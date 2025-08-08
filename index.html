@@ -161,7 +161,10 @@
 
         <!-- Card 3: Landing -->
         <article class="glass rounded-xl overflow-hidden">
-          <div class="aspect-video bg-gradient-to-tr from-primary/30 to-neon/20"></div>
+          <div class="aspect-video relative cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="preview-estetica.png" alt="Preview do site completo da Clínica Saúde Plena"
+              class="w-full h-full object-cover hover:opacity-90 transition">
+        </div>
           <div class="p-5 flex flex-col gap-4">
             <h3 class="text-xl font-bold">Landing Page Promocional</h3>
             <ul class="text-sm text-white/80 space-y-1.5">
