@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Clínica Saúde Plena</title>
-  <meta name="description" content="Clínica Saúde Plena - Atendimento médico de qualidade com agendamento rápido e fácil." />
+  <title>Clínica Saúde Plena — Consultas, Exames e Atendimento Humanizado</title>
+  <meta name="description" content="A Clínica Saúde Plena oferece consultas médicas, exames laboratoriais e atendimento humanizado em diversas especialidades. Agende sua consulta online e cuide da sua saúde com qualidade e confiança." />
+  <link rel="canonical" href="https://seudominio.com/">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -27,14 +28,14 @@
   <!-- NAV -->
   <header class="bg-white shadow fixed w-full z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-      <a href="#" class="text-2xl font-bold text-primary">Saúde<span class="text-secondary">Plena</span></a>
-      <nav class="hidden md:flex space-x-6">
-        <a href="#servicos" class="hover:text-primary">Serviços</a>
-        <a href="#sobre" class="hover:text-primary">Sobre</a>
-        <a href="#equipe" class="hover:text-primary">Equipe</a>
-        <a href="#contato" class="hover:text-primary">Contato</a>
+      <a href="index.html" class="text-2xl font-bold text-primary">Saúde<span class="text-secondary">Plena</span></a>
+      <nav class="hidden md:flex space-x-6" aria-label="Navegação principal">
+        <a href="index.html" class="hover:text-primary">Início</a>
+        <a href="servicos.html" class="hover:text-primary">Serviços</a>
+        <a href="sobre.html" class="hover:text-primary">Sobre</a>
+        <a href="contato.html" class="hover:text-primary">Contato</a>
       </nav>
-      <a href="#contato" class="hidden sm:inline-block px-4 py-2 bg-primary text-white rounded hover:bg-primary/90">Agendar Consulta</a>
+      <a href="contato.html" class="hidden sm:inline-block px-4 py-2 bg-primary text-white rounded hover:bg-primary/90">Agendar Consulta</a>
     </div>
   </header>
 
@@ -42,109 +43,78 @@
   <section class="bg-light pt-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
       <div>
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-primary">Cuidando de você com excelência</h1>
-        <p class="mt-4 text-lg text-gray-600">Na Saúde Plena, oferecemos atendimento humanizado e tecnologia de ponta para sua saúde e bem-estar.</p>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-primary">Clínica Saúde Plena — Cuidando de você com excelência</h1>
+        <p class="mt-4 text-lg text-gray-600">Consultas, exames e atendimento humanizado em diversas especialidades médicas, com tecnologia de ponta e agendamento rápido.</p>
         <div class="mt-6">
-          <a href="#contato" class="px-6 py-3 bg-secondary text-white rounded-md font-semibold hover:bg-secondary/90">Agendar Consulta</a>
+          <a href="contato.html" class="px-6 py-3 bg-secondary text-white rounded-md font-semibold hover:bg-secondary/90">Agendar Consulta</a>
         </div>
       </div>
       <div>
-        <img src="https://images.unsplash.com/photo-1588776814546-636a2d75ba23" alt="Clínica moderna" class="rounded-lg shadow-lg">
+        <img src="https://images.unsplash.com/photo-1588776814546-636a2d75ba23" alt="Recepção moderna da Clínica Saúde Plena" class="rounded-lg shadow-lg">
       </div>
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" class="py-16 bg-white">
+  <!-- RESUMO SERVIÇOS -->
+  <section class="py-16 bg-white" id="servicos">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl font-bold text-center text-primary">Nossos Serviços</h2>
+      <h2 class="text-3xl font-bold text-center text-primary">Serviços Principais</h2>
+      <p class="text-center text-gray-600 mt-2">Especialidades e exames mais procurados pelos nossos pacientes.</p>
       <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="p-6 border rounded-lg hover:shadow-lg transition">
+        <article class="p-6 border rounded-lg hover:shadow-lg transition">
           <h3 class="font-semibold text-lg mb-2">Consultas Médicas</h3>
-          <p class="text-gray-600">Atendimento em diversas especialidades com médicos experientes e comprometidos.</p>
-        </div>
-        <div class="p-6 border rounded-lg hover:shadow-lg transition">
+          <p class="text-gray-600">Clínica geral, pediatria, cardiologia, ginecologia e outras especialidades com profissionais experientes.</p>
+        </article>
+        <article class="p-6 border rounded-lg hover:shadow-lg transition">
           <h3 class="font-semibold text-lg mb-2">Exames Laboratoriais</h3>
-          <p class="text-gray-600">Exames rápidos e precisos com laudos entregues no mesmo dia.</p>
-        </div>
-        <div class="p-6 border rounded-lg hover:shadow-lg transition">
+          <p class="text-gray-600">Coleta ágil e resultados rápidos com precisão e sigilo.</p>
+        </article>
+        <article class="p-6 border rounded-lg hover:shadow-lg transition">
           <h3 class="font-semibold text-lg mb-2">Atendimento de Urgência</h3>
-          <p class="text-gray-600">Equipe preparada para atendimentos emergenciais com rapidez e cuidado.</p>
-        </div>
+          <p class="text-gray-600">Equipe preparada para emergências, garantindo cuidado imediato e seguro.</p>
+        </article>
+      </div>
+      <div class="text-center mt-10">
+        <a href="servicos.html" class="px-5 py-3 bg-primary text-white rounded-md hover:bg-primary/90">Ver todos os serviços</a>
       </div>
     </div>
   </section>
 
-  <!-- SOBRE -->
-  <section id="sobre" class="py-16 bg-light">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e83" alt="Equipe médica" class="rounded-lg shadow-lg">
-      </div>
-      <div>
-        <h2 class="text-3xl font-bold text-primary">Sobre Nós</h2>
-        <p class="mt-4 text-gray-600">Há mais de 15 anos cuidando da saúde da nossa comunidade, a Saúde Plena conta com infraestrutura moderna e profissionais qualificados para oferecer o melhor atendimento.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- EQUIPE -->
-  <section id="equipe" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl font-bold text-center text-primary">Nossa Equipe</h2>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="text-center">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dra. Ana" class="w-32 h-32 rounded-full mx-auto shadow-md">
-          <h3 class="mt-4 font-semibold">Dra. Ana Silva</h3>
-          <p class="text-gray-500 text-sm">Clínica Geral</p>
-        </div>
-        <div class="text-center">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. Carlos" class="w-32 h-32 rounded-full mx-auto shadow-md">
-          <h3 class="mt-4 font-semibold">Dr. Carlos Mendes</h3>
-          <p class="text-gray-500 text-sm">Cardiologista</p>
-        </div>
-        <div class="text-center">
-          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Dra. Beatriz" class="w-32 h-32 rounded-full mx-auto shadow-md">
-          <h3 class="mt-4 font-semibold">Dra. Beatriz Rocha</h3>
-          <p class="text-gray-500 text-sm">Pediatra</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEPOIMENTOS -->
+  <!-- DIFERENCIAIS -->
   <section class="py-16 bg-light">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl font-bold text-center text-primary">O que nossos pacientes dizem</h2>
-      <div class="mt-10 grid md:grid-cols-2 gap-6">
-        <div class="p-6 bg-white rounded-lg shadow">
-          <p class="text-gray-600">“Fui muito bem atendida, equipe muito simpática e atenciosa. Recomendo!”</p>
-          <p class="mt-2 text-sm text-gray-500">— Maria F.</p>
+      <h2 class="text-3xl font-bold text-center text-primary">Por que escolher a Saúde Plena?</h2>
+      <p class="text-center text-gray-600 mt-2">Conheça os diferenciais que fazem da nossa clínica a melhor escolha para você e sua família.</p>
+      <div class="mt-10 grid md:grid-cols-4 gap-6">
+        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition text-center">
+          <div class="text-4xl mb-3">👨‍⚕️</div>
+          <h3 class="font-semibold text-lg mb-1">Equipe Especializada</h3>
+          <p class="text-gray-600 text-sm">Médicos qualificados em diversas áreas, sempre atualizados.</p>
         </div>
-        <div class="p-6 bg-white rounded-lg shadow">
-          <p class="text-gray-600">“Ambiente limpo, médicos competentes e atendimento rápido. Excelente clínica!”</p>
-          <p class="mt-2 text-sm text-gray-500">— João P.</p>
+        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition text-center">
+          <div class="text-4xl mb-3">🏥</div>
+          <h3 class="font-semibold text-lg mb-1">Estrutura Moderna</h3>
+          <p class="text-gray-600 text-sm">Ambientes confortáveis e equipamentos de última geração.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition text-center">
+          <div class="text-4xl mb-3">⚡</div>
+          <h3 class="font-semibold text-lg mb-1">Agendamento Rápido</h3>
+          <p class="text-gray-600 text-sm">Marque sua consulta online ou por telefone de forma simples.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition text-center">
+          <div class="text-4xl mb-3">❤️</div>
+          <h3 class="font-semibold text-lg mb-1">Atendimento Humanizado</h3>
+          <p class="text-gray-600 text-sm">Tratamos cada paciente com respeito, empatia e atenção.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTATO -->
-  <section id="contato" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10">
-      <div>
-        <h2 class="text-3xl font-bold text-primary">Entre em Contato</h2>
-        <form class="mt-6 space-y-4">
-          <input type="text" placeholder="Seu nome" class="w-full p-3 border rounded-md">
-          <input type="email" placeholder="Seu e-mail" class="w-full p-3 border rounded-md">
-          <textarea placeholder="Sua mensagem" class="w-full p-3 border rounded-md h-32"></textarea>
-          <button class="px-6 py-3 bg-primary text-white rounded-md font-semibold hover:bg-primary/90">Enviar</button>
-        </form>
-      </div>
-      <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." class="w-full h-64 rounded-lg border" loading="lazy"></iframe>
-      </div>
-    </div>
+  <!-- CTA FINAL -->
+  <section class="py-16 bg-primary text-white text-center">
+    <h2 class="text-3xl font-bold">Agende sua consulta agora mesmo</h2>
+    <p class="mt-2">A sua saúde merece o melhor cuidado. Fale conosco e marque seu horário.</p>
+    <a href="contato.html" class="mt-6 inline-block px-6 py-3 bg-secondary text-white rounded-md hover:bg-secondary/90">Entrar em contato</a>
   </section>
 
   <!-- RODAPÉ -->
