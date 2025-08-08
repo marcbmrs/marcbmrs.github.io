@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre — Clínica Saúde Plena</title>
+  <meta name="description" content="A Clínica Saúde Plena é referência em atendimento médico humanizado e de qualidade, com equipe experiente e estrutura completa para cuidar de você e sua família.">
+  <link rel="canonical" href="https://seudominio.com/sobre.html">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            primary: '#0EA5E9',
+            secondary: '#10B981',
+            light: '#F9FAFB'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- NAV -->
+  <header class="bg-white shadow fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <a href="index.html" class="text-2xl font-bold text-primary">Saúde<span class="text-secondary">Plena</span></a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-primary">Início</a>
+        <a href="site-completo-demo-servicos.html" class="hover:text-primary">Serviços</a>
+        <a href="site-completo-demo-sobre.html" class="text-primary font-semibold">Sobre</a>
+        <a href="site-completo-demo-contato.html" class="hover:text-primary">Contato</a>
+      </nav>
+      <a href="site-completo-demo-contato.html" class="hidden sm:inline-block px-4 py-2 bg-primary text-white rounded hover:bg-primary/90">Agendar Consulta</a>
+    </div>
+  </header>
+
+  <!-- HERO SOBRE -->
+  <section class="bg-light pt-24 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl font-extrabold text-primary">Sobre a Clínica Saúde Plena</h1>
+        <p class="mt-4 text-gray-600">Fundada com a missão de oferecer <strong>atendimento médico humanizado</strong>, a Clínica Saúde Plena reúne uma equipe multidisciplinar dedicada ao cuidado integral de seus pacientes, aliando <strong>tecnologia de ponta</strong> e acolhimento.</p>
+        <p class="mt-4 text-gray-600">Nossa estrutura conta com consultórios modernos, equipamentos de última geração e ambiente confortável, garantindo qualidade e confiança em cada atendimento.</p>
+      </div>
+      <div>
+        <img src="sobre-clinica.jpg" alt="Foto da clínica com fachada moderna e ambiente acolhedor" class="rounded-lg shadow-lg w-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl font-bold text-primary mb-8 text-center">Nossos Diferenciais</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="p-6 border rounded-lg hover:shadow-lg transition">
+          <h3 class="font-semibold text-lg mb-2">Equipe Especializada</h3>
+          <p class="text-gray-600">Médicos e profissionais altamente qualificados em diversas especialidades.</p>
+        </div>
+        <div class="p-6 border rounded-lg hover:shadow-lg transition">
+          <h3 class="font-semibold text-lg mb-2">Tecnologia Avançada</h3>
+          <p class="text-gray-600">Equipamentos modernos para diagnósticos rápidos e precisos.</p>
+        </div>
+        <div class="p-6 border rounded-lg hover:shadow-lg transition">
+          <h3 class="font-semibold text-lg mb-2">Atendimento Humanizado</h3>
+          <p class="text-gray-600">Acolhimento e cuidado individualizado para cada paciente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary text-white text-center">
+    <h2 class="text-3xl font-bold">Conheça nossa clínica pessoalmente</h2>
+    <p class="mt-2">Agende uma visita ou marque sua consulta agora mesmo.</p>
+    <a href="site-completo-demo-contato.html" class="mt-6 inline-block px-6 py-3 bg-secondary text-white rounded-md hover:bg-secondary/90">Entrar em contato</a>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-light py-6 text-center text-gray-500 text-sm">
+    © <span id="y"></span> MarcosDev — Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
