@@ -140,9 +140,8 @@
        <!-- Card 2: Site completo -->
       <article class="glass rounded-xl overflow-hidden">
         <!-- Preview da clínica -->
-        <div class="aspect-video relative cursor-pointer" onclick="openLightbox('preview-preview-mini-site.png')">
-          <img src="preview-clinica.png" 
-              alt="Preview do site completo da Clínica Saúde Plena"
+        <div class="aspect-video relative cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="preview-clinica.png" alt="Preview do site completo da Clínica Saúde Plena"
               class="w-full h-full object-cover hover:opacity-90 transition">
         </div>
 
@@ -279,10 +278,11 @@
   <footer class="border-t border-white/10 py-8 text-center text-sm text-white/60">
     © <span id="y"></span> MarcosDev — todos os direitos reservados.
   </footer>
-  <!-- Lightbox -->
-<div id="lightbox" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
-  <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-3xl">&times;</button>
-  <img id="lightbox-img" src="preview-mini-site.png" alt="Preview ampliado" class="max-w-full max-h-full rounded-lg shadow-lg">
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50" role="dialog" aria-modal="true" aria-label="Visualização de imagem">
+  <button id="lb-close" class="absolute top-4 right-4 text-white text-3xl" aria-label="Fechar">&times;</button>
+  <img id="lightbox-img" src="" alt="Preview ampliado" class="max-w-full max-h-full rounded-lg shadow-lg">
 </div>
   <!-- FAQ (opcional/âncora do botão) -->
   <section id="faq" class="hidden"></section>
@@ -304,16 +304,39 @@
         if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); if(!mob.classList.contains('hidden')) mob.classList.add('hidden'); }
       });
     });
-    function openLightbox(imgSrc) {
-    document.getElementById('lightbox-img').src = imgSrc;
-    document.getElementById('lightbox').classList.remove('hidden');
-    document.getElementById('lightbox').classList.add('flex');
+  
+      const lb     = document.getElementById('lightbox');
+  const lbImg  = document.getElementById('lightbox-img');
+  const lbBtn  = document.getElementById('lb-close');
+
+  // Abra usando a src da própria imagem clicada
+  function openLightbox(imgSrc) {
+    lbImg.src = imgSrc || '';
+    lb.classList.remove('hidden');
+    lb.classList.add('flex');
+    // (opcional) trava o scroll da página
+    document.body.style.overflow = 'hidden';
   }
 
+  // Fecha (botão, ESC, clique fora)
   function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('flex');
-    document.getElementById('lightbox').classList.add('hidden');
+    lb.classList.remove('flex');
+    lb.classList.add('hidden');
+    lbImg.src = ''; // limpa para não ficar carregando
+    document.body.style.overflow = ''; // libera scroll
   }
+
+  lbBtn.addEventListener('click', closeLightbox);
+
+  // Fecha com ESC
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('hidden') && e.key === 'Escape') closeLightbox();
+  });
+
+  // Fecha clicando fora da imagem
+  lb.addEventListener('click', (e) => {
+    if (e.target === lb) closeLightbox();
+  });
   </script>
 </body>
 </html>
