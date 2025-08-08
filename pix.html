@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pagar via Pix — Site de Teste R$9,90</title>
+  <meta name="description" content="Pague seu site de teste por R$9,90 via Pix. QR Code, Copia e Cola e envio de comprovante pelo WhatsApp." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            bg: '#0b0f1a',
+            primary: '#6D28D9',
+            neon: '#00E5FF',
+            ink: '#D6E4FF',
+          },
+          boxShadow: {
+            neon: '0 0 16px rgba(0,229,255,.35), 0 0 40px rgba(109,40,217,.25)',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12) }
+  </style>
+</head>
+<body class="bg-bg text-ink font-sans antialiased">
+  <div class="min-h-screen flex items-center justify-center px-4">
+    <main class="w-full max-w-lg glass rounded-2xl p-5 sm:p-8 shadow-neon">
+      <header class="text-center">
+        <p class="text-xs uppercase tracking-widest text-neon/90">Tripwire</p>
+        <h1 class="mt-2 text-2xl sm:text-3xl font-extrabold">Pagar via Pix — <span class="text-neon">R$9,90</span></h1>
+        <p class="mt-2 text-white/80">Após o pagamento, envie o comprovante pelo WhatsApp para ativar sua entrega em até 24h.</p>
+      </header>
+
+      <!-- QR CODE -->
+      <section class="mt-6">
+        <div class="rounded-xl bg-white/5 border border-white/10 p-4 flex items-center justify-center">
+          <!-- TROQUE o src abaixo pelo QR do seu Pix -->
+          <img src="qr-pix.png" alt="QR Code do Pix para pagamento de R$9,90" class="w-52 h-52 object-contain" />
+        </div>
+        <p class="mt-2 text-xs text-white/60 text-center">Aponte a câmera do app do seu banco para o QR Code.</p>
+      </section>
+
+      <!-- COPIA E COLA -->
+      <section class="mt-6">
+        <label for="pixcode" class="text-sm font-semibold">Código Pix Copia e Cola</label>
+        <div class="mt-2 flex gap-2">
+          <textarea id="pixcode" class="flex-1 rounded-md bg-black/30 border border-white/10 p-3 text-sm resize-none h-24" readonly></textarea>
+          <button id="copyBtn" class="shrink-0 px-4 py-2 rounded-md bg-neon text-bg font-bold hover:opacity-90">Copiar</button>
+        </div>
+        <p class="mt-2 text-xs text-white/60">Cole o código no “Pix Copia e Cola” do seu banco.</p>
+      </section>
+
+      <!-- WHATSAPP -->
+      <section class="mt-6">
+        <a id="whatsBtn" href="#" target="_blank" rel="noopener"
+           class="w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-md bg-primary text-white font-semibold hover:opacity-90">
+          Já paguei, quero enviar o comprovante
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+        </a>
+        <p class="mt-2 text-xs text-white/60 text-center">Abrirá o WhatsApp com mensagem pré-preenchida.</p>
+      </section>
+
+      <!-- VOLTAR -->
+      <div class="mt-6 text-center">
+        <a href="index.html" class="text-neon hover:underline">Voltar para a página inicial</a>
+      </div>
+
+      <!-- TOAST -->
+      <div id="toast" class="fixed left-1/2 -translate-x-1/2 bottom-6 hidden px-4 py-2 rounded-md bg-white/10 border border-white/15 text-sm">
+        Copiado! Código Pix enviado para a área de transferência.
+      </div>
+
+      <!-- INFO SEGURA -->
+      <p class="mt-6 text-center text-xs text-white/50">Se preferir, também aceito pagamento via Mercado Pago / Stripe. Peça o link no WhatsApp.</p>
+    </main>
+  </div>
+
+  <script>
+    // ======= CONFIGURE AQUI =======
+    const PIX_COPIA_E_COLA = `00020126610014br.gov.bcb.pix0114+55519954125360221Quero meu site Teste!52040000530398654049.905802BR5924Marcos Paulo Borges da S6009Sao Paulo610901227-20062240520daqr240024899088733063046386`;
+    const WHATS_NUMBER = '51995412536'; // só números com DDI (55BR)
+    const WHATS_MSG = `Olá! Paguei o Pix de R$ 9,90 do site de teste. Segue o comprovante:`;
+    // ===============================
+
+    // Preenche o textarea com seu código Pix
+    const ta = document.getElementById('pixcode');
+    ta.value = PIX_COPIA_E_COLA;
+
+    // Copy to clipboard
+    const toast = document.getElementById('toast');
+    document.getElementById('copyBtn').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(PIX_COPIA_E_COLA);
+        toast.classList.remove('hidden');
+        setTimeout(()=> toast.classList.add('hidden'), 2000);
+      } catch (e) {
+        // Fallback: seleciona o textarea
+        ta.select(); document.execCommand('copy');
+        toast.classList.remove('hidden');
+        setTimeout(()=> toast.classList.add('hidden'), 2000);
+      }
+    });
+
+    // WhatsApp com mensagem pré-preenchida
+    const wa = document.getElementById('whatsBtn');
+    const waURL = `https://wa.me/${WHATS_NUMBER}?text=${encodeURIComponent(WHATS_MSG)}`;
+    wa.setAttribute('href', waURL);
+  </script>
+</body>
+</html>
