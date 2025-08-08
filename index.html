@@ -189,7 +189,7 @@
         <div class="flex flex-col lg:flex-row items-start gap-8">
           <div class="flex-1">
             <h2 class="text-2xl sm:text-3xl font-extrabold">Teste seu site por apenas <span class="text-neon">R$9,90</span> — <span class="text-primary">Entrego em até 24h</span></h2>
-            <p class="mt-3 text-white/80">Receba uma mini‑página pronta pra tráfego com seu logo, cores e CTA. Se curtir, descontamos o valor no projeto final.</p>
+            <p class="mt-3 text-white/80">Receba uma mini‑página pronta com seu logo, cores e CTA. Se curtir, descontamos o valor no projeto final.</p>
             <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-white/85">
               <li>✓ Layout responsivo</li>
               <li>✓ Otimizado para conversão</li>
@@ -198,9 +198,9 @@
             </ul>
             <div class="mt-6 flex flex-wrap gap-3">
               <a href="https://seu-checkout-tripwire.com" class="px-6 py-3 rounded-md bg-neon text-bg font-bold btn-glow">Quero meu site de teste</a>
-              <a href="#faq" class="px-5 py-3 rounded-md border border-white/15 hover:bg-white/10">Como funciona?</a>
+              <a href="javascript:void(0)" onclick="abrirComoFunciona()" class="px-5 py-3 rounded-md border border-white/15 hover:bg-white/10">Como funciona?</a>
             </div>
-            <p class="mt-3 text-xs text-white/60">Aceito Mercado Pago, Stripe ou Gumroad. Envio o link de edição/aprovação em até 24h úteis.</p>
+            <p class="mt-3 text-xs text-white/60">Aceito Mercado Pago e Pix. Envio o link para você visualizar em até 24h úteis.</p>
           </div>
           <div class="w-full lg:w-96">
             <div class="rounded-xl border border-neon/40 p-5 bg-bg/60">
@@ -212,7 +212,7 @@
                 <li>• Entrega e suporte por e‑mail/WhatsApp</li>
               </ul>
               <div class="mt-5">
-                <a href="https://seu-checkout-tripwire.com" class="w-full inline-flex justify-center px-5 py-3 rounded-md bg-primary text-white font-semibold hover:opacity-90">Pagar R$9,90</a>
+                <a href="pix.html" class="w-full inline-flex justify-center px-5 py-3 rounded-md bg-primary text-white font-semibold hover:opacity-90">Pagar R$9,90</a>
               </div>
               <p class="mt-3 text-xs text-white/60 text-center">Garantia de satisfação: não curtiu? Reembolso total.</p>
             </div>
@@ -272,8 +272,7 @@
       <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Pronto para ter um site que trabalha por você?</h2>
       <p class="mt-3 text-white/80">Clique abaixo e me chame agora. Vamos colocar sua oferta no ar ainda essa semana.</p>
       <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
-        <a href="https://wa.me/5599999999999" class="px-6 py-3 rounded-md bg-neon text-bg font-bold btn-glow">Pedir agora pelo WhatsApp</a>
-        <a href="mailto:voce@seuemail.com" class="px-6 py-3 rounded-md bg-white/5 border border-white/15 hover:bg-white/10">Falar por e‑mail</a>
+        <a href="https://wa.me/5595412536" class="px-6 py-3 rounded-md bg-neon text-bg font-bold btn-glow">Pedir agora pelo WhatsApp</a>
       </div>
     </div>
   </section>
@@ -289,7 +288,7 @@
 </div>
   <!-- FAQ (opcional/âncora do botão) -->
   <section id="faq" class="hidden"></section>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     // Mobile menu
     const btn = document.getElementById('menu');
@@ -340,6 +339,30 @@
   lb.addEventListener('click', (e) => {
     if (e.target === lb) closeLightbox();
   });
+  function abrirComoFunciona() {
+  Swal.fire({
+    title: 'Como funciona o Site Teste?',
+    html: `
+      <p style="text-align: left;">
+        🔹 Por apenas <b style="color:#FFD600;">R$9,90</b> eu crio um <b>site de teste personalizado</b> 
+        com as <b>suas cores e logo</b>, para você visualizar como ficaria seu projeto.<br><br>
+        ✅ Ideal para ter uma prévia profissional antes de investir no site completo.<br>
+        ✅ Ótima forma de validar seu layout e identidade visual.<br>
+        ✅ Entrega rápida: em até <b>24 horas</b>.<br><br>
+        <b style="color:#FF5555;">Importante:</b> Este é apenas um <b>protótipo</b> para visualização.
+        <u>Não inclui domínio, hospedagem, tráfego ou publicação final</u>.<br><br>
+        Se gostar do resultado, o valor pago é descontado do projeto final. 😉
+      </p>
+    `,
+    icon: 'info',
+    confirmButtonText: 'Entendi!',
+    confirmButtonColor: '#6D28D9',
+    width: 600,
+    background: '#0b0f1a',
+    color: '#FFF',
+    backdrop: `rgba(0,0,0,0.8)`
+  });
+}
   </script>
 </body>
 </html>
