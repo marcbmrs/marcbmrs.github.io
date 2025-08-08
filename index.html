@@ -118,10 +118,10 @@
       <div class="mt-10 grid md:grid-cols-3 gap-6">
         <!-- Card 1: Tripwire -->
         <article class="glass rounded-xl overflow-hidden group">
-        <div class="aspect-video relative">
+        <div class="aspect-video relative cursor-pointer" onclick="openLightbox('preview-tripwire.png')">
           <img src="preview-mini-site.png" 
               alt="Preview da Mini-página Tripwire Social Media" 
-              class="w-full h-full object-cover">
+              class="w-full h-full object-cover hover:opacity-90 transition">
         </div>
         <div class="p-5 flex flex-col gap-4">
           <ul class="text-sm text-white/80 space-y-1.5">
@@ -272,7 +272,11 @@
   <footer class="border-t border-white/10 py-8 text-center text-sm text-white/60">
     © <span id="y"></span> SitesQueVendem — todos os direitos reservados.
   </footer>
-
+  <!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+  <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-3xl">&times;</button>
+  <img id="lightbox-img" src="" alt="Preview ampliado" class="max-w-full max-h-full rounded-lg shadow-lg">
+</div>
   <!-- FAQ (opcional/âncora do botão) -->
   <section id="faq" class="hidden"></section>
 
@@ -293,6 +297,16 @@
         if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); if(!mob.classList.contains('hidden')) mob.classList.add('hidden'); }
       });
     });
+    function openLightbox(imgSrc) {
+    document.getElementById('lightbox-img').src = imgSrc;
+    document.getElementById('lightbox').classList.remove('hidden');
+    document.getElementById('lightbox').classList.add('flex');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('flex');
+    document.getElementById('lightbox').classList.add('hidden');
+  }
   </script>
 </body>
 </html>
