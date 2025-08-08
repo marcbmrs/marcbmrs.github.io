@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sites que vendem — Portfólio & Tripwire R$9,90</title>
+  <meta name="description" content="Eu crio sites rápidos, bonitos e que vendem. Teste seu site por R$9,90 e receba em até 24h." />
+  <meta property="og:title" content="Sites que vendem — Portfólio & Tripwire R$9,90" />
+  <meta property="og:description" content="Teste seu site por R$9,90 e receba em até 24h." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Paleta inspirada na sua imagem (ajuste se quiser)
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            bg:   '#0b0f1a',     // fundo escuro
+            primary: '#6D28D9',  // roxo principal
+            neon: '#00E5FF',     // azul neon
+            ink: '#D6E4FF',      // texto claro
+          },
+          boxShadow: {
+            neon: '0 0 16px rgba(0,229,255,.35), 0 0 40px rgba(109,40,217,.25)',
+          },
+          backgroundImage: {
+            glow: 'radial-gradient(1200px 600px at 80% -10%, rgba(0,229,255,.12), transparent 40%), radial-gradient(900px 500px at -10% 10%, rgba(109,40,217,.18), transparent 35%)',
+            grid: 'linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px)',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    /* grade sutil no fundo */
+    .bg-grid {
+      background-size: 24px 24px, 24px 24px;
+      mask-image: radial-gradient(circle at 50% 30%, black 60%, transparent 100%);
+    }
+    .btn-glow { box-shadow: 0 0 0 0 rgba(0,229,255,.6); animation: pulseGlow 2.4s ease-in-out infinite; }
+    @keyframes pulseGlow { 0%,100%{ box-shadow: 0 0 0 0 rgba(0,229,255,.55) } 50%{ box-shadow: 0 0 28px 6px rgba(0,229,255,.35) } }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12) }
+  </style>
+</head>
+<body class="bg-bg text-ink font-sans antialiased selection:bg-primary/40">
+  <!-- BG decor -->
+  <div aria-hidden="true" class="fixed inset-0 -z-10 bg-glow"></div>
+  <div aria-hidden="true" class="fixed inset-0 -z-10 bg-grid pointer-events-none"></div>
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-bg/70 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-neon shadow-neon"></span>
+        <span class="font-extrabold tracking-tight">Sites<span class="text-neon">QueVendem</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#portfolio" class="hover:text-neon transition">Portfólio</a>
+        <a href="#tripwire" class="hover:text-neon transition">Tripwire</a>
+        <a href="#depoimentos" class="hover:text-neon transition">Depoimentos</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#cta" class="hidden sm:inline-flex items-center px-4 py-2 rounded-md border border-neon/60 text-neon hover:bg-neon/10 transition">Falar agora</a>
+        <button id="menu" class="md:hidden p-2 rounded border border-white/10" aria-label="Abrir menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-width="1.7" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile" class="md:hidden hidden border-t border-white/10">
+      <nav class="px-4 py-3 flex flex-col gap-3 bg-bg/90">
+        <a href="#portfolio" class="hover:text-neon">Portfólio</a>
+        <a href="#tripwire" class="hover:text-neon">Tripwire</a>
+        <a href="#depoimentos" class="hover:text-neon">Depoimentos</a>
+        <a href="#cta" class="text-neon">Falar agora</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-neon/90">
+          <span class="w-1.5 h-1.5 rounded-full bg-neon"></span> projetos entregues em 24h
+        </p>
+        <h1 class="mt-3 text-3xl sm:text-5xl font-extrabold leading-tight">
+          Eu crio sites <span class="text-neon">rápidos</span>, <span class="text-primary">bonitos</span> e <span class="underline decoration-neon/60">que vendem</span> — veja meu trabalho abaixo
+        </h1>
+        <p class="mt-5 text-white/80 max-w-xl">Conversão primeiro, visual forte e performance de nota A. Ideal pra seu MVP ou campanha que precisa começar a vender agora.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#portfolio" class="px-5 py-3 rounded-md bg-white/5 hover:bg-white/10 border border-white/15">Ver portfólio</a>
+          <a href="https://seu-checkout-tripwire.com" class="px-6 py-3 rounded-md bg-neon text-bg font-semibold hover:opacity-90 btn-glow">Quero meu site de teste</a>
+        </div>
+        <div class="mt-6 flex items-center gap-4 text-xs text-white/60">
+          <span class="flex items-center gap-1"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2Zm1 14h-2v-2h2Zm0-4h-2V6h2Z"/></svg> Suporte rápido</span>
+          <span class="flex items-center gap-1"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5Zm0 19.1C8.06 19 5 14.94 5 11V6.3l7-3.11 7 3.11V11c0 3.94-3.06 8-7 9.1Z"/></svg> Projetos de alta conversão</span>
+        </div>
+      </div>
+      <div class="glass rounded-2xl p-4 sm:p-6 lg:p-8 shadow-neon">
+        <img src="Marcos Dev.png" alt="Ilustração do criador: laptop, ícones de crescimento e dinheiro" class="rounded-xl w-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section id="portfolio" class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-extrabold">Portfólio <span class="text-neon">selecionado</span></h2>
+        <p class="text-white/70">Três formatos que mais pedem: <span class="text-neon">Tripwire</span>, Site completo e Landing promocional.</p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- Card 1: Tripwire -->
+        <article class="glass rounded-xl overflow-hidden group">
+          <div class="aspect-video bg-gradient-to-tr from-primary/40 to-neon/30 relative">
+            <div class="absolute inset-0 grid place-items-center text-center p-6">
+              <span class="text-xs tracking-widest uppercase text-ink/80">Prévia</span>
+              <h3 class="mt-2 text-xl font-bold">Mini‑página Tripwire</h3>
+              <p class="text-sm text-white/80">Oferta de entrada — R$9,90</p>
+            </div>
+          </div>
+          <div class="p-5 flex flex-col gap-4">
+            <ul class="text-sm text-white/80 space-y-1.5">
+              <li>✓ Seção única, foco no CTA</li>
+              <li>✓ Pagamento direto (Mercado Pago / Stripe / Gumroad)</li>
+              <li>✓ Entrega em até 24h</li>
+            </ul>
+            <div class="flex gap-3">
+              <a href="https://demo-tripwire.com" class="px-4 py-2 rounded-md border border-white/15 hover:bg-white/10">Ver demo</a>
+              <a href="https://seu-checkout-tripwire.com" class="px-4 py-2 rounded-md bg-neon text-bg font-semibold">Quero por R$9,90</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Site completo -->
+        <article class="glass rounded-xl overflow-hidden">
+          <div class="aspect-video bg-gradient-to-tr from-primary/30 to-neon/20"></div>
+          <div class="p-5 flex flex-col gap-4">
+            <h3 class="text-xl font-bold">Site Completo</h3>
+            <ul class="text-sm text-white/80 space-y-1.5">
+              <li>✓ 4–6 páginas (Home, Serviços, Portfólio, Sobre, Contato…)</li>
+              <li>✓ SEO técnico e performance A</li>
+              <li>✓ Integração WhatsApp / CRM</li>
+            </ul>
+            <div class="flex gap-3">
+              <a href="https://demo-site-completo.com" class="px-4 py-2 rounded-md border border-white/15 hover:bg-white/10">Ver demo</a>
+              <a href="#cta" class="px-4 py-2 rounded-md bg-primary text-white font-semibold">Solicitar orçamento</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Landing -->
+        <article class="glass rounded-xl overflow-hidden">
+          <div class="aspect-video bg-gradient-to-tr from-primary/30 to-neon/20"></div>
+          <div class="p-5 flex flex-col gap-4">
+            <h3 class="text-xl font-bold">Landing Page Promocional</h3>
+            <ul class="text-sm text-white/80 space-y-1.5">
+              <li>✓ Foco em campanha/lançamento</li>
+              <li>✓ Seções de prova social e FAQ</li>
+              <li>✓ Pixel, Tag, metas de conversão</li>
+            </ul>
+            <div class="flex gap-3">
+              <a href="https://demo-landing.com" class="px-4 py-2 rounded-md border border-white/15 hover:bg-white/10">Ver demo</a>
+              <a href="#cta" class="px-4 py-2 rounded-md bg-neon text-bg font-semibold">Quero essa</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIPWIRE -->
+  <section id="tripwire" class="py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="glass rounded-2xl p-6 sm:p-10 shadow-neon">
+        <div class="flex flex-col lg:flex-row items-start gap-8">
+          <div class="flex-1">
+            <h2 class="text-2xl sm:text-3xl font-extrabold">Teste seu site por apenas <span class="text-neon">R$9,90</span> — <span class="text-primary">Entrego em até 24h</span></h2>
+            <p class="mt-3 text-white/80">Receba uma mini‑página pronta pra tráfego com seu logo, cores e CTA. Se curtir, descontamos o valor no projeto final.</p>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-white/85">
+              <li>✓ Layout responsivo</li>
+              <li>✓ Otimizado para conversão</li>
+              <li>✓ Integração de pagamento/lead</li>
+              <li>✓ 1 rodada de ajustes</li>
+            </ul>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="https://seu-checkout-tripwire.com" class="px-6 py-3 rounded-md bg-neon text-bg font-bold btn-glow">Quero meu site de teste</a>
+              <a href="#faq" class="px-5 py-3 rounded-md border border-white/15 hover:bg-white/10">Como funciona?</a>
+            </div>
+            <p class="mt-3 text-xs text-white/60">Aceito Mercado Pago, Stripe ou Gumroad. Envio o link de edição/aprovação em até 24h úteis.</p>
+          </div>
+          <div class="w-full lg:w-96">
+            <div class="rounded-xl border border-neon/40 p-5 bg-bg/60">
+              <p class="text-sm text-neon font-semibold">Inclui:</p>
+              <ul class="mt-2 space-y-1.5 text-sm text-white/85">
+                <li>• Headline + CTA + Prova Social</li>
+                <li>• Animações leves</li>
+                <li>• SEO básico (title/description/OG)</li>
+                <li>• Entrega e suporte por e‑mail/WhatsApp</li>
+              </ul>
+              <div class="mt-5">
+                <a href="https://seu-checkout-tripwire.com" class="w-full inline-flex justify-center px-5 py-3 rounded-md bg-primary text-white font-semibold hover:opacity-90">Pagar R$9,90</a>
+              </div>
+              <p class="mt-3 text-xs text-white/60 text-center">Garantia de satisfação: não curtiu? Reembolso total.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Depoimentos & Prova social</h2>
+      <p class="text-sm text-white/70">Exemplos para visualização — substitua pelos seus reais depois.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <!-- depo 1 -->
+        <figure class="glass p-6 rounded-xl">
+          <blockquote class="text-white/90">“Subimos tráfego no mesmo dia e a página já trouxe os primeiros leads. Rápido e direto ao ponto.”</blockquote>
+          <figcaption class="mt-4 flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-primary to-neon"></span>
+            <div>
+              <div class="font-semibold">Marina S.</div>
+              <div class="text-xs text-white/60">E-commerce de acessórios</div>
+            </div>
+          </figcaption>
+        </figure>
+        <!-- depo 2 -->
+        <figure class="glass p-6 rounded-xl">
+          <blockquote class="text-white/90">“O site ficou muito leve e com uma cara profissional. Conversão subiu e o suporte foi impecável.”</blockquote>
+          <figcaption class="mt-4 flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-primary to-neon"></span>
+            <div>
+              <div class="font-semibold">Rafael T.</div>
+              <div class="text-xs text-white/60">Infoprodutor</div>
+            </div>
+          </figcaption>
+        </figure>
+        <!-- depo 3 -->
+        <figure class="glass p-6 rounded-xl">
+          <blockquote class="text-white/90">“Em 24h eu já tinha uma landing linda rodando campanha. Excelente custo‑benefício.”</blockquote>
+          <figcaption class="mt-4 flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-primary to-neon"></span>
+            <div>
+              <div class="font-semibold">Carlos M.</div>
+              <div class="text-xs text-white/60">Prestador de serviços</div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Pronto para ter um site que trabalha por você?</h2>
+      <p class="mt-3 text-white/80">Clique abaixo e me chame agora. Vamos colocar sua oferta no ar ainda essa semana.</p>
+      <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
+        <a href="https://wa.me/5599999999999" class="px-6 py-3 rounded-md bg-neon text-bg font-bold btn-glow">Pedir agora pelo WhatsApp</a>
+        <a href="mailto:voce@seuemail.com" class="px-6 py-3 rounded-md bg-white/5 border border-white/15 hover:bg-white/10">Falar por e‑mail</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 py-8 text-center text-sm text-white/60">
+    © <span id="y"></span> SitesQueVendem — todos os direitos reservados.
+  </footer>
+
+  <!-- FAQ (opcional/âncora do botão) -->
+  <section id="faq" class="hidden"></section>
+
+  <script>
+    // Mobile menu
+    const btn = document.getElementById('menu');
+    const mob = document.getElementById('mobile');
+    btn?.addEventListener('click', ()=> mob.classList.toggle('hidden'));
+
+    // Ano automático
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        const el = document.querySelector(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); if(!mob.classList.contains('hidden')) mob.classList.add('hidden'); }
+      });
+    });
+  </script>
+</body>
+</html>
