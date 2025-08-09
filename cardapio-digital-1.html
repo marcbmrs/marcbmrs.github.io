@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ferro & Fogo Burgers — Cardápio Digital</title>
+  <meta name="description" content="Cardápio digital da Ferro & Fogo Burgers. Peça seu burger artesanal com fritas e bebidas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            coal: { 900:'#0f1113', 800:'#171a1d', 700:'#1f2327' },
+            ember:{ 50:'#fff1f1',100:'#ffd9d9',200:'#ffb3b3',300:'#ff8c8c',400:'#ff5555',500:'#ef2f2f',600:'#c41d1d',700:'#991818',800:'#6f1212',900:'#4a0d0d' },
+            mustard:'#facc15',
+            leaf:'#22c55e'
+          },
+          boxShadow:{
+            glow: '0 10px 30px rgba(239,47,47,.35)'
+          },
+          backgroundImage:{
+            firemesh: 'radial-gradient(60% 60% at 20% 0%, rgba(239,47,47,.18), transparent 60%), radial-gradient(40% 40% at 100% 20%, rgba(250,204,21,.12), transparent 60%)'
+          },
+          fontFamily:{
+            display:['Anton','system-ui','sans-serif'],
+            sans:['Inter','system-ui','sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    .mask-top{mask-image:linear-gradient(#000 70%,transparent)}
+  </style>
+</head>
+<body class="bg-coal-900 text-white antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-coal-900/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3" aria-label="Início">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-ember-600 text-white font-display text-xl shadow-glow">FF</span>
+        <span class="font-display tracking-wide text-xl">Ferro & Fogo <span class="text-ember-400">Burgers</span></span>
+      </a>
+      <div class="hidden sm:flex items-center gap-3">
+        <input id="search" type="search" placeholder="Buscar item..." class="rounded-lg bg-coal-800 border border-white/10 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ember-500" />
+        <a href="#cart" class="relative inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-ember-600 hover:bg-ember-700">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4h-2a1 1 0 1 0 0 2h1l1.6 8.4A3 3 0 0 0 10.5 17h6.9a3 3 0 0 0 2.95-2.45L22 8H7.8l-.3-2Zm3 16a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm8 0a1.5 1.5 0 1 0 .001 2.999A1.5 1.5 0 0 0 18 20Z"/></svg>
+          <span id="cartCount" class="text-sm font-semibold">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-firemesh pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <p class="uppercase text-ember-300/90 tracking-widest text-xs">artesanal • smash • grill</p>
+        <h1 class="font-display text-4xl sm:text-6xl leading-[0.95] mt-2">Sabor no <span class="text-ember-500">fogo</span>, suculência no <span class="text-mustard">ponto</span>.</h1>
+        <p class="mt-4 text-white/80">Peça pelo QR da mesa ou para retirada. Ingredientes de qualidade, pão brioche e nosso blend secreto 160g.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#menu" class="inline-flex items-center rounded-full bg-ember-600 px-5 py-3 font-semibold hover:bg-ember-700 shadow-glow">Ver Cardápio</a>
+          <a href="#promos" class="inline-flex items-center rounded-full border border-white/20 px-5 py-3 hover:bg-white/5">Promoções</a>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="hero-burger.png" alt="Burger assinatura Ferro & Fogo" class="w-full max-w-xl mx-auto mask-top" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorias -->
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Categorias">
+    <ul class="flex flex-wrap gap-3">
+      <li><button data-cat="all" class="catbtn active inline-flex items-center px-4 py-2 rounded-full bg-white/10 hover:bg-white/15">Todos</button></li>
+      <li><button data-cat="burgers" class="catbtn inline-flex items-center px-4 py-2 rounded-full bg-white/10 hover:bg-white/15">Burgers</button></li>
+      <li><button data-cat="sides" class="catbtn inline-flex items-center px-4 py-2 rounded-full bg-white/10 hover:bg-white/15">Acompanhamentos</button></li>
+      <li><button data-cat="drinks" class="catbtn inline-flex items-center px-4 py-2 rounded-full bg-white/10 hover:bg-white/15">Bebidas</button></li>
+      <li><button data-cat="vegan" class="catbtn inline-flex items-center px-4 py-2 rounded-full bg-white/10 hover:bg-white/15">Veggie</button></li>
+    </ul>
+  </nav>
+
+  <!-- Menu -->
+  <main id="menu" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="grid">
+
+      <!-- Item: Burger 1 -->
+     <article class="card group rounded-2xl overflow-hidden bg-coal-800 border border-white/10" data-cat="burgers">
+  <!-- wrapper da imagem -->
+  <div class="h-44 w-full bg-coal-900/20 flex items-center justify-center">
+    <img src="burger-classico.png" alt="Clássico F&F com cheddar e bacon"
+         class="max-h-full max-w-full object-contain p-3" loading="lazy" decoding="async">
+  </div>
+
+  <div class="p-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-lg">Clássico F&F</h3>
+            <span class="text-mustard font-semibold">R$ 29</span>
+          </div>
+          <p class="mt-1 text-white/70 text-sm">Blend 160g, cheddar, bacon crocante, cebola caramelizada, maionese da casa no brioche.</p>
+          <div class="mt-3 flex items-center gap-2">
+            <span class="inline-flex items-center rounded-full bg-ember-600/20 text-ember-300 px-2 py-1 text-xs">+ Suculento</span>
+            <span class="inline-flex items-center rounded-full bg-leaf/20 text-leaf px-2 py-1 text-xs">Opção veggie</span>
+          </div>
+          <div class="mt-4 flex items-center gap-2">
+            <button class="add px-4 py-2 rounded-lg bg-ember-600 hover:bg-ember-700 text-sm font-semibold" data-name="Clássico F&F" data-price="29">Adicionar</button>
+            <button class="px-3 py-2 rounded-lg bg-white/10 hover:bg-white/15 text-sm">Sem cebola</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item: Burger 2 -->
+      <article class="card group rounded-2xl overflow-hidden bg-coal-800 border border-white/10" data-cat="burgers">
+  <!-- wrapper da imagem -->
+  <div class="h-44 w-full bg-coal-900/20 flex items-center justify-center">
+    <img src="burger-fogo.png" alt="Clássico F&F com cheddar e bacon"
+         class="max-h-full max-w-full object-contain p-3" loading="lazy" decoding="async">
+  </div>
+
+  <div class="p-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-lg">Fogo Alto 🌶️</h3>
+            <span class="text-mustard font-semibold">R$ 34</span>
+          </div>
+          <p class="mt-1 text-white/70 text-sm">Blend 160g, queijo pepper, jalapeño, crispy de pimenta, maionese defumada.</p>
+          <div class="mt-3 flex items-center gap-2">
+            <span class="inline-flex items-center rounded-full bg-ember-600/20 text-ember-300 px-2 py-1 text-xs">Picante</span>
+          </div>
+          <div class="mt-4">
+            <button class="add px-4 py-2 rounded-lg bg-ember-600 hover:bg-ember-700 text-sm font-semibold" data-name="Fogo Alto" data-price="34">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Item: Burger veggie -->
+      <article class="card group rounded-2xl overflow-hidden bg-coal-800 border border-white/10" data-cat="burgers">
+  <!-- wrapper da imagem -->
+  <div class="h-44 w-full bg-coal-900/20 flex items-center justify-center">
+    <img src="burger-veggie.png" alt="Clássico F&F com cheddar e bacon"
+         class="max-h-full max-w-full object-contain p-3" loading="lazy" decoding="async">
+  </div>
+
+  <div class="p-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-lg">Veggie Grill</h3>
+            <span class="text-mustard font-semibold">R$ 31</span>
+          </div>
+          <p class="mt-1 text-white/70 text-sm">Burger vegetal grelhado, cheddar vegano, alface, tomate, relish da casa.</p>
+          <div class="mt-3 flex items-center gap-2">
+            <span class="inline-flex items-center rounded-full bg-leaf/20 text-leaf px-2 py-1 text-xs">Vegano</span>
+          </div>
+          <div class="mt-4">
+            <button class="add px-4 py-2 rounded-lg bg-ember-600 hover:bg-ember-700 text-sm font-semibold" data-name="Veggie Grill" data-price="31">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sides -->
+      <article class="card group rounded-2xl overflow-hidden bg-coal-800 border border-white/10" data-cat="burgers">
+  <!-- wrapper da imagem -->
+  <div class="h-44 w-full bg-coal-900/20 flex items-center justify-center">
+    <img src="side-fritas.png" alt="Clássico F&F com cheddar e bacon"
+         class="max-h-full max-w-full object-contain p-3" loading="lazy" decoding="async">
+  </div>
+
+  <div class="p-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-lg">Fritas da Casa</h3>
+            <span class="text-mustard font-semibold">R$ 14</span>
+          </div>
+          <p class="mt-1 text-white/70 text-sm">Porção 200g, sal especial F&F. +R$4 cheddar e bacon.</p>
+          <div class="mt-4">
+            <button class="add px-4 py-2 rounded-lg bg-ember-600 hover:bg-ember-700 text-sm font-semibold" data-name="Fritas da Casa" data-price="14">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+     <article class="card group rounded-2xl overflow-hidden bg-coal-800 border border-white/10" data-cat="burgers">
+  <!-- wrapper da imagem -->
+  <div class="h-44 w-full bg-coal-900/20 flex items-center justify-center">
+    <img src="side-aneis.png" alt="Clássico F&F com cheddar e bacon"
+         class="max-h-full max-w-full object-contain p-3" loading="lazy" decoding="async">
+  </div>
+
+  <div class="p-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-lg">Anéis Croc</h3>
+            <span class="text-mustard font-semibold">R$ 16</span>
+          </div>
+          <p class="mt-1 text-white/70 text-sm">Anéis de cebola empanados com molho barbecue.</p>
+          <div class="mt-4">
+            <button class="add px-4 py-2 rounded-lg bg-ember-600 hover:bg-ember-700 text-sm font-semibold" data-name="Anéis Croc" data-price="16">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Drinks -->
+      <article class="card group rounded-2xl overflow-hidden bg-coal-800 border border-white/10" data-cat="burgers">
+  <!-- wrapper da imagem -->
+  <div class="h-44 w-full bg-coal-900/20 flex items-center justify-center">
+    <img src="drink-cola.png" alt="Clássico F&F com cheddar e bacon"
+         class="max-h-full max-w-full object-contain p-3" loading="lazy" decoding="async">
+  </div>
+
+  <div class="p-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-lg">Refrigerante Lata</h3>
+            <span class="text-mustard font-semibold">R$ 7</span>
+          </div>
+          <p class="mt-1 text-white/70 text-sm">350 ml — sabores diversos.</p>
+          <div class="mt-4">
+            <button class="add px-4 py-2 rounded-lg bg-ember-600 hover:bg-ember-700 text-sm font-semibold" data-name="Refrigerante Lata" data-price="7">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card group rounded-2xl overflow-hidden bg-coal-800 border border-white/10" data-cat="burgers">
+  <!-- wrapper da imagem -->
+  <div class="h-44 w-full bg-coal-900/20 flex items-center justify-center">
+    <img src="drink-milkshake.png" alt="Clássico F&F com cheddar e bacon"
+         class="max-h-full max-w-full object-contain p-3" loading="lazy" decoding="async">
+  </div>
+
+  <div class="p-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-lg">Milkshake Baunilha</h3>
+            <span class="text-mustard font-semibold">R$ 17</span>
+          </div>
+          <p class="mt-1 text-white/70 text-sm">400 ml — cremoso com calda da casa.</p>
+          <div class="mt-4">
+            <button class="add px-4 py-2 rounded-lg bg-ember-600 hover:bg-ember-700 text-sm font-semibold" data-name="Milkshake Baunilha" data-price="17">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+<!-- Promoções -->
+<section id="promos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+  <div class="rounded-3xl border border-white/10 bg-gradient-to-tr from-ember-800/60 to-coal-800 p-6 sm:p-8">
+    <h2 class="font-display text-2xl">Combos da Brasa</h2>
+    <p class="text-white/70">Economize nos preferidos — adicione pelo carrinho.</p>
+    <ul class="mt-4 grid gap-4 sm:grid-cols-2">
+      
+      <!-- Combo 1 -->
+      <li class="flex items-center justify-between bg-white/5 rounded-xl p-4">
+        <div class="flex items-center gap-3">
+          <!-- PNG do combo -->
+          <img src="combo-classico.png" alt="Combo Clássico" class="w-14 h-14 object-contain">
+          <div>
+            <p class="font-semibold">Clássico + Fritas + Refri</p>
+            <span class="text-white/60 text-sm">Economia de R$ 4</span>
+          </div>
+        </div>
+        <button class="add px-4 py-2 rounded-lg bg-ember-600 hover:bg-ember-700 text-sm font-semibold"
+          data-name="Combo Clássico" data-price="46">Adicionar</button>
+      </li>
+
+      <!-- Combo 2 -->
+      <li class="flex items-center justify-between bg-white/5 rounded-xl p-4">
+        <div class="flex items-center gap-3">
+          <!-- PNG do combo -->
+          <img src="combo-fogo.png" alt="Combo Fogo Alto" class="w-14 h-14 object-contain">
+          <div>
+            <p class="font-semibold">Fogo Alto + Anéis + Refri</p>
+            <span class="text-white/60 text-sm">Economia de R$ 5</span>
+          </div>
+        </div>
+        <button class="add px-4 py-2 rounded-lg bg-ember-600 hover:bg-ember-700 text-sm font-semibold"
+          data-name="Combo Fogo Alto" data-price="55">Adicionar</button>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+  <!-- Barra fixa do Carrinho -->
+  <div id="cart" class="fixed bottom-0 inset-x-0 z-50 bg-coal-800/95 backdrop-blur border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row sm:items-center gap-3">
+      <div class="flex-1">
+        <p class="text-sm text-white/80"><strong>Itens:</strong> <span id="cartList" class="text-white/90">nenhum</span></p>
+        <p class="text-sm text-white/70"><strong>Total:</strong> R$ <span id="cartTotal">0</span></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input id="table" type="text" placeholder="Mesa (opcional)" class="w-32 rounded-lg bg-coal-900 border border-white/10 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ember-500"/>
+        <a id="whats" target="_blank" rel="noopener" href="#" class="inline-flex items-center gap-2 rounded-lg bg-ember-600 hover:bg-ember-700 px-5 py-3 font-semibold shadow-glow">
+          <span>Enviar pedido</span>
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21 3 8.5 15.5l-1 4 4-1L21 3Zm-6 2 4 4"/></svg>
+        </a>
+        <button id="clear" class="px-3 py-3 rounded-lg bg-white/10 hover:bg-white/15">Limpar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-8 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© 2025 Ferro & Fogo Burgers</p>
+      <p class="text-white/60">Rua da Brasa, 123 — Seu Bairro • Seg–Dom 18h–23h</p>
+    </div>
+  </footer>
+
+  <script>
+    // Filtro por categoria
+    const buttons = document.querySelectorAll('.catbtn');
+    const cards = document.querySelectorAll('.card');
+    buttons.forEach(b=>{
+      b.addEventListener('click', ()=>{
+        buttons.forEach(x=>x.classList.remove('active','bg-ember-600'));
+        b.classList.add('active','bg-ember-600');
+        const cat = b.dataset.cat;
+        cards.forEach(c=>{
+          const show = cat==='all' || c.dataset.cat?.includes(cat);
+          c.classList.toggle('hidden', !show);
+        });
+      });
+    });
+
+    // Busca
+    const search = document.getElementById('search');
+    search?.addEventListener('input', e=>{
+      const q = e.target.value.toLowerCase();
+      cards.forEach(c=>{
+        const txt = c.innerText.toLowerCase();
+        c.classList.toggle('hidden', !txt.includes(q));
+      });
+    });
+
+    // Carrinho simples
+    const cart = [];
+    const fmt = n => (Math.round(n*100)/100).toFixed(0);
+    const cartCount = document.getElementById('cartCount');
+    const cartList = document.getElementById('cartList');
+    const cartTotal = document.getElementById('cartTotal');
+    const whats = document.getElementById('whats');
+    const table = document.getElementById('table');
+    const clearBtn = document.getElementById('clear');
+
+    function renderCart(){
+      cartCount.textContent = cart.reduce((a,i)=>a+i.qtd,0);
+      cartList.textContent = cart.length ? cart.map(i=>`${i.qtd}x ${i.name}`).join(', ') : 'nenhum';
+      const total = cart.reduce((a,i)=>a+i.qtd*i.price,0);
+      cartTotal.textContent = fmt(total);
+      const mesa = table.value ? `Mesa: ${table.value}%0A` : '';
+      const itens = cart.map(i=>`• ${i.qtd}x ${i.name} — R$${fmt(i.price*i.qtd)}`).join('%0A');
+      const msg = `Pedido Ferro & Fogo%0A${mesa}${itens}%0A%0ATotal: R$${fmt(total)}`;
+      // Troque o número abaixo pelo WhatsApp da loja
+      whats.href = `https://wa.me/5500000000000?text=${msg}`;
+    }
+
+    document.querySelectorAll('.add').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const name = btn.dataset.name, price = Number(btn.dataset.price);
+        const found = cart.find(i=>i.name===name && i.price===price);
+        found ? found.qtd++ : cart.push({name, price, qtd:1});
+        renderCart();
+        btn.classList.add('ring-2','ring-ember-500'); setTimeout(()=>btn.classList.remove('ring-2','ring-ember-500'),300);
+      });
+    });
+
+    clearBtn.addEventListener('click', ()=>{ cart.length=0; renderCart(); });
+    table.addEventListener('input', renderCart);
+    renderCart();
+  </script>
+</body>
+</html>
