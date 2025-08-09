@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- ====== META ====== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Belle Clinic — Landing Page Express</title>
+  <meta name="description" content="Agende sua avaliação estética com 20% OFF hoje. WhatsApp integrado, atendimento ágil e resultados comprovados." />
+  <meta property="og:title" content="Belle Clinic — Promo de Avaliação" />
+  <meta property="og:description" content="Vagas limitadas. Reserve pelo WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="cover-estetica.jpg" />
+
+  <!-- ====== FONTS & TAILWIND ====== -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Poppins','ui-sans-serif','system-ui'] },
+          colors: {
+            bg: '#fffaf8',          // claro/aveludado
+            ink: '#3b2f2f',         // marrom suave p/ texto
+            primary: '#ec407a',     // rosa
+            accent: '#7c4dff',      // lavanda
+            blush: '#ffccbc',       // pêssego claro
+            leaf: '#22c55e'         // sucesso
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(236, 64, 122, .12)',
+            card: '0 10px 24px rgba(124, 77, 255, .12)'
+          },
+          backgroundImage: {
+            blob1: 'radial-gradient(600px 300px at 85% -10%, rgba(124,77,255,.18), transparent 40%)',
+            blob2: 'radial-gradient(500px 280px at -10% 30%, rgba(236,64,122,.15), transparent 45%)',
+            texture: 'linear-gradient(rgba(59,47,47,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59,47,47,.04) 1px, transparent 1px)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-texture{ background-size:24px 24px,24px 24px; mask-image: radial-gradient(circle at 50% 25%, black 62%, transparent 100%); }
+    .glass{ backdrop-filter: blur(10px); background: rgba(255,255,255,.6); border: 1px solid rgba(59,47,47,.08); }
+    .btn-pop{ transition: transform .08s ease; }
+    .btn-pop:active{ transform: translateY(1px) scale(.99); }
+    .badge{ background: linear-gradient(90deg, rgba(236,64,122,.15), rgba(124,77,255,.15)); border: 1px solid rgba(236,64,122,.25); }
+  </style>
+
+  <!-- ====== SCHEMA (HealthAndBeautyBusiness) ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "Belle Clinic",
+    "image": "https://seu-dominio.com/cover-estetica.jpg",
+    "telephone": "+55 11 99999-9999",
+    "address": {"@type": "PostalAddress", "addressLocality": "Sua Cidade", "addressRegion": "UF", "streetAddress": "Rua X, 123"},
+    "url": "https://seu-dominio.com",
+    "sameAs": ["https://instagram.com/seuinstagram"]
+  }
+  </script>
+</head>
+<body class="bg-bg text-ink font-sans antialiased">
+  <!-- BG decor -->
+  <div aria-hidden="true" class="fixed inset-0 -z-10 bg-blob1"></div>
+  <div aria-hidden="true" class="fixed inset-0 -z-10 bg-blob2"></div>
+  <div aria-hidden="true" class="fixed inset-0 -z-10 bg-texture pointer-events-none"></div>
+
+  <!-- TOP BAR / URGÊNCIA -->
+  <div class="w-full badge text-center py-2 text-[13px]">
+    Últimas <b>7 vagas</b> para avaliação com <b>20% OFF</b> — expira em <span id="timer" class="font-semibold"></span>
+  </div>
+
+  <!-- NAV SIMPLES -->
+  <header class="sticky top-0 z-40 bg-white/70 backdrop-blur border-b border-black/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a class="font-extrabold tracking-tight" href="#">Belle<span class="text-primary">Clinic</span></a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#beneficios" class="hover:text-primary">Benefícios</a>
+        <a href="#servicos" class="hover:text-primary">Serviços</a>
+        <a href="#antesdepois" class="hover:text-primary">Antes & Depois</a>
+        <a href="#depoimentos" class="hover:text-primary">Depoimentos</a>
+      </nav>
+      <a href="#agendar" class="px-4 py-2 rounded-md bg-primary text-white btn-pop shadow-soft">Agendar</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-xs uppercase tracking-widest text-primary flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> atendimento humanizado</p>
+        <h1 class="mt-3 text-3xl sm:text-5xl font-extrabold leading-tight">Sua pele <span class="text-primary">radiante</span> e sua autoestima ainda <span class="text-accent">mais alta</span></h1>
+        <p class="mt-4 text-neutral-700 max-w-xl">Agende sua avaliação hoje e garanta <b>20% OFF</b>. Tratamentos faciais e corporais com tecnologia e protocolo exclusivo.</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="https://wa.me/5599999999999?text=Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o" class="px-6 py-3 rounded-md bg-primary text-white font-semibold btn-pop shadow-soft">Agendar no WhatsApp</a>
+          <a href="#servicos" class="px-6 py-3 rounded-md bg-white/80 border border-black/10 hover:bg-white">Ver tratamentos</a>
+        </div>
+        <ul class="mt-5 flex flex-wrap gap-4 text-xs text-neutral-600">
+          <li>✓ Profissionais certificados</li>
+          <li>✓ Equipamentos aprovados pela Anvisa</li>
+          <li>✓ Parcelamento facilitado</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-3 sm:p-4 shadow-card max-w-md mx-auto">
+        <img src="hero-estetica.jpg" alt="Atendimento estético em clínica" class="rounded-xl w-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS / O QUE INCLUI NA LANDING EXPRESS -->
+  <section id="beneficios" class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-extrabold">Por que escolher a Belle?</h2>
+        <p class="text-neutral-600">Cuidamos da sua pele com ciência, técnica e carinho.</p>
+      </div>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="glass rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-2">Avaliação Personalizada</h3>
+          <p class="text-sm text-neutral-700">Entendemos sua rotina e traçamos um plano realista para seus objetivos.</p>
+        </article>
+        <article class="glass rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-2">Tecnologia & Protocolos</h3>
+          <p class="text-sm text-neutral-700">Aparelhos modernos e protocolos próprios para performance e segurança.</p>
+        </article>
+        <article class="glass rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-2">Acompanhamento</h3>
+          <p class="text-sm text-neutral-700">Follow‑up pelo WhatsApp para garantir adesão e melhores resultados.</p>
+        </article>
+      </div>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <article class="glass rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-2">Bônus</h3>
+          <ul class="text-sm text-neutral-700 space-y-1.5">
+            <li>🎁 1 sessão de limpeza de pele básica (na contratação de pacote)</li>
+            <li>🎁 Guia de cuidados em casa</li>
+          </ul>
+        </article>
+        <article class="glass rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-2">Garantia</h3>
+          <p class="text-sm text-neutral-700">Satisfação na avaliação: não curtiu a experiência? Reagendamos ou reembolsamos.</p>
+        </article>
+        <article class="glass rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-2">Upgrade</h3>
+          <p class="text-sm text-neutral-700">Feche um pacote no dia e ganhe <b>R$100 de desconto</b> no plano completo (site completo / aqui vira sua oferta).</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Tratamentos em destaque</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="glass rounded-xl overflow-hidden">
+          <img src="svc-limpeza.jpg" alt="Limpeza de pele" class="w-full h-44 object-cover">
+          <div class="p-5">
+            <h3 class="font-semibold text-lg">Limpeza de Pele Glow</h3>
+            <p class="text-sm text-neutral-700 mt-1">Remoção de impurezas + hidratação intensa para pele luminosa.</p>
+            <a href="#agendar" class="inline-block mt-3 text-primary font-semibold">Agendar</a>
+          </div>
+        </article>
+        <article class="glass rounded-xl overflow-hidden">
+          <img src="svc-peeling.jpg" alt="Peeling" class="w-full h-44 object-cover">
+          <div class="p-5">
+            <h3 class="font-semibold text-lg">Peeling Renovador</h3>
+            <p class="text-sm text-neutral-700 mt-1">Textura e uniformidade com ativos de alta performance.</p>
+            <a href="#agendar" class="inline-block mt-3 text-primary font-semibold">Agendar</a>
+          </div>
+        </article>
+        <article class="glass rounded-xl overflow-hidden">
+          <img src="svc-body.jpg" alt="Tratamento corporal" class="w-full h-44 object-cover">
+          <div class="p-5">
+            <h3 class="font-semibold text-lg">Modeladora 360</h3>
+            <p class="text-sm text-neutral-700 mt-1">Drenagem + tecnologias para contorno e retenção.</p>
+            <a href="#agendar" class="inline-block mt-3 text-primary font-semibold">Agendar</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTES & DEPOIS (LIGHTBOX) -->
+  <section id="antesdepois" class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-extrabold">Antes & Depois</h2>
+        <p class="text-neutral-600">Resultados reais de clientes.</p>
+      </div>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <article class="glass rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="before-after-1.jpg" alt="Antes e depois 1" class="w-full h-56 object-cover">
+        </article>
+        <article class="glass rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="before-after-2.jpg" alt="Antes e depois 2" class="w-full h-56 object-cover">
+        </article>
+        <article class="glass rounded-xl overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="before-after-3.jpg" alt="Antes e depois 3" class="w-full h-56 object-cover">
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="py-12 lg:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">O que nossas clientes dizem</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <figure class="glass p-6 rounded-xl">
+          <blockquote class="text-neutral-800">“A pele ficou incrível já na primeira sessão. Atendimento carinhoso!”</blockquote>
+          <figcaption class="mt-4 text-xs text-neutral-500">— Ana P.</figcaption>
+        </figure>
+        <figure class="glass p-6 rounded-xl">
+          <blockquote class="text-neutral-800">“Equipe atenciosa, expliquei minhas queixas e saí confiante com o plano.”</blockquote>
+          <figcaption class="mt-4 text-xs text-neutral-500">— Larissa M.</figcaption>
+        </figure>
+        <figure class="glass p-6 rounded-xl">
+          <blockquote class="text-neutral-800">“Ambiente impecável. Recomendo muito a limpeza de pele Glow.”</blockquote>
+          <figcaption class="mt-4 text-xs text-neutral-500">— Camila R.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIA + UPSell -->
+  <section class="py-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="glass rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1">
+          <h3 class="text-xl font-extrabold">Avaliação com Garantia + Upgrade</h3>
+          <p class="text-neutral-700 mt-2">Se não ficar satisfeita com a avaliação, devolvemos o valor. Fechando um pacote no dia, você ganha <b>R$100 de desconto</b> no plano completo.</p>
+        </div>
+        <a href="#agendar" class="px-6 py-3 rounded-md bg-accent text-white font-semibold btn-pop">Quero aproveitar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDAR / CHECKOUT -->
+  <section id="agendar" class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Agende sua avaliação com 20% OFF</h2>
+      <p class="mt-3 text-neutral-700">Escolha o método e receba o link do formulário rápido (3 minutos).</p>
+      <div class="mt-7 grid sm:grid-cols-2 gap-3 max-w-xl mx-auto">
+        <!-- Substitua os href pelos seus links reais -->
+        <a href="#" class="px-6 py-3 rounded-md bg-primary text-white font-bold btn-pop">Pagar R$47 (Pix)</a>
+        <a href="#" class="px-6 py-3 rounded-md bg-accent text-white font-bold btn-pop">Pagar R$47 (Cartão)</a>
+      </div>
+      <div class="mt-4 text-sm text-neutral-600">Dúvidas? WhatsApp <a class="text-primary underline" href="https://wa.me/5599999999999" target="_blank" rel="noopener">(55) 99999‑9999</a></div>
+    </div>
+  </section>
+
+  <!-- MAPA (opcional) -->
+  <section class="py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="glass rounded-2xl p-2 overflow-hidden">
+        <iframe class="w-full h-72" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-black/10 py-8 text-center text-sm text-neutral-600">
+    © <span id="y"></span> Belle Clinic · Todos os direitos reservados · <a href="#" class="underline">Privacidade</a>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50" role="dialog" aria-modal="true" aria-label="Visualização de imagem">
+    <button id="lb-close" class="absolute top-4 right-4 text-white text-3xl" aria-label="Fechar">&times;</button>
+    <img id="lightbox-img" src="" alt="Preview ampliado" class="max-w-full max-h-full rounded-lg shadow-lg">
+  </div>
+
+  <script>
+    // Ano
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Timer até 23:59
+    function atualizarTimer(){
+      const agora = new Date();
+      const fim = new Date();
+      fim.setHours(23,59,59,999);
+      const diff = Math.max(0, fim - agora);
+      const h = String(Math.floor(diff/3.6e6)).padStart(2,'0');
+      const m = String(Math.floor((diff%3.6e6)/6e4)).padStart(2,'0');
+      const s = String(Math.floor((diff%6e4)/1e3)).padStart(2,'0');
+      document.getElementById('timer').textContent = `${h}:${m}:${s}`;
+    }
+    setInterval(atualizarTimer, 1000); atualizarTimer();
+
+    // Lightbox
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbBtn = document.getElementById('lb-close');
+    window.openLightbox = function(imgSrc){ lbImg.src = imgSrc||''; lb.classList.remove('hidden'); lb.classList.add('flex'); document.body.style.overflow='hidden'; };
+    function closeLightbox(){ lb.classList.remove('flex'); lb.classList.add('hidden'); lbImg.src=''; document.body.style.overflow=''; }
+    lbBtn.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', e=>{ if(!lb.classList.contains('hidden') && e.key==='Escape') closeLightbox(); });
+    lb.addEventListener('click', e=>{ if(e.target===lb) closeLightbox(); });
+  </script>
+</body>
+</html>
