@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Pata & Pêlo Petshop — Banho, Tosa e Pet Care no seu bairro</title>
+  <meta name="description" content="Banho & Tosa com carinho, produtos premium e atendimento rápido. Agende pelo WhatsApp.">
+  <meta name="theme-color" content="#0ea5a4">
+  <meta property="og:title" content="Pata & Pêlo Petshop — Banho, Tosa e Pet Care">
+  <meta property="og:description" content="Banho & Tosa com carinho, produtos premium e atendimento rápido.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="capa-petshop.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme:{
+        extend:{
+          colors:{
+            brand:{ 50:'#ecfeff',100:'#cffafe',200:'#a5f3fc',300:'#67e8f9',400:'#22d3ee',500:'#06b6d4',600:'#0ea5a4',700:'#0f766e',800:'#115e59',900:'#134e4a' },
+            carrot:{ 50:'#fff7ed',100:'#ffedd5',200:'#fed7aa',300:'#fdba74',400:'#fb923c',500:'#f97316',600:'#ea580c',700:'#c2410c' }
+          },
+          boxShadow:{ paw:'0 10px 30px rgba(6,182,212,.25)' }
+        },
+        fontFamily:{
+          display:['Baloo 2','system-ui','sans-serif'],
+          sans:['Inter','system-ui','sans-serif']
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    @keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    .floaty{animation:floaty 6s ease-in-out infinite}
+  </style>
+
+  <!-- LocalBusiness / PetStore JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"PetStore",
+    "name":"Pata & Pêlo Petshop",
+    "image":"capa-petshop.png",
+    "telephone":"+55 00 00000-0000",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Rua dos Animais, 123",
+      "addressLocality":"Sua Cidade",
+      "addressRegion":"SP",
+      "postalCode":"00000-000",
+      "addressCountry":"BR"
+    },
+    "openingHours":["Seg-Sex 09:00-19:00","Sab 09:00-13:00"],
+    "url":"https://seudominio.com",
+    "priceRange":"$$"
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-7xl mx-auto h-16 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2" aria-label="Pata & Pêlo Petshop - Início">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 text-white font-display text-xl shadow-paw">🐾</span>
+        <span class="font-display text-xl leading-none">Pata & Pêlo <span class="text-brand-600">Petshop</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#servicos" class="hover:text-brand-700">Serviços</a>
+        <a href="#produtos" class="hover:text-brand-700">Produtos</a>
+        <a href="#depoimentos" class="hover:text-brand-700">Depoimentos</a>
+        <a href="#contato" class="hover:text-brand-700">Contato</a>
+        <a href="https://wa.me/5500000000000?text=Olá%20quero%20agendar%20banho%20%26%20tosa" target="_blank" class="inline-flex items-center gap-2 rounded-full bg-brand-600 text-white px-4 py-2 hover:bg-brand-700 shadow-paw">Agendar no Whats</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden w-10 h-10 grid place-items-center rounded-lg border"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="px-4 py-3 grid gap-2">
+        <a href="#servicos" class="py-2">Serviços</a>
+        <a href="#produtos" class="py-2">Produtos</a>
+        <a href="#depoimentos" class="py-2">Depoimentos</a>
+        <a href="#contato" class="py-2">Contato</a>
+        <a href="https://wa.me/5500000000000?text=Olá%20quero%20agendar%20banho%20%26%20tosa" target="_blank" class="py-2 rounded-lg bg-brand-600 text-white text-center">Agendar no Whats</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(60%_60%_at_10%_0%,rgba(14,165,164,.15),transparent),radial-gradient(50%_50%_at_100%_0%,rgba(249,115,22,.12),transparent)]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="font-display text-4xl sm:text-5xl font-bold tracking-tight">Carinho que se vê no banho & tosa.</h1>
+        <p class="mt-3 text-lg text-slate-600">Equipe treinada, produtos hipoalergênicos e todo cuidado que seu pet merece.</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="https://wa.me/5500000000000?text=Olá%20quero%20agendar%20banho%20%26%20tosa" target="_blank" class="inline-flex items-center justify-center rounded-full bg-brand-600 text-white px-6 py-3 font-semibold hover:bg-brand-700 shadow-paw">Agendar pelo WhatsApp</a>
+          <a href="#servicos" class="inline-flex items-center justify-center rounded-full border px-6 py-3 hover:bg-slate-50">Ver serviços</a>
+        </div>
+        <p class="mt-2 text-sm text-slate-500">Atendemos cães e gatos • Seg - Sex 9h–19h • Sab 9h–13h</p>
+      </div>
+      <div class="relative max-w-[250px] mx-auto">
+        <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-brand-200 to-carrot-200 blur-2xl"></div>
+        <img src="hero-petshop.png" 
+            alt="Cachorro limpo e feliz após banho" 
+            class="relative w-full rounded-3xl shadow-2xl floaty" 
+            loading="lazy" decoding="async">
+        </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="py-14 sm:py-20 bg-gradient-to-b from-white to-brand-50/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header class="max-w-2xl">
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold">Serviços principais</h2>
+        <p class="mt-2 text-slate-600">Tudo para o bem‑estar do seu pet, com protocolos de higiene e segurança.</p>
+      </header>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <!-- Banho & Tosa -->
+        <article class="rounded-2xl border p-6 bg-white hover:shadow-lg transition">
+          <img src="serv-banho-tosa.png" alt="Banho e tosa" class="w-full h-40 object-contain mb-4">
+          <h3 class="font-semibold text-lg">Banho & Tosa</h3>
+          <p class="mt-1 text-slate-600 text-sm">Cortes padrão e personalizados, hidratação e escovação completa.</p>
+          <div class="mt-3 flex items-center gap-2">
+            <span class="inline-flex rounded-full bg-brand-100 text-brand-700 px-2.5 py-1 text-xs">Shampoo hipoalergênico</span>
+            <span class="inline-flex rounded-full bg-carrot-100 text-carrot-700 px-2.5 py-1 text-xs">Secagem segura</span>
+          </div>
+        </article>
+        <!-- Veterinário -->
+        <article class="rounded-2xl border p-6 bg-white hover:shadow-lg transition">
+          <img src="serv-vet.png" alt="Atendimento veterinário" class="w-full h-40 object-contain mb-4">
+          <h3 class="font-semibold text-lg">Atendimento Vet</h3>
+          <p class="mt-1 text-slate-600 text-sm">Consultas, vacinas e orientação de cuidados preventivos.</p>
+          <div class="mt-3 flex items-center gap-2">
+            <span class="inline-flex rounded-full bg-brand-100 text-brand-700 px-2.5 py-1 text-xs">Vacinação</span>
+            <span class="inline-flex rounded-full bg-carrot-100 text-carrot-700 px-2.5 py-1 text-xs">Check-up</span>
+          </div>
+        </article>
+        <!-- Pet Boutique -->
+        <article class="rounded-2xl border p-6 bg-white hover:shadow-lg transition">
+          <img src="serv-boutique.png" alt="Pet boutique" class="w-full h-40 object-contain mb-4">
+          <h3 class="font-semibold text-lg">Pet Boutique</h3>
+          <p class="mt-1 text-slate-600 text-sm">Rações premium, snacks naturais, roupinhas e acessórios.</p>
+          <div class="mt-3 flex items-center gap-2">
+            <span class="inline-flex rounded-full bg-brand-100 text-brand-700 px-2.5 py-1 text-xs">Rações premium</span>
+            <span class="inline-flex rounded-full bg-carrot-100 text-carrot-700 px-2.5 py-1 text-xs">Acessórios</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destaques / Ofertas -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-6 items-center">
+      <div class="rounded-3xl p-6 sm:p-8 bg-slate-900 text-white overflow-hidden relative">
+        <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full bg-brand-500/20"></div>
+        <h3 class="font-display text-2xl">Day Care de Sábado</h3>
+        <p class="mt-2 text-white/80">Brincadeiras monitoradas + socialização. Pacotes mensais com desconto.</p>
+        <a href="https://wa.me/5500000000000?text=Quero%20saber%20sobre%20Day%20Care" target="_blank" class="mt-4 inline-flex rounded-full bg-brand-500 hover:bg-brand-600 px-5 py-3 font-semibold">Reservar</a>
+        <img src="promo-daycare.png" 
+     alt="Day care para cães" 
+     class="absolute -bottom-6 right-0 w-40 sm:w-52 object-contain">
+      </div>
+
+      <div class="rounded-3xl p-6 sm:p-8 border">
+        <h3 class="font-display text-2xl">Clube do Banho</h3>
+        <p class="mt-2 text-slate-600">Assinatura com 2 banhos mensais + brinde. Cancela quando quiser.</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-700">
+          <li>✔️ Lembrete automático no WhatsApp</li>
+          <li>✔️ 10% OFF em produtos</li>
+        </ul>
+        <a href="https://wa.me/5500000000000?text=Quero%20assinar%20o%20Clube%20do%20Banho" target="_blank" class="mt-4 inline-flex rounded-full bg-carrot-500 hover:bg-carrot-600 px-5 py-3 font-semibold text-white">Quero assinar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="py-12 bg-gradient-to-b from-brand-50/60 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold">Clientes felizes</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <figure class="rounded-2xl border p-6 bg-white">
+          <img src="avatar1.png" alt="Cliente 1" class="w-12 h-12 rounded-full object-cover">
+          <blockquote class="mt-3 text-slate-700">“Meu shih-tzu saiu perfumado e sem nós. Atendimento 10!”</blockquote>
+          <figcaption class="mt-2 text-sm text-slate-500">— Paula S.</figcaption>
+        </figure>
+        <figure class="rounded-2xl border p-6 bg-white">
+          <img src="avatar2.png" alt="Cliente 2" class="w-12 h-12 rounded-full object-cover">
+          <blockquote class="mt-3 text-slate-700">“Preço justo e muito carinho com meu gato.”</blockquote>
+          <figcaption class="mt-2 text-sm text-slate-500">— Rodrigo M.</figcaption>
+        </figure>
+        <figure class="rounded-2xl border p-6 bg-white">
+          <img src="avatar3.png" alt="Cliente 3" class="w-12 h-12 rounded-full object-cover">
+          <blockquote class="mt-3 text-slate-700">“A boutique tem produtos que não acho em lugar nenhum.”</blockquote>
+          <figcaption class="mt-2 text-sm text-slate-500">— Kátia L.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato / Mapa -->
+  <section id="contato" class="py-14 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8">
+      <div>
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold">Fale com a gente</h2>
+        <p class="mt-2 text-slate-600">Tire dúvidas, agende um horário ou peça indicação de produtos.</p>
+
+        <div class="mt-6 grid gap-4">
+          <a href="https://wa.me/5500000000000?text=Olá%20preciso%20de%20ajuda%20para%20meu%20pet" target="_blank" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 text-white px-5 py-3 hover:bg-brand-700 shadow-paw">
+            <span>💬 WhatsApp</span>
+          </a>
+          <a href="tel:+550000000000" class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 hover:bg-slate-50">📞 (00) 0000‑0000</a>
+          <a href="mailto:contato@pataepelo.com.br" class="inline-flex items-center gap-2 rounded-xl border px-5 py-3 hover:bg-slate-50">✉️ contato@pataepelo.com.br</a>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="font-semibold">Endereço</h3>
+          <p class="text-slate-600">Rua dos Animais, 123 — Sua Cidade/SP</p>
+          <h3 class="mt-4 font-semibold">Horários</h3>
+          <p class="text-slate-600">Seg–Sáb 9h–19h • Dom 9h–13h</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border">
+        <!-- Substitua o src do iframe pelo embed do Google Maps da sua loja -->
+        <iframe title="Mapa - Pata & Pêlo Petshop" src="https://maps.google.com/maps?q=Av.%20Paulista%2C%20S%C3%A3o%20Paulo&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="380" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="border-t py-8 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© 2025 Pata & Pêlo Petshop. Todos os direitos reservados.</p>
+      <nav class="flex items-center gap-4">
+        <a href="#" class="text-slate-600 hover:text-slate-900">Política de Privacidade</a>
+        <a href="#" class="text-slate-600 hover:text-slate-900">Termos</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // menu mobile
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', ()=> menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

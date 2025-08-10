@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurora Glow Estética — Beleza que ilumina você</title>
+  <meta name="description" content="Aurora Glow Estética: tratamentos faciais e corporais com tecnologia e carinho. Agende sua avaliação e garanta 30% OFF até 15/08/2025.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  <meta property="og:title" content="Aurora Glow Estética — Beleza que ilumina você">
+  <meta property="og:description" content="Tratamentos faciais e corporais. 30% OFF até 15/08/2025.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1556228578-8b54f0c3a6df?q=80&w=1200&auto=format&fit=crop">
+  <meta name="theme-color" content="#db2777">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#fff1f7',
+              100: '#ffe4ef',
+              200: '#fec7dc',
+              300: '#f99cc0',
+              400: '#f26aa1',
+              500: '#db2777', /* base */
+              600: '#c01b66',
+              700: '#9a154f',
+              800: '#7b123f',
+              900: '#5f0f33'
+            }
+          },
+          boxShadow: {
+            glow: '0 10px 30px rgba(219,39,119,0.25)'
+          }
+        },
+        fontFamily: {
+          display: ['Poppins', 'system-ui', 'sans-serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif']
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .motion-safe\:floaty { transform: none !important; animation: none !important; }
+    }
+    @keyframes floaty { 0%{transform: translateY(0)} 50%{transform: translateY(-6px)} 100%{transform: translateY(0)} }
+    .motion-safe\:floaty { animation: floaty 6s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <!-- Skip link -->
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 bg-white text-slate-900 border rounded px-3 py-2">Ir para o conteúdo</a>
+
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2" aria-label="Aurora Glow Estética - Início">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-brand-400 to-brand-600 text-white shadow-glow">AG</span>
+        <span class="font-display font-semibold tracking-tight text-slate-900">Aurora Glow <span class="text-brand-600">Estética</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6" aria-label="Primária">
+        <a href="#servicos" class="text-sm text-slate-600 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">Serviços</a>
+        <a href="#oferta" class="text-sm text-slate-600 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">Oferta</a>
+        <a href="#contato" class="text-sm text-slate-600 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded">Contato</a>
+        <a href="#agendar" class="inline-flex items-center rounded-full bg-brand-600 text-white text-sm font-medium px-4 py-2 shadow-glow hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">Agendar</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-slate-200 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500" aria-label="Abrir menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-100 bg-white">
+      <div class="px-4 py-3 space-y-2">
+        <a href="#servicos" class="block px-3 py-2 rounded hover:bg-slate-50">Serviços</a>
+        <a href="#oferta" class="block px-3 py-2 rounded hover:bg-slate-50">Oferta</a>
+        <a href="#contato" class="block px-3 py-2 rounded hover:bg-slate-50">Contato</a>
+        <a href="#agendar" class="block px-3 py-2 rounded-full text-center bg-brand-600 text-white font-medium hover:bg-brand-700">Agendar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="conteudo">
+    <section class="relative pt-28 sm:pt-32 pb-16 sm:pb-24">
+  <div aria-hidden="true" class="absolute inset-x-0 -top-24 h-64 bg-gradient-to-b from-brand-50 to-transparent"></div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="font-display text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">
+      Beleza que <span class="bg-gradient-to-r from-brand-500 to-fuchsia-600 bg-clip-text text-transparent">ilumina você</span>
+    </h1>
+    <p class="mt-4 text-lg text-slate-600">
+      Tratamentos faciais e corporais com tecnologia e cuidado humano. Resultados reais com conforto, segurança e carinho.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center" id="agendar">
+      <a href="#oferta" class="inline-flex items-center justify-center rounded-full bg-brand-600 text-white font-medium px-6 py-3 shadow-glow hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+        Agendar avaliação • 30% OFF
+      </a>
+      <a href="#servicos" class="inline-flex items-center justify-center rounded-full px-6 py-3 border border-slate-300 text-slate-700 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">
+        Ver serviços
+      </a>
+    </div>
+    <p class="mt-3 text-sm text-slate-500">Promo válida até <strong>15/08/2025</strong> • Vagas limitadas</p>
+  </div>
+</section>
+
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-16 sm:py-24 bg-gradient-to-b from-white to-brand-50/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <h2 class="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900">Nossos serviços</h2>
+          <p class="mt-2 text-slate-600">Três experiências pensadas para você se sentir incrível de dentro para fora.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Card 1 com fundo PNG -->
+      <article class="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow bg-[url('fundo-card1.png')] bg-cover bg-center">
+        <!-- Camada branca translúcida para manter legibilidade -->
+        <div class="absolute inset-0 bg-white/80 rounded-2xl"></div>
+
+        <!-- Conteúdo do card -->
+        <div class="relative">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2a7 7 0 0 0-7 7v3.586l-1.707 1.707A1 1 0 0 0 4 16h16a1 1 0 0 0 .707-1.707L19 12.586V9a7 7 0 0 0-7-7Zm-1 19a1 1 0 1 0 2 0v-1H11v1Z"/>
+            </svg>
+          </div>
+          <h3 class="mt-4 font-display text-xl font-semibold text-slate-900">Limpeza Facial Profunda</h3>
+          <p class="mt-2 text-slate-600">Detox, extração suave e hidratação avançada para pele luminosa desde a primeira sessão.</p>
+        </div>
+      </article>
+
+          <!-- Card 2 -->
+          <article class="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow bg-[url('fundo-card2.png')] bg-cover bg-center">
+        <!-- Camada branca translúcida para manter legibilidade -->
+        <div class="absolute inset-0 bg-white/80 rounded-2xl"></div>
+
+        <!-- Conteúdo do card -->
+        <div class="relative">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2a7 7 0 0 0-7 7v3.586l-1.707 1.707A1 1 0 0 0 4 16h16a1 1 0 0 0 .707-1.707L19 12.586V9a7 7 0 0 0-7-7Zm-1 19a1 1 0 1 0 2 0v-1H11v1Z"/>
+            </svg>
+          </div>
+            <h3 class="mt-4 font-display text-xl font-semibold text-slate-900">Modeladora Corporal</h3>
+            <p class="mt-2 text-slate-600">Massagem com foco em contorno e redução de medidas. Bem‑estar e resultados visíveis.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow bg-[url('fundo-card3.png')] bg-cover bg-center">
+        <!-- Camada branca translúcida para manter legibilidade -->
+        <div class="absolute inset-0 bg-white/80 rounded-2xl"></div>
+
+        <!-- Conteúdo do card -->
+        <div class="relative">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2a7 7 0 0 0-7 7v3.586l-1.707 1.707A1 1 0 0 0 4 16h16a1 1 0 0 0 .707-1.707L19 12.586V9a7 7 0 0 0-7-7Zm-1 19a1 1 0 1 0 2 0v-1H11v1Z"/>
+            </svg>
+          </div>
+            <h3 class="mt-4 font-display text-xl font-semibold text-slate-900">Peeling Iluminador</h3>
+            <p class="mt-2 text-slate-600">Renovação suave que melhora textura, manchas leves e devolve o viço natural.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<!-- Detalhes dos Procedimentos -->
+<section id="detalhes" class="py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="max-w-2xl">
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900">
+        Como cada procedimento funciona
+      </h2>
+      <p class="mt-2 text-slate-600">
+        Explicamos etapas, indicação, duração e cuidados — para você escolher com segurança.
+      </p>
+    </header>
+
+    <div class="mt-10 space-y-8">
+      <!-- Limpeza Facial Profunda -->
+      <article id="limpeza-facial-profunda" class="scroll-mt-24 rounded-3xl border border-slate-200 bg-white/80 backdrop-blur p-6 sm:p-8">
+        <header class="flex items-start gap-4">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7v3.586l-1.707 1.707A1 1 0 0 0 4 16h16a1 1 0 0 0 .707-1.707L19 12.586V9a7 7 0 0 0-7-7Zm-1 19a1 1 0 1 0 2 0v-1H11v1Z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-semibold text-slate-900">Limpeza Facial Profunda</h3>
+            <div class="mt-2 flex flex-wrap gap-2 text-xs">
+              <span class="inline-flex items-center rounded-full bg-brand-50 text-brand-700 px-2.5 py-1">Duração: 60–75 min</span>
+              <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-700 px-2.5 py-1">Periodicidade: 30–45 dias</span>
+              <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-700 px-2.5 py-1">Pele oleosa/mista</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="mt-6 grid gap-6 lg:grid-cols-2">
+          <section>
+            <h4 class="font-semibold text-slate-900">Passo a passo</h4>
+            <ol class="mt-3 space-y-2 text-slate-700">
+              <li><strong>1.</strong> Higienização e esfoliação suave.</li>
+              <li><strong>2.</strong> Emoliência + vapor/máscara térmica (abrir poros).</li>
+              <li><strong>3.</strong> Extração <em>suave</em> com material esterilizado.</li>
+              <li><strong>4.</strong> Alta‑frequência (opcional) para assepsia e calma.</li>
+              <li><strong>5.</strong> Máscara calmante + hidratação.</li>
+              <li><strong>6.</strong> Finalização com fotoproteção.</li>
+            </ol>
+          </section>
+
+          <section class="space-y-3">
+            <div>
+              <h4 class="font-semibold text-slate-900">Cuidados pós</h4>
+              <ul class="mt-2 list-disc pl-5 text-slate-700">
+                <li>Evite sol direto e ácidos por 48h.</li>
+                <li>Não manipular espinhas/cravos.</li>
+                <li>Use FPS alto diariamente.</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-900">Contraindicações gerais</h4>
+              <ul class="mt-2 list-disc pl-5 text-slate-700">
+                <li>Feridas/infecções ativas na área.</li>
+                <li>Hipersensibilidade a ativos da sessão.</li>
+              </ul>
+            </div>
+            <p class="text-slate-500 text-sm">Avaliação individual é essencial para definir o protocolo ideal.</p>
+          </section>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#oferta" class="inline-flex items-center rounded-full bg-brand-600 text-white px-5 py-2.5 shadow-glow hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">Agendar com 30% OFF</a>
+          <a href="#servicos" class="inline-flex items-center rounded-full border px-5 py-2.5 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">Voltar aos serviços</a>
+        </div>
+      </article>
+
+      <!-- Modeladora Corporal -->
+      <article id="modeladora-corporal" class="scroll-mt-24 rounded-3xl border border-slate-200 bg-white/80 backdrop-blur p-6 sm:p-8">
+        <header class="flex items-start gap-4">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3c-4.418 0-8 3.582-8 8 0 6 8 10 8 10s8-4 8-10c0-4.418-3.582-8-8-8Zm0 11a3 3 0 1 1 .001-6.001A3 3 0 0 1 12 14Z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-semibold text-slate-900">Modeladora Corporal</h3>
+            <div class="mt-2 flex flex-wrap gap-2 text-xs">
+              <span class="inline-flex items-center rounded-full bg-brand-50 text-brand-700 px-2.5 py-1">Duração: 40–60 min/área</span>
+              <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-700 px-2.5 py-1">Frequência: 1–3×/semana</span>
+              <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-700 px-2.5 py-1">Contorno e firmeza</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="mt-6 grid gap-6 lg:grid-cols-2">
+          <section>
+            <h4 class="font-semibold text-slate-900">Passo a passo</h4>
+            <ol class="mt-3 space-y-2 text-slate-700">
+              <li><strong>1.</strong> Anamnese + definição de áreas.</li>
+              <li><strong>2.</strong> Cosmético de apoio (termogênico/firmador).</li>
+              <li><strong>3.</strong> Manobras vigorosas (amassamento, pinçamento, deslizamentos).</li>
+              <li><strong>4.</strong> Recursos auxiliares (ventosas/rolos), se indicado.</li>
+              <li><strong>5.</strong> Drenagem leve e alongamentos finais.</li>
+            </ol>
+          </section>
+
+          <section class="space-y-3">
+            <div>
+              <h4 class="font-semibold text-slate-900">Cuidados pós</h4>
+              <ul class="mt-2 list-disc pl-5 text-slate-700">
+                <li>Hidratar-se bem no dia.</li>
+                <li>Evitar álcool por 24h.</li>
+                <li>Alimentação leve potencializa resultados.</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-900">Contraindicações gerais</h4>
+              <ul class="mt-2 list-disc pl-5 text-slate-700">
+                <li>Trombose/varizes severas, hipertensão descontrolada.</li>
+                <li>Processos inflamatórios/infecciosos locais.</li>
+                <li>Gestação: requer avaliação e restrições por área.</li>
+              </ul>
+            </div>
+            <p class="text-slate-500 text-sm">Resultados são cumulativos e variam conforme rotina e biotipo.</p>
+          </section>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#oferta" class="inline-flex items-center rounded-full bg-brand-600 text-white px-5 py-2.5 shadow-glow hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">Agendar com 30% OFF</a>
+          <a href="#servicos" class="inline-flex items-center rounded-full border px-5 py-2.5 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">Voltar aos serviços</a>
+        </div>
+      </article>
+
+      <!-- Peeling Iluminador -->
+      <article id="peeling-iluminador" class="scroll-mt-24 rounded-3xl border border-slate-200 bg-white/80 backdrop-blur p-6 sm:p-8">
+        <header class="flex items-start gap-4">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 8a7 7 0 0 1 14 0v5h1a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2h1V8Zm7 13a3 3 0 0 0 3-3H9a3 3 0 0 0 3 3Z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-semibold text-slate-900">Peeling Iluminador</h3>
+            <div class="mt-2 flex flex-wrap gap-2 text-xs">
+              <span class="inline-flex items-center rounded-full bg-brand-50 text-brand-700 px-2.5 py-1">Duração: 30–50 min</span>
+              <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-700 px-2.5 py-1">Série: 3–6 sessões</span>
+              <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-700 px-2.5 py-1">Intervalo: 15–21 dias</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="mt-6 grid gap-6 lg:grid-cols-2">
+          <section>
+            <h4 class="font-semibold text-slate-900">Passo a passo</h4>
+            <ol class="mt-3 space-y-2 text-slate-700">
+              <li><strong>1.</strong> Limpeza e preparação da pele.</li>
+              <li><strong>2.</strong> Aplicação de esfoliante químico suave (ex.: mandélico/láctico), conforme avaliação.</li>
+              <li><strong>3.</strong> Tempo de ação controlado + neutralização.</li>
+              <li><strong>4.</strong> Máscara hidratante e calmante.</li>
+              <li><strong>5.</strong> Finalização com hidratante e FPS.</li>
+            </ol>
+          </section>
+
+          <section class="space-y-3">
+            <div>
+              <h4 class="font-semibold text-slate-900">Cuidados pós</h4>
+              <ul class="mt-2 list-disc pl-5 text-slate-700">
+                <li>Evitar sol, calor excessivo e atrito por 48–72h.</li>
+                <li>Suspender ácidos/retinoides por 5–7 dias.</li>
+                <li>Hidratação intensa + fotoproteção diária.</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-slate-900">Contraindicações gerais</h4>
+              <ul class="mt-2 list-disc pl-5 text-slate-700">
+                <li>Pele sensibilizada, dermatites ativas, feridas.</li>
+                <li>Uso recente de isotretinoína (até ~6 meses).</li>
+                <li>Gestação/lactação: requer avaliação de ativos.</li>
+              </ul>
+            </div>
+            <p class="text-slate-500 text-sm">Protocolos e ativos são definidos individualmente em avaliação profissional.</p>
+          </section>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#oferta" class="inline-flex items-center rounded-full bg-brand-600 text-white px-5 py-2.5 shadow-glow hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">Agendar com 30% OFF</a>
+          <a href="#servicos" class="inline-flex items-center rounded-full border px-5 py-2.5 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">Voltar aos serviços</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="mt-8 text-xs text-slate-500">
+      *As informações acima são gerais e não substituem avaliação presencial. Resultados variam de acordo com a individualidade de cada pessoa.
+    </p>
+  </div>
+</section>
+
+
+
+
+    <!-- Oferta final / CTA -->
+    <section id="oferta" class="relative py-16 sm:py-24">
+  <div class="absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(219,39,119,0.15),transparent)]"></div>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="rounded-3xl bg-slate-900 text-white p-8 sm:p-12 overflow-hidden text-center">
+      <div class="absolute right-0 top-0 opacity-20 pointer-events-none" aria-hidden="true">
+        <svg width="500" height="500" viewBox="0 0 500 500" fill="none"><circle cx="400" cy="100" r="120" fill="#db2777"/></svg>
+      </div>
+
+      <p class="uppercase tracking-widest text-brand-300 text-xs font-semibold">Oferta relâmpago</p>
+      <h3 class="mt-2 font-display text-3xl sm:text-4xl font-bold">30% de desconto na avaliação e primeira sessão</h3>
+      <p class="mt-3 text-slate-300">Garanta agora e comece seu cuidado com benefícios exclusivos. Restam poucas vagas!</p>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="https://wa.me/5500000000000?text=Quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20na%20Aurora%20Glow%20Est%C3%A9tica" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-white text-slate-900 font-medium px-6 py-3 hover:bg-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">
+          Agendar pelo WhatsApp
+        </a>
+        <a href="#contato" class="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400">
+          Falar com a equipe
+        </a>
+      </div>
+
+      <p class="mt-3 text-sm text-slate-400">Válido até <strong>15/08/2025</strong> — <span id="contador" class="font-semibold text-brand-300">carregando…</span></p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contato (placeholder simples para CTA funcionar) -->
+    <section id="contato" class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-2xl border border-slate-200 p-6 sm:p-8">
+          <h4 class="font-display text-2xl font-semibold">Fale com a Aurora Glow</h4>
+          <p class="mt-2 text-slate-600">Respondemos rapidamente via WhatsApp ou e‑mail.</p>
+          <div class="mt-4 flex flex-col sm:flex-row gap-3">
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-lg bg-brand-600 text-white px-5 py-3 hover:bg-brand-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">WhatsApp</a>
+            <a href="mailto:contato@auroraglow.com.br" class="inline-flex items-center justify-center rounded-lg border px-5 py-3 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">contato@auroraglow.com.br</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-slate-500">
+      <p>© 2025 Aurora Glow Estética. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JS: menu mobile + contador -->
+  <script>
+    // Menu mobile
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => {
+      const isOpen = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      btn.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+    });
+
+    // Contador regressivo até 15/08/2025 23:59:59 (horário local do usuário)
+    (function(){
+      const end = new Date('2025-08-15T23:59:59');
+      const el = document.getElementById('contador');
+      if(!el) return;
+      function pad(n){ return n.toString().padStart(2,'0'); }
+      function tick(){
+        const now = new Date();
+        const diff = end - now;
+        if(diff <= 0){ el.textContent = 'encerrado'; return; }
+        const d = Math.floor(diff / (1000*60*60*24));
+        const h = Math.floor((diff / (1000*60*60)) % 24);
+        const m = Math.floor((diff / (1000*60)) % 60);
+        const s = Math.floor((diff / 1000) % 60);
+        el.textContent = `${d}d ${pad(h)}h ${pad(m)}m ${pad(s)}s`;
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>
