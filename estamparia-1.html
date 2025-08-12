@@ -588,23 +588,38 @@
     document.getElementById('whats-float').href = whatsLink();
 
     // ====== Segmentador -> pré-preencher form ======
-    const segButtons = document.querySelectorAll('#segmentador [data-seg]');
-    segButtons.forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const seg = btn.getAttribute('data-seg');
-        const qtd = document.getElementById('qtd');
-        if(seg === '100+') qtd.value = 100;
-        if(seg === '20-99') qtd.value = 50;
-        if(seg === '1-19') qtd.value = 10;
-        // heurística simples para técnica
-        const tecnica = document.querySelector('[name="tecnica"]');
-        if(seg === '100+') tecnica.value = 'Silk';
-        if(seg === '20-99') tecnica.value = 'DTF';
-        if(seg === '1-19') tecnica.value = 'DTF';
-        // rolar para formulário
-        document.querySelector('#orcamento').scrollIntoView({behavior:'smooth'});
-      });
+    // Usa suas referências existentes:
+  const segButtons = document.querySelectorAll('#segGroup [data-seg]');
+  const qtd = document.getElementById('qtd');
+  const tecnica = document.querySelector('[name="tecnica"]');
+
+  function setSelected(btn){
+    segButtons.forEach(b=>{
+      b.setAttribute('aria-checked','false');
+      b.classList.remove('border-gold');
+      b.querySelector('.check')?.classList.add('hidden');
     });
+    btn.setAttribute('aria-checked','true');
+    btn.classList.add('border-gold');
+    btn.querySelector('.check')?.classList.remove('hidden');
+  }
+
+  segButtons.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const seg = btn.dataset.seg;
+      // Pré-preenche
+      if(seg === '100+') { qtd.value = 100; tecnica.value = 'Silk'; }
+      if(seg === '20-99'){ qtd.value = 50;  tecnica.value = 'DTF'; }
+      if(seg === '1-19'){ qtd.value = 10;  tecnica.value = 'DTF'; }
+      setSelected(btn);
+      // rola pro form
+      document.querySelector('#orcamento').scrollIntoView({behavior:'smooth'});
+    });
+    // acessibilidade teclado (espaço/enter)
+    btn.addEventListener('keydown', (e)=>{
+      if(e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); btn.click(); }
+    });
+  });
 
     // ====== Form multi-passos ======
     const steps = Array.from(document.querySelectorAll('[data-step]'));
