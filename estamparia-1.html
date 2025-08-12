@@ -573,23 +573,19 @@
     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.2 11.2 0 0 0-9.72 16.8L1 24l6.89-1.8A11.2 11.2 0 1 0 12 .5Zm6.55 16.05c-.28.8-1.64 1.53-2.26 1.58-.58.05-1.33.07-2.15-.13-.5-.12-1.15-.37-1.99-.77-3.49-1.65-5.75-5.47-5.93-5.73-.18-.26-1.42-1.9-1.42-3.63s.9-2.58 1.22-2.93c.32-.35.7-.44.94-.44h.68c.22 0 .52-.09.81.62.28.68.95 2.35 1.03 2.52.08.17.12.37.02.6-.1.23-.15.37-.3.57-.15.2-.32.45-.46.61-.15.17-.3.36-.13.68.18.32.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.5 1.53.32.14.52.12.72-.07.2-.18.84-.98 1.07-1.32.23-.34.46-.28.77-.17.32.12 2.01.95 2.36 1.12.35.17.58.26.66.41.08.14.08.83-.2 1.63Z"/></svg>
   </a>
 
-  <!-- Modal Portfólio simples/carrossel -->
-  <div id="modalPortfolio" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/70 p-4">
-    <div class="card max-w-3xl w-full overflow-hidden">
-      <div class="flex items-center justify-between p-3 border-b border-[#1F1F1F]">
-        <strong>Cases</strong>
-        <button id="closePortfolio" class="px-3 py-1 rounded hover:bg-white/5">Fechar</button>
-      </div>
-      <div class="p-4">
-        <div class="relative">
-          <img id="carouselImg" src="portfolio-1.png" alt="Case" class="w-full aspect-video object-cover rounded">
-          <button id="prevCase" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 px-3 py-2 rounded">‹</button>
-          <button id="nextCase" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 px-3 py-2 rounded">›</button>
-        </div>
-        <p id="carouselCaption" class="text-sm text-neutral-300 mt-2">DTF • 50 peças • Loja X</p>
-      </div>
+<!-- Modal Portfólio simples/carrossel -->
+<div id="modalPortfolio" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/70 p-4">
+  <div class="card max-w-3xl w-full overflow-hidden">
+    <div class="flex items-center justify-between p-3 border-b border-[#1F1F1F]">
+      <strong>Cases</strong>
+      <button id="closePortfolio" class="px-3 py-1 rounded hover:bg-white/5">Fechar</button>
+    </div>
+    <div class="p-4" id="portfolioModalContent">
+      <!-- Conteúdo inicial -->
+      <p class="text-center text-neutral-300 text-sm">Aqui um carrossel com todo o seu portfólio</p>
     </div>
   </div>
+</div>
 
   <script>
     // ====== Configurações rápidas ======
@@ -733,29 +729,26 @@
     });
 
     // ====== Modal Portfólio/Carrossel simples ======
-    const modal = document.getElementById('modalPortfolio');
-    const openBtn = document.getElementById('openPortfolio');
-    const closeBtn = document.getElementById('closePortfolio');
-    const prevCase = document.getElementById('prevCase');
-    const nextCase = document.getElementById('nextCase');
-    const img = document.getElementById('carouselImg');
-    const cap = document.getElementById('carouselCaption');
+   const modal = document.getElementById('modalPortfolio');
+const openBtn = document.getElementById('openPortfolio');
+const closeBtn = document.getElementById('closePortfolio');
+const portfolioContent = document.getElementById('portfolioModalContent');
 
-    const cases = [
-      {src:'portfolio-1.png', cap:'DTF • 50 peças • Loja X'},
-      {src:'portfolio-2.png', cap:'Silk 2 cores • 120 peças • Evento Y'},
-      {src:'portfolio-3.png', cap:'Bordado • 30 bonés • Marca Z'},
-      {src:'portfolio-4.png', cap:'Sublimação • 40 camisetas • Equipe W'},
-      {src:'portfolio-5.png', cap:'DTF • 300 peças • Empresa Q'},
-      {src:'portfolio-6.png', cap:'Silk 1 cor • 80 peças • Banda R'},
-    ];
-    let idx = 0;
-    function renderCase(){ img.src = cases[idx].src; cap.textContent = cases[idx].cap; }
-    openBtn.addEventListener('click', ()=>{ modal.classList.remove('hidden'); renderCase(); modal.classList.add('flex'); });
-    closeBtn.addEventListener('click', ()=> modal.classList.add('hidden'));
-    prevCase.addEventListener('click', ()=>{ idx = (idx-1+cases.length)%cases.length; renderCase(); });
-    nextCase.addEventListener('click', ()=>{ idx = (idx+1)%cases.length; renderCase(); });
-    modal.addEventListener('click', (e)=>{ if(e.target===modal) modal.classList.add('hidden'); });
+openBtn.addEventListener('click', () => {
+  // Exibe a mensagem antes do carrossel
+  portfolioContent.innerHTML = `<p class="text-center text-neutral-300 text-sm">Aqui um carrossel com todo o seu portfólio</p>`;
+  
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+
+  // Aqui você poderia iniciar o carrossel após um tempo ou evento:
+  // setTimeout(() => { portfolioContent.innerHTML = carrosselHTML; }, 2000);
+});
+
+closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) modal.classList.add('hidden');
+});
   </script>
 </body>
 </html>
