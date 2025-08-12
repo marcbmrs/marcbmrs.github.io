@@ -269,32 +269,101 @@
 </section>
 
 
-  <!-- COMO FUNCIONA -->
-  <section id="como-funciona" class="section mx-auto container-max px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold mb-8">Como funciona</h2>
-    <div class="grid md:grid-cols-4 gap-4">
-      <div class="card p-5">
-        <div class="text-2xl gold mb-2">1</div>
-        <h3 class="font-semibold mb-1">Envie sua arte/ideia</h3>
-        <p class="text-sm text-neutral-300">Arquivos PNG, SVG, PDF ou AI.</p>
+  <!-- COMO FUNCIONA (versão aprimorada) -->
+<section id="como-funciona" class="section mx-auto container-max px-4 py-16">
+  <div class="flex items-end justify-between mb-10">
+    <h2 class="text-2xl md:text-3xl font-bold">Como funciona</h2>
+    <p class="hidden md:block text-sm text-neutral-400">Processo simples, resposta rápida.</p>
+  </div>
+
+  <!-- Stepper -->
+  <ol class="relative grid gap-8 md:grid-cols-4">
+    <!-- linha conectora (desktop) -->
+    <span aria-hidden="true"
+          class="hidden md:block absolute left-0 right-0 top-9 h-[2px] mx-[6.5rem]"
+          style="background:linear-gradient(90deg, rgba(212,175,55,.15), rgba(212,175,55,.6), rgba(212,175,55,.15));"></span>
+
+    <!-- PASSO 1 -->
+    <li class="group">
+      <div class="flex md:block items-center gap-4">
+        <!-- bolinha numerada -->
+        <div class="relative shrink-0 w-14 h-14 rounded-full grid place-items-center border border-gold bg-black">
+          <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition"
+                style="background: radial-gradient(80px 80px at 50% 50%, rgba(212,175,55,.25), transparent);"></span>
+          <span class="font-bold gold">1</span>
+        </div>
+
+        <div class="card mt-0 md:mt-4 p-5">
+          <div class="flex items-center gap-2 mb-1">
+            <!-- ícone upload -->
+            <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 7 7h3v6h4V7h3l-5-5ZM5 20h14v-4h2v6H3v-6h2v4Z"/></svg>
+            <h3 class="font-semibold">Envie sua arte/ideia</h3>
+          </div>
+          <p class="text-sm text-neutral-300">Arquivos <strong>PNG, SVG, PDF, AI</strong> — ou descreva e a gente modela.</p>
+        </div>
       </div>
-      <div class="card p-5">
-        <div class="text-2xl gold mb-2">2</div>
-        <h3 class="font-semibold mb-1">Receba mockup & orçamento</h3>
-        <p class="text-sm text-neutral-300">Devolutiva em até 30 minutos úteis.</p>
+    </li>
+
+    <!-- PASSO 2 -->
+    <li class="group">
+      <div class="flex md:block items-center gap-4">
+        <div class="relative shrink-0 w-14 h-14 rounded-full grid place-items-center border border-gold bg-black">
+          <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition"
+                style="background: radial-gradient(80px 80px at 50% 50%, rgba(212,175,55,.25), transparent);"></span>
+          <span class="font-bold gold">2</span>
+        </div>
+        <div class="card mt-0 md:mt-4 p-5">
+          <div class="flex items-center gap-2 mb-1">
+            <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18v12H7l-4 4V5zm4 3v2h10V8H7z"/></svg>
+            <h3 class="font-semibold">Orçamento</h3>
+          </div>
+          <p class="text-sm text-neutral-300">Devolutiva em até <strong>30 min úteis</strong> com simulação de técnica.</p>
+        </div>
       </div>
-      <div class="card p-5">
-        <div class="text-2xl gold mb-2">3</div>
-        <h3 class="font-semibold mb-1">Produção (X–Y dias)</h3>
-        <p class="text-sm text-neutral-300">Prazos express sob consulta.</p>
+    </li>
+
+    <!-- PASSO 3 -->
+    <li class="group">
+      <div class="flex md:block items-center gap-4">
+        <div class="relative shrink-0 w-14 h-14 rounded-full grid place-items-center border border-gold bg-black">
+          <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition"
+                style="background: radial-gradient(80px 80px at 50% 50%, rgba(212,175,55,.25), transparent);"></span>
+          <span class="font-bold gold">3</span>
+        </div>
+        <div class="card mt-0 md:mt-4 p-5">
+          <div class="flex items-center gap-2 mb-1">
+            <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 7l11 5 11-5-11-5Zm0 7L1 4v13l11 5 11-5V4l-11 5Z"/></svg>
+            <h3 class="font-semibold">Produção (X–Y dias)</h3>
+          </div>
+          <p class="text-sm text-neutral-300">Controle de qualidade em cada lote. <span class="gold">Express</span> sob consulta.</p>
+        </div>
       </div>
-      <div class="card p-5">
-        <div class="text-2xl gold mb-2">4</div>
-        <h3 class="font-semibold mb-1">Entrega rastreada</h3>
-        <p class="text-sm text-neutral-300">Enviamos para todo o Brasil.</p>
+    </li>
+
+    <!-- PASSO 4 -->
+    <li class="group">
+      <div class="flex md:block items-center gap-4">
+        <div class="relative shrink-0 w-14 h-14 rounded-full grid place-items-center border border-gold bg-black">
+          <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition"
+                style="background: radial-gradient(80px 80px at 50% 50%, rgba(212,175,55,.25), transparent);"></span>
+          <span class="font-bold gold">4</span>
+        </div>
+        <div class="card mt-0 md:mt-4 p-5">
+          <div class="flex items-center gap-2 mb-1">
+            <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M20 8h-3V4H7v4H4l-2 5v7h20v-7l-2-5ZM9 6h6v2H9V6Zm9 11H6v-5h12v5Z"/></svg>
+            <h3 class="font-semibold">Entrega rastreada</h3>
+          </div>
+          <p class="text-sm text-neutral-300">Envio para todo o Brasil com código de rastreio.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </li>
+  </ol>
+
+  <p class="mt-6 text-xs text-neutral-400">
+    Dica: envie sua arte com <strong>fundo transparente</strong> para melhor visualização do mockup.
+  </p>
+</section>
+
 
 
   <!-- DIFERENCIAIS -->
