@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tudo do Seu Jeito — Estamparia Profissional</title>
+  <meta name="description" content="Camisetas personalizadas com padrão de loja. Silk, DTF, Bordado e Sublimação. Orçamento em até 30 min. Enviamos para todo o Brasil." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --gold:#D4AF37; /* dourado */
+      --black:#0A0A0A;
+      --gray:#111318;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--black);color:#F7F7F7}
+    /* fino brilho em botões dourados */
+    .btn-gold{background:linear-gradient(180deg, #E5C65C 0%, #D4AF37 60%, #B58C1F 100%); color:#111; box-shadow:0 6px 20px rgba(212,175,55,.25)}
+    .btn-gold:hover{filter:brightness(1.05)}
+    .gold{color:var(--gold)}
+    .bg-gold{background-color:var(--gold); color:#111}
+    .border-gold{border-color:var(--gold)}
+    .ring-gold:focus{outline:none; box-shadow:0 0 0 3px rgba(212,175,55,.35)}
+    .card{background:#0E0E0E;border:1px solid #1F1F1F;border-radius:14px}
+    .section{scroll-margin-top:84px}
+    .container-max{max-width:1200px}
+  </style>
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Tudo do Seu Jeito - Estamparia",
+    "image":"https://example.com/logo.png",
+    "url":"https://tudodoseujeito.com.br",
+    "telephone":"+55-11-99999-9999",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Rua Exemplo, 123",
+      "addressLocality":"São Paulo",
+      "addressRegion":"SP",
+      "postalCode":"01234-567",
+      "addressCountry":"BR"
+    },
+    "openingHours":"Mo-Fr 09:00-18:00",
+    "priceRange":"$$",
+    "sameAs":[
+      "https://instagram.com/tudodoseujeito"
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased">
+
+  <!-- Topbar/CTA fixo -->
+  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-[#1F1F1F]">
+    <div class="mx-auto container-max px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="logo-placeholder.png" alt="Tudo do Seu Jeito" class="w-9 h-9 rounded-md border border-[#222]" />
+        <span class="font-semibold tracking-tight">Tudo do Seu Jeito</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#segmentador" class="hover:text-[var(--gold)]">Para quem?</a>
+        <a href="#portfolio" class="hover:text-[var(--gold)]">Portfólio</a>
+        <a href="#precos-ancora" class="hover:text-[var(--gold)]">Preços</a>
+        <a href="#faq" class="hover:text-[var(--gold)]">FAQ</a>
+      </nav>
+      <a href="#orcamento" class="btn-gold px-4 py-2 rounded-md font-semibold text-sm">Solicitar Orçamento</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="section relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[.07] pointer-events-none" aria-hidden="true" style="background: radial-gradient(600px 400px at 70% -10%, rgba(212,175,55,.35), transparent), radial-gradient(500px 300px at 10% 110%, rgba(212,175,55,.25), transparent);"></div>
+    <div class="mx-auto container-max px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div class="space-y-6">
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+          Camisetas personalizadas com <span class="gold">padrão de loja</span> — orçamento em até 30 min.
+        </h1>
+        <p class="text-lg text-neutral-300">
+          Silk, DTF, Bordado e Sublimação. Prazos rápidos. Enviamos para todo o Brasil.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <a href="#orcamento" class="btn-gold px-6 py-3 rounded-lg font-semibold text-base text-center">Quero meu orçamento</a>
+          <a id="whats-hero" href="#" target="_blank" class="px-6 py-3 rounded-lg font-semibold text-base text-center border border-gold hover:bg-white/5">Falar no Whats</a>
+        </div>
+
+        <!-- Trust -->
+        <div class="flex flex-wrap items-center gap-3 text-sm text-neutral-300">
+          <span class="gold">★★★★★</span>
+          <span>+2.000 pedidos entregues</span>
+          <span class="opacity-50">•</span>
+          <span>NF-e</span>
+          <span class="opacity-50">•</span>
+          <span>Entrega Garantida</span>
+          <span class="opacity-50">•</span>
+          <span>Clientes:</span>
+          <img src="logo-cliente-1.png" alt="Cliente 1" class="h-5 opacity-80">
+          <img src="logo-cliente-2.png" alt="Cliente 2" class="h-5 opacity-80">
+          <img src="logo-cliente-3.png" alt="Cliente 3" class="h-5 opacity-80">
+        </div>
+
+        <p class="text-xs text-neutral-400">
+          Sem compromisso • Resposta rápida • Arte gratuita no fechamento
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Imagem hero placeholder -->
+        <div class="card aspect-[4/3] w-full flex items-center justify-center text-neutral-500">
+          <span>Imagem/Mockup do seu portfólio aqui</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGMENTADOR -->
+  <section id="segmentador" class="section mx-auto container-max px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Para quem é o seu pedido?</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <button data-seg="100+" class="card p-6 text-left hover:border-gold transition group">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold text-lg">Atacado 100+</h3>
+          <span class="gold group-hover:scale-110 transition">↳</span>
+        </div>
+        <p class="mt-2 text-sm text-neutral-300">Grandes lotes com melhor custo unitário.</p>
+      </button>
+      <button data-seg="20-99" class="card p-6 text-left hover:border-gold transition group">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold text-lg">Lotes médios 20–99</h3>
+          <span class="gold group-hover:scale-110 transition">↳</span>
+        </div>
+        <p class="mt-2 text-sm text-neutral-300">Equilíbrio entre prazo e preço.</p>
+      </button>
+      <button data-seg="1-19" class="card p-6 text-left hover:border-gold transition group">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold text-lg">Pequenas quantidades 1–19</h3>
+          <span class="gold group-hover:scale-110 transition">↳</span>
+        </div>
+        <p class="mt-2 text-sm text-neutral-300">Pedidos rápidos e personalizados.</p>
+      </button>
+    </div>
+    <p class="text-xs text-neutral-400 mt-3">Ao escolher, pré-preenchemos o formulário de orçamento.</p>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section id="portfolio" class="section mx-auto container-max px-4 py-14">
+    <div class="flex items-end justify-between mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold">Portfólio</h2>
+      <button id="openPortfolio" class="text-sm border border-gold px-3 py-1.5 rounded hover:bg-white/5">Ver mais cases</button>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <!-- repita 6–9 itens -->
+      <figure class="card overflow-hidden">
+        <img src="portfolio-1.png" alt="DTF • 50 peças • Loja X" class="w-full aspect-square object-cover">
+        <figcaption class="p-3 text-sm text-neutral-300">DTF • 50 peças • Loja X</figcaption>
+      </figure>
+      <figure class="card overflow-hidden">
+        <img src="portfolio-2.png" alt="Silk 2 cores • 120 peças • Evento Y" class="w-full aspect-square object-cover">
+        <figcaption class="p-3 text-sm text-neutral-300">Silk 2 cores • 120 peças • Evento Y</figcaption>
+      </figure>
+      <figure class="card overflow-hidden">
+        <img src="portfolio-3.png" alt="Bordado • 30 bonés • Marca Z" class="w-full aspect-square object-cover">
+        <figcaption class="p-3 text-sm text-neutral-300">Bordado • 30 bonés • Marca Z</figcaption>
+      </figure>
+      <figure class="card overflow-hidden">
+        <img src="portfolio-4.png" alt="Sublimação • 40 camisetas • Equipe W" class="w-full aspect-square object-cover">
+        <figcaption class="p-3 text-sm text-neutral-300">Sublimação • 40 camisetas • Equipe W</figcaption>
+      </figure>
+      <figure class="card overflow-hidden">
+        <img src="portfolio-5.png" alt="DTF • 300 peças • Empresa Q" class="w-full aspect-square object-cover">
+        <figcaption class="p-3 text-sm text-neutral-300">DTF • 300 peças • Empresa Q</figcaption>
+      </figure>
+      <figure class="card overflow-hidden">
+        <img src="portfolio-6.png" alt="Silk 1 cor • 80 peças • Banda R" class="w-full aspect-square object-cover">
+        <figcaption class="p-3 text-sm text-neutral-300">Silk 1 cor • 80 peças • Banda R</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="section mx-auto container-max px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold mb-8">Como funciona</h2>
+    <div class="grid md:grid-cols-4 gap-4">
+      <div class="card p-5">
+        <div class="text-2xl gold mb-2">1</div>
+        <h3 class="font-semibold mb-1">Envie sua arte/ideia</h3>
+        <p class="text-sm text-neutral-300">Arquivos PNG, SVG, PDF ou AI.</p>
+      </div>
+      <div class="card p-5">
+        <div class="text-2xl gold mb-2">2</div>
+        <h3 class="font-semibold mb-1">Receba mockup & orçamento</h3>
+        <p class="text-sm text-neutral-300">Devolutiva em até 30 minutos úteis.</p>
+      </div>
+      <div class="card p-5">
+        <div class="text-2xl gold mb-2">3</div>
+        <h3 class="font-semibold mb-1">Produção (X–Y dias)</h3>
+        <p class="text-sm text-neutral-300">Prazos express sob consulta.</p>
+      </div>
+      <div class="card p-5">
+        <div class="text-2xl gold mb-2">4</div>
+        <h3 class="font-semibold mb-1">Entrega rastreada</h3>
+        <p class="text-sm text-neutral-300">Enviamos para todo o Brasil.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREÇOS ÂNCORA -->
+  <section id="precos-ancora" class="section mx-auto container-max px-4 py-14">
+    <div class="md:flex items-start justify-between gap-8">
+      <div class="md:w-1/3">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">Preços “a partir de”</h2>
+        <p class="text-sm text-neutral-300 mb-4">Valores variam por técnica, cores e malha. Peça seu preço exato em 30 min.</p>
+        <a href="#orcamento" class="inline-block btn-gold px-4 py-2 rounded-md font-semibold">Calcular meu preço agora</a>
+      </div>
+      <div class="md:w-2/3 grid sm:grid-cols-3 gap-4 mt-6 md:mt-0">
+        <!-- Tabelas simples por técnica -->
+        <div class="card p-4">
+          <h3 class="font-semibold mb-2">Silk</h3>
+          <ul class="text-sm text-neutral-300 space-y-1">
+            <li>20–49: R$ <span class="gold">xx</span></li>
+            <li>50–99: R$ <span class="gold">xx</span></li>
+            <li>100+: R$ <span class="gold">xx</span></li>
+          </ul>
+        </div>
+        <div class="card p-4">
+          <h3 class="font-semibold mb-2">DTF</h3>
+          <ul class="text-sm text-neutral-300 space-y-1">
+            <li>20–49: R$ <span class="gold">xx</span></li>
+            <li>50–99: R$ <span class="gold">xx</span></li>
+            <li>100+: R$ <span class="gold">xx</span></li>
+          </ul>
+        </div>
+        <div class="card p-4">
+          <h3 class="font-semibold mb-2">Bordado</h3>
+          <ul class="text-sm text-neutral-300 space-y-1">
+            <li>20–49: R$ <span class="gold">xx</span></li>
+            <li>50–99: R$ <span class="gold">xx</span></li>
+            <li>100+: R$ <span class="gold">xx</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section id="diferenciais" class="section mx-auto container-max px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Por que escolher a gente</h2>
+    <ul class="grid md:grid-cols-3 gap-3 text-sm">
+      <li class="card p-4">Malhas premium</li>
+      <li class="card p-4">Cores sólidas</li>
+      <li class="card p-4">Controle de qualidade</li>
+      <li class="card p-4">NF‑e</li>
+      <li class="card p-4">Reimpressão se falhar</li>
+      <li class="card p-4">Prazos rápidos</li>
+    </ul>
+    <p class="mt-4 text-neutral-300"><span class="gold font-semibold">Garantia:</span> Se a estampa falhar em até 30 dias, reimprimimos.</p>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="section mx-auto container-max px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Depoimentos</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <figure class="card p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="avatar-1.png" alt="Ana — Compras" class="w-10 h-10 rounded-full object-cover">
+          <figcaption>
+            <div class="font-semibold">Ana</div>
+            <div class="text-xs text-neutral-400">Compras</div>
+          </figcaption>
+        </div>
+        <blockquote class="text-sm text-neutral-200">“Empresa X — 300 peças em 7 dias (DTF). Padrão impecável.”</blockquote>
+      </figure>
+      <figure class="card p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="avatar-2.png" alt="Lucas — Produtor" class="w-10 h-10 rounded-full object-cover">
+          <figcaption>
+            <div class="font-semibold">Lucas</div>
+            <div class="text-xs text-neutral-400">Produtor</div>
+          </figcaption>
+        </div>
+        <blockquote class="text-sm text-neutral-200">“Atendimento rápido e ótimo custo-benefício.”</blockquote>
+      </figure>
+      <figure class="card p-5">
+        <div class="flex items-center gap-3 mb-3">
+          <img src="avatar-3.png" alt="Paula — Marketing" class="w-10 h-10 rounded-full object-cover">
+          <figcaption>
+            <div class="font-semibold">Paula</div>
+            <div class="text-xs text-neutral-400">Marketing</div>
+          </figcaption>
+        </div>
+        <blockquote class="text-sm text-neutral-200">“Entregaram antes do prazo e com qualidade de loja.”</blockquote>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section mx-auto container-max px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">FAQ</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <!-- use <details> para acessibilidade simples -->
+      <details class="card p-4">
+        <summary class="font-semibold cursor-pointer">Qual o mínimo por técnica?</summary>
+        <p class="mt-2 text-sm text-neutral-300">Silk e Bordado: consulte a partir de 20 peças. DTF e Sublimação: aceitamos pequenas quantidades.</p>
+      </details>
+      <details class="card p-4">
+        <summary class="font-semibold cursor-pointer">Prazo médio de produção?</summary>
+        <p class="mt-2 text-sm text-neutral-300">Em geral X–Y dias após aprovação. Prazos express sob consulta.</p>
+      </details>
+      <details class="card p-4">
+        <summary class="font-semibold cursor-pointer">Quais arquivos vocês aceitam?</summary>
+        <p class="mt-2 text-sm text-neutral-300">PNG, SVG, PDF e AI. Informe cores Pantone se houver.</p>
+      </details>
+      <details class="card p-4">
+        <summary class="font-semibold cursor-pointer">Entregam para todo o Brasil?</summary>
+        <p class="mt-2 text-sm text-neutral-300">Sim, envio com código de rastreio.</p>
+      </details>
+      <details class="card p-4">
+        <summary class="font-semibold cursor-pointer">Formas de pagamento</summary>
+        <p class="mt-2 text-sm text-neutral-300">Pix, cartão e boleto (PJ).</p>
+      </details>
+      <details class="card p-4">
+        <summary class="font-semibold cursor-pointer">Trocas e reimpressões</summary>
+        <p class="mt-2 text-sm text-neutral-300">Se a estampa falhar em 30 dias, reimprimimos sem custo.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ORÇAMENTO (3 passos) -->
+  <section id="orcamento" class="section mx-auto container-max px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold mb-2">Solicite seu orçamento</h2>
+    <p class="text-sm text-neutral-300 mb-6">Retorno em até 30 min. Sem compromisso.</p>
+
+    <!-- Barra de progresso -->
+    <div class="w-full h-2 bg-[#1B1B1B] rounded mb-6">
+      <div id="progress" class="h-2 bg-gold rounded" style="width:33%"></div>
+    </div>
+
+    <form id="formOrcamento" class="card p-5 md:p-6 space-y-6">
+      <!-- Passo 1 -->
+      <fieldset data-step="1" class="grid md:grid-cols-2 gap-4">
+        <legend class="sr-only">Produto & Quantidade</legend>
+
+        <label class="block">
+          <span class="text-sm">Tipo de peça</span>
+          <select name="produto" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+            <option>T‑shirt</option>
+            <option>Baby look</option>
+            <option>Moletom</option>
+            <option>Polo</option>
+          </select>
+        </label>
+
+        <label class="block">
+          <span class="text-sm">Malha</span>
+          <select name="malha" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+            <option>Algodão 100% (30.1)</option>
+            <option>Algodão 100% (24.1)</option>
+            <option>Mista (50/50)</option>
+          </select>
+        </label>
+
+        <label class="block">
+          <span class="text-sm">Cor da peça</span>
+          <input name="cor" type="text" placeholder="Preto / Branco / Pantone..." class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+        </label>
+
+        <label class="block">
+          <span class="text-sm">Quantidade total</span>
+          <input id="qtd" name="quantidade" type="number" min="1" placeholder="Ex.: 50" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+          <small class="text-xs text-neutral-400">Opcional: envie grade por tamanhos nas observações.</small>
+        </label>
+
+        <label class="block md:col-span-2">
+          <span class="text-sm">Prazo desejado</span>
+          <div class="mt-1 flex gap-3">
+            <input name="prazo" type="date" class="w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+            <label class="flex items-center gap-2 text-sm">
+              <input type="checkbox" name="urgencia" class="accent-[var(--gold)]"> Tenho urgência
+            </label>
+          </div>
+        </label>
+      </fieldset>
+
+      <!-- Passo 2 -->
+      <fieldset data-step="2" class="grid md:grid-cols-2 gap-4 hidden">
+        <legend class="sr-only">Estampa & Arquivos</legend>
+
+        <div class="grid grid-cols-2 gap-3 md:col-span-2">
+          <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="locais" value="Frente" class="accent-[var(--gold)]"> Frente</label>
+          <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="locais" value="Costas" class="accent-[var(--gold)]"> Costas</label>
+          <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="locais" value="Manga Esq." class="accent-[var(--gold)]"> Manga Esq.</label>
+          <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="locais" value="Manga Dir." class="accent-[var(--gold)]"> Manga Dir.</label>
+        </div>
+
+        <label class="block">
+          <span class="text-sm">Nº de cores (aprox.)</span>
+          <input name="cores" type="text" placeholder="Ex.: 1 / 2 / 4 / Não sei" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+        </label>
+
+        <label class="block">
+          <span class="text-sm">Técnica preferida</span>
+          <select name="tecnica" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold" title="Silk: melhor custo em volume. DTF: detalhes finos. Bordado: alto relevo. Sublimação: poliéster.">
+            <option>Silk</option>
+            <option>DTF</option>
+            <option>Bordado</option>
+            <option>Sublimação</option>
+            <option>Não sei, me ajude</option>
+          </select>
+        </label>
+
+        <label class="block md:col-span-2">
+          <span class="text-sm">Upload de arte</span>
+          <input name="arquivos" type="file" multiple accept=".png,.svg,.pdf,.ai" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+          <small class="text-xs text-neutral-400">Ou cole um link de referência abaixo.</small>
+        </label>
+
+        <label class="block md:col-span-2">
+          <span class="text-sm">Link de referência</span>
+          <input name="link" type="url" placeholder="https://..." class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+        </label>
+
+        <label class="block md:col-span-2">
+          <span class="text-sm">Observações</span>
+          <textarea name="obs" rows="3" placeholder="Pantone, área máxima, posição, grade de tamanhos..." class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"></textarea>
+        </label>
+      </fieldset>
+
+      <!-- Passo 3 -->
+      <fieldset data-step="3" class="grid md:grid-cols-2 gap-4 hidden">
+        <legend class="sr-only">Contato & Entrega</legend>
+
+        <label class="block">
+          <span class="text-sm">Nome e Sobrenome</span>
+          <input name="nome" required type="text" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+        </label>
+        <label class="block">
+          <span class="text-sm">Empresa (opcional)</span>
+          <input name="empresa" type="text" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+        </label>
+        <label class="block">
+          <span class="text-sm">E‑mail</span>
+          <input name="email" type="email" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+        </label>
+        <label class="block">
+          <span class="text-sm">WhatsApp (obrigatório)</span>
+          <input id="whats" name="whats" required type="tel" placeholder="(11) 99999-9999" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+        </label>
+        <label class="block">
+          <span class="text-sm">Cidade/UF</span>
+          <input name="cidade" type="text" placeholder="São Paulo/SP" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+        </label>
+        <label class="block">
+          <span class="text-sm">CEP</span>
+          <input id="cep" name="cep" type="text" placeholder="01234-567" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
+        </label>
+
+        <label class="flex items-center gap-2 text-sm md:col-span-2">
+          <input type="checkbox" name="receberWhats" class="accent-[var(--gold)]" checked> Receber orçamento por WhatsApp
+        </label>
+      </fieldset>
+
+      <!-- Navegação do formulário -->
+      <div class="flex items-center justify-between pt-2">
+        <button type="button" id="prevStep" class="px-4 py-2 rounded-md border border-[#2A2A2A] hover:bg-white/5">Voltar</button>
+        <div class="flex gap-2">
+          <button type="button" id="finishWhats" class="hidden px-4 py-2 rounded-md border border-gold hover:bg-white/5">Finalizar no WhatsApp</button>
+          <button type="button" id="nextStep" class="btn-gold px-4 py-2 rounded-md font-semibold">Continuar</button>
+          <button type="submit" id="submitBtn" class="hidden btn-gold px-4 py-2 rounded-md font-semibold">Enviar e receber orçamento</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta-final" class="section mx-auto container-max px-4 py-16 text-center">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Pronto para um orçamento rápido?</h2>
+    <p class="text-neutral-300 mb-6">Retorno em até 30 min. Sem compromisso.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#orcamento" class="btn-gold px-6 py-3 rounded-lg font-semibold">Quero meu orçamento</a>
+      <a id="whats-cta-final" href="#" target="_blank" class="px-6 py-3 rounded-lg font-semibold border border-gold hover:bg-white/5">Falar no Whats</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="border-t border-[#1F1F1F]">
+    <div class="mx-auto container-max px-4 py-10 grid md:grid-cols-3 gap-6 text-sm">
+      <div>
+        <div class="font-semibold mb-2">Tudo do Seu Jeito — Estamparia</div>
+        <p>Rua Exemplo, 123 — São Paulo/SP</p>
+        <p>Tel: (11) 99999‑9999 • CNPJ: 00.000.000/0001‑00</p>
+        <p>Horário: Seg–Sex, 9h–18h</p>
+        <p>E‑mail: contato@tudodoseujeito.com.br</p>
+        <a class="gold underline" href="https://maps.google.com" target="_blank" rel="noopener">Ver no mapa</a>
+      </div>
+      <div>
+        <div class="font-semibold mb-2">Links úteis</div>
+        <ul class="space-y-1 text-neutral-300">
+          <li><a href="#" class="hover:text-white">Política de Privacidade</a></li>
+          <li><a href="#" class="hover:text-white">Termos de Uso</a></li>
+          <li><a href="https://instagram.com/tudodoseujeito" target="_blank" class="hover:text-white">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-2">Assine novidades</div>
+        <form class="flex gap-2">
+          <input type="email" placeholder="Seu e-mail" class="w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+          <button class="btn-gold px-3 rounded-md">OK</button>
+        </form>
+      </div>
+    </div>
+    <div class="text-center text-xs text-neutral-500 py-4 border-t border-[#1F1F1F]">© <span id="year"></span> Tudo do Seu Jeito. Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp (mobile) -->
+  <a id="whats-float" href="#" target="_blank" aria-label="Falar no WhatsApp"
+     class="fixed md:hidden bottom-4 right-4 btn-gold rounded-full w-14 h-14 grid place-items-center">
+    <!-- ícone simples -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.2 11.2 0 0 0-9.72 16.8L1 24l6.89-1.8A11.2 11.2 0 1 0 12 .5Zm6.55 16.05c-.28.8-1.64 1.53-2.26 1.58-.58.05-1.33.07-2.15-.13-.5-.12-1.15-.37-1.99-.77-3.49-1.65-5.75-5.47-5.93-5.73-.18-.26-1.42-1.9-1.42-3.63s.9-2.58 1.22-2.93c.32-.35.7-.44.94-.44h.68c.22 0 .52-.09.81.62.28.68.95 2.35 1.03 2.52.08.17.12.37.02.6-.1.23-.15.37-.3.57-.15.2-.32.45-.46.61-.15.17-.3.36-.13.68.18.32.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.5 1.53.32.14.52.12.72-.07.2-.18.84-.98 1.07-1.32.23-.34.46-.28.77-.17.32.12 2.01.95 2.36 1.12.35.17.58.26.66.41.08.14.08.83-.2 1.63Z"/></svg>
+  </a>
+
+  <!-- Modal Portfólio simples/carrossel -->
+  <div id="modalPortfolio" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/70 p-4">
+    <div class="card max-w-3xl w-full overflow-hidden">
+      <div class="flex items-center justify-between p-3 border-b border-[#1F1F1F]">
+        <strong>Cases</strong>
+        <button id="closePortfolio" class="px-3 py-1 rounded hover:bg-white/5">Fechar</button>
+      </div>
+      <div class="p-4">
+        <div class="relative">
+          <img id="carouselImg" src="portfolio-1.png" alt="Case" class="w-full aspect-video object-cover rounded">
+          <button id="prevCase" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 px-3 py-2 rounded">‹</button>
+          <button id="nextCase" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 px-3 py-2 rounded">›</button>
+        </div>
+        <p id="carouselCaption" class="text-sm text-neutral-300 mt-2">DTF • 50 peças • Loja X</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ====== Configurações rápidas ======
+    const WHATS_NUMBER = '5511999999999'; // coloque seu número com DDI/DDD
+    const PRE_MSG = encodeURIComponent('Olá! Quero um orçamento para camisetas personalizadas.');
+
+    // Atualiza ano no footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Deep links Whats
+    const whatsLink = (extra='') => `https://wa.me/${WHATS_NUMBER}?text=${PRE_MSG}${extra ? '%0A%0A' + encodeURIComponent(extra) : ''}`;
+    document.getElementById('whats-hero').href = whatsLink();
+    document.getElementById('whats-cta-final').href = whatsLink();
+    document.getElementById('whats-float').href = whatsLink();
+
+    // ====== Segmentador -> pré-preencher form ======
+    const segButtons = document.querySelectorAll('#segmentador [data-seg]');
+    segButtons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const seg = btn.getAttribute('data-seg');
+        const qtd = document.getElementById('qtd');
+        if(seg === '100+') qtd.value = 100;
+        if(seg === '20-99') qtd.value = 50;
+        if(seg === '1-19') qtd.value = 10;
+        // heurística simples para técnica
+        const tecnica = document.querySelector('[name="tecnica"]');
+        if(seg === '100+') tecnica.value = 'Silk';
+        if(seg === '20-99') tecnica.value = 'DTF';
+        if(seg === '1-19') tecnica.value = 'DTF';
+        // rolar para formulário
+        document.querySelector('#orcamento').scrollIntoView({behavior:'smooth'});
+      });
+    });
+
+    // ====== Form multi-passos ======
+    const steps = Array.from(document.querySelectorAll('[data-step]'));
+    let current = 0;
+    const progress = document.getElementById('progress');
+    const prevBtn = document.getElementById('prevStep');
+    const nextBtn = document.getElementById('nextStep');
+    const submitBtn = document.getElementById('submitBtn');
+    const finishWhats = document.getElementById('finishWhats');
+
+    function renderStep(){
+      steps.forEach((s,i)=> s.classList.toggle('hidden', i !== current));
+      const pct = ((current+1)/steps.length)*100;
+      progress.style.width = pct + '%';
+      prevBtn.disabled = current===0;
+      prevBtn.classList.toggle('opacity-40', current===0);
+      nextBtn.classList.toggle('hidden', current===steps.length-1);
+      submitBtn.classList.toggle('hidden', current!==steps.length-1);
+      finishWhats.classList.toggle('hidden', current!==steps.length-1);
+    }
+    renderStep();
+
+    prevBtn.addEventListener('click', ()=>{ if(current>0){ current--; renderStep(); }});
+    nextBtn.addEventListener('click', ()=>{ if(current<steps.length-1){ current++; renderStep(); }});
+
+    // Máscaras simples (sem libs)
+    const whatsInput = document.getElementById('whats');
+    whatsInput.addEventListener('input', (e)=>{
+      let v = e.target.value.replace(/\D/g,'').slice(0,11);
+      const ddd = v.slice(0,2), a = v.slice(2,7), b = v.slice(7,11);
+      e.target.value = v.length>6 ? `(${ddd}) ${a}-${b}` : v.length>2 ? `(${ddd}) ${v.slice(2)}` : v;
+    });
+    const cepInput = document.getElementById('cep');
+    cepInput.addEventListener('input', (e)=>{
+      let v = e.target.value.replace(/\D/g,'').slice(0,8);
+      e.target.value = v.length>5 ? `${v.slice(0,5)}-${v.slice(5)}` : v;
+    });
+
+    // Coleta dados do form em objeto
+    function getFormData(){
+      const form = document.getElementById('formOrcamento');
+      const data = new FormData(form);
+      const locais = [];
+      form.querySelectorAll('input[name="locais"]:checked').forEach(i=>locais.push(i.value));
+      return {
+        produto: data.get('produto'),
+        malha: data.get('malha'),
+        cor: data.get('cor'),
+        quantidade: data.get('quantidade'),
+        prazo: data.get('prazo'),
+        urgencia: data.get('urgencia') ? 'Sim' : 'Não',
+        locais,
+        cores: data.get('cores'),
+        tecnica: data.get('tecnica'),
+        link: data.get('link'),
+        obs: data.get('obs'),
+        nome: data.get('nome'),
+        empresa: data.get('empresa'),
+        email: data.get('email'),
+        whats: data.get('whats'),
+        cidade: data.get('cidade'),
+        cep: data.get('cep'),
+        receberWhats: data.get('receberWhats') ? 'Sim' : 'Não'
+      };
+    }
+
+    function resumoTexto(d){
+      return `Resumo do pedido:
+- Produto: ${d.produto} | Malha: ${d.malha} | Cor: ${d.cor}
+- Quantidade: ${d.quantidade} | Prazo: ${d.prazo || '—'} | Urgência: ${d.urgencia}
+- Locais: ${d.locais.join(', ') || '—'} | Nº cores: ${d.cores || '—'}
+- Técnica: ${d.tecnica}
+- Link: ${d.link || '—'}
+- Observações: ${d.obs || '—'}
+- Cliente: ${d.nome} ${d.empresa?('('+d.empresa+')'):''}
+- Contato: ${d.email || '—'} | Whats: ${d.whats}
+- Entrega: ${d.cidade || '—'} | CEP: ${d.cep || '—'}
+- Preferência de retorno por WhatsApp: ${d.receberWhats}`;
+    }
+
+    // Envio (placeholder)
+    document.getElementById('formOrcamento').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const d = getFormData();
+      alert('Orçamento enviado! Vamos retornar em até 30 min.\n\n' + resumoTexto(d));
+      // Aqui você integra com seu backend/Forms (fetch/POST)
+    });
+
+    // Finalizar no WhatsApp
+    finishWhats.addEventListener('click', ()=>{
+      const d = getFormData();
+      window.open(whatsLink(resumoTexto(d)), '_blank');
+    });
+
+    // ====== Modal Portfólio/Carrossel simples ======
+    const modal = document.getElementById('modalPortfolio');
+    const openBtn = document.getElementById('openPortfolio');
+    const closeBtn = document.getElementById('closePortfolio');
+    const prevCase = document.getElementById('prevCase');
+    const nextCase = document.getElementById('nextCase');
+    const img = document.getElementById('carouselImg');
+    const cap = document.getElementById('carouselCaption');
+
+    const cases = [
+      {src:'portfolio-1.png', cap:'DTF • 50 peças • Loja X'},
+      {src:'portfolio-2.png', cap:'Silk 2 cores • 120 peças • Evento Y'},
+      {src:'portfolio-3.png', cap:'Bordado • 30 bonés • Marca Z'},
+      {src:'portfolio-4.png', cap:'Sublimação • 40 camisetas • Equipe W'},
+      {src:'portfolio-5.png', cap:'DTF • 300 peças • Empresa Q'},
+      {src:'portfolio-6.png', cap:'Silk 1 cor • 80 peças • Banda R'},
+    ];
+    let idx = 0;
+    function renderCase(){ img.src = cases[idx].src; cap.textContent = cases[idx].cap; }
+    openBtn.addEventListener('click', ()=>{ modal.classList.remove('hidden'); renderCase(); modal.classList.add('flex'); });
+    closeBtn.addEventListener('click', ()=> modal.classList.add('hidden'));
+    prevCase.addEventListener('click', ()=>{ idx = (idx-1+cases.length)%cases.length; renderCase(); });
+    nextCase.addEventListener('click', ()=>{ idx = (idx+1)%cases.length; renderCase(); });
+    modal.addEventListener('click', (e)=>{ if(e.target===modal) modal.classList.add('hidden'); });
+  </script>
+</body>
+</html>
