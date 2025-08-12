@@ -470,42 +470,59 @@
 </section>
 
 
-  <!-- DEPOIMENTOS -->
-  <section id="depoimentos" class="section mx-auto container-max px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold mb-6">Depoimentos</h2>
-    <div class="grid md:grid-cols-3 gap-4">
-      <figure class="card p-5">
-        <div class="flex items-center gap-3 mb-3">
-          <img src="avatar-1.png" alt="Ana — Compras" class="w-10 h-10 rounded-full object-cover">
-          <figcaption>
-            <div class="font-semibold">Ana</div>
-            <div class="text-xs text-neutral-400">Compras</div>
-          </figcaption>
-        </div>
-        <blockquote class="text-sm text-neutral-200">“Empresa X — 300 peças em 7 dias (DTF). Padrão impecável.”</blockquote>
-      </figure>
-      <figure class="card p-5">
-        <div class="flex items-center gap-3 mb-3">
-          <img src="avatar-2.png" alt="Lucas — Produtor" class="w-10 h-10 rounded-full object-cover">
-          <figcaption>
-            <div class="font-semibold">Lucas</div>
-            <div class="text-xs text-neutral-400">Produtor</div>
-          </figcaption>
-        </div>
-        <blockquote class="text-sm text-neutral-200">“Atendimento rápido e ótimo custo-benefício.”</blockquote>
-      </figure>
-      <figure class="card p-5">
-        <div class="flex items-center gap-3 mb-3">
-          <img src="avatar-3.png" alt="Paula — Marketing" class="w-10 h-10 rounded-full object-cover">
-          <figcaption>
-            <div class="font-semibold">Paula</div>
-            <div class="text-xs text-neutral-400">Marketing</div>
-          </figcaption>
-        </div>
-        <blockquote class="text-sm text-neutral-200">“Entregaram antes do prazo e com qualidade de loja.”</blockquote>
-      </figure>
-    </div>
-  </section>
+ <!-- DEPOIMENTOS (sem fotos) -->
+<section id="depoimentos" class="section mx-auto container-max px-4 py-16">
+  <div class="flex items-end justify-between mb-8">
+    <h2 class="text-2xl md:text-3xl font-bold">Depoimentos</h2>
+    <p class="hidden md:block text-sm text-neutral-400">O que nossos clientes dizem</p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-5">
+    <figure class="card p-6 relative">
+      <!-- Ícone de aspas -->
+      <svg class="absolute top-4 right-4 w-6 h-6 gold opacity-40" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M7.17 6A4.17 4.17 0 0 0 3 10.17v5.66A4.17 4.17 0 0 0 7.17 20h1.66A4.17 4.17 0 0 0 13 15.83v-5.66A4.17 4.17 0 0 0 8.83 6H7.17Zm9 0A4.17 4.17 0 0 0 12 10.17v5.66A4.17 4.17 0 0 0 16.17 20h1.66A4.17 4.17 0 0 0 22 15.83v-5.66A4.17 4.17 0 0 0 17.83 6h-1.66Z"/>
+      </svg>
+
+      <blockquote class="text-sm text-neutral-200 leading-relaxed mb-4">
+        “Empresa X — 300 peças em 7 dias (DTF). Padrão impecável.”
+      </blockquote>
+      <figcaption>
+        <div class="font-semibold">Ana</div>
+        <div class="text-xs text-neutral-400">Compras</div>
+      </figcaption>
+    </figure>
+
+    <figure class="card p-6 relative">
+      <svg class="absolute top-4 right-4 w-6 h-6 gold opacity-40" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M7.17 6A4.17 4.17 0 0 0 3 10.17v5.66A4.17 4.17 0 0 0 7.17 20h1.66A4.17 4.17 0 0 0 13 15.83v-5.66A4.17 4.17 0 0 0 8.83 6H7.17Zm9 0A4.17 4.17 0 0 0 12 10.17v5.66A4.17 4.17 0 0 0 16.17 20h1.66A4.17 4.17 0 0 0 22 15.83v-5.66A4.17 4.17 0 0 0 17.83 6h-1.66Z"/>
+      </svg>
+
+      <blockquote class="text-sm text-neutral-200 leading-relaxed mb-4">
+        “Atendimento rápido e ótimo custo-benefício.”
+      </blockquote>
+      <figcaption>
+        <div class="font-semibold">Lucas</div>
+        <div class="text-xs text-neutral-400">Produtor</div>
+      </figcaption>
+    </figure>
+
+    <figure class="card p-6 relative">
+      <svg class="absolute top-4 right-4 w-6 h-6 gold opacity-40" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M7.17 6A4.17 4.17 0 0 0 3 10.17v5.66A4.17 4.17 0 0 0 7.17 20h1.66A4.17 4.17 0 0 0 13 15.83v-5.66A4.17 4.17 0 0 0 8.83 6H7.17Zm9 0A4.17 4.17 0 0 0 12 10.17v5.66A4.17 4.17 0 0 0 16.17 20h1.66A4.17 4.17 0 0 0 22 15.83v-5.66A4.17 4.17 0 0 0 17.83 6h-1.66Z"/>
+      </svg>
+
+      <blockquote class="text-sm text-neutral-200 leading-relaxed mb-4">
+        “Entregaram antes do prazo e com qualidade de loja.”
+      </blockquote>
+      <figcaption>
+        <div class="font-semibold">Paula</div>
+        <div class="text-xs text-neutral-400">Marketing</div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
 
   <!-- FAQ -->
   <section id="faq" class="section mx-auto container-max px-4 py-14">
@@ -539,151 +556,120 @@
     </div>
   </section>
 
-  <!-- ORÇAMENTO (3 passos) -->
-  <section id="orcamento" class="section mx-auto container-max px-4 py-14">
-    <h2 class="text-2xl md:text-3xl font-bold mb-2">Solicite seu orçamento</h2>
-    <p class="text-sm text-neutral-300 mb-6">Retorno em até 30 min. Sem compromisso.</p>
+  <!-- ORÇAMENTO (1 passo + WhatsApp) -->
+<section id="orcamento" class="section mx-auto container-max px-4 py-16">
+  <h2 class="text-2xl md:text-3xl font-bold mb-2">Solicite seu orçamento</h2>
+  <p class="text-sm text-neutral-300 mb-6">Retorno em até 30 min. Sem compromisso.</p>
 
-    <!-- Barra de progresso -->
-    <div class="w-full h-2 bg-[#1B1B1B] rounded mb-6">
-      <div id="progress" class="h-2 bg-gold rounded" style="width:33%"></div>
+  <form id="formOrcamento" class="card p-5 md:p-6 space-y-5">
+    <!-- Produto -->
+    <div class="grid md:grid-cols-4 gap-4">
+      <label class="block md:col-span-1">
+        <span class="text-sm">Tipo de peça</span>
+        <select name="produto" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+          <option>T‑shirt</option>
+          <option>Baby look</option>
+          <option>Moletom</option>
+          <option>Polo</option>
+        </select>
+      </label>
+
+      <label class="block md:col-span-1">
+        <span class="text-sm">Malha</span>
+        <select name="malha" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+          <option>Algodão 100% (30.1)</option>
+          <option>Algodão 100% (24.1)</option>
+          <option>Mista (50/50)</option>
+        </select>
+      </label>
+
+      <label class="block md:col-span-1">
+        <span class="text-sm">Cor</span>
+        <input name="cor" type="text" placeholder="Preto / Branco / Pantone…" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+      </label>
+
+      <label class="block md:col-span-1">
+        <span class="text-sm">Quantidade</span>
+        <input id="qtd" name="quantidade" type="number" min="1" placeholder="Ex.: 50" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+      </label>
     </div>
 
-    <form id="formOrcamento" class="card p-5 md:p-6 space-y-6">
-      <!-- Passo 1 -->
-      <fieldset data-step="1" class="grid md:grid-cols-2 gap-4">
-        <legend class="sr-only">Produto & Quantidade</legend>
-
-        <label class="block">
-          <span class="text-sm">Tipo de peça</span>
-          <select name="produto" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
-            <option>T‑shirt</option>
-            <option>Baby look</option>
-            <option>Moletom</option>
-            <option>Polo</option>
-          </select>
-        </label>
-
-        <label class="block">
-          <span class="text-sm">Malha</span>
-          <select name="malha" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
-            <option>Algodão 100% (30.1)</option>
-            <option>Algodão 100% (24.1)</option>
-            <option>Mista (50/50)</option>
-          </select>
-        </label>
-
-        <label class="block">
-          <span class="text-sm">Cor da peça</span>
-          <input name="cor" type="text" placeholder="Preto / Branco / Pantone..." class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-        </label>
-
-        <label class="block">
-          <span class="text-sm">Quantidade total</span>
-          <input id="qtd" name="quantidade" type="number" min="1" placeholder="Ex.: 50" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-          <small class="text-xs text-neutral-400">Opcional: envie grade por tamanhos nas observações.</small>
-        </label>
-
-        <label class="block md:col-span-2">
-          <span class="text-sm">Prazo desejado</span>
-          <div class="mt-1 flex gap-3">
-            <input name="prazo" type="date" class="w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-            <label class="flex items-center gap-2 text-sm">
-              <input type="checkbox" name="urgencia" class="accent-[var(--gold)]"> Tenho urgência
-            </label>
-          </div>
-        </label>
-      </fieldset>
-
-      <!-- Passo 2 -->
-      <fieldset data-step="2" class="grid md:grid-cols-2 gap-4 hidden">
-        <legend class="sr-only">Estampa & Arquivos</legend>
-
-        <div class="grid grid-cols-2 gap-3 md:col-span-2">
-          <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="locais" value="Frente" class="accent-[var(--gold)]"> Frente</label>
-          <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="locais" value="Costas" class="accent-[var(--gold)]"> Costas</label>
-          <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="locais" value="Manga Esq." class="accent-[var(--gold)]"> Manga Esq.</label>
-          <label class="flex items-center gap-2 text-sm"><input type="checkbox" name="locais" value="Manga Dir." class="accent-[var(--gold)]"> Manga Dir.</label>
+    <!-- Estampa -->
+    <div class="grid md:grid-cols-4 gap-4">
+      <fieldset class="md:col-span-2">
+        <legend class="text-sm">Locais da estampa</legend>
+        <div class="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-2 text-sm">
+          <label class="flex items-center gap-2"><input type="checkbox" name="locais" value="Frente" class="accent-[var(--gold)]">Frente</label>
+          <label class="flex items-center gap-2"><input type="checkbox" name="locais" value="Costas" class="accent-[var(--gold)]">Costas</label>
+          <label class="flex items-center gap-2"><input type="checkbox" name="locais" value="Manga Esq." class="accent-[var(--gold)]">Manga Esq.</label>
+          <label class="flex items-center gap-2"><input type="checkbox" name="locais" value="Manga Dir." class="accent-[var(--gold)]">Manga Dir.</label>
         </div>
-
-        <label class="block">
-          <span class="text-sm">Nº de cores (aprox.)</span>
-          <input name="cores" type="text" placeholder="Ex.: 1 / 2 / 4 / Não sei" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-        </label>
-
-        <label class="block">
-          <span class="text-sm">Técnica preferida</span>
-          <select name="tecnica" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold" title="Silk: melhor custo em volume. DTF: detalhes finos. Bordado: alto relevo. Sublimação: poliéster.">
-            <option>Silk</option>
-            <option>DTF</option>
-            <option>Bordado</option>
-            <option>Sublimação</option>
-            <option>Não sei, me ajude</option>
-          </select>
-        </label>
-
-        <label class="block md:col-span-2">
-          <span class="text-sm">Upload de arte</span>
-          <input name="arquivos" type="file" multiple accept=".png,.svg,.pdf,.ai" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-          <small class="text-xs text-neutral-400">Ou cole um link de referência abaixo.</small>
-        </label>
-
-        <label class="block md:col-span-2">
-          <span class="text-sm">Link de referência</span>
-          <input name="link" type="url" placeholder="https://..." class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-        </label>
-
-        <label class="block md:col-span-2">
-          <span class="text-sm">Observações</span>
-          <textarea name="obs" rows="3" placeholder="Pantone, área máxima, posição, grade de tamanhos..." class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"></textarea>
-        </label>
       </fieldset>
 
-      <!-- Passo 3 -->
-      <fieldset data-step="3" class="grid md:grid-cols-2 gap-4 hidden">
-        <legend class="sr-only">Contato & Entrega</legend>
+      <label class="block">
+        <span class="text-sm">Nº de cores (aprox.)</span>
+        <input name="cores" type="text" placeholder="1 / 2 / 4 / Não sei" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+      </label>
 
-        <label class="block">
-          <span class="text-sm">Nome e Sobrenome</span>
-          <input name="nome" required type="text" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-        </label>
-        <label class="block">
-          <span class="text-sm">Empresa (opcional)</span>
-          <input name="empresa" type="text" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-        </label>
-        <label class="block">
-          <span class="text-sm">E‑mail</span>
-          <input name="email" type="email" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-        </label>
-        <label class="block">
-          <span class="text-sm">WhatsApp (obrigatório)</span>
-          <input id="whats" name="whats" required type="tel" placeholder="(11) 99999-9999" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-        </label>
-        <label class="block">
-          <span class="text-sm">Cidade/UF</span>
-          <input name="cidade" type="text" placeholder="São Paulo/SP" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-        </label>
-        <label class="block">
-          <span class="text-sm">CEP</span>
-          <input id="cep" name="cep" type="text" placeholder="01234-567" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"/>
-        </label>
+      <label class="block">
+        <span class="text-sm">Técnica</span>
+        <select name="tecnica" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+          <option>Silk</option>
+          <option>DTF</option>
+          <option>Bordado</option>
+          <option>Sublimação</option>
+          <option>Não sei, me ajude</option>
+        </select>
+      </label>
+    </div>
 
-        <label class="flex items-center gap-2 text-sm md:col-span-2">
-          <input type="checkbox" name="receberWhats" class="accent-[var(--gold)]" checked> Receber orçamento por WhatsApp
-        </label>
-      </fieldset>
-
-      <!-- Navegação do formulário -->
-      <div class="flex items-center justify-between pt-2">
-        <button type="button" id="prevStep" class="px-4 py-2 rounded-md border border-[#2A2A2A] hover:bg-white/5">Voltar</button>
-        <div class="flex gap-2">
-          <button type="button" id="finishWhats" class="hidden px-4 py-2 rounded-md border border-gold hover:bg-white/5">Finalizar no WhatsApp</button>
-          <button type="button" id="nextStep" class="btn-gold px-4 py-2 rounded-md font-semibold">Continuar</button>
-          <button type="submit" id="submitBtn" class="hidden btn-gold px-4 py-2 rounded-md font-semibold">Enviar e receber orçamento</button>
+    <!-- Arquivos/Referência -->
+    <div class="grid md:grid-cols-2 gap-4">
+      <label class="block md:col-span-1">
+        <span class="text-sm">Link de referência (Drive/WeTransfer/Instagram)</span>
+        <input name="link" type="url" placeholder="https://..." class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+      </label>
+      <label class="block md:col-span-1">
+        <span class="text-sm">Prazo desejado</span>
+        <div class="mt-1 flex gap-3">
+          <input name="prazo" type="date" class="w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+          <label class="flex items-center gap-2 text-sm">
+            <input type="checkbox" name="urgencia" class="accent-[var(--gold)]"> Tenho urgência
+          </label>
         </div>
-      </div>
-    </form>
-  </section>
+      </label>
+    </div>
+
+    <!-- Contato -->
+    <div class="grid md:grid-cols-3 gap-4">
+      <label class="block md:col-span-1">
+        <span class="text-sm">Seu nome</span>
+        <input name="nome" required type="text" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+      </label>
+      <label class="block md:col-span-1">
+        <span class="text-sm">WhatsApp <span class="gold">*</span></span>
+        <input id="whats" name="whats" required type="tel" placeholder="(11) 99999-9999" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+      </label>
+      <label class="block md:col-span-1">
+        <span class="text-sm">Cidade/UF</span>
+        <input name="cidade" type="text" placeholder="São Paulo/SP" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold">
+      </label>
+    </div>
+
+    <label class="block">
+      <span class="text-sm">Observações</span>
+      <textarea name="obs" rows="3" placeholder="Pantone, área máx., posição, grade de tamanhos..." class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2 ring-gold"></textarea>
+    </label>
+
+    <div class="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between pt-2">
+      <small class="text-xs text-neutral-400">Sem compromisso • Resposta rápida • Arte gratuita no fechamento</small>
+      <button type="submit" class="btn-gold px-5 py-2.5 rounded-md font-semibold">
+        Enviar no WhatsApp
+      </button>
+    </div>
+  </form>
+</section>
+
 
   <!-- CTA FINAL -->
   <section id="cta-final" class="section mx-auto container-max px-4 py-16 text-center">
@@ -747,41 +733,51 @@
 </div>
 
   <script>
-     // aplica uma leve animação nos cards quando a seção aparece
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.querySelectorAll('.card').forEach((el,i)=>{
-          el.style.opacity = 0;
-          el.style.transform = 'translateY(8px)';
-          setTimeout(()=>{
-            el.style.transition = 'opacity .5s ease, transform .5s ease';
-            el.style.opacity = 1;
-            el.style.transform = 'translateY(0)';
-          }, i*120);
-        });
-        observer.unobserve(e.target);
-      }
-    });
-  },{threshold:.2});
-  const sec = document.querySelector('#como-funciona');
-  if(sec) observer.observe(sec);
+  // ====== Animação suave na seção "Como funciona" ======
+  (() => {
+    const sec = document.querySelector('#como-funciona');
+    if (!sec) return;
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.querySelectorAll('.card').forEach((el,i)=>{
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(8px)';
+            setTimeout(()=>{
+              el.style.transition = 'opacity .5s ease, transform .5s ease';
+              el.style.opacity = 1;
+              el.style.transform = 'translateY(0)';
+            }, i*120);
+          });
+          observer.unobserve(e.target);
+        }
+      });
+    },{threshold:.2});
+    observer.observe(sec);
+  })();
 
-    // ====== Configurações rápidas ======
-    const WHATS_NUMBER = '5511999999999'; // coloque seu número com DDI/DDD
-    const PRE_MSG = encodeURIComponent('Olá! Quero um orçamento para camisetas personalizadas.');
+  // ====== Configurações rápidas ======
+  const WHATS_NUMBER = '5511999999999'; // coloque seu número com DDI/DDD
+  const PRE_MSG = encodeURIComponent('Olá! Quero um orçamento para camisetas personalizadas.');
 
-    // Atualiza ano no footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+  // Atualiza ano no footer (se existir)
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Deep links Whats
-    const whatsLink = (extra='') => `https://wa.me/${WHATS_NUMBER}?text=${PRE_MSG}${extra ? '%0A%0A' + encodeURIComponent(extra) : ''}`;
-    document.getElementById('whats-hero').href = whatsLink();
-    document.getElementById('whats-cta-final').href = whatsLink();
-    document.getElementById('whats-float').href = whatsLink();
+  // Deep links Whats (se existirem)
+  const whatsLink = (extra='') =>
+    `https://wa.me/${WHATS_NUMBER}?text=${PRE_MSG}${extra ? '%0A%0A' + encodeURIComponent(extra) : ''}`;
 
-    // ====== Segmentador -> pré-preencher form ======
-    // Usa suas referências existentes:
+  const heroWhats = document.getElementById('whats-hero');
+  if (heroWhats) heroWhats.href = whatsLink();
+
+  const ctaFinalWhats = document.getElementById('whats-cta-final');
+  if (ctaFinalWhats) ctaFinalWhats.href = whatsLink();
+
+  const floatWhats = document.getElementById('whats-float');
+  if (floatWhats) floatWhats.href = whatsLink();
+
+  // ====== Segmentador -> pré-preencher form ======
   const segButtons = document.querySelectorAll('#segGroup [data-seg]');
   const qtd = document.getElementById('qtd');
   const tecnica = document.querySelector('[name="tecnica"]');
@@ -797,137 +793,101 @@
     btn.querySelector('.check')?.classList.remove('hidden');
   }
 
-  segButtons.forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      const seg = btn.dataset.seg;
-      // Pré-preenche
-      if(seg === '100+') { qtd.value = 100; tecnica.value = 'Silk'; }
-      if(seg === '20-99'){ qtd.value = 50;  tecnica.value = 'DTF'; }
-      if(seg === '1-19'){ qtd.value = 10;  tecnica.value = 'DTF'; }
-      setSelected(btn);
-      // rola pro form
-      document.querySelector('#orcamento').scrollIntoView({behavior:'smooth'});
+  if (segButtons.length) {
+    segButtons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const seg = btn.dataset.seg;
+        if(qtd && tecnica){
+          if(seg === '100+') { qtd.value = 100; tecnica.value = 'Silk'; }
+          if(seg === '20-99'){ qtd.value = 50;  tecnica.value = 'DTF'; }
+          if(seg === '1-19'){ qtd.value = 10;  tecnica.value = 'DTF'; }
+        }
+        setSelected(btn);
+        document.querySelector('#orcamento')?.scrollIntoView({behavior:'smooth'});
+      });
+      btn.addEventListener('keydown', (e)=>{
+        if(e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); btn.click(); }
+      });
     });
-    // acessibilidade teclado (espaço/enter)
-    btn.addEventListener('keydown', (e)=>{
-      if(e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); btn.click(); }
-    });
-  });
+  }
 
-    // ====== Form multi-passos ======
-    const steps = Array.from(document.querySelectorAll('[data-step]'));
-    let current = 0;
-    const progress = document.getElementById('progress');
-    const prevBtn = document.getElementById('prevStep');
-    const nextBtn = document.getElementById('nextStep');
-    const submitBtn = document.getElementById('submitBtn');
-    const finishWhats = document.getElementById('finishWhats');
+  // ====== Formulário único -> abrir WhatsApp com resumo ======
+  const form = document.getElementById('formOrcamento');
+  const whatsInput = document.getElementById('whats');
 
-    function renderStep(){
-      steps.forEach((s,i)=> s.classList.toggle('hidden', i !== current));
-      const pct = ((current+1)/steps.length)*100;
-      progress.style.width = pct + '%';
-      prevBtn.disabled = current===0;
-      prevBtn.classList.toggle('opacity-40', current===0);
-      nextBtn.classList.toggle('hidden', current===steps.length-1);
-      submitBtn.classList.toggle('hidden', current!==steps.length-1);
-      finishWhats.classList.toggle('hidden', current!==steps.length-1);
-    }
-    renderStep();
-
-    prevBtn.addEventListener('click', ()=>{ if(current>0){ current--; renderStep(); }});
-    nextBtn.addEventListener('click', ()=>{ if(current<steps.length-1){ current++; renderStep(); }});
-
-    // Máscaras simples (sem libs)
-    const whatsInput = document.getElementById('whats');
+  // Máscara WhatsApp
+  if (whatsInput) {
     whatsInput.addEventListener('input', (e)=>{
       let v = e.target.value.replace(/\D/g,'').slice(0,11);
       const ddd = v.slice(0,2), a = v.slice(2,7), b = v.slice(7,11);
       e.target.value = v.length>6 ? `(${ddd}) ${a}-${b}` : v.length>2 ? `(${ddd}) ${v.slice(2)}` : v;
     });
-    const cepInput = document.getElementById('cep');
+  }
+
+  // (Opcional) máscara de CEP se existir campo
+  const cepInput = document.getElementById('cep');
+  if (cepInput) {
     cepInput.addEventListener('input', (e)=>{
       let v = e.target.value.replace(/\D/g,'').slice(0,8);
       e.target.value = v.length>5 ? `${v.slice(0,5)}-${v.slice(5)}` : v;
     });
+  }
 
-    // Coleta dados do form em objeto
-    function getFormData(){
-      const form = document.getElementById('formOrcamento');
-      const data = new FormData(form);
-      const locais = [];
-      form.querySelectorAll('input[name="locais"]:checked').forEach(i=>locais.push(i.value));
-      return {
-        produto: data.get('produto'),
-        malha: data.get('malha'),
-        cor: data.get('cor'),
-        quantidade: data.get('quantidade'),
-        prazo: data.get('prazo'),
-        urgencia: data.get('urgencia') ? 'Sim' : 'Não',
-        locais,
-        cores: data.get('cores'),
-        tecnica: data.get('tecnica'),
-        link: data.get('link'),
-        obs: data.get('obs'),
-        nome: data.get('nome'),
-        empresa: data.get('empresa'),
-        email: data.get('email'),
-        whats: data.get('whats'),
-        cidade: data.get('cidade'),
-        cep: data.get('cep'),
-        receberWhats: data.get('receberWhats') ? 'Sim' : 'Não'
-      };
-    }
+  function resumoDoFormulario(f){
+    const data = new FormData(f);
+    const locais = Array.from(f.querySelectorAll('input[name="locais"]:checked')).map(i=>i.value).join(', ') || '—';
+    return `Pedido de orçamento:
+• Produto: ${data.get('produto')||'—'} | Malha: ${data.get('malha')||'—'} | Cor: ${data.get('cor')||'—'}
+• Quantidade: ${data.get('quantidade')||'—'}
+• Locais: ${locais} | Nº cores: ${data.get('cores')||'—'}
+• Técnica: ${data.get('tecnica')||'—'}
+• Link ref.: ${data.get('link')||'—'}
+• Prazo: ${data.get('prazo')||'—'} ${data.get('urgencia')?'(URGENTE)':''}
+• Observações: ${data.get('obs')||'—'}
 
-    function resumoTexto(d){
-      return `Resumo do pedido:
-- Produto: ${d.produto} | Malha: ${d.malha} | Cor: ${d.cor}
-- Quantidade: ${d.quantidade} | Prazo: ${d.prazo || '—'} | Urgência: ${d.urgencia}
-- Locais: ${d.locais.join(', ') || '—'} | Nº cores: ${d.cores || '—'}
-- Técnica: ${d.tecnica}
-- Link: ${d.link || '—'}
-- Observações: ${d.obs || '—'}
-- Cliente: ${d.nome} ${d.empresa?('('+d.empresa+')'):''}
-- Contato: ${d.email || '—'} | Whats: ${d.whats}
-- Entrega: ${d.cidade || '—'} | CEP: ${d.cep || '—'}
-- Preferência de retorno por WhatsApp: ${d.receberWhats}`;
-    }
+Dados do cliente:
+• Nome: ${data.get('nome')||'—'}
+• Whats: ${data.get('whats')||'—'}
+• Cidade/UF: ${data.get('cidade')||'—'}`;
+  }
 
-    // Envio (placeholder)
-    document.getElementById('formOrcamento').addEventListener('submit', (e)=>{
+  if (form) {
+    form.addEventListener('submit', (e)=>{
       e.preventDefault();
-      const d = getFormData();
-      alert('Orçamento enviado! Vamos retornar em até 30 min.\n\n' + resumoTexto(d));
-      // Aqui você integra com seu backend/Forms (fetch/POST)
+      const resumo = resumoDoFormulario(form);
+      const url = `https://wa.me/${WHATS_NUMBER}?text=${encodeURIComponent(resumo)}`;
+      // feedback rápido para evitar múltiplos cliques
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn) {
+        const old = btn.innerText;
+        btn.disabled = true;
+        btn.innerText = 'Abrindo WhatsApp...';
+        setTimeout(()=>{ btn.disabled = false; btn.innerText = old; }, 2000);
+      }
+      window.open(url, '_blank');
     });
+  }
 
-    // Finalizar no WhatsApp
-    finishWhats.addEventListener('click', ()=>{
-      const d = getFormData();
-      window.open(whatsLink(resumoTexto(d)), '_blank');
+  // ====== Modal Portfólio: mensagem "Ver mais cases" ======
+  const modal = document.getElementById('modalPortfolio');
+  const openBtn = document.getElementById('openPortfolio');
+  const closeBtn = document.getElementById('closePortfolio');
+  const portfolioContent = document.getElementById('portfolioModalContent');
+
+  if (openBtn && modal && portfolioContent) {
+    openBtn.addEventListener('click', () => {
+      portfolioContent.innerHTML = `<p class="text-center text-neutral-300 text-sm">Aqui um carrossel com todo o seu portfólio</p>`;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      // Ex.: trocar para carrossel depois de X ms
+      // setTimeout(()=>{ portfolioContent.innerHTML = carrosselHTML; }, 1500);
     });
+  }
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.add('hidden'); });
+  }
+</script>
 
-    // ====== Modal Portfólio/Carrossel simples ======
-   const modal = document.getElementById('modalPortfolio');
-const openBtn = document.getElementById('openPortfolio');
-const closeBtn = document.getElementById('closePortfolio');
-const portfolioContent = document.getElementById('portfolioModalContent');
-
-openBtn.addEventListener('click', () => {
-  // Exibe a mensagem antes do carrossel
-  portfolioContent.innerHTML = `<p class="text-center text-neutral-300 text-sm">Aqui um carrossel com todo o seu portfólio</p>`;
-  
-  modal.classList.remove('hidden');
-  modal.classList.add('flex');
-
-  // Aqui você poderia iniciar o carrossel após um tempo ou evento:
-  // setTimeout(() => { portfolioContent.innerHTML = carrosselHTML; }, 2000);
-});
-
-closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) modal.classList.add('hidden');
-});
-  </script>
 </body>
 </html>
