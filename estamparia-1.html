@@ -81,7 +81,7 @@
           Camisetas personalizadas com <span class="gold">padrão de loja</span> — orçamento em até 30 min.
         </h1>
         <p class="text-lg text-neutral-300">
-          Silk, DTF, Bordado e Sublimação. Prazos rápidos. Enviamos para todo o Brasil.
+          Silk, DTF, Bordado e Sublimação. Prazos rápidos. Enviamos para todo o RS.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 pt-2">
           <a href="#orcamento" class="btn-gold px-6 py-3 rounded-lg font-semibold text-base text-center">Quero meu orçamento</a>
@@ -97,10 +97,6 @@
           <span class="opacity-50">•</span>
           <span>Entrega Garantida</span>
           <span class="opacity-50">•</span>
-          <span>Clientes:</span>
-          <img src="logo-cliente-1.png" alt="Cliente 1" class="h-5 opacity-80">
-          <img src="logo-cliente-2.png" alt="Cliente 2" class="h-5 opacity-80">
-          <img src="logo-cliente-3.png" alt="Cliente 3" class="h-5 opacity-80">
         </div>
 
         <p class="text-xs text-neutral-400">
@@ -109,12 +105,20 @@
       </div>
 
       <div class="relative">
-        <!-- Imagem hero placeholder -->
-        <div class="card aspect-[4/3] w-full flex items-center justify-center text-neutral-500">
-          <span>Imagem/Mockup do seu portfólio aqui</span>
+        <!-- Imagem hero -->
+        <picture>
+            <!-- WebP (para navegadores modernos) -->
+            <source srcset="estamparia01.webp" type="image/webp">
+            <!-- JPG fallback -->
+            <source srcset="estamparia01.jpg" type="image/jpeg">
+            <!-- Imagem padrão -->
+            <img src="estamparia01.jpg" 
+                alt="Camiseta personalizada de alta qualidade com estampa vibrante"
+                class="w-full rounded-lg object-cover aspect-[4/3]"
+                width="1920" height="1080"
+                loading="eager" fetchpriority="high">
+        </picture>
         </div>
-      </div>
-    </div>
   </section>
 
   <!-- SEGMENTADOR -->
