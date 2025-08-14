@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CT IMPÉRIO FITNESS — Treine como um guerreiro</title>
+  <meta name="description" content="Academia com equipamentos importados, metodologia inteligente e vibe espartana. Agende uma aula experimental." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --black:#0A0A0A;
+      --yellow:#F5C32E; /* ajuste para combinar com seu logo */
+      --gray:#121316;
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--black); color:#F7F7F7; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+    .gold{color:var(--yellow)}
+    .btn-gold{background:linear-gradient(180deg,#FFD666 0%, var(--yellow) 60%, #C09213 100%); color:#111; box-shadow:0 8px 28px rgba(245,195,46,.25)}
+    .btn-gold:hover{filter:brightness(1.05)}
+    .card{background:#0E0E0E;border:1px solid #1C1C1C;border-radius:14px}
+    .section{scroll-margin-top:84px}
+    .container-max{max-width:1200px}
+
+    /* anima a largura total (A+B). Ao chegar em -50%, a trilha B ocupa a posição da A */
+    .animate-brands {
+    animation: brands-marquee 28s linear infinite;
+    will-change: transform;
+  }
+  @keyframes brands-marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-brands { animation: none; }
+  }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- TOPBAR -->
+  <header class="sticky top-0 z-50 bg-black/85 backdrop-blur border-b border-[#1F1F1F]">
+    <div class="mx-auto container-max px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <!-- seu logo sem texto -->
+        <img src="logo-ct.jpg" alt="CT Império Fitness" class="w-10 h-10 object-contain">
+        <span class="hidden md:inline font-semibold tracking-tight">CT IMPÉRIO FITNESS</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#sobre" class="hover:text-[var(--yellow)]">Sobre</a>
+        <a href="#equipamentos" class="hover:text-[var(--yellow)]">Equipamentos</a>
+        <a href="#planos" class="hover:text-[var(--yellow)]">Planos</a>
+        <a href="#agendamento" class="hover:text-[var(--yellow)]">Agendar</a>
+      </nav>
+      <a href="#agendamento" class="btn-gold px-4 py-2 rounded-md font-semibold text-sm">Aula experimental</a>
+    </div>
+  </header>
+
+  <!-- HERO (vibe espartana + romano) -->
+  <section id="hero" class="section relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none opacity-[.08]"
+         style="background:
+            radial-gradient(600px 380px at 85% -10%, rgba(245,195,46,.35), transparent),
+            radial-gradient(560px 320px at 10% 110%, rgba(245,195,46,.2), transparent);"></div>
+
+    <div class="mx-auto container-max px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div class="space-y-6">
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+        Atendimento <span class="gold">humanizado</span>. Equipamentos de <span class="gold">última geração</span>.
+        </h1>
+        <p class="text-lg text-neutral-300">
+        Tornamos sua jornada fitness mais acessível e conveniente — com estrutura importada, professores qualificados e orientação para você evoluir com segurança. 
+        Venha fazer parte da <span class="gold font-semibold">FAMÍLIA CT IMPÉRIO FITNESS</span>.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 pt-1">
+          <a href="#agendamento" class="btn-gold px-6 py-3 rounded-lg font-semibold text-base text-center">Agendar experimental</a>
+          <a href="#planos" class="px-6 py-3 rounded-lg font-semibold text-base text-center border border-[var(--yellow)] hover:bg-white/5">Ver planos</a>
+        </div>
+        <div class="text-sm text-neutral-400">★★★★★ • +200 alunos • Avaliação física • App de treino</div>
+      </div>
+
+      <div class="relative">
+
+        <!-- coloca uma foto do espaço ou mockup com vibe romana -->
+        <div class="card aspect-[4/3] w-full overflow-hidden">
+        <img src="hero_img.webp" 
+            alt="Academia CT Império Fitness com vibe romana" 
+            class="w-full h-full object-cover">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- FAIXA "FININHA" DE MARCAS (loop contínuo com mais espaço) -->
+<section aria-label="Equipamentos importados" class="border-y border-[#1F1F1F] bg-[#FFFFFF]">
+  <div class="mx-auto container-max px-0">
+    <div class="h-14 md:h-16 overflow-hidden flex items-center">
+      <div class="marquee flex items-center animate-brands whitespace-nowrap">
+        <!-- trilha A -->
+        <ul class="flex items-center gap-20 shrink-0">
+          <li><img src="life.webp"   alt="Life Fitness"    class="h-9 md:h-10 opacity-90"></li>
+          <li><img src="hammer.webp" alt="Hammer Strength" class="h-12 md:h-12 opacity-90"></li>
+          <li><img src="techno.webp" alt="Technogym"       class="h-9 md:h-10 opacity-90"></li>
+          <li><img src="cybex.webp"  alt="Cybex"           class="h-9 md:h-10 opacity-90"></li>
+          <!-- espaçador extra -->
+          <li class="w-18"></li>
+        </ul>
+        <!-- trilha B -->
+        <ul class="flex items-center gap-20 shrink-0" aria-hidden="true">
+          <li><img src="life.webp"   alt="" class="h-9 md:h-10 opacity-90"></li>
+          <li><img src="hammer.webp" alt="" class="h-12 md:h-12 opacity-90"></li>
+          <li><img src="techno.webp" alt="" class="h-9 md:h-10 opacity-90"></li>
+          <li><img src="cybex.webp"  alt="" class="h-9 md:h-10 opacity-90"></li>
+          <!-- espaçador extra -->
+          <li class="w-32"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SOBRE (missão + método, sem repetir o hero) -->
+<section id="sobre" class="section relative mx-auto container-max px-4 py-16">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-[.06]"
+       style="background:
+        radial-gradient(700px 380px at 90% -10%, rgba(245,195,46,.45), transparent),
+        radial-gradient(560px 320px at 10% 110%, rgba(245,195,46,.25), transparent);"></div>
+
+  <div class="relative grid md:grid-cols-2 gap-10 items-start">
+    <!-- Lado A -->
+    <div>
+      <div class="flex items-center gap-3 mb-3">
+        <span class="h-[2px] w-10 bg-[var(--yellow)] inline-block"></span>
+        <span class="uppercase tracking-widest text-xs text-neutral-400">Nossa missão & método</span>
+      </div>
+
+      <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
+        Força, disciplina e constância — com orientação de verdade.
+      </h2>
+
+      <p class="mt-4 text-neutral-300 text-base md:text-lg">
+        A CT Império existe para tornar sua jornada fitness <span class="gold font-semibold">acessível e conveniente</span>.
+        Treinos planejados por professores qualificados, acompanhamento próximo e progressões simples de seguir —
+        sem modismos, só o que funciona.
+      </p>
+
+      <ul class="mt-6 grid grid-cols-2 gap-3 text-sm">
+        <li class="card p-4 flex items-center gap-3">
+          <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 7 7h3v8h4V7h3l-5-5ZM4 20h16v2H4z"/></svg>
+          Avaliação física
+        </li>
+        <li class="card p-4 flex items-center gap-3">
+          <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18v12H7l-4 4V5z"/></svg>
+          Plano no app
+        </li>
+        <li class="card p-4 flex items-center gap-3">
+          <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h4l3 8 3-12 2 6h2"/></svg>
+          Suporte do coach
+        </li>
+        <li class="card p-4 flex items-center gap-3">
+          <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18v14H3z"/></svg>
+          Ambiente motivador
+        </li>
+      </ul>
+
+      <div class="mt-6">
+        <a href="#agendamento" class="btn-gold px-5 py-2.5 rounded-md font-semibold inline-flex items-center gap-2">
+          Agendar aula experimental
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13 5l7 7-7 7v-4H4v-6h9V5z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Lado B -->
+    <div class="card p-6 relative overflow-hidden">
+      <div aria-hidden="true" class="absolute -right-10 -top-10 w-48 h-48 rounded-full border border-[var(--yellow)]/20"></div>
+
+      <div class="flex items-center justify-between gap-3">
+        <h3 class="text-xl font-semibold">Equipamentos importados</h3>
+        <span class="text-xs px-2 py-1 rounded-full border border-[var(--yellow)]/60 text-neutral-200 bg-black/30">
+          Performance & Ergonomia
+        </span>
+      </div>
+      <p class="mt-2 text-sm text-neutral-300">
+        Máquinas e acessórios de marcas globais para segurança, ergonomia e resultados consistentes.
+      </p>
+
+      <ul class="mt-4 grid grid-cols-2 gap-2 text-sm text-neutral-300">
+        <li class="flex items-center gap-2"><span class="gold">•</span> Racks olímpicos</li>
+        <li class="flex items-center gap-2"><span class="gold">•</span> Remo indoor</li>
+        <li class="flex items-center gap-2"><span class="gold">•</span> Bikes air</li>
+        <li class="flex items-center gap-2"><span class="gold">•</span> Placas calibradas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+  <!-- PLANOS -->
+  <section id="planos" class="section mx-auto container-max px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold mb-8">Planos</h2>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="card p-6">
+        <div class="text-sm gold mb-1">Mensal</div>
+        <div class="text-3xl font-extrabold mb-2">R$ <span class="gold">xx</span></div>
+        <ul class="text-sm text-neutral-300 space-y-1 mb-4">
+          <li>Acesso total</li><li>Aulas coletivas</li><li>Avaliação física</li>
+        </ul>
+        <a href="#agendamento" class="btn-gold px-4 py-2 rounded-md font-semibold inline-block">Assinar</a>
+      </div>
+      <div class="card p-6 border border-[var(--yellow)]">
+        <div class="text-sm gold mb-1">Semestral • <span class="text-white/80">Mais vantajoso</span></div>
+        <div class="text-3xl font-extrabold mb-2">R$ <span class="gold">xx</span></div>
+        <ul class="text-sm text-neutral-300 space-y-1 mb-4">
+          <li>Acesso total + App</li><li>1 Personal/mês</li><li>Avaliação InBody</li>
+        </ul>
+        <a href="#agendamento" class="btn-gold px-4 py-2 rounded-md font-semibold inline-block">Assinar</a>
+      </div>
+      <div class="card p-6">
+        <div class="text-sm gold mb-1">Anual</div>
+        <div class="text-3xl font-extrabold mb-2">R$ <span class="gold">xx</span></div>
+        <ul class="text-sm text-neutral-300 space-y-1 mb-4">
+          <li>Melhor preço/mês</li><li>Brindes sazonais</li><li>Prioridade em turmas</li>
+        </ul>
+        <a href="#agendamento" class="btn-gold px-4 py-2 rounded-md font-semibold inline-block">Assinar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTADOS (depoimentos sem foto) -->
+  <section id="resultados" class="section mx-auto container-max px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Resultados reais</h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <figure class="card p-6 relative">
+        <svg class="absolute top-4 right-4 w-6 h-6 gold opacity-40" viewBox="0 0 24 24" fill="currentColor"><path d="M7.17 6A4.17 4.17 0 003 10.17v5.66A4.17 4.17 0 007.17 20h1.66A4.17 4.17 0 0013 15.83v-5.66A4.17 4.17 0 008.83 6H7.17Zm9 0A4.17 4.17 0 0012 10.17v5.66A4.17 4.17 0 0016.17 20h1.66A4.17 4.17 0 0022 15.83v-5.66A4.17 4.17 0 0017.83 6h-1.66Z"/></svg>
+        <blockquote class="text-sm text-neutral-200 mb-3">“‑8 kg em 12 semanas com acompanhamento e HIIT.”</blockquote>
+        <figcaption class="text-xs text-neutral-400">Carla — Administradora</figcaption>
+      </figure>
+      <figure class="card p-6 relative">
+        <svg class="absolute top-4 right-4 w-6 h-6 gold opacity-40" viewBox="0 0 24 24" fill="currentColor"><path d="M7.17 6A4.17 4.17 0 003 10.17v5.66A4.17 4.17 0 007.17 20h1.66A4.17 4.17 0 0013 15.83v-5.66A4.17 4.17 0 008.83 6H7.17Zm9 0A4.17 4.17 0 0012 10.17v5.66A4.17 4.17 0 0016.17 20h1.66A4.17 4.17 0 0022 15.83v-5.66A4.17 4.17 0 0017.83 6h-1.66Z"/></svg>
+        <blockquote class="text-sm text-neutral-200 mb-3">“+20% de força no agachamento em 10 semanas.”</blockquote>
+        <figcaption class="text-xs text-neutral-400">Rafael — Estudante</figcaption>
+      </figure>
+      <figure class="card p-6 relative">
+        <svg class="absolute top-4 right-4 w-6 h-6 gold opacity-40" viewBox="0 0 24 24" fill="currentColor"><path d="M7.17 6A4.17 4.17 0 003 10.17v5.66A4.17 4.17 0 007.17 20h1.66A4.17 4.17 0 0013 15.83v-5.66A4.17 4.17 0 008.83 6H7.17Zm9 0A4.17 4.17 0 0012 10.17v5.66A4.17 4.17 0 0016.17 20h1.66A4.17 4.17 0 0022 15.83v-5.66A4.17 4.17 0 0017.83 6h-1.66Z"/></svg>
+        <blockquote class="text-sm text-neutral-200 mb-3">“Condicionamento e mobilidade muito melhores.”</blockquote>
+        <figcaption class="text-xs text-neutral-400">Lívia — Designer</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- AGENDAMENTO (1 passo → WhatsApp) -->
+  <section id="agendamento" class="section mx-auto container-max px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-2">Agende sua aula experimental</h2>
+    <p class="text-sm text-neutral-300 mb-6">Sem compromisso • Resposta rápida</p>
+
+    <form id="formAgendar" class="card p-5 md:p-6 space-y-5">
+      <div class="grid md:grid-cols-3 gap-4">
+        <label class="block">
+          <span class="text-sm">Seu nome</span>
+          <input name="nome" required type="text" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+        </label>
+        <label class="block">
+          <span class="text-sm">WhatsApp</span>
+          <input id="whats" name="whats" required type="tel" placeholder="(11) 99999-9999" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+        </label>
+        <label class="block">
+          <span class="text-sm">Objetivo</span>
+          <select name="objetivo" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+            <option>Emagrecimento</option><option>Ganho de massa</option>
+            <option>Condicionamento</option><option>Saúde/Qualidade de vida</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <label class="block">
+          <span class="text-sm">Modalidade preferida</span>
+          <select name="modalidade" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+            <option>Musculação</option><option>Funcional</option><option>HIIT</option><option>Bike</option>
+          </select>
+        </label>
+        <label class="block">
+          <span class="text-sm">Melhor horário</span>
+          <select name="horario" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+            <option>Manhã</option><option>Tarde</option><option>Noite</option>
+          </select>
+        </label>
+        <label class="block">
+          <span class="text-sm">Dia desejado</span>
+          <input name="dia" type="date" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+        </label>
+      </div>
+
+      <div class="flex items-center justify-between gap-3">
+        <small class="text-xs text-neutral-400">Ao enviar, abriremos o WhatsApp com seu pedido.</small>
+        <button class="btn-gold px-5 py-2.5 rounded-md font-semibold" type="submit">Agendar pelo Whats</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta-final" class="section mx-auto container-max px-4 py-16 text-center">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Bora treinar hoje?</h2>
+    <p class="text-neutral-300 mb-6">Estrutura de império. Foco de espartano.</p>
+    <a href="#agendamento" class="btn-gold px-6 py-3 rounded-lg font-semibold">Agendar agora</a>
+  </section>
+
+  <!-- FOOTER (linha única sempre visível) -->
+  <footer class="border-t border-[#1F1F1F]">
+    <div class="text-center text-xs text-neutral-500 py-4">© <span id="year"></span> CT Império Fitness. Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- WHATS FLOAT (opcional mobile) -->
+  <a id="whats-float" href="#" target="_blank" aria-label="Falar no WhatsApp"
+     class="fixed md:hidden bottom-4 right-4 btn-gold rounded-full w-14 h-14 grid place-items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.2 11.2 0 0 0-9.72 16.8L1 24l6.89-1.8A11.2 11.2 0 1 0 12 .5Zm6.55 16.05c-.28.8-1.64 1.53-2.26 1.58-.58.05-1.33.07-2.15-.13-.5-.12-1.15-.37-1.99-.77-3.49-1.65-5.75-5.47-5.93-5.73-.18-.26-1.42-1.9-1.42-3.63s.9-2.58 1.22-2.93c.32-.35.7-.44.94-.44h.68c.22 0 .52-.09.81.62.28.68.95 2.35 1.03 2.52.08.17.12.37.02.6-.1.23-.15.37-.3.57-.15.2-.32.45-.46.61-.15.17-.3.36-.13.68.18.32.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.5 1.53.32.14.52.12.72-.07.2-.18.84-.98 1.07-1.32.23-.34.46-.28.77-.17.32.12 2.01.95 2.36 1.12.35.17.58.26.66.41.08.14.08.83-.2 1.63Z"/></svg>
+  </a>
+
+  <script>
+    // Número do Whats
+    const WHATS_NUMBER = '555196474166';
+    const whatsLink = (msg='') => `https://wa.me/${WHATS_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+    // Ano
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Float Whats
+    document.getElementById('whats-float').href = whatsLink('Olá! Quero agendar uma aula experimental.');
+
+    // Máscara simples para Whats
+    const w = document.getElementById('whats');
+    if(w){
+      w.addEventListener('input', (e)=>{
+        let v = e.target.value.replace(/\D/g,'').slice(0,11);
+        const ddd=v.slice(0,2), a=v.slice(2,7), b=v.slice(7);
+        e.target.value = v.length>6 ? `(${ddd}) ${a}-${b}` : v.length>2 ? `(${ddd}) ${v.slice(2)}` : v;
+      });
+    }
+
+    // Envio do agendamento → Whats
+    const form = document.getElementById('formAgendar');
+    form?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const d = new FormData(form);
+      const resumo = `Aula experimental:
+• Nome: ${d.get('nome')}
+• Whats: ${d.get('whats')}
+• Objetivo: ${d.get('objetivo')}
+• Modalidade: ${d.get('modalidade')}
+• Melhor horário: ${d.get('horario')}
+• Dia desejado: ${d.get('dia')||'—'}`;
+      window.open(whatsLink(resumo), '_blank');
+    });
+  </script>
+</body>
+</html>
