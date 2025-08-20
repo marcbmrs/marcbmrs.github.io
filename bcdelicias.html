@@ -124,7 +124,12 @@
         Doces
       </button>
     </li>
-  </ul>
+  <li>
+  <button data-cat="bebidas" class="catbtn inline-flex items-center px-4 py-2 rounded-full bg-white border border-brand-200 hover:bg-brand-50">
+    Bebidas
+  </button>
+</li>
+</ul>
 </nav>
 
   <!-- Cardápio -->
@@ -133,199 +138,299 @@
 
     <!-- BOLOS -->
     <article class="card rounded-2xl overflow-hidden bg-white border border-brand-100" data-cat="bolos">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="bolo pacoca.webp" alt="Bolo de Paçoca" class="max-h-full max-w-full object-contain p-3">
-      </div>
+      <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+        <img src="bolo pacoca.webp" alt="Bolo de Paçoca" class="w-full h-full object-cover object-bottom"
+     loading="lazy" decoding="async">
+        </div>
       <div class="p-5">
         <div class="flex items-center justify-between">
           <h3 class="font-semibold">Bolo de Paçoca</h3>
           <span class="text-brand-700 font-semibold">R$ 12</span>
         </div>
-      </div>
-    </article>
 
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bolos">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="bolo choco belga.webp" alt="Bolo de Chocolate Belga" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Bolo de Chocolate Belga</h3>
-          <span class="text-brand-700 font-semibold">R$ 10</span>
+          <div class="mt-4">
+        <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+            data-name="Bolo de Paçoca" data-price="12">Adicionar ao pedido</button>
         </div>
       </div>
     </article>
 
     <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bolos">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="bolo beijinho coco.webp" alt="Bolo de Beijinho com Coco" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Bolo Beijinho com Coco</h3>
-          <span class="text-brand-700 font-semibold">R$ 12</span>
-        </div>
-      </div>
-    </article>
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="bolo choco belga.webp" alt="Bolo de Chocolate Belga"
+         class="w-full h-full object-cover object-bottom" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Bolo de Chocolate Belga</h3>
+      <span class="text-brand-700 font-semibold">R$ 10</span>
+    </div>
+
+    <!-- Botão fica FORA da flex de título/preço -->
+    <div class="mt-4">
+      <button
+        class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+        data-name="Bolo de Chocolate Belga" data-price="10">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
     <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bolos">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="bolo maracuja belga.webp" alt="Bolo de Maracujá com Chocolate Preto Belga" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Bolo Maracujá + Choc. Preto Belga</h3>
-          <span class="text-brand-700 font-semibold">R$ 12</span>
-        </div>
-      </div>
-    </article>
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="bolo beijinho coco.webp" alt="Bolo de Beijinho com Coco" class="w-full h-full object-cover object-bottom" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Bolo Beijinho com Coco</h3>
+      <span class="text-brand-700 font-semibold">R$ 12</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Bolo Beijinho com Coco" data-price="12">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bolos">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="bolo maracuja branco.webp" alt="Bolo de Maracujá com Chocolate Branco" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Bolo Maracujá + Choc. Branco</h3>
-          <span class="text-brand-700 font-semibold">R$ 12</span>
-        </div>
-      </div>
-    </article>
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bolos">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="bolo maracuja belga.webp" alt="Bolo de Maracujá com Chocolate Preto Belga" class="w-full h-full object-cover object-bottom" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Bolo Maracujá + Choc. Preto Belga</h3>
+      <span class="text-brand-700 font-semibold">R$ 12</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Bolo Maracujá + Choc. Preto Belga" data-price="12">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <!-- DOCES -->
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="doces">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="trufas.webp" alt="Trufa" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Trufa (Maracujá, Chocolate, Branquinho)</h3>
-          <span class="text-brand-700 font-semibold">R$ 5</span>
-        </div>
-      </div>
-    </article>
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bolos">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="bolo maracuja branco.webp" alt="Bolo de Maracujá com Chocolate Branco" class="w-full h-full object-cover object-bottom" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Bolo Maracujá + Choc. Branco</h3>
+      <span class="text-brand-700 font-semibold">R$ 12</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Bolo Maracujá + Choc. Branco" data-price="12">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="doces">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="torta limao.webp" alt="Torta de Limão" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Torta de Limão</h3>
-          <span class="text-brand-700 font-semibold">R$ 6</span>
-        </div>
-      </div>
-    </article>
+<!-- DOCES -->
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="doces">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="trufas.webp" alt="Trufa" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Trufa (Maracujá, Chocolate, Branquinho)</h3>
+      <span class="text-brand-700 font-semibold">R$ 5</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Trufa" data-price="5">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <!-- SALGADOS -->
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="enroladinho.webp" alt="Enroladinho" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Enroladinho</h3>
-          <span class="text-brand-700 font-semibold">R$ 8</span>
-        </div>
-      </div>
-    </article>
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="doces">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="torta limao.webp" alt="Torta de Limão" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Torta de Limão</h3>
+      <span class="text-brand-700 font-semibold">R$ 6</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Torta de Limão" data-price="6">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="enroladinho-folhado.webp" alt="Enroladinho Folhado" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Enroladinho Folhado</h3>
-          <span class="text-brand-700 font-semibold">R$ 8</span>
-        </div>
-      </div>
-    </article>
+<!-- SALGADOS -->
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="enroladinho.webp" alt="Enroladinho" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Enroladinho</h3>
+      <span class="text-brand-700 font-semibold">R$ 8</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Enroladinho" data-price="8">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="coxinha.webp" alt="Coxinha" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Coxinha</h3>
-          <span class="text-brand-700 font-semibold">R$ 10</span>
-        </div>
-      </div>
-    </article>
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="enroladinho-folhado.webp" alt="Enroladinho Folhado" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Enroladinho Folhado</h3>
+      <span class="text-brand-700 font-semibold">R$ 8</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Enroladinho Folhado" data-price="8">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="pastel de carne.webp" alt="Pastel de Carne" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Pastel de Carne</h3>
-          <span class="text-brand-700 font-semibold">R$ 12</span>
-        </div>
-      </div>
-    </article>
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="coxinha.webp" alt="Coxinha" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Coxinha</h3>
+      <span class="text-brand-700 font-semibold">R$ 10</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Coxinha" data-price="10">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="pastel de frango.webp" alt="Pastel de Frango" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Pastel de Frango</h3>
-          <span class="text-brand-700 font-semibold">R$ 12</span>
-        </div>
-      </div>
-    </article>
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="pastel de carne.webp" alt="Pastel de Carne" class="w-full h-full object-cover object-bottom" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Pastel de Carne</h3>
+      <span class="text-brand-700 font-semibold">R$ 12</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Pastel de Carne" data-price="12">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="pastel de forno.webp" alt="Pastel de Forno" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Pastel de Forno</h3>
-          <span class="text-brand-700 font-semibold">R$ 9</span>
-        </div>
-      </div>
-    </article>
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="pastel de frango.webp" alt="Pastel de Frango" class="w-full h-full object-cover object-bottom" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Pastel de Frango</h3>
+      <span class="text-brand-700 font-semibold">R$ 12</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Pastel de Frango" data-price="12">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="empada chef.webp" alt="Empada Carro Chef" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Empada Carro Chef</h3>
-          <span class="text-brand-700 font-semibold">R$ 15</span>
-        </div>
-      </div>
-    </article>
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="pastel de forno.webp" alt="Pastel de Forno" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Pastel de Forno</h3>
+      <span class="text-brand-700 font-semibold">R$ 9</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Pastel de Forno" data-price="9">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="empada chef.webp" alt="Empada de Frango com Catupiry" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Empada Frango + Catupiry</h3>
-          <span class="text-brand-700 font-semibold">R$ 15</span>
-        </div>
-      </div>
-    </article>
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="empada chef.webp" alt="Empada Carro Chef" class="w-full h-full object-cover object-bottom" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Empada Carro Chef</h3>
+      <span class="text-brand-700 font-semibold">R$ 15</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Empada Carro Chef" data-price="15">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
-    <!-- BEBIDAS -->
-    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bebidas">
-      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
-        <img src="200ml.webp" alt="Refrigerante 200ml" class="max-h-full max-w-full object-contain p-3">
-      </div>
-      <div class="p-5">
-        <div class="flex items-center justify-between">
-          <h3 class="font-semibold">Refrigerante 200ml</h3>
-          <span class="text-brand-700 font-semibold">R$ 3</span>
-        </div>
-      </div>
-    </article>
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="empada chef.webp" alt="Empada de Frango com Catupiry" class="w-full h-full object-cover object-bottom" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Empada Frango + Catupiry</h3>
+      <span class="text-brand-700 font-semibold">R$ 15</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Empada Frango + Catupiry" data-price="15">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
+
+<!-- BEBIDAS -->
+<article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bebidas">
+  <div class="aspect-[4/3] w-full bg-brand-50 overflow-hidden">
+    <img src="200ml.webp" alt="Refrigerante 200ml" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
+  </div>
+  <div class="p-5">
+    <div class="flex items-center justify-between">
+      <h3 class="font-semibold">Refrigerante 200ml</h3>
+      <span class="text-brand-700 font-semibold">R$ 3</span>
+    </div>
+    <div class="mt-4">
+      <button class="add px-4 py-2 rounded-full bg-brand-600 hover:bg-brand-700 text-sm font-semibold text-white shadow-sweet"
+              data-name="Refrigerante 200ml" data-price="3">
+        Adicionar ao pedido
+      </button>
+    </div>
+  </div>
+</article>
 
   </div>
 </main>
@@ -362,15 +467,16 @@
         </div>
         <div class="mt-6">
           <p class="font-semibold">Endereço</p>
-          <p class="text-cocoa/80">Rua Cruzeiro do Sul, 123 — Santa Tereza, Porto Alegre</p>
+          <p class="text-cocoa/80">Rua Cruzeiro do Sul, 2576 — Santa Tereza, Porto Alegre</p>
           <p class="mt-2 text-sm text-cocoa/60">Aberto: Ter–Sáb 9h–20h • Sex-Sáb 9h–21h30</p>
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden border border-brand-100">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4105.642975165126!2d-51.23038886426462!3d-30.08214239006897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1755728107220!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.3926198924128!2d-51.2299033!3d-30.082939999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951982784da09b3f%3A0xb21f18b5c69955cf!2sR.%20Cruzeiro%20do%20Sul%2C%202576%20-%20Santa%20Tereza%2C%20Porto%20Alegre%20-%20RS%2C%2090820-180!5e0!3m2!1spt-BR!2sbr!4v1755730495793!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
+
 
   <!-- Rodapé -->
   <footer class="border-t border-brand-100 py-8 text-sm">
@@ -379,38 +485,54 @@
     </div>
   </footer>
 
+  <!-- Carrinho -->
+<div id="cart" class="fixed bottom-0 inset-x-0 z-50 bg-cream/95 backdrop-blur border-t border-brand-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row sm:items-center gap-3">
+    <div class="flex-1">
+      <p class="text-sm text-cocoa/80"><strong>Itens:</strong> <span id="cartList" class="text-cocoa">nenhum</span></p>
+      <p class="text-sm text-cocoa/70"><strong>Total:</strong> R$ <span id="cartTotal">0</span></p>
+    </div>
+    <div class="flex items-center gap-2">
+      <a id="whats" target="_blank" rel="noopener" href="#"
+         class="inline-flex items-center gap-2 rounded-full bg-brand-600 hover:bg-brand-700 px-5 py-3 text-white font-semibold shadow-sweet">
+        <span>Enviar pedido</span>
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21 3 8.5 15.5l-1 4 4-1L21 3Zm-6 2 4 4"/></svg>
+      </a>
+      <button id="clear" class="px-3 py-3 rounded-full border border-brand-200 hover:bg-brand-100 text-sm text-cocoa">Limpar</button>
+    </div>
+  </div>
+</div>
   <script>
-    // Menu mobile
-    const btn = document.getElementById('menuBtn');
-    const mm = document.getElementById('mobileMenu');
-    btn?.addEventListener('click', ()=> mm.classList.toggle('hidden'));
+  // Menu mobile
+  const btn = document.getElementById('menuBtn');
+  const mm  = document.getElementById('mobileMenu');
+  btn?.addEventListener('click', ()=> mm.classList.toggle('hidden'));
 
-    // script para alternar cor do filtro selecionado
-  document.querySelectorAll('.catbtn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.catbtn').forEach(b => {
-        b.classList.remove('active', 'bg-brand-600', 'text-white');
-        b.classList.add('bg-white', 'text-brand-700', 'border', 'border-brand-200');
+  // Filtros (visual + lógica + acessibilidade)
+  const catBtns = document.querySelectorAll('.catbtn');
+  const cards   = document.querySelectorAll('.card');
+
+  function setActive(btn){
+    catBtns.forEach(b=>{
+      b.classList.remove('active','bg-brand-600','text-white');
+      b.classList.add('bg-white','text-brand-700','border','border-brand-200');
+      b.setAttribute('aria-pressed','false');
+    });
+    btn.classList.add('active','bg-brand-600','text-white');
+    btn.classList.remove('bg-white','text-brand-700','border','border-brand-200');
+    btn.setAttribute('aria-pressed','true');
+  }
+
+  catBtns.forEach(b=>{
+    b.addEventListener('click', ()=>{
+      setActive(b);
+      const cat = b.dataset.cat;
+      cards.forEach(c=>{
+        const show = cat==='all' || (c.dataset.cat||'').includes(cat);
+        c.classList.toggle('hidden', !show);
       });
-      btn.classList.add('active', 'bg-brand-600', 'text-white');
-      btn.classList.remove('bg-white', 'text-brand-700', 'border', 'border-brand-200');
     });
   });
-
-    // Filtro categorias
-    const catBtns = document.querySelectorAll('.catbtn');
-    const cards = document.querySelectorAll('.card');
-    catBtns.forEach(b=>{
-      b.addEventListener('click', ()=>{
-        catBtns.forEach(x=>x.classList.remove('bg-brand-600','text-black'));
-        b.classList.add('bg-brand-600','text-black');
-        const cat = b.dataset.cat;
-        cards.forEach(c=>{
-          const show = cat==='all' || (c.dataset.cat||'').includes(cat);
-          c.classList.toggle('hidden', !show);
-        });
-      });
-    });
 
     // Botão "Pedir no Whats" por item
     document.querySelectorAll('.whats').forEach(btn=>{
@@ -424,6 +546,44 @@
         window.open(`https://wa.me/5551920065517?text=${msg}`, '_blank');
       });
     });
+
+     const cart = [];
+  const fmt = n => (Math.round(n*100)/100).toFixed(2).replace('.', ',');
+
+  const cartList = document.getElementById('cartList');
+  const cartTotal = document.getElementById('cartTotal');
+  const whats = document.getElementById('whats');
+  const clearBtn = document.getElementById('clear');
+
+  function renderCart(){
+    const totalItems = cart.reduce((a,i)=>a+i.qtd,0);
+    const total = cart.reduce((a,i)=>a+i.qtd*i.price,0);
+    cartList.textContent = cart.length ? cart.map(i=>`${i.qtd}x ${i.name}`).join(', ') : 'nenhum';
+    cartTotal.textContent = fmt(total);
+
+    const itens = cart.map(i => `• ${i.qtd}x ${i.name} — R$ ${fmt(i.price * i.qtd)}`).join('%0A');
+    const msg = `Olá BC Delícias!%0AQuero pedir:%0A${itens}%0A%0ATotal: R$ ${fmt(total)}`;
+    whats.href = `https://wa.me/5551920065517?text=${msg}`;
+  }
+
+  document.querySelectorAll('.add').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.dataset.name;
+      const price = Number(btn.dataset.price);
+      const found = cart.find(i => i.name === name && i.price === price);
+      found ? found.qtd++ : cart.push({name, price, qtd: 1});
+      renderCart();
+      btn.classList.add('ring-2','ring-brand-300');
+      setTimeout(() => btn.classList.remove('ring-2','ring-brand-300'), 300);
+    });
+  });
+
+  clearBtn.addEventListener('click', () => {
+    cart.length = 0;
+    renderCart();
+  });
+
+  renderCart();
   </script>
 </body>
 </html>
