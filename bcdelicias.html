@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>BC Delícias — Pastéis, Bolos & Salgados</title>
+  <meta name="description" content="Pastéis sequinhos, bolos caseiros e salgados fresquinhos. Peça pelo WhatsApp!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* paleta puxada do seu logo (rosa blush) */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:'#fff6f8',
+              100:'#ffe9ee',
+              200:'#ffd3dd',
+              300:'#f8b5c4',
+              400:'#ec8fa6',
+              500:'#d97186', /* base */
+              600:'#c45d74',
+              700:'#a2485d',
+              800:'#7f394a',
+              900:'#5f2c39'
+            },
+            cream:'#fffaf5',
+            cocoa:'#5a3d2b'
+          },
+          boxShadow:{
+            sweet:'0 10px 30px rgba(217,113,134,.20)'
+          },
+          backgroundImage:{
+            sugar:'radial-gradient(60% 60% at 0% 0%, rgba(236,143,166,.15) 0%, transparent 60%), radial-gradient(50% 50% at 100% 0%, rgba(255,233,238,.7) 0%, transparent 60%)'
+          },
+          fontFamily:{
+            display:['Dancing Script','system-ui','sans-serif'],
+            sans:['Inter','system-ui','sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body class="bg-cream text-cocoa antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-cream/80 backdrop-blur border-b border-brand-100">
+    <div class="max-w-7xl mx-auto h-16 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3" aria-label="BC Delícias - Início">
+        <img src="Logo-bc.webp" alt="BC Delícias" class="h-10 w-10 rounded-full object-cover ring-2 ring-brand-200">
+        <span class="font-display text-2xl leading-none text-brand-700">BC Delícias</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#menu" class="hover:text-brand-700">Cardápio</a>
+        <a href="#sobre" class="hover:text-brand-700">Sobre</a>
+        <a href="#contato" class="hover:text-brand-700">Contato</a>
+        <a href="https://wa.me/5500000000000?text=Olá%20BC%20Delícias!%20Quero%20fazer%20um%20pedido."
+           target="_blank"
+           class="inline-flex items-center rounded-full bg-brand-600 text-white px-4 py-2 hover:bg-brand-700 shadow-sweet">Pedir no Whats</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden w-10 h-10 grid place-items-center rounded-lg border border-brand-100">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-brand-100 bg-cream">
+      <div class="px-4 py-3 grid gap-2">
+        <a href="#menu" class="py-2">Cardápio</a>
+        <a href="#sobre" class="py-2">Sobre</a>
+        <a href="#contato" class="py-2">Contato</a>
+        <a href="https://wa.me/5500000000000?text=Olá%20BC%20Delícias!%20Quero%20fazer%20um%20pedido."
+           target="_blank" class="py-2 rounded-lg text-center bg-brand-600 text-white">Pedir no Whats</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-sugar pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="uppercase tracking-widest text-xs text-brand-600">Excelência • em cada detalhe.</p>
+        <h1 class="mt-2 font-display text-5xl sm:text-6xl leading-[0.95] text-brand-700">Doces & Salgados que abraçam</h1>
+        <p class="mt-4 text-cocoa/80 text-lg">Pastéis sequinhos, bolos caseiros, salgados de festa e aquele brigadeiro cremoso. Retire ou peça por delivery.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#menu" class="inline-flex items-center rounded-full bg-brand-600 text-white px-6 py-3 font-semibold hover:bg-brand-700 shadow-sweet">Ver cardápio</a>
+          <a href="https://wa.me/5500000000000?text=Olá%20BC%20Delícias!%20Quero%20ver%20as%20opções%20do%20dia."
+             target="_blank" class="inline-flex items-center rounded-full border border-brand-200 px-6 py-3 hover:bg-white">Falar no Whats</a>
+        </div>
+        <p class="mt-2 text-sm text-cocoa/60">Aberto: Seg–Sáb 9h–19h • Dom 9h–13h</p>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-brand-200 to-brand-50 blur-2xl"></div>
+        <img src="hero-doces.png" alt="Vitrine com bolos e doces" class="relative w-full rounded-3xl shadow-2xl" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorias -->
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Categorias">
+    <ul class="flex flex-wrap gap-2">
+      <li><button data-cat="all" class="catbtn active inline-flex items-center px-4 py-2 rounded-full bg-brand-600 text-white">Todos</button></li>
+      <li><button data-cat="pasteis" class="catbtn inline-flex items-center px-4 py-2 rounded-full bg-white border border-brand-200 hover:bg-brand-50">Pastéis</button></li>
+      <li><button data-cat="bolos" class="catbtn inline-flex items-center px-4 py-2 rounded-full bg-white border border-brand-200 hover:bg-brand-50">Bolos</button></li>
+      <li><button data-cat="salgados" class="catbtn inline-flex items-center px-4 py-2 rounded-full bg-white border border-brand-200 hover:bg-brand-50">Salgados</button></li>
+      <li><button data-cat="doces" class="catbtn inline-flex items-center px-4 py-2 rounded-full bg-white border border-brand-200 hover:bg-brand-50">Doces</button></li>
+    </ul>
+  </nav>
+
+  <!-- Cardápio -->
+  <main id="menu" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="grid">
+
+    <!-- BOLOS -->
+    <article class="card rounded-2xl overflow-hidden bg-white border border-brand-100" data-cat="bolos">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="bolo-pacoca.png" alt="Bolo de Paçoca" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Bolo de Paçoca</h3>
+          <span class="text-brand-700 font-semibold">R$ 12</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bolos">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="bolo-belga.png" alt="Bolo de Chocolate Belga" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Bolo de Chocolate Belga</h3>
+          <span class="text-brand-700 font-semibold">R$ 10</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bolos">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="bolo-branco-choco.png" alt="Bolo de Chocolate Branco com Massa de Chocolate" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Bolo Branco + Massa Chocolate</h3>
+          <span class="text-brand-700 font-semibold">R$ 10</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bolos">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="bolo-beijinho.png" alt="Bolo de Beijinho com Coco" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Bolo Beijinho com Coco</h3>
+          <span class="text-brand-700 font-semibold">R$ 12</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bolos">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="bolo-maracuja-preto.png" alt="Bolo de Maracujá com Chocolate Preto Belga" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Bolo Maracujá + Choc. Preto Belga</h3>
+          <span class="text-brand-700 font-semibold">R$ 12</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bolos">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="bolo-maracuja-branco.png" alt="Bolo de Maracujá com Chocolate Branco" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Bolo Maracujá + Choc. Branco</h3>
+          <span class="text-brand-700 font-semibold">R$ 12</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- DOCES -->
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="doces">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="trufa.png" alt="Trufa" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Trufa (Maracujá, Chocolate, Branquinho)</h3>
+          <span class="text-brand-700 font-semibold">R$ 5</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="doces">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="torta-limao.png" alt="Torta de Limão" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Torta de Limão</h3>
+          <span class="text-brand-700 font-semibold">R$ 6</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- SALGADOS -->
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="enroladinho.png" alt="Enroladinho" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Enroladinho</h3>
+          <span class="text-brand-700 font-semibold">R$ 8</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="enroladinho-folhado.png" alt="Enroladinho Folhado" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Enroladinho Folhado</h3>
+          <span class="text-brand-700 font-semibold">R$ 8</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="coxinha.png" alt="Coxinha" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Coxinha</h3>
+          <span class="text-brand-700 font-semibold">R$ 10</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="pastel-carne.png" alt="Pastel de Carne" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Pastel de Carne</h3>
+          <span class="text-brand-700 font-semibold">R$ 12</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="pastel-frango.png" alt="Pastel de Frango" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Pastel de Frango</h3>
+          <span class="text-brand-700 font-semibold">R$ 12</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="pastel-forno.png" alt="Pastel de Forno" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Pastel de Forno</h3>
+          <span class="text-brand-700 font-semibold">R$ 9</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="empada-carro-chef.png" alt="Empada Carro Chef" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Empada Carro Chef</h3>
+          <span class="text-brand-700 font-semibold">R$ 15</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="salgados">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="empada-frango.png" alt="Empada de Frango com Catupiry" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Empada Frango + Catupiry</h3>
+          <span class="text-brand-700 font-semibold">R$ 15</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- BEBIDAS -->
+    <article class="card bg-white border border-brand-100 rounded-2xl" data-cat="bebidas">
+      <div class="h-44 w-full bg-brand-50 flex items-center justify-center">
+        <img src="refri.png" alt="Refrigerante 200ml" class="max-h-full max-w-full object-contain p-3">
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">Refrigerante 200ml</h3>
+          <span class="text-brand-700 font-semibold">R$ 3</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-12 bg-white/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="font-display text-3xl sm:text-4xl text-brand-700">O sabor da casa</h2>
+        <p class="mt-3 text-cocoa/80">Receitas de família, ingredientes frescos e muito carinho em cada etapa. Atendemos encomendas para festas e cafés corporativos.</p>
+        <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-cocoa/80">
+          <li>✔️ Encomendas com 24–48h</li>
+          <li>✔️ Opções sem lactose</li>
+          <li>✔️ Entrega na região</li>
+          <li>✔️ Pagamento via Pix/Cartão</li>
+        </ul>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-brand-200 to-brand-50 blur-2xl"></div>
+        <img src="sobre-cozinha.png" alt="Produção artesanal" class="relative w-full rounded-3xl shadow-2xl" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato / Localização -->
+  <section id="contato" class="py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8">
+      <div>
+        <h2 class="font-display text-3xl sm:text-4xl text-brand-700">Faça seu pedido</h2>
+        <div class="mt-4 grid gap-3">
+          <a href="https://wa.me/5500000000000?text=Olá%20BC%20Delícias!%20Gostaria%20de%20fazer%20um%20pedido."
+             target="_blank" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 text-white px-5 py-3 hover:bg-brand-700 shadow-sweet">💬 WhatsApp</a>
+          <a href="tel:+550000000000" class="inline-flex items-center gap-2 rounded-xl border border-brand-200 px-5 py-3 hover:bg-white">📞 (00) 0000‑0000</a>
+          <a href="mailto:contato@bcdelicias.com.br" class="inline-flex items-center gap-2 rounded-xl border border-brand-200 px-5 py-3 hover:bg-white">✉️ contato@bcdelicias.com.br</a>
+        </div>
+        <div class="mt-6">
+          <p class="font-semibold">Endereço</p>
+          <p class="text-cocoa/80">Rua Doce, 123 — Seu Bairro, Sua Cidade</p>
+          <p class="mt-2 text-sm text-cocoa/60">Seg–Sáb 9h–19h • Dom 9h–13h</p>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-brand-100">
+        <iframe title="Mapa — BC Delícias" src="https://maps.google.com/maps?q=Av.%20Paulista%2C%20S%C3%A3o%20Paulo&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="380" style="border:0" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="border-t border-brand-100 py-8 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© 2025 BC Delícias. Todos os direitos reservados.</p>
+      <nav class="flex items-center gap-4">
+        <a href="#" class="text-cocoa/70 hover:text-cocoa">Política de Privacidade</a>
+        <a href="#" class="text-cocoa/70 hover:text-cocoa">Termos</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Menu mobile
+    const btn = document.getElementById('menuBtn');
+    const mm = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', ()=> mm.classList.toggle('hidden'));
+
+    // Filtro categorias
+    const catBtns = document.querySelectorAll('.catbtn');
+    const cards = document.querySelectorAll('.card');
+    catBtns.forEach(b=>{
+      b.addEventListener('click', ()=>{
+        catBtns.forEach(x=>x.classList.remove('bg-brand-600','text-white'));
+        b.classList.add('bg-brand-600','text-white');
+        const cat = b.dataset.cat;
+        cards.forEach(c=>{
+          const show = cat==='all' || (c.dataset.cat||'').includes(cat);
+          c.classList.toggle('hidden', !show);
+        });
+      });
+    });
+
+    // Botão "Pedir no Whats" por item
+    document.querySelectorAll('.whats').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const wrap = btn.closest('.p-5');
+        const qty = Number(wrap.querySelector('.qty')?.value || 1);
+        const name = btn.dataset.name;
+        const price = Number(btn.dataset.price);
+        const total = (Math.round(qty*price*100)/100).toFixed(2).replace('.', ',');
+        const msg = `Olá BC Delícias!%0AQuero pedir:%0A• ${qty}x ${name}%0ATotal aprox.: R$ ${total}`;
+        window.open(`https://wa.me/5500000000000?text=${msg}`, '_blank');
+      });
+    });
+  </script>
+</body>
+</html>
