@@ -5,64 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A Libertação do Açúcar</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Poppins"', 'sans-serif'],
+          },
+        },
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    .neon-text {
-      text-shadow: 0 0 3px #00ffe1, 0 0 6px #00ffe1;
-      color: #b3fdf7;
-    }
     .neon-btn {
-      box-shadow: 0 0 4px #ff0055, 0 0 8px #ff0055;
+      box-shadow: 0 0 6px #a3e635, 0 0 12px #a3e635;
     }
   </style>
 </head>
-<body class="bg-zinc-900 text-white font-sans">
-  <!-- Hero Section -->
-  <section class="bg-zinc-900 py-16 px-4 text-center border-b border-zinc-700">
-    <div class="max-w-5xl mx-auto">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 neon-text">
-        Domine Seus Impulsos, Corte os Doces, Transforme Seu Corpo
+<body class="bg-slate-900 text-white font-display">
+
+  <!-- Hero -->
+  <section class="relative bg-slate-900 py-20 px-4 text-center border-b border-slate-800 overflow-hidden">
+    <div class="max-w-5xl mx-auto z-10 relative">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-lime-400 leading-tight">
+        Domine Seus Impulsos,<br> Corte os Doces, Transforme Seu Corpo
       </h1>
-      <p class="text-lg md:text-2xl text-zinc-300 mb-8">
+      <p class="text-lg md:text-2xl text-slate-300 mb-10">
         Método comprovado para controlar o açúcar, equilibrar seus hormônios e conquistar definição corporal – sem dietas malucas.
       </p>
-      <div class="mb-8">
-        <img src="mockup-ebook.webp" alt="Mockup do eBook" class="mx-auto max-w-xs md:max-w-md rounded-xl shadow-xl border-4 border-zinc-700">
+      <div class="mb-10 animate-pulse">
+        <img src="mockup-ebook.webp" alt="Mockup do eBook" class="mx-auto max-w-xs md:max-w-md rounded-xl shadow-2xl border-4 border-slate-800">
       </div>
-      <a href="#compra" class="bg-red-600 neon-btn text-white px-8 py-4 rounded-xl text-xl font-semibold uppercase tracking-wide hover:bg-red-700 transition">
+      <a href="https://pay.hotmart.com/P101474696H" target="_blank" rel="noopener noreferrer"
+        class="bg-lime-500 neon-btn text-slate-900 px-10 py-4 rounded-xl text-xl font-bold uppercase tracking-wide hover:bg-lime-600 transition duration-300 inline-block">
         Quero Me Libertar do Açúcar
-      </a>
+        </a>
     </div>
   </section>
 
   <!-- Problema e Solução -->
-  <section class="py-16 px-4 bg-zinc-950 text-center">
+  <section class="py-20 px-4 bg-slate-950 text-center">
     <div class="max-w-3xl mx-auto">
-      <p class="text-xl md:text-2xl font-medium mb-4">
+      <p class="text-2xl font-semibold mb-4">
         Você treina, mas o vício em açúcar te impede de secar?
       </p>
-      <p class="text-zinc-400 mb-6">
+      <p class="text-slate-400 text-lg leading-relaxed">
         O corpo viciado em açúcar entra em um ciclo hormonal sabotador. Você sente fome o tempo todo, energia oscilando, ansiedade e estagnação nos resultados.
         <br/><br/>
-        O programa <span class="neon-text font-semibold">A Libertação do Açúcar</span> mostra o caminho para recuperar o controle mental e hormonal — usando nutrição inteligente, hábitos anabólicos e ciência do comportamento.
+        O programa <span class="text-lime-400 font-semibold">A Libertação do Açúcar</span> mostra o caminho para recuperar o controle mental e hormonal — usando nutrição inteligente, hábitos anabólicos e ciência do comportamento.
       </p>
     </div>
   </section>
 
   <!-- Benefícios -->
-  <section class="bg-gradient-to-b from-zinc-900 to-zinc-800 py-16 px-4">
+  <section class="bg-slate-900 py-20 px-4">
     <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-10 neon-text">O Que Você Vai Aprender</h2>
+      <h2 class="text-4xl font-bold mb-12 text-lime-400">O Que Você Vai Aprender</h2>
       <div class="grid md:grid-cols-2 gap-8 text-left">
-        <div class="bg-zinc-800 p-6 rounded-2xl shadow-xl border border-zinc-700">
+        <div class="bg-slate-800 p-6 rounded-2xl shadow-lg border border-lime-500/30 hover:shadow-lime-400/20 transition">
           <p class="text-lg">✅ Como o açúcar afeta seus hormônios e destrói sua performance</p>
         </div>
-        <div class="bg-zinc-800 p-6 rounded-2xl shadow-xl border border-zinc-700">
+        <div class="bg-slate-800 p-6 rounded-2xl shadow-lg border border-lime-500/30 hover:shadow-lime-400/20 transition">
           <p class="text-lg">✅ Estratégias para cortar o vício por doces sem sentir fraqueza</p>
         </div>
-        <div class="bg-zinc-800 p-6 rounded-2xl shadow-xl border border-zinc-700">
+        <div class="bg-slate-800 p-6 rounded-2xl shadow-lg border border-lime-500/30 hover:shadow-lime-400/20 transition">
           <p class="text-lg">✅ Técnicas mentais e nutricionais para manter disciplina alimentar</p>
         </div>
-        <div class="bg-zinc-800 p-6 rounded-2xl shadow-xl border border-zinc-700">
+        <div class="bg-slate-800 p-6 rounded-2xl shadow-lg border border-lime-500/30 hover:shadow-lime-400/20 transition">
           <p class="text-lg">✅ Como acelerar a queima de gordura e manter energia estável</p>
         </div>
       </div>
@@ -70,29 +80,30 @@
   </section>
 
   <!-- Oferta -->
-  <section id="compra" class="bg-zinc-950 py-16 px-4 text-center border-t border-zinc-700">
+  <section id="compra" class="bg-slate-950 py-20 px-4 text-center border-t border-slate-800">
     <div class="max-w-xl mx-auto">
-      <h2 class="text-4xl font-bold mb-6 neon-text">Apenas R$19,90</h2>
-      <p class="text-lg text-zinc-400 mb-6">Oferta de entrada para quem quer iniciar sua transformação com ciência, não achismo.</p>
-      <a href="#" class="bg-red-600 neon-btn text-white px-10 py-4 rounded-xl text-xl font-bold uppercase tracking-wide hover:bg-red-700 transition">
+      <h2 class="text-5xl font-bold mb-6 text-lime-400">Apenas R$19,90</h2>
+      <p class="text-lg text-slate-400 mb-8">Oferta de entrada para quem quer iniciar sua transformação com ciência, não achismo.</p>
+      <a href="https://pay.hotmart.com/P101474696H" target="_blank" rel="noopener noreferrer"
+        class="bg-lime-500 neon-btn text-slate-900 px-12 py-5 rounded-xl text-xl font-bold uppercase tracking-wide hover:bg-lime-600 transition duration-300 inline-block">
         Começar Agora
-      </a>
-      <p class="text-sm text-zinc-500 mt-4">Acesso imediato | Pagamento 100% seguro</p>
+        </a>
+      <p class="text-sm text-slate-500 mt-4">Acesso imediato | Pagamento 100% seguro</p>
     </div>
   </section>
 
   <!-- Garantia -->
-  <section class="py-16 px-4 text-center bg-zinc-900">
+  <section class="py-20 px-4 text-center bg-slate-900">
     <div class="max-w-xl mx-auto">
-      <h3 class="text-2xl font-semibold mb-2">Garantia Incondicional de 7 Dias</h3>
-      <p class="text-zinc-400">
+      <h3 class="text-3xl font-semibold mb-4">Garantia Incondicional de 7 Dias</h3>
+      <p class="text-slate-400 text-lg">
         Se o conteúdo não te ajudar, é só pedir reembolso. Simples, direto e sem enrolação.
       </p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-zinc-950 py-8 text-center text-sm text-zinc-500 border-t border-zinc-800">
+  <footer class="bg-slate-950 py-10 text-center text-sm text-slate-500 border-t border-slate-800">
     <p>&copy; 2025 A Libertação do Açúcar. Todos os direitos reservados.</p>
     <p class="mt-2">Checkout seguro | Política de Privacidade | Termos de Uso</p>
   </footer>
