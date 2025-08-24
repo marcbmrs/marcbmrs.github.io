@@ -84,46 +84,56 @@
   </header>
 
   <!-- HERO (vibe espartana + romano) -->
-  <section id="hero" class="section relative overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none opacity-[.08]"
-         style="background:
-            radial-gradient(600px 380px at 85% -10%, rgba(245,195,46,.35), transparent),
-            radial-gradient(560px 320px at 10% 110%, rgba(245,195,46,.2), transparent);"></div>
+  <!-- HERO (vibe espartana + romano) -->
+<section id="hero" class="section relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none opacity-[.08]"
+       style="background:
+          radial-gradient(600px 380px at 85% -10%, rgba(245,195,46,.35), transparent),
+          radial-gradient(560px 320px at 10% 110%, rgba(245,195,46,.2), transparent);"></div>
 
-    <div class="mx-auto container-max px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-      <div class="space-y-6">
-        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+  <div class="mx-auto container-max px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+    <div class="space-y-6">
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
         Atendimento <span class="gold">humanizado</span>. Equipamentos de <span class="gold">última geração</span>.
-        </h1>
-        <p class="text-sm text-neutral-400">
+      </h1>
+
+      <p class="text-sm text-neutral-400">
         ⏰ Aberta todos os dias — <strong>Seg a Sex:</strong> 06h às 23h • <strong>Sáb:</strong> 09h às 16h • <strong>Dom/Feriados:</strong> 06h às 14h
       </p>
-        <p class="text-lg text-neutral-300">
+
+      <p class="text-lg text-neutral-300">
         Aqui sua evolução é levada a sério. Com professores qualificados, tecnologia de ponta e acompanhamento real, 
         você conquista resultados com segurança e motivação. Junte-se à <span class="gold font-semibold">FAMÍLIA CT IMPÉRIO FITNESS</span>.
       </p>
-        <div class="flex flex-col sm:flex-row gap-3 pt-1">
-          <a href="#agendamento" class="btn-gold px-6 py-3 rounded-lg font-semibold text-base text-center">Agendar experimental</a>
-          <a href="#planos" class="px-6 py-3 rounded-lg font-semibold text-base text-center border border-[var(--yellow)] hover:bg-white/5">Ver planos</a>
-          <div class="flex items-center gap-2 text-sm text-neutral-300">
+
+      <!-- Botões + WellHub -->
+      <div class="flex flex-col sm:flex-row gap-3 pt-1">
+        <a href="#agendamento" class="btn-gold px-6 py-3 rounded-lg font-semibold text-base text-center">
+          Agendar experimental
+        </a>
+        <a href="#planos" class="px-6 py-3 rounded-lg font-semibold text-base text-center border border-[var(--yellow)] hover:bg-white/5">
+          Ver planos
+        </a>
+        <!-- WellHub centralizado no mobile -->
+        <div class="flex items-center gap-2 text-sm text-neutral-300 self-center sm:self-auto">
           <img src="wellhub-logo.svg" alt="WellHub aceito" class="h-6 w-auto">
+          <!-- opcional: mostrar texto só no desktop -->
+          <!-- <span class="hidden sm:inline">Aceitamos WellHub</span> -->
         </div>
-        </div>
-        <div class="text-sm text-neutral-400">★★★★★ • +200 alunos • Avaliação física • App de treino</div>
       </div>
 
-      <div class="relative">
-
-        <!-- coloca uma foto do espaço ou mockup com vibe romana -->
-        <div class="card aspect-[4/3] w-full overflow-hidden">
-        <img src="hero_img.webp" 
-            alt="Academia CT Império Fitness com vibe romana" 
-            class="w-full h-full object-cover">
-        </div>
-
+      <div class="text-sm text-neutral-400">
+        ★★★★★ • +200 alunos • Avaliação física • App de treino
       </div>
     </div>
-  </section>
+
+    <div class="relative">
+      <div class="card aspect-[4/3] w-full overflow-hidden">
+        <img src="hero_img.webp" alt="Academia CT Império Fitness com vibe romana" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FAIXA "FININHA" DE MARCAS (loop contínuo com mais espaço) -->
 <section aria-label="Equipamentos importados" class="border-y border-[#1F1F1F] bg-[#FFFFFF]">
@@ -462,6 +472,7 @@
 
 <!-- SCRIPT Instagram (adicione apenas uma vez no final da página) -->
 <script async src="//www.instagram.com/embed.js"></script>
+
   <script>
     // Número do Whats
     const WHATS_NUMBER = '555196474166';
