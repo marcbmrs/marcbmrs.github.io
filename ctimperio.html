@@ -231,23 +231,23 @@
   <div class="flex md:grid gap-4 overflow-x-auto snap-x snap-mandatory md:grid-cols-3 scroll-smooth pb-2 -mx-4 px-4">
     
     <div class="snap-start shrink-0 w-[85%] sm:w-[70%] md:w-auto">
-      <img src="galeria01.webp" alt="Área de musculação" class="rounded-lg w-full h-auto object-cover">
+      <img src="galeria01.webp" alt="Área de musculação" class="rounded-lg w-full h-auto object-cover cursor-pointer" onclick="abrirLightbox(this.src)">
     </div>
     
     <div class="snap-start shrink-0 w-[85%] sm:w-[70%] md:w-auto">
-      <img src="galeria02.webp" alt="Sala de cardio" class="rounded-lg w-full h-auto object-cover">
+      <img src="galeria02.webp" alt="Sala de cardio" class="rounded-lg w-full h-auto object-cover cursor-pointer" onclick="abrirLightbox(this.src)">
     </div>
     
     <div class="snap-start shrink-0 w-[85%] sm:w-[70%] md:w-auto">
-      <img src="galeria03.webp" alt="Espaço funcional" class="rounded-lg w-full h-auto object-cover">
+      <img src="galeria03.webp" alt="Espaço funcional" class="rounded-lg w-full h-auto object-cover cursor-pointer" onclick="abrirLightbox(this.src)">
     </div>
 
     <div class="snap-start shrink-0 w-[85%] sm:w-[70%] md:w-auto">
-      <img src="galeria04.webp" alt="Espaço funcional" class="rounded-lg w-full h-auto object-cover">
+      <img src="galeria04.webp" alt="Espaço funcional" class="rounded-lg w-full h-auto object-cover cursor-pointer" onclick="abrirLightbox(this.src)">
     </div>
 
     <div class="snap-start shrink-0 w-[85%] sm:w-[70%] md:w-auto">
-      <img src="galeria05.webp" alt="Espaço funcional" class="rounded-lg w-full h-auto object-cover">
+      <img src="galeria05.webp" alt="Espaço funcional" class="rounded-lg w-full h-auto object-cover cursor-pointer" onclick="abrirLightbox(this.src)">
     </div>
 
     <!-- Adicione mais imagens conforme necessário -->
@@ -405,6 +405,12 @@
     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.2 11.2 0 0 0-9.72 16.8L1 24l6.89-1.8A11.2 11.2 0 1 0 12 .5Zm6.55 16.05c-.28.8-1.64 1.53-2.26 1.58-.58.05-1.33.07-2.15-.13-.5-.12-1.15-.37-1.99-.77-3.49-1.65-5.75-5.47-5.93-5.73-.18-.26-1.42-1.9-1.42-3.63s.9-2.58 1.22-2.93c.32-.35.7-.44.94-.44h.68c.22 0 .52-.09.81.62.28.68.95 2.35 1.03 2.52.08.17.12.37.02.6-.1.23-.15.37-.3.57-.15.2-.32.45-.46.61-.15.17-.3.36-.13.68.18.32.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.5 1.53.32.14.52.12.72-.07.2-.18.84-.98 1.07-1.32.23-.34.46-.28.77-.17.32.12 2.01.95 2.36 1.12.35.17.58.26.66.41.08.14.08.83-.2 1.63Z"/></svg>
   </a>
 
+  <!-- LIGHTBOX -->
+<div id="lightbox" class="fixed inset-0 z-[999] bg-black/90 hidden items-center justify-center" onclick="fecharLightbox()">
+  <img id="lightbox-img" src="" class="max-w-[95vw] max-h-[90vh] rounded-lg shadow-lg">
+</div>
+
+
   <script>
     // Número do Whats
     const WHATS_NUMBER = '555196474166';
@@ -440,6 +446,19 @@
 • Dia desejado: ${d.get('dia')||'—'}`;
       window.open(whatsLink(resumo), '_blank');
     });
+
+    // LIGHTBOX (galeria)
+function abrirLightbox(src) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  lb.classList.remove('hidden');
+}
+
+function fecharLightbox() {
+  const lb = document.getElementById('lightbox');
+  lb.classList.add('hidden');
+}
   </script>
 </body>
 </html>
