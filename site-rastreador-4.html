@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sua Empresa — Rastreamento Veicular (Layout Split)</title>
+  <meta name="description" content="Rastreamento veicular com monitoramento ao vivo, bloqueio remoto e suporte 24h. Planos a partir de R$xx,xx/mês.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    .active-link{color:#2563eb;font-weight:700}
+    .reveal{opacity:0;transform:translateY(10px);transition:opacity .45s ease, transform .45s ease}
+    .reveal.show{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+  <!-- mobile topbar -->
+  <header class="lg:hidden sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2" aria-label="Início">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white font-bold">SE</span>
+        <span class="font-semibold">Sua Empresa</span>
+      </a>
+      <button id="openDrawer" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200" aria-label="Abrir menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- layout split -->
+  <div class="max-w-7xl mx-auto lg:grid lg:grid-cols-[280px_1fr]">
+    <!-- Sidebar fixa -->
+    <aside class="hidden lg:flex lg:sticky lg:top-6 lg:h-[calc(100vh-3rem)] lg:flex-col lg:justify-between m-4 rounded-2xl border border-gray-200 bg-white p-5">
+      <div>
+        <a href="#" class="flex items-center gap-3">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 text-white font-bold">SE</span>
+          <div class="leading-tight">
+            <p class="font-semibold">Sua Empresa</p>
+            <p class="text-xs text-gray-500">Rastreamento Veicular</p>
+          </div>
+        </a>
+
+        <nav id="spy" class="mt-8 grid gap-2 text-sm">
+          <a href="#inicio"       class="px-3 py-2 rounded-lg hover:bg-gray-50">Início</a>
+          <a href="#solucao"      class="px-3 py-2 rounded-lg hover:bg-gray-50">Solução</a>
+          <a href="#diferenciais" class="px-3 py-2 rounded-lg hover:bg-gray-50">Diferenciais</a>
+          <a href="#planos"       class="px-3 py-2 rounded-lg hover:bg-gray-50">Planos</a>
+          <a href="#comparativo"  class="px-3 py-2 rounded-lg hover:bg-gray-50">Comparativo</a>
+          <a href="#depoimentos"  class="px-3 py-2 rounded-lg hover:bg-gray-50">Depoimentos</a>
+          <a href="#contato"      class="px-3 py-2 rounded-lg hover:bg-gray-50">Contato</a>
+        </nav>
+      </div>
+
+      <div class="grid gap-2">
+        <a href="#planos" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700 transition">Ver planos</a>
+        <a href="https://wa.me/SEUNUMERO" class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-4 py-2 font-semibold hover:bg-gray-50 transition">WhatsApp</a>
+        <p class="text-[11px] text-gray-500 text-center">Planos a partir de <strong>R$xx,xx/mês</strong></p>
+      </div>
+    </aside>
+
+    <!-- Drawer mobile -->
+    <div id="drawer" class="fixed inset-0 z-50 hidden">
+      <div id="drawerBg" class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute right-0 top-0 h-full w-[82%] max-w-xs bg-white shadow-xl p-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white font-bold">SE</span>
+            <span class="font-semibold">Sua Empresa</span>
+          </div>
+          <button id="closeDrawer" class="h-9 w-9 inline-flex items-center justify-center rounded-lg border border-gray-200" aria-label="Fechar menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <nav class="mt-6 grid gap-1 text-sm">
+          <a href="#inicio" class="px-3 py-2 rounded-lg hover:bg-gray-50">Início</a>
+          <a href="#solucao" class="px-3 py-2 rounded-lg hover:bg-gray-50">Solução</a>
+          <a href="#diferenciais" class="px-3 py-2 rounded-lg hover:bg-gray-50">Diferenciais</a>
+          <a href="#planos" class="px-3 py-2 rounded-lg hover:bg-gray-50">Planos</a>
+          <a href="#comparativo" class="px-3 py-2 rounded-lg hover:bg-gray-50">Comparativo</a>
+          <a href="#depoimentos" class="px-3 py-2 rounded-lg hover:bg-gray-50">Depoimentos</a>
+          <a href="#contato" class="px-3 py-2 rounded-lg hover:bg-gray-50">Contato</a>
+        </nav>
+        <div class="mt-6 grid gap-2">
+          <a href="#planos" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700 transition">Ver planos</a>
+          <a href="https://wa.me/SEUNUMERO" class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-4 py-2 font-semibold hover:bg-gray-50 transition">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conteúdo -->
+    <main class="min-h-screen p-4 lg:p-8">
+      <!-- Início / Hero -->
+      <section id="inicio" class="reveal rounded-2xl border border-gray-200 bg-white p-8">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900">
+              Segurança em tempo real para seu veículo e sua frota
+            </h1>
+            <p class="mt-3 text-gray-600">
+              Monitoramento ao vivo, bloqueio remoto e suporte 24h. Comece a partir de <span class="font-semibold text-gray-900">R$xx,xx/mês</span>.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a href="#planos" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700 transition">Ver Planos</a>
+              <a href="https://wa.me/SEUNUMERO" class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 font-semibold hover:bg-gray-50 transition">WhatsApp</a>
+            </div>
+            <p class="mt-3 text-sm text-gray-500">Instalação rápida • Cobertura nacional • App iOS/Android</p>
+          </div>
+          <figure class="order-first lg:order-none rounded-xl overflow-hidden ring-1 ring-gray-200">
+            <img src="rota de veiculo.png" alt="Mapa com rota de veículo" class="w-full h-full object-cover">
+          </figure>
+        </div>
+      </section>
+
+      <!-- Solução -->
+      <section id="solucao" class="reveal mt-6 rounded-2xl border border-gray-200 bg-white p-8">
+        <h2 class="text-2xl font-extrabold text-gray-900">Como nossa solução funciona</h2>
+        <div class="mt-6 grid md:grid-cols-3 gap-6">
+          <div class="rounded-xl border border-gray-200 p-5">
+            <p class="text-sm font-semibold text-blue-600">1. Instalação</p>
+            <p class="mt-1 text-gray-700">Técnico credenciado instala o rastreador no veículo.</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 p-5">
+            <p class="text-sm font-semibold text-blue-600">2. Ativação</p>
+            <p class="mt-1 text-gray-700">Liberamos acesso ao app e painel web.</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 p-5">
+            <p class="text-sm font-semibold text-blue-600">3. Monitoramento</p>
+            <p class="mt-1 text-gray-700">Acompanhe em tempo real e receba alertas inteligentes.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Diferenciais -->
+      <section id="diferenciais" class="reveal mt-6 rounded-2xl border border-gray-200 bg-white p-8">
+        <h2 class="text-2xl font-extrabold text-gray-900">Diferenciais que fazem a diferença</h2>
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="rounded-xl bg-gray-50 p-5 ring-1 ring-gray-200">
+            <p class="font-semibold">Rastreamento ao vivo</p>
+            <p class="text-gray-600 text-sm mt-1">Atualização em segundos no app ou computador.</p>
+          </div>
+          <div class="rounded-xl bg-gray-50 p-5 ring-1 ring-gray-200">
+            <p class="font-semibold">Bloqueio remoto seguro</p>
+            <p class="text-gray-600 text-sm mt-1">Ação rápida com acompanhamento 24h.</p>
+          </div>
+          <div class="rounded-xl bg-gray-50 p-5 ring-1 ring-gray-200">
+            <p class="font-semibold">Alertas inteligentes</p>
+            <p class="text-gray-600 text-sm mt-1">Cerca, ignição, velocidade e bateria.</p>
+          </div>
+          <div class="rounded-xl bg-gray-50 p-5 ring-1 ring-gray-200">
+            <p class="font-semibold">Suporte humano 24/7</p>
+            <p class="text-gray-600 text-sm mt-1">Central própria, sem robô.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Planos -->
+      <section id="planos" class="reveal mt-6 rounded-2xl border border-gray-200 bg-white p-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-extrabold text-gray-900">Planos simples e transparentes</h2>
+          <p class="mt-1 text-gray-600">Escolha o ideal para você. Sem letrinhas miúdas.</p>
+        </div>
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border border-gray-200 p-6">
+            <p class="text-lg font-semibold">Básico</p>
+            <p class="mt-2 text-3xl font-extrabold text-gray-900">R$xx,xx<span class="text-base text-gray-500">/mês</span></p>
+            <ul class="mt-4 space-y-2 text-sm text-gray-600">
+              <li>• Rastreamento ao vivo</li>
+              <li>• App e web</li>
+              <li>• Suporte comercial</li>
+            </ul>
+            <a href="https://wa.me/SEUNUMERO" class="mt-6 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 px-4 py-2 font-semibold hover:bg-gray-50 transition">Assinar</a>
+          </div>
+          <div class="relative rounded-2xl border-2 border-blue-600 p-6 bg-white shadow-sm">
+            <span class="absolute -top-3 right-4 rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white">Mais escolhido</span>
+            <p class="text-lg font-semibold">Completo</p>
+            <p class="mt-2 text-3xl font-extrabold text-gray-900">R$xx,xx<span class="text-base text-gray-500">/mês</span></p>
+            <ul class="mt-4 space-y-2 text-sm text-gray-700">
+              <li>• Tudo do Básico</li>
+              <li>• Bloqueio remoto</li>
+              <li>• Central 24/7</li>
+            </ul>
+            <a href="https://wa.me/SEUNUMERO" class="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700 transition">Assinar</a>
+          </div>
+          <div class="rounded-2xl border border-gray-200 p-6">
+            <p class="text-lg font-semibold">Premium</p>
+            <p class="mt-2 text-3xl font-extrabold text-gray-900">R$xx,xx<span class="text-base text-gray-500">/mês</span></p>
+            <ul class="mt-4 space-y-2 text-sm text-gray-600">
+              <li>• Prioridade 24/7</li>
+              <li>• Relatórios avançados</li>
+              <li>• Multiveículos/Frota</li>
+            </ul>
+            <a href="https://wa.me/SEUNUMERO" class="mt-6 inline-flex w-full items-center justify-center rounded-lg border border-gray-300 px-4 py-2 font-semibold hover:bg-gray-50 transition">Assinar</a>
+          </div>
+        </div>
+        <p class="mt-4 text-center text-xs text-gray-500">Valores ilustrativos (R$xx,xx/mês). Ajuste conforme sua oferta.</p>
+      </section>
+
+      <!-- Comparativo -->
+      <section id="comparativo" class="reveal mt-6 rounded-2xl border border-gray-200 bg-white p-8 overflow-x-auto">
+        <h2 class="text-2xl font-extrabold text-gray-900">Compare os recursos</h2>
+        <table class="mt-4 w-full text-sm">
+          <thead>
+            <tr class="text-left text-gray-600">
+              <th class="py-2 pr-4">Recurso</th>
+              <th class="py-2 pr-4">Básico</th>
+              <th class="py-2 pr-4">Completo</th>
+              <th class="py-2 pr-4">Premium</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr>
+              <td class="py-3 pr-4">Rastreamento ao vivo</td>
+              <td class="py-3 pr-4">✔</td>
+              <td class="py-3 pr-4">✔</td>
+              <td class="py-3 pr-4">✔</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4">Bloqueio remoto</td>
+              <td class="py-3 pr-4">—</td>
+              <td class="py-3 pr-4">✔</td>
+              <td class="py-3 pr-4">✔</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4">Central 24/7</td>
+              <td class="py-3 pr-4">—</td>
+              <td class="py-3 pr-4">✔</td>
+              <td class="py-3 pr-4">✔ (prioridade)</td>
+            </tr>
+            <tr>
+              <td class="py-3 pr-4">Relatórios avançados</td>
+              <td class="py-3 pr-4">—</td>
+              <td class="py-3 pr-4">—</td>
+              <td class="py-3 pr-4">✔</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Depoimentos -->
+      <section id="depoimentos" class="reveal mt-6 rounded-2xl border border-gray-200 bg-white p-8">
+        <h2 class="text-2xl font-extrabold text-gray-900">O que nossos clientes dizem</h2>
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <figure class="rounded-xl bg-gray-50 p-5 ring-1 ring-gray-200">
+            <blockquote class="text-gray-700">“Recuperei meu carro rapidamente. Atendimento nota 10!”</blockquote>
+            <figcaption class="mt-2 text-xs text-gray-500">— Ana L.</figcaption>
+          </figure>
+          <figure class="rounded-xl bg-gray-50 p-5 ring-1 ring-gray-200">
+            <blockquote class="text-gray-700">“Alertas úteis e app muito fácil de usar.”</blockquote>
+            <figcaption class="mt-2 text-xs text-gray-500">— Diego M.</figcaption>
+          </figure>
+          <figure class="rounded-xl bg-gray-50 p-5 ring-1 ring-gray-200">
+            <blockquote class="text-gray-700">“Equipe atenciosa, suporte 24h de verdade.”</blockquote>
+            <figcaption class="mt-2 text-xs text-gray-500">— Priscila R.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contato" class="reveal my-6 rounded-2xl border border-gray-200 bg-white p-8">
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <div>
+            <h2 class="text-2xl font-extrabold text-gray-900">Fale com a Sua Empresa</h2>
+            <p class="mt-1 text-gray-600">Tire dúvidas e receba uma proposta personalizada.</p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a href="https://wa.me/SEUNUMERO" class="inline-flex items-center justify-center rounded-lg bg-green-500 px-6 py-3 font-semibold text-white hover:bg-green-600 transition">
+                WhatsApp
+              </a>
+              <a href="#planos" class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 font-semibold hover:bg-gray-50 transition">
+                Ver planos
+              </a>
+            </div>
+            <p class="mt-3 text-xs text-gray-500">Ao enviar seus dados, você concorda com nossa política de privacidade.</p>
+          </div>
+          <form class="grid gap-4" onsubmit="event.preventDefault(); window.location.href='https://wa.me/SEUNUMERO';">
+            <label class="text-sm">Nome
+              <input type="text" required class="mt-1 w-full rounded-lg border-gray-300 focus:border-blue-600 focus:ring-blue-600">
+            </label>
+            <label class="text-sm">Telefone
+              <input type="tel" required class="mt-1 w-full rounded-lg border-gray-300 focus:border-blue-600 focus:ring-blue-600" placeholder="(xx) xxxxx-xxxx">
+            </label>
+            <label class="text-sm">Mensagem
+              <textarea rows="4" class="mt-1 w-full rounded-lg border-gray-300 focus:border-blue-600 focus:ring-blue-600" placeholder="Quero saber mais sobre os planos..."></textarea>
+            </label>
+            <button type="submit" class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700 transition">Enviar</button>
+          </form>
+        </div>
+      </section>
+
+      <footer class="py-10 text-center text-xs text-gray-500">
+        &copy; 2025 Sua Empresa — Todos os direitos reservados.
+      </footer>
+    </main>
+  </div>
+
+  <!-- Botão flutuante WhatsApp (ícone oficial) -->
+  <a href="https://wa.me/SEUNUMERO" aria-label="Fale no WhatsApp"
+     class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 shadow-xl ring-1 ring-black/5 hover:bg-green-600 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-7 w-7 fill-white" aria-hidden="true">
+      <path d="M16 .6C7.5.6.6 7.5.6 16c0 2.8.7 5.4 2.1 7.8L0 32l8.5-2.2c2.3 1.3 4.9 2 7.6 2 8.5 0 15.4-6.9 15.4-15.4S24.5.6 16 .6zm0 28.2c-2.3 0-4.6-.6-6.6-1.8l-.5-.3-5 .1 1.4-4.8-.3-.5c-1.2-2-1.9-4.3-1.9-6.7 0-7 5.7-12.7 12.7-12.7s12.7 5.7 12.7 12.7S23 28.8 16 28.8zm7.1-9.9c-.4-.2-2.2-1.1-2.6-1.3s-.6-.2-.9.2-1 1.3-1.2 1.5c-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.3.4-.5.1-.2.1-.4 0-.6s-.9-2.2-1.2-3-.6-.7-.9-.7h-.8c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.6.8.3 1.5.2 2.1.1.6-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5z"/>
+    </svg>
+  </a>
+
+  <!-- JS: drawer, scrollspy, reveal -->
+  <script>
+    // Drawer mobile
+    const drawer = document.getElementById('drawer');
+    const openDrawer = document.getElementById('openDrawer');
+    const closeDrawer = document.getElementById('closeDrawer');
+    const drawerBg = document.getElementById('drawerBg');
+    openDrawer?.addEventListener('click', ()=> drawer.classList.remove('hidden'));
+    closeDrawer?.addEventListener('click', ()=> drawer.classList.add('hidden'));
+    drawerBg?.addEventListener('click', ()=> drawer.classList.add('hidden'));
+
+    // Scrollspy (sidebar)
+    const links = Array.from(document.querySelectorAll('#spy a'));
+    const sections = links.map(a => document.querySelector(a.getAttribute('href')));
+    const spy = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        const id = '#' + entry.target.id;
+        const link = links.find(a => a.getAttribute('href') === id);
+        if(entry.isIntersecting){
+          links.forEach(l=>l.classList.remove('active-link'));
+          link?.classList.add('active-link');
+          history.replaceState(null, '', id); // atualização da URL sem pular
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px', threshold:0.01});
+    sections.forEach(s=> s && spy.observe(s));
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
+      });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
