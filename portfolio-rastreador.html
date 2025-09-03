@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');fbq('init','SEU_PIXEL_ID');fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oferta Temporária — 5 Vagas • Sites de Rastreamento por R$200</title>
+  <meta name="description" content="Somente 5 vagas: crio seu site de rastreamento veicular por R$200 (personalizado) + domínio anual e hospedagem mensal pagas direto à plataforma. Oferta por tempo limitado." />
+  <meta property="og:title" content="Oferta Temporária — 5 Vagas" />
+  <meta property="og:description" content="Site personalizado por R$200 para empresas de rastreadores. Somente 5 vagas. Fale no WhatsApp." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] },
+          colors: {
+            bg: '#0b0f1a',
+            primary: '#6D28D9',
+            neon: '#00E5FF',
+            ink: '#D6E4FF',
+            success: '#22c55e',
+            warn: '#f59e0b',
+            danger: '#ef4444'
+          },
+          boxShadow: { neon: '0 0 16px rgba(0,229,255,.35), 0 0 40px rgba(109,40,217,.25)' },
+          backgroundImage: {
+            glow: 'radial-gradient(1200px 600px at 80% -10%, rgba(0,229,255,.12), transparent 40%), radial-gradient(900px 500px at -10% 10%, rgba(109,40,217,.18), transparent 35%)',
+            grid: 'linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .bg-grid{background-size:24px 24px,24px 24px;mask-image:radial-gradient(circle at 50% 30%, black 60%, transparent 100%)}
+    .btn-glow{box-shadow:0 0 0 0 rgba(0,229,255,.6);animation:pulseGlow 2.4s ease-in-out infinite}
+    @keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(0,229,255,.55)}50%{box-shadow:0 0 28px 6px rgba(0,229,255,.35)}}
+    .glass{backdrop-filter:blur(10px);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+    .modal-open{overflow:hidden}
+    .reveal{opacity:0;transform:translateY(10px);transition:opacity .45s ease,transform .45s ease}
+    .reveal.show{opacity:1;transform:none}
+  </style>
+</head>
+<body class="bg-bg text-ink font-sans antialiased selection:bg-primary/40">
+  <!-- BG decor -->
+  <div aria-hidden="true" class="fixed inset-0 -z-10 bg-glow"></div>
+  <div aria-hidden="true" class="fixed inset-0 -z-10 bg-grid pointer-events-none"></div>
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-bg/70 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-neon shadow-neon"></span>
+        <span class="font-extrabold tracking-tight">Oferta<span class="text-neon">Rastreadores</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#oferta" class="hover:text-neon transition">Oferta</a>
+        <a href="#exemplos" class="hover:text-neon transition">Exemplos</a>
+        <a href="#processo" class="hover:text-neon transition">Processo</a>
+        <a href="#faq" class="hover:text-neon transition">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#checkout" class="hidden sm:inline-flex items-center px-4 py-2 rounded-md border border-neon/60 text-neon hover:bg-neon/10 transition">Reservar vaga</a>
+        <button id="menu" class="md:hidden p-2 rounded border border-white/10" aria-label="Abrir menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-width="1.7" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile" class="md:hidden hidden border-t border-white/10">
+      <nav class="px-4 py-3 flex flex-col gap-3 bg-bg/90">
+        <a href="#oferta" class="hover:text-neon">Oferta</a>
+        <a href="#exemplos" class="hover:text-neon">Exemplos</a>
+        <a href="#processo" class="hover:text-neon">Processo</a>
+        <a href="#faq" class="hover:text-neon">FAQ</a>
+        <a href="#checkout" class="text-neon">Reservar</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / OFERTA -->
+  <section id="oferta" class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20 grid lg:grid-cols-[1.1fr_.9fr] gap-10 items-center">
+      <div class="reveal">
+        <p class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-neon/90">
+          <span class="w-1.5 h-1.5 rounded-full bg-neon"></span> oferta temporária • somente 5 vagas
+        </p>
+        <h1 class="mt-3 text-3xl sm:text-5xl font-extrabold leading-tight">
+          Site personalizado por <span class="text-primary">R$200</span> para empresas de <span class="text-neon">rastreamento veicular</span>
+        </h1>
+        <p class="mt-4 text-white/80 max-w-xl">
+          Você leva um site profissional pronto para vender no WhatsApp. <b>Valor do domínio (anual)</b> e <b>hospedagem (mensal)</b> são pagos <u>direto para a plataforma</u>.
+        </p>
+
+        <!-- Urgência: contador + vagas -->
+        <div class="mt-6 grid gap-4 glass rounded-xl p-5">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div class="text-sm text-white/80">Oferta encerra em: <b id="deadlineText" class="text-ink"></b></div>
+            <div class="text-sm"><span class="text-success font-bold" id="vagasRestantes">5</span> vagas restantes</div>
+          </div>
+          <div class="h-2 w-full rounded bg-white/10 overflow-hidden">
+            <div id="bar" class="h-full bg-neon" style="width:0%"></div>
+          </div>
+          <div class="text-xs text-white/60">Atualizo as vagas manualmente. Garanta a sua pelo WhatsApp.</div>
+        </div>
+
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#checkout" class="px-6 py-3 rounded-md bg-neon text-bg font-semibold btn-glow">Reservar minha vaga</a>
+          <a href="#exemplos" class="px-5 py-3 rounded-md bg-white/5 hover:bg-white/10 border border-white/15">Ver exemplos</a>
+        </div>
+        <div class="mt-4 text-xs text-white/70">
+          *Os modelos abaixo são <b>exemplos</b>. Posso usar como base ou criar algo 100% no seu estilo.
+        </div>
+      </div>
+
+      <div class="hidden sm:block reveal">
+        <div class="glass rounded-2xl p-4 sm:p-5 shadow-neon">
+          <img src="rastreador/site-1.png" alt="Preview de site para rastreador" class="rounded-xl w-full max-h-80 object-cover object-top">
+            <li>WhatsApp fixo</li><li>Planos R$xx,xx/mês</li>
+            <li>SEO e performance</li><li>Responsivo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXEMPLOS / PORTFÓLIO -->
+  <section id="exemplos" class="py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-extrabold">Exemplos (podem ser usados)</h2>
+        <p class="text-white/70">Servem como base de personalização ou podem ir ao ar como estão.</p>
+      </div>
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 1 -->
+        <article class="glass rounded-xl overflow-hidden">
+          <div class="aspect-video relative cursor-pointer" onclick="openModal('site-rastreador-1.html','Modelo 1 — Corporativo')">
+            <img src="rastreador/site-1.png" alt="Modelo 1" class="rounded-xl w-full max-h-40 object-cover object-top">
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold">Modelo 1 — Corporativo</h3>
+            <p class="text-sm text-white/75 mt-1">Hero gradiente, cards glass, FAQ e WhatsApp fixo.</p>
+            <div class="mt-4 flex gap-2">
+              <a href="site-rastreador-1.html" target="_blank" class="px-4 py-2 rounded-md bg-neon text-bg font-semibold">Ver Demo</a>
+            </div>
+          </div>
+        </article>
+        <!-- 2 -->
+        <article class="glass rounded-xl overflow-hidden">
+          <div class="aspect-video relative cursor-pointer" onclick="openModal('site-rastreador-2.html','Modelo 1 — Corporativo')">
+            <img src="rastreador/site-2.png" alt="Modelo 2" class="rounded-xl w-full max-h-40 object-cover object-top">
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold">Modelo 2 — One Page</h3>
+            <p class="text-sm text-white/75 mt-1">Layout claro, sticky CTA mobile e formulário.</p>
+            <div class="mt-4 flex gap-2">
+              <a href="site-rastreador-2.html" target="_blank" class="px-4 py-2 rounded-md bg-neon text-bg font-semibold">Ver Demo</a>
+            </div>
+          </div>
+        </article>
+        <!-- 3 -->
+        <article class="glass rounded-xl overflow-hidden">
+          <div class="aspect-video relative cursor-pointer" onclick="openModal('site-rastreador-3.html','Modelo 1 — Corporativo')">
+            <img src="rastreador/site-3.png" alt="Modelo 3" class="w-full h-full object-cover hover:opacity-90 transition">
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold">Modelo 3 — High-Tech</h3>
+            <p class="text-sm text-white/75 mt-1">Dark + neon, contadores e tilt 3D leve.</p>
+            <div class="mt-4 flex gap-2">
+              <a href="site-rastreador-3.html" target="_blank" class="px-4 py-2 rounded-md bg-neon text-bg font-semibold">Ver Demo</a>
+            </div>
+          </div>
+        </article>
+        <!-- 4 -->
+        <article class="glass rounded-xl overflow-hidden">
+          <div class="aspect-video relative cursor-pointer" onclick="openModal('site-rastreador-4.html','Modelo 1 — Corporativo')">
+            <img src="rastreador/site-4.png" alt="Modelo 4" class="w-full h-full object-cover hover:opacity-90 transition">
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold">Modelo 4 — Sidebar Split</h3>
+            <p class="text-sm text-white/75 mt-1">Sidebar fixa no desktop e scrollspy.</p>
+            <div class="mt-4 flex gap-2">
+              <a href="site-rastreador-4.html" target="_blank" class="px-4 py-2 rounded-md bg-neon text-bg font-semibold">Ver Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section id="processo" class="py-16 lg:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="glass rounded-2xl p-6 sm:p-10 shadow-neon">
+        <div class="grid lg:grid-cols-3 gap-8">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold">Como funciona</h2>
+            <p class="mt-2 text-white/80">Processo enxuto para colocar no ar rápido e sem dor de cabeça.</p>
+          </div>
+          <ol class="lg:col-span-2 grid sm:grid-cols-3 gap-6">
+            <li class="glass rounded-xl p-5 text-center">
+              <span class="text-neon font-bold block">1. Reserva</span>
+              <p class="text-sm text-white/85 mt-1">Confirma a vaga e me chama no WhatsApp.</p>
+            </li>
+            <li class="glass rounded-xl p-5 text-center">
+              <span class="text-neon font-bold block">2. Personalização</span>
+              <p class="text-sm text-white/85 mt-1">Logo, cores, textos, plano e WhatsApp.</p>
+            </li>
+            <li class="glass rounded-xl p-5 text-center">
+              <span class="text-neon font-bold block">3. Publicação</span>
+              <p class="text-sm text-white/85 mt-1">Link no ar. Domínio e hospedagem pagos direto à plataforma.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Perguntas Frequentes</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-5">
+        <details class="glass rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">O que está incluso nos R$200?</summary>
+          <p class="text-sm text-white/80 mt-2">Site personalizado (HTML + Tailwind + JS), otimizações básicas de SEO/performance e publicação. Domínio (anual) e hospedagem (mensal) são cobrados separadamente pela plataforma escolhida.</p>
+        </details>
+        <details class="glass rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">Os exemplos do portfólio são finais?</summary>
+          <p class="text-sm text-white/80 mt-2">São <b>exemplos</b>. Posso usar qualquer um como base e ajustar identidade/conteúdo, ou criar uma variação sob medida.</p>
+        </details>
+        <details class="glass rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">Prazo e vagas</summary>
+          <p class="text-sm text-white/80 mt-2">Oferta válida enquanto durarem as <b>5 vagas</b> ou até o prazo do contador. Após encerrar, volto ao valor padrão.</p>
+        </details>
+        <details class="glass rounded-xl p-5">
+          <summary class="font-semibold cursor-pointer">Posso parcelar?</summary>
+          <p class="text-sm text-white/80 mt-2">Negociamos no WhatsApp. O domínio/hospedagem são pagos direto à plataforma (cartão ou boleto, conforme o provedor).</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKOUT / CTA -->
+  <section id="checkout" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Garanta sua vaga por R$200</h2>
+      <p class="mt-3 text-white/80">Preço não inclui domínio (anual) e hospedagem (mensal, direto na plataforma).</p>
+      <div class="mt-6 text-sm">
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-danger"></span> Restam <b id="restam">5</b> vagas
+        </span>
+      </div>
+      <div class="mt-7 grid sm:grid-cols-1 gap-3 max-w-xl mx-auto">
+        <a href="https://wa.me/5195412536?text=Ol%C3%A1!%20Quero%20reservar%20minha%20vaga%20por%20R%24200%20para%20o%20site%20de%20rastreador."
+           class="px-6 py-3 rounded-md bg-neon text-bg font-bold btn-glow">Reservar pelo WhatsApp</a>
+        <a href="#exemplos" class="px-6 py-3 rounded-md bg-white/5 hover:bg-white/10 border border-white/15">Ver exemplos novamente</a>
+      </div>
+      <div class="mt-4 text-sm text-white/60">Dúvidas rápidas? WhatsApp: <a class="text-neon underline" href="https://wa.me/5195412536" target="_blank" rel="noopener">(51) 9541-2536</a></div>
+    </div>
+  </section>
+<!-- Botão flutuante WhatsApp -->
+<a href="https://wa.me/5195412536" aria-label="Fale no WhatsApp"
+   class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 shadow-xl ring-1 ring-white/20 hover:bg-green-600 transition">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-7 w-7 fill-white">
+    <path d="M16 .6C7.5.6.6 7.5.6 16c0 2.8.7 5.4 2.1 7.8L0 32l8.5-2.2c2.3 1.3 4.9 2 7.6 2 8.5 0 15.4-6.9 15.4-15.4S24.5.6 16 .6zm0 28.2c-2.3 0-4.6-.6-6.6-1.8l-.5-.3-5 .1 1.4-4.8-.3-.5c-1.2-2-1.9-4.3-1.9-6.7 0-7 5.7-12.7 12.7-12.7s12.7 5.7 12.7 12.7S23 28.8 16 28.8zm7.1-9.9c-.4-.2-2.2-1.1-2.6-1.3s-.6-.2-.9.2-1 1.3-1.2 1.5c-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.3.4-.5.1-.2.1-.4 0-.6s-.9-2.2-1.2-3-.6-.7-.9-.7h-.8c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.6.8.3 1.5.2 2.1.1.6-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5z"/>
+  </svg>
+</a>
+  <footer class="border-t border-white/10 py-8 text-center text-sm text-white/60">
+    © <span id="y"></span> OfertaRastreadores — todos os direitos reservados.
+  </footer>
+
+  <!-- MODAL Preview (iframe) -->
+  <div id="modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50" role="dialog" aria-modal="true" aria-label="Preview do modelo">
+    <div class="relative w-[95vw] h-[85vh] max-w-6xl glass rounded-2xl shadow-neon overflow-hidden">
+      <button id="btnClose" class="absolute top-3 right-3 z-10 inline-flex h-10 w-10 items-center justify-center rounded-md bg-white/10 border border-white/20" aria-label="Fechar">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-width="1.7" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <iframe id="frame" title="Demo do modelo" class="w-full h-full bg-black" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <script>
+    // ======= CONFIGURÁVEIS =======
+    const DEADLINE = '2025-09-01T23:59:59'; // altere a data/horário limite da oferta
+    const vagasTotal = 5;
+    const vagasVendidas = 0; // atualize manualmente quando fechar uma vaga
+    const tel = '5195412536'; // WhatsApp
+    // =============================
+
+    // Mobile menu
+    const btn = document.getElementById('menu');
+    const mob = document.getElementById('mobile');
+    btn?.addEventListener('click', ()=> mob.classList.toggle('hidden'));
+
+    // Ano
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Reveal
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Modal
+    const modal = document.getElementById('modal');
+    const frame = document.getElementById('frame');
+    const btnClose = document.getElementById('btnClose');
+    window.openModal = function(url,title){
+      frame.src = url; modal.classList.remove('hidden'); modal.classList.add('flex');
+      document.documentElement.classList.add('modal-open'); document.title = title + ' — Oferta';
+    }
+    function closeModal(){ modal.classList.remove('flex'); modal.classList.add('hidden'); frame.src=''; document.documentElement.classList.remove('modal-open'); }
+    btnClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e)=>{ if(e.target===modal) closeModal(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !modal.classList.contains('hidden')) closeModal(); });
+
+    // Vagas + barra
+    const restantes = Math.max(0, vagasTotal - vagasVendidas);
+    const pct = Math.min(100, Math.round((vagasVendidas / vagasTotal) * 100));
+    document.getElementById('vagasRestantes').textContent = restantes;
+    document.getElementById('restam').textContent = restantes;
+    document.getElementById('bar').style.width = pct + '%';
+
+    // Deadline (contador simples)
+    const deadlineEl = document.getElementById('deadlineText');
+    function fmt(n){ return n.toString().padStart(2,'0'); }
+    function tick(){
+      const now = new Date();
+      const end = new Date(DEADLINE);
+      let diff = Math.max(0, end - now);
+      const d = Math.floor(diff / (1000*60*60*24)); diff -= d*86400000;
+      const h = Math.floor(diff / (1000*60*60)); diff -= h*3600000;
+      const m = Math.floor(diff / (1000*60)); diff -= m*60000;
+      const s = Math.floor(diff / 1000);
+      deadlineEl.textContent = `${d}d ${fmt(h)}:${fmt(m)}:${fmt(s)}`;
+      if(end - now > 0) requestAnimationFrame(()=>setTimeout(tick,500));
+      else deadlineEl.textContent = 'encerrada';
+    }
+    tick();
+
+    // Atualiza links de WhatsApp automaticamente
+    document.querySelectorAll('a[href*="SEU_NUMERO"]').forEach(a=>{
+      a.href = a.href.replace('SEU_NUMERO', tel);
+    });
+  </script>
+</body>
+</html>
