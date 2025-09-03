@@ -13,77 +13,252 @@
     body {
       font-family: 'Playfair Display', serif;
     }
+    .btn-glow {
+  box-shadow: 0 0 0 0 rgba(166, 108, 100, .55);
+  animation: pulseGlow 2.4s ease-in-out infinite;
+    }
+    @keyframes pulseGlow {
+      0%,100% { box-shadow: 0 0 0 0 rgba(166, 108, 100, .45); }
+      50% { box-shadow: 0 0 28px 8px rgba(166, 108, 100, .25); }
+    }
+    .bg-hero {
+      background:
+        radial-gradient(600px 400px at 90% 10%, rgba(166, 108, 100, 0.08), transparent 60%),
+        radial-gradient(500px 300px at 0% 20%, rgba(244, 230, 228, 0.4), transparent 60%);
+    }
+    .bg-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('sparkle-bg.svg'); /* pode ser SVG com estrelas, brilhos ou corações */
+  opacity: 0.06;
+  z-index: 0;
+  pointer-events: none;
+}
+.bg-decorativa::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2OrnwQmpZLPPJHASJyrgSJ9wET99qQnFsIA&s');
+    background-repeat: no-repeat;
+    background-size: cover; /* ou 'contain', dependendo da imagem */
+    background-position: center;
+    opacity: 0.1; /* controle da opacidade aqui */
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .bg-decorativa > * {
+    position: relative;
+    z-index: 10;
+  }
   </style>
 </head>
 
 <body class="bg-[#F4E6E4] text-[#2B2B2B]">
-  <!-- Header -->
-  <header class="text-center py-6 px-4 bg-white shadow-md">
-    <img src="logo-rafaela.png" alt="Logo Rafaela Camparra" class="mx-auto h-20">
-    <h1 class="text-3xl font-bold mt-2">Rafaela Camparra</h1>
-    <p class="text-[#A66C64] mt-1">Sobrancelhas & Skincare • Viamão - RS</p>
-  </header>
 
- <!-- Hero com imagem de fundo -->
-<section class="relative h-[500px] md:h-[600px] text-white flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('bg-sobrancelhas.jpg');">
-  <div class="absolute inset-0 bg-[#2B2B2B]/60"></div> <!-- overlay escuro -->
-  <div class="relative z-10 px-4">
-    <h2 class="text-4xl md:text-5xl font-bold mb-2">Apaixone-se por elas.</h2>
-    <p class="text-lg md:text-xl text-[#F4E6E4] mb-6">Realce seu olhar com técnicas indolores e atendimento humanizado.</p>
-    <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" class="inline-block bg-[#A66C64] text-white px-6 py-3 rounded-full text-lg transition hover:bg-[#8b524c]">
-      Agende pelo WhatsApp
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-[#A66C64]/20 shadow-sm">
+  <div class="max-w-7xl mx-auto h-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+    
+    <!-- Logo e nome -->
+    <a href="#" class="flex items-center space-x-3">
+      <img src="logo-rafaela.png" alt="Logo Rafaela Camparra" class="h-16 sm:h-20 md:h-24 transition-all duration-300" />
+      <span class="text-[#2B2B2B] font-semibold text-sm sm:text-base md:text-lg tracking-tight hidden xs:inline">
+        Rafaela Camparra
+      </span>
     </a>
+
+
+    <!-- Botão de agendamento -->
+    <a href="https://wa.me/55XXXXXXXXXXX"
+       class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A66C64] text-white text-xs sm:text-sm md:text-base font-medium shadow-md hover:bg-[#8b524c] transition-all duration-300 btn-glow">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0l4 4m-4-4l4-4" />
+      </svg>
+      <span>Agendar</span>
+    </a>
+
+  </div>
+</header>
+
+<section class="relative bg-[#F4E6E4] bg-decorativa px-6 py-10 md:py-16 text-center overflow-hidden">
+  <div class="max-w-3xl mx-auto space-y-6">
+    
+    <h1 class="text-4xl md:text-5xl font-extrabold text-[#2B2B2B] leading-tight">
+      Apaixone-se pelo <span class="text-[#A66C64]">seu olhar.</span>
+    </h1>
+
+    <p class="text-base md:text-lg text-[#2B2B2B]/80">
+      Sobrancelhas que valorizam sua beleza natural com técnica, cuidado e sofisticação.
+    </p>
+
+    <a href="https://wa.me/55XXXXXXXXXXX"
+       class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#A66C64] text-white text-sm md:text-base font-medium shadow-md hover:bg-[#8b524c] transition-all duration-300 btn-glow">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6" />
+      </svg>
+      Agendar agora pelo WhatsApp
+    </a>
+
   </div>
 </section>
 
+
   <!-- Sobre a Rafaela -->
-  <section class="bg-white py-12 px-4 text-center">
-    <img src="rafaela-atendendo.png" alt="Rafaela atendendo" class="rounded-full w-40 h-40 mx-auto mb-4 border-4 border-white shadow-md object-cover">
-    <h3 class="text-2xl font-semibold mb-2">Rafaela Camparra</h3>
-    <p class="max-w-xl mx-auto text-base">Especialista em sobrancelhas e cuidados com a pele. Atendimento acolhedor, técnicas modernas e resultados naturais para você se apaixonar pelo espelho todos os dias.</p>
-  </section>
+<section class="bg-white py-16 px-6 text-center relative overflow-hidden">
+  <div class="max-w-4xl mx-auto space-y-6">
+
+    <!-- Foto com destaque maior -->
+    <div class="flex justify-center">
+      <img src="rafaela-atendendo.png" alt="Rafaela Camparra atendendo"
+           class="w-56 h-56 sm:w-64 sm:h-64 rounded-full border-4 border-[#F4E6E4] shadow-xl object-cover transition duration-300 hover:scale-105" />
+    </div>
+
+    <!-- Nome e título -->
+    <div>
+      <h3 class="text-3xl font-bold text-[#2B2B2B]">Rafaela Camparra</h3>
+      <p class="text-[#A66C64] text-sm uppercase tracking-wide mt-1">Especialista em sobrancelhas & skincare</p>
+    </div>
+
+    <!-- Descrição -->
+    <p class="text-base md:text-lg text-[#2B2B2B]/80 max-w-2xl mx-auto leading-relaxed">
+      Com uma abordagem acolhedora, técnicas modernas e olhar clínico estético, Rafaela transforma a beleza do seu rosto com naturalidade e precisão. Cada atendimento é pensado para valorizar sua identidade e fazer você se apaixonar pelo espelho todos os dias.
+    </p>
+
+  </div>
+</section>
+
 
   <!-- Serviços -->
-  <section class="py-12 px-4 bg-[#F4E6E4] text-center">
-    <h3 class="text-2xl font-bold mb-6">Serviços</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <div class="bg-white p-6 rounded-2xl shadow-md">
-        <h4 class="text-xl font-semibold mb-2">Micropigmentação</h4>
-        <p class="text-sm">Técnica sem dor para realçar suas sobrancelhas com naturalidade.</p>
+<section class="py-20 px-6 bg-[#F4E6E4] text-center">
+  <div class="max-w-6xl mx-auto space-y-12">
+
+    <!-- Título -->
+    <div>
+      <h3 class="text-3xl font-extrabold text-[#2B2B2B] mb-2">Nossos Serviços</h3>
+      <p class="text-[#A66C64] text-base md:text-lg max-w-xl mx-auto">
+        Cuidado personalizado com sobrancelhas e pele para realçar sua beleza natural.
+      </p>
+    </div>
+
+    <!-- Cards de serviços -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Serviço 1 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+        <div class="flex flex-col items-center space-y-4">
+          <svg class="w-12 h-12 text-[#A66C64]" fill="none" stroke="currentColor" stroke-width="1.5"
+               viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+               d="M12 4v16m8-8H4" /></svg>
+          <h4 class="text-xl font-semibold text-[#2B2B2B]">Micropigmentação</h4>
+          <p class="text-sm text-[#2B2B2B]/80 text-center">
+            Técnica sem dor para realçar suas sobrancelhas com leveza e naturalidade.
+          </p>
+        </div>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md">
-        <h4 class="text-xl font-semibold mb-2">Design de Sobrancelhas</h4>
-        <p class="text-sm">Personalizado para valorizar o seu olhar com precisão.</p>
+
+      <!-- Serviço 2 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+        <div class="flex flex-col items-center space-y-4">
+          <svg class="w-12 h-12 text-[#A66C64]" fill="none" stroke="currentColor" stroke-width="1.5"
+               viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+               d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <h4 class="text-xl font-semibold text-[#2B2B2B]">Design de Sobrancelhas</h4>
+          <p class="text-sm text-[#2B2B2B]/80 text-center">
+            Personalização total para valorizar o seu olhar com precisão e harmonia facial.
+          </p>
+        </div>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md">
-        <h4 class="text-xl font-semibold mb-2">Limpeza de Pele</h4>
-        <p class="text-sm">Skincare profundo com foco em saúde e beleza.</p>
+
+      <!-- Serviço 3 -->
+      <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300">
+        <div class="flex flex-col items-center space-y-4">
+          <svg class="w-12 h-12 text-[#A66C64]" fill="none" stroke="currentColor" stroke-width="1.5"
+               viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+               d="M12 8c-2.21 0-4 1.79-4 4v1a4 4 0 008 0v-1c0-2.21-1.79-4-4-4z" /></svg>
+          <h4 class="text-xl font-semibold text-[#2B2B2B]">Limpeza de Pele</h4>
+          <p class="text-sm text-[#2B2B2B]/80 text-center">
+            Tratamento profundo de skincare com foco em saúde, viço e renovação celular.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ <!-- Antes e Depois -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-6xl mx-auto space-y-12">
+
+    <!-- Título -->
+    <div class="text-center">
+      <h3 class="text-3xl font-extrabold text-[#2B2B2B] mb-2">Antes & Depois</h3>
+      <p class="text-[#A66C64] text-base md:text-lg">
+        Resultados reais que transformam o olhar e a autoestima.
+      </p>
+    </div>
+
+    <!-- Galeria de imagens -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Imagem 1 -->
+      <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+        <img src="antes-depois-1.png" alt="Antes e Depois 1" class="w-full h-auto object-cover hover:scale-105 transition duration-300">
+      </div>
+      <!-- Imagem 2 -->
+      <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+        <img src="antes-depois-2.png" alt="Antes e Depois 2" class="w-full h-auto object-cover hover:scale-105 transition duration-300">
+      </div>
+      <!-- Imagem 3 -->
+      <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+        <img src="antes-depois-3.png" alt="Antes e Depois 3" class="w-full h-auto object-cover hover:scale-105 transition duration-300">
       </div>
     </div>
-  </section>
 
-  <!-- Antes e Depois -->
-  <section class="bg-white py-12 px-4">
-    <h3 class="text-2xl font-bold text-center mb-6">Antes e Depois</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      <img src="antes-depois-1.png" alt="Antes e Depois 1" class="rounded-xl shadow-md">
-      <img src="antes-depois-2.png" alt="Antes e Depois 2" class="rounded-xl shadow-md">
-      <img src="antes-depois-3.png" alt="Antes e Depois 3" class="rounded-xl shadow-md">
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA Final -->
-  <section class="text-center py-12 px-4 bg-[#A66C64] text-white">
-    <h3 class="text-2xl font-bold mb-4">Pronta para se apaixonar por suas sobrancelhas?</h3>
-    <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" class="inline-block bg-white text-[#A66C64] px-6 py-3 rounded-full text-lg transition hover:bg-[#f4e6e4] hover:text-[#2B2B2B]">
-      Agende agora pelo WhatsApp
+
+<!-- CTA Final -->
+<section class="text-center py-20 px-6 bg-[#A66C64] text-white relative overflow-hidden">
+  <div class="max-w-3xl mx-auto space-y-6">
+
+    <h3 class="text-3xl md:text-4xl font-extrabold leading-snug">
+      Pronta para <span class="underline decoration-white/30">se apaixonar</span> pelo seu novo olhar?
+    </h3>
+
+    <p class="text-white/90 text-base md:text-lg max-w-xl mx-auto">
+      Agende agora mesmo e descubra como suas sobrancelhas podem transformar sua autoestima.
+    </p>
+
+    <a href="https://wa.me/55XXXXXXXXXXX" target="_blank"
+       class="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-white text-[#A66C64] text-base font-semibold shadow-md hover:bg-[#f4e6e4] hover:text-[#2B2B2B] transition-all duration-300 btn-glow">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M16.672 13.803l-2.674-.383a.792.792 0 00-.748.216l-1.68 1.68a12.015 12.015 0 01-5.387-5.387l1.68-1.68a.792.792 0 00.216-.748l-.383-2.674A.787.787 0 006.91 4H4.79A.79.79 0 004 4.79c0 10.493 8.503 19 19 19a.79.79 0 00.79-.79v-2.12a.787.787 0 00-.668-.786z"/>
+      </svg>
+      Agendar pelo WhatsApp
     </a>
-  </section>
+
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="text-center text-sm text-[#2B2B2B] py-4 bg-white">
     © 2025 Rafaela Camparra. Todos os direitos reservados.
   </footer>
+
+<!-- Botão flutuante do WhatsApp (ícone limpo) -->
+<a href="https://wa.me/55XXXXXXXXXXX"
+   class="fixed bottom-5 right-5 z-50 bg-[#25D366] hover:bg-[#1ebe5b] text-white p-4 rounded-full shadow-lg transition-all duration-300 sm:hidden"
+   aria-label="Abrir WhatsApp">
+  <!-- Ícone WhatsApp -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 32 32" fill="currentColor">
+    <path d="M16.01 2.007a13.991 13.991 0 00-12.46 20.422L2 30l7.73-1.522a13.991 13.991 0 006.28 1.53h.01c7.72 0 13.99-6.27 13.99-13.99S23.73 2.006 16.01 2.006zm7.88 19.02c-.3.84-1.73 1.61-2.38 1.71-.61.09-1.38.13-2.22-.17-.51-.16-1.17-.42-2.03-.82a16.456 16.456 0 01-3.03-1.91 10.56 10.56 0 01-1.96-2.31c-.21-.29-.52-.72-.52-1.33s.33-.92.45-1.05c.12-.13.27-.15.45-.15s.33.005.48.01c.15.005.36-.065.57.49.22.57.75 1.94.82 2.08.07.14.14.17.27.11.12-.06.52-.24.99-.61.47-.38.83-.84.93-.94.1-.11.21-.1.36-.06.15.04.97.46 1.14.54.17.09.28.13.32.2.04.07.04.4-.21 1.11z"/>
+  </svg>
+</a>
+
 </body>
 
 </html>
