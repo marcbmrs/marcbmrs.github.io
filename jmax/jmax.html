@@ -18,64 +18,75 @@
   </style>
 </head>
 <body class="bg-gray-950 text-gray-100 antialiased">
+<!-- Topbar de Contato -->
+<div class="bg-indigo-600 text-white text-sm py-2 px-4 flex justify-between items-center">
+  <div></div> <!-- Espaço vazio à esquerda -->
+  <div class="flex items-center gap-4">
+    <span>📞 (85) 9 8143-2880</span>
+    <a href="mailto:jmaxrastreamento@gmail.com" class="hover:underline">jmaxrastreamento@gmail.com</a>
+    <a href="#" class="text-white hover:text-gray-200">📷</a>
+    <a href="#" class="bg-white text-indigo-600 px-3 py-1 rounded font-semibold text-sm hover:bg-gray-100">2ª Via Boleto</a>
+  </div>
+</div>
 
-  <!-- Header -->
-  <header class="fixed inset-x-0 top-0 z-40">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="mt-4 rounded-2xl border border-white/10 bg-gray-900/70 backdrop-blur supports-[backdrop-filter]:glass">
-        <div class="flex items-center justify-between px-4 py-3 md:px-6">
-          <a href="#" class="flex items-center gap-2">
-            <img src="logo-1.jpeg" alt="JMAX Logo" class="h-10 w-10 rounded bg-white p-1" />
-            <div class="leading-tight">
-              <p class="font-semibold">JMAX Rastreamento</p>
-              <p class="text-xs text-gray-400">Tecnologia que Protege</p>
-            </div>
-          </a>
-          <nav class="hidden items-center gap-6 md:flex">
-            <a href="#" class="text-gray-300 hover:text-white">Home</a>
-            <a href="#planos" class="text-gray-300 hover:text-white">Planos</a>
-            <a href="#contato" class="text-gray-300 hover:text-white">Contato</a>
-          </nav>
-          <div class="hidden md:flex items-center gap-3">
-            <a href="https://wa.me/558581432880?text=Olá,+gostaria+de+saber+mais+sobre+os+planos+da+JMAX+Rastreamento" class="inline-flex items-center justify-center rounded-lg bg-green-500 px-4 py-2 font-semibold text-white hover:bg-green-600 transition">
-              Fale no WhatsApp
-            </a>
-          </div>
-          <button id="menuBtn" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 hover:bg-white/5">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
-        <div id="mobileMenu" class="hidden border-t border-white/10 px-4 pb-4 md:hidden">
-          <nav class="grid gap-2 py-3">
-            <a href="#" class="rounded-lg px-3 py-2 hover:bg-white/5">Home</a>
-            <a href="#planos" class="rounded-lg px-3 py-2 hover:bg-white/5">Planos</a>
-            <a href="#contato" class="rounded-lg px-3 py-2 hover:bg-white/5">Contato</a>
-            <a href="https://wa.me/558581432880?text=Olá,+gostaria+de+saber+mais+sobre+os+planos+da+JMAX+Rastreamento" class="mt-2 inline-flex items-center justify-center rounded-lg bg-green-500 px-4 py-2 font-semibold text-white hover:bg-green-600 transition">
-              WhatsApp
-            </a>
-          </nav>
-        </div>
+<header class="bg-black h-[267px] px-4 flex items-center">
+  <div class="max-w-7xl mx-auto flex items-center justify-between w-full h-full">
+
+    <!-- Logo com altura controlada -->
+    <a href="#" class="flex items-center gap-2">
+      <img src="logo-1.jpeg" alt="JMAX Logo" class="max-h-[80px] bg-white rounded p-1" />>
+      <div class="text-white leading-tight">
+        <p class="text-xl font-bold">JMAX</p>
+        <p class="text-xs text-gray-400">RASTREAMENTO</p>
+      </div>
+    </a>
+    
+    <!-- Navegação -->
+    <nav class="hidden md:flex items-center gap-6 text-white font-medium">
+      <a href="#" class="hover:text-indigo-400">Home</a>
+      <a href="#sobre" class="hover:text-indigo-400">Sobre Nós</a>
+      <a href="#planos" class="hover:text-indigo-400">Planos</a>
+      <a href="#noticias" class="hover:text-indigo-400">Notícias</a>
+      <a href="#contato" class="hover:text-indigo-400">Contato</a>
+      <a href="#cliente" class="hover:text-indigo-400">Área do Cliente</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Institucional -->
+<section id="sobre" class="bg-white text-gray-800 py-20">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Imagem com borda vermelha -->
+    <div class="flex justify-center">
+      <div class="rounded-full p-2 bg-red-600">
+        <img src="retro.webp" alt="Foto Equipe JMAX" class="rounded-full w-72 h-72 object-cover border-4 border-white" />
       </div>
     </div>
-  </header>
 
-<!-- Hero -->
-<section class="relative overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-b from-blue-700 via-indigo-700 to-gray-950"></div>
-  <div class="pointer-events-none absolute -top-40 left-1/2 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-blue-400/30 blur-3xl"></div>
+    <!-- Texto -->
+    <div>
+      <p class="text-xl font-medium text-gray-600 mb-2 italic">Olá, somos a</p>
+      <h2 class="text-4xl font-extrabold text-indigo-600 mb-6">Jmax Rastreamento</h2>
 
-  <div class="relative mx-auto max-w-7xl px-4 pt-40 pb-24 text-center">
-    <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-gray-200">
-      <span class="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Cobertura Nacional • Bloqueio Remoto • App Próprio
-    </span>
-    <h1 class="mx-auto mt-6 max-w-3xl text-4xl font-extrabold leading-tight md:text-5xl">
-      Seu veículo <span class="text-blue-300">sempre protegido</span>, onde estiver
-    </h1>
-    <p class="mx-auto mt-4 max-w-2xl text-gray-200">
-      Rastreamento em tempo real, alertas inteligentes e suporte humanizado 24h.
-    </p>
+      <p class="mb-4">
+        Na JMAX Rastreamento, acreditamos que segurança, tecnologia e tranquilidade devem andar juntas.
+        Com anos de experiência no mercado, oferecemos soluções modernas em rastreamento para carros, motos, caminhões, frotas, quadriciclos, jetskis e barcos de passeios, garantindo proteção, controle e eficiência em tempo real.
+      </p>
+
+      <p class="mb-4">
+        Nosso compromisso é cuidar do que é valioso para você. Por isso, trabalhamos com equipamentos de alta qualidade, plataforma intuitiva e suporte humanizado, sempre prontos para atender cada cliente de forma ágil e personalizada.
+      </p>
+
+      <p class="mb-4">
+        Mais do que rastrear, nossa missão é gerar confiança: seja para proteger seu patrimônio, otimizar a gestão da sua frota ou oferecer mais segurança para quem você ama.
+      </p>
+
+      <p class="text-sm mt-4">👉 <strong class="text-indigo-600">JMAX Rastreamento</strong> – Tecnologia que protege, confiança que acompanha.</p>
+    </div>
+  </div>
+</section>
+
 
     <!-- Linha 1: Planos + WhatsApp -->
     <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -169,17 +180,17 @@
 <section id="depoimentos" class="py-20 bg-gray-950">
   <div class="mx-auto max-w-7xl px-4 text-center">
     <!-- Selo de 5 estrelas -->
-<div class="mb-6 flex items-center justify-center gap-2 text-yellow-400 text-lg font-medium">
-  <span class="text-white text-sm">Avaliação:</span>
-  <span class="flex gap-1">
-    <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
-    <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
-    <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
-    <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
-    <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
-  </span>
-  <span class="text-white text-sm">no Google</span>
-</div>
+    <div class="mb-6 flex items-center justify-center gap-2 text-yellow-400 text-lg font-medium">
+      <span class="text-white text-sm">Avaliação:</span>
+      <span class="flex gap-1">
+        <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
+        <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
+        <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
+        <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
+        <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
+      </span>
+      <span class="text-white text-sm">no Google</span>
+    </div>
     <h2 class="text-3xl font-bold text-blue-300 mb-10">O que dizem nossos clientes</h2>
 
     <!-- Swiper Container -->
