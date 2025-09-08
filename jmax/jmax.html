@@ -6,6 +6,9 @@
   <title>JMAX Rastreamento - Proteção Veicular em Tempo Real</title>
   <meta name="description" content="Rastreamento veicular com monitoramento em tempo real, bloqueio remoto e suporte humanizado 24h.">
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SwiperJS CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <style>
     html { scroll-behavior: smooth }
     .glass { background: rgba(255, 255, 255, .08); backdrop-filter: blur(10px) }
@@ -162,6 +165,101 @@
   </div>
 </section>
 
+<!-- Seção de Depoimentos em Carrossel -->
+<section id="depoimentos" class="py-20 bg-gray-950">
+  <div class="mx-auto max-w-7xl px-4 text-center">
+    <!-- Selo de 5 estrelas -->
+<div class="mb-6 flex items-center justify-center gap-2 text-yellow-400 text-lg font-medium">
+  <span class="text-white text-sm">Avaliação:</span>
+  <span class="flex gap-1">
+    <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
+    <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
+    <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
+    <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
+    <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
+  </span>
+  <span class="text-white text-sm">no Google</span>
+</div>
+    <h2 class="text-3xl font-bold text-blue-300 mb-10">O que dizem nossos clientes</h2>
+
+    <!-- Swiper Container -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="avaliacao1.png" alt="Avaliação 1" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="avaliacao2.png" alt="Avaliação 2" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="avaliacao3.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+         <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="avaliacao4.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+         <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="avaliacao5.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="avaliacao6.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide">
+          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="avaliacao7.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="swiper-slide">
+          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="avaliacao8.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="swiper-slide">
+          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
+            <img src="avaliacao9.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <!-- Adicione mais .swiper-slide conforme necessário -->
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination mt-6"></div>
+    </div>
+  </div>
+</section>
+
+
  <!-- Planos -->
 <section id="planos" class="py-20 bg-gray-900">
   <div class="mx-auto max-w-7xl px-4">
@@ -286,7 +384,28 @@
       <path d="M16 .6C7.5.6.6 7.5.6 16c0 2.8.7 5.4 2.1 7.8L0 32l8.5-2.2c2.3 1.3 4.9 2 7.6 2 8.5 0 15.4-6.9 15.4-15.4S24.5.6 16 .6zM16 28.8c-2.3 0-4.6-.6-6.6-1.8l-.5-.3-5 .1 1.4-4.8-.3-.5C3.8 20.3 3 18 3 15.6 3 8.6 8.7 3 15.6 3S28.2 8.7 28.2 15.6 23.3 28.8 16 28.8z"/>
     </svg>
   </a>
-
+<!-- SwiperJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+</script>
   <!-- JS para menu e animação scroll -->
   <script>
     const menuBtn = document.getElementById('menuBtn');
