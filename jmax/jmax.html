@@ -1,438 +1,245 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JMAX Rastreamento</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome para os ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JMAX Rastreamento - Proteção Veicular em Tempo Real</title>
-  <meta name="description" content="Rastreamento veicular com monitoramento em tempo real, bloqueio remoto e suporte humanizado 24h.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- SwiperJS CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JMAX Rastreamento</title>
 
-  <style>
-    html { scroll-behavior: smooth }
-    .glass { background: rgba(255, 255, 255, .08); backdrop-filter: blur(10px) }
-    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease }
-    .reveal.show { opacity: 1; transform: translateY(0) }
-    html { scroll-behavior: smooth; }
-  </style>
+  <!-- Font Awesome para ícones -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
 </head>
-<body class="bg-gray-950 text-gray-100 antialiased">
-<!-- Topbar de Contato -->
-<div class="bg-indigo-600 text-white text-sm py-2 px-4 flex justify-between items-center">
-  <div></div> <!-- Espaço vazio à esquerda -->
-  <div class="flex items-center gap-4">
-    <span>📞 (85) 9 8143-2880</span>
-    <a href="mailto:jmaxrastreamento@gmail.com" class="hover:underline">jmaxrastreamento@gmail.com</a>
-    <a href="#" class="text-white hover:text-gray-200">📷</a>
-    <a href="#" class="bg-white text-indigo-600 px-3 py-1 rounded font-semibold text-sm hover:bg-gray-100">2ª Via Boleto</a>
+<body>
+
+  <!-- TOPO DE CONTATO -->
+  <div class="top-bar">
+    <div class="top-content">
+      <span class="top-item whatsapp">
+        <i class="fab fa-whatsapp"></i> <span class="whatsappnelson">(85) 9 8143.2880</span>
+      </span>
+      <span class="top-item email">
+        <i class="fas fa-envelope"></i> jmaxrastreamento@gmail.com
+      </span>
+      <span class="top-item instagram">
+        <i class="fab fa-instagram"></i>
+      </span>
+    </div>
   </div>
-</div>
 
-<header class="bg-black h-[267px] px-4 flex items-center">
-  <div class="max-w-7xl mx-auto flex items-center justify-between w-full h-full">
+  <!-- HEADER PRINCIPAL -->
+  <header class="main-header">
+    <div class="header-content">
+      <img src="logo.webp" alt="JMAX Rastreamento" class="logo" />
 
-    <!-- Logo com altura controlada -->
-    <a href="#" class="flex items-center gap-2">
-      <img src="logo-1.jpeg" alt="JMAX Logo" class="max-h-[80px] bg-white rounded p-1" />>
-      <div class="text-white leading-tight">
-        <p class="text-xl font-bold">JMAX</p>
-        <p class="text-xs text-gray-400">RASTREAMENTO</p>
-      </div>
-    </a>
-    
-    <!-- Navegação -->
-    <nav class="hidden md:flex items-center gap-6 text-white font-medium">
-      <a href="#" class="hover:text-indigo-400">Home</a>
-      <a href="#sobre" class="hover:text-indigo-400">Sobre Nós</a>
-      <a href="#planos" class="hover:text-indigo-400">Planos</a>
-      <a href="#noticias" class="hover:text-indigo-400">Notícias</a>
-      <a href="#contato" class="hover:text-indigo-400">Contato</a>
-      <a href="#cliente" class="hover:text-indigo-400">Área do Cliente</a>
-    </nav>
-  </div>
-</header>
+      <!-- Botão hamburguer -->
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
 
-<!-- Hero Institucional -->
-<section id="sobre" class="bg-white text-gray-800 py-20">
-  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-    
-    <!-- Imagem com borda vermelha -->
-    <div class="flex justify-center">
-      <div class="rounded-full p-2 bg-red-600">
-        <img src="retro.webp" alt="Foto Equipe JMAX" class="rounded-full w-72 h-72 object-cover border-4 border-white" />
+      <!-- Menu e botão -->
+      <div class="menu-area">
+        <nav class="nav-menu">
+          <a href="#" class="active">Home</a>
+          <a href="#">Sobre Nós</a>
+          <a href="#">Planos</a>
+          <a href="#">Notícias</a>
+          <a href="#">Contato</a>
+          <a href="#">Área do Cliente</a>
+        </nav>
+        <a href="#" class="btn-boleto">2º Via Boleto</a>
       </div>
     </div>
+  </header>
 
-    <!-- Texto -->
-    <div>
-      <p class="text-xl font-medium text-gray-600 mb-2 italic">Olá, somos a</p>
-      <h2 class="text-4xl font-extrabold text-indigo-600 mb-6">Jmax Rastreamento</h2>
+  <section class="sobre-nos">
+  <div class="container">
+    <div class="image">
+      <img src="retro.webp" alt="Imagem sobre a JMAX" />
+    </div>
 
-      <p class="mb-4">
-        Na JMAX Rastreamento, acreditamos que segurança, tecnologia e tranquilidade devem andar juntas.
+    <div class="content">
+      <h3><span>Olá, somos a</span><br /><strong>Jmax Rastreamento</strong></h3>
+
+      <p>
+        Na JMAX Rastreamento, acreditamos que segurança, tecnologia e tranquilidade devem andar juntas.  
         Com anos de experiência no mercado, oferecemos soluções modernas em rastreamento para carros, motos, caminhões, frotas, quadriciclos, jetskis e barcos de passeios, garantindo proteção, controle e eficiência em tempo real.
       </p>
 
-      <p class="mb-4">
+      <p>
         Nosso compromisso é cuidar do que é valioso para você. Por isso, trabalhamos com equipamentos de alta qualidade, plataforma intuitiva e suporte humanizado, sempre prontos para atender cada cliente de forma ágil e personalizada.
       </p>
 
-      <p class="mb-4">
+      <p>
         Mais do que rastrear, nossa missão é gerar confiança: seja para proteger seu patrimônio, otimizar a gestão da sua frota ou oferecer mais segurança para quem você ama.
       </p>
 
-      <p class="text-sm mt-4">👉 <strong class="text-indigo-600">JMAX Rastreamento</strong> – Tecnologia que protege, confiança que acompanha.</p>
+      <p>👉 <strong>JMAX Rastreamento</strong> – Tecnologia que protege, confiança que acompanha.</p>
     </div>
   </div>
 </section>
 
 
-    <!-- Linha 1: Planos + WhatsApp -->
-    <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-      <a href="#planos" class="inline-flex items-center justify-center rounded-xl bg-white px-6 py-3 font-semibold text-gray-900 hover:bg-gray-100 transition">
-        Ver Planos
-      </a>
-      <a href="https://wa.me/558581432880" class="inline-flex items-center justify-center rounded-xl bg-green-500 px-6 py-3 font-semibold text-white hover:bg-green-600 transition">
-        Fale no WhatsApp
-      </a>
-    </div>
+<section class="recursos">
+  <div class="container">
+    <h2>Principais Recursos da Plataforma</h2>
 
-    <!-- Linha 2: Plataforma e Apps -->
-    <div class="mt-6 flex flex-wrap justify-center gap-3">
-      <a href="https://jmaxrastreio.rastrosystem.com.br/" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-blue-500 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-600 transition">
-        Acessar Plataforma
-      </a>
-      <a href="https://play.google.com/store/apps/details?id=br.com.rs.rastrosystem3&pcampaignid=web_share" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-purple-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-purple-700 transition">
-        App Android
-      </a>
-      <a href="https://apps.apple.com/br/app/rastro-system-3-0/id6474566461?platform=iphone" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-gray-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-600 transition">
-        App iOS
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- Benefícios da JMAX -->
-<section class="py-16 bg-gray-950">
-  <div class="mx-auto max-w-7xl px-4 text-center">
-
-    <!-- Logo acima do título -->
-    <img src="logo-2.jpeg" alt="Logo JMAX" class="mx-auto mb-6 h-48 w-auto rounded bg-white p-1 shadow-md" />
-
-    <h2 class="text-3xl font-bold mb-6 text-blue-300">Por que escolher a JMAX Rastreamento?</h2>
-
-    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 text-left text-sm text-gray-300">
-      <div class="bg-gray-800/70 rounded-lg p-4">✔️ Suporte humano 24h</div>
-      <div class="bg-gray-800/70 rounded-lg p-4">✔️ Plataforma intuitiva com app próprio</div>
-      <div class="bg-gray-800/70 rounded-lg p-4">✔️ Rastreamento em tempo real</div>
-      <div class="bg-gray-800/70 rounded-lg p-4">✔️ Instalação rápida e sem burocracia</div>
-      <div class="bg-gray-800/70 rounded-lg p-4">✔️ Equipamentos modernos (J16)</div>
-      <div class="bg-gray-800/70 rounded-lg p-4">✔️ Cobertura nacional com central ativa</div>
-    </div>
-  </div>
-</section>
-
-<!-- Seção Rastreador J16 -->
-<section id="rastreador" class="py-20 bg-gray-950">
-  <div class="mx-auto max-w-7xl px-4">
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      
-      <!-- Texto -->
-      <div class="reveal">
-        <h2 class="text-3xl font-extrabold mb-4 text-blue-300">Rastreador J16</h2>
-        <p class="text-gray-300 mb-4">
-          O <strong>J16</strong> é o modelo de rastreador utilizado pela JMAX Rastreamento. Um dos mais confiáveis do mercado, ideal para veículos de passeio, utilitários, motos e embarcações.
-        </p>
-        <p class="text-gray-400 mb-6">
-          Com tecnologia de ponta, o J16 garante localização precisa em tempo real, memória para quedas de sinal e resistência à água. Tudo isso aliado ao suporte humano da JMAX.
-        </p>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-300 mb-6">
-          <li class="bg-gray-800/70 rounded-lg p-3">✔️ Localização em tempo real</li>
-          <li class="bg-gray-800/70 rounded-lg p-3">✔️ Bloqueio remoto via central</li>
-          <li class="bg-gray-800/70 rounded-lg p-3">✔️ Resistente à água (IP65)</li>
-          <li class="bg-gray-800/70 rounded-lg p-3">✔️ Antena interna de alta performance</li>
-          <li class="bg-gray-800/70 rounded-lg p-3">✔️ Memória interna (blackbox)</li>
-          <li class="bg-gray-800/70 rounded-lg p-3">✔️ Instalação rápida e discreta</li>
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <h3>Alertas</h3>
+        <ul>
+          <li>Pânico, Bateria violada, Velocidade</li>
+          <li>Entrada/Saída de Cerca Eletrônica</li>
+          <li>Ignição Ligada/Desligada</li>
+          <li>Alarme virtual</li>
+          <li>Falha de transmissão</li>
+          <li>Franquia de KM</li>
         </ul>
-
-        <!-- CTA WhatsApp -->
-        <a href="https://wa.me/558581432880?text=Olá,+gostaria+de+adquirir+o+rastreador+J16+da+JMAX" 
-           class="inline-flex items-center justify-center rounded-xl bg-green-500 px-6 py-3 font-semibold text-white hover:bg-green-600 transition">
-          Quero adquirir o J16
-        </a>
       </div>
 
-      <!-- Imagem do J16 -->
-      <div class="reveal flex justify-center">
-        <div class="rounded-2xl border border-white/10 bg-gradient-to-b from-gray-800 to-gray-900 p-4">
-          <img src="rastreador-j16.png" alt="Rastreador J16" class="rounded-lg w-full max-w-xs object-contain" />
-          <p class="mt-3 text-center text-sm text-gray-400">Imagem ilustrativa do rastreador J16</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Seção de Depoimentos em Carrossel -->
-<section id="depoimentos" class="py-20 bg-gray-950">
-  <div class="mx-auto max-w-7xl px-4 text-center">
-    <!-- Selo de 5 estrelas -->
-    <div class="mb-6 flex items-center justify-center gap-2 text-yellow-400 text-lg font-medium">
-      <span class="text-white text-sm">Avaliação:</span>
-      <span class="flex gap-1">
-        <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
-        <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
-        <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
-        <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
-        <svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 24 24"><path d="M12 2l2.6 7.5H22l-6.2 4.7L18.4 22 12 17.8 5.6 22l2.6-7.8L2 9.5h7.4z"/></svg>
-      </span>
-      <span class="text-white text-sm">no Google</span>
-    </div>
-    <h2 class="text-3xl font-bold text-blue-300 mb-10">O que dizem nossos clientes</h2>
-
-    <!-- Swiper Container -->
-    <div class="swiper">
-      <div class="swiper-wrapper">
-
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
-            <img src="avaliacao1.png" alt="Avaliação 1" class="w-full h-auto object-cover" />
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
-            <img src="avaliacao2.png" alt="Avaliação 2" class="w-full h-auto object-cover" />
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="swiper-slide">
-          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
-            <img src="avaliacao3.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
-          </div>
-        </div>
-
-         <!-- Slide 4 -->
-        <div class="swiper-slide">
-          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
-            <img src="avaliacao4.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
-          </div>
-        </div>
-
-         <!-- Slide 5 -->
-        <div class="swiper-slide">
-          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
-            <img src="avaliacao5.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
-          </div>
-        </div>
-
-        <!-- Slide 6 -->
-        <div class="swiper-slide">
-          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
-            <img src="avaliacao6.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
-          </div>
-        </div>
-
-        <!-- Slide 7 -->
-        <div class="swiper-slide">
-          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
-            <img src="avaliacao7.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
-          </div>
-        </div>
-
-        <!-- Slide 8 -->
-        <div class="swiper-slide">
-          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
-            <img src="avaliacao8.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
-          </div>
-        </div>
-
-        <!-- Slide 9 -->
-        <div class="swiper-slide">
-          <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg">
-            <img src="avaliacao9.png" alt="Avaliação 3" class="w-full h-auto object-cover" />
-          </div>
-        </div>
-
-        <!-- Adicione mais .swiper-slide conforme necessário -->
-
-      </div>
-
-      <!-- Pagination -->
-      <div class="swiper-pagination mt-6"></div>
-    </div>
-  </div>
-</section>
-
-
- <!-- Planos -->
-<section id="planos" class="py-20 bg-gray-900">
-  <div class="mx-auto max-w-7xl px-4">
-    <h2 class="text-3xl font-extrabold text-center text-blue-300">Planos disponíveis</h2>
-    <p class="mt-2 text-center text-gray-400">Escolha o ideal para seu veículo</p>
-
-    <div class="mt-10 grid gap-6 md:grid-cols-3">
-      <!-- Moto -->
-      <div class="reveal flex flex-col justify-between rounded-2xl border border-white/10 bg-gray-800 p-6 shadow-lg hover:scale-[1.02] transition">
-        <div>
-          <h3 class="text-xl font-semibold text-white mb-2">Moto / Quadriciclo</h3>
-          <p class="text-blue-300 text-3xl font-bold">R$ 49,99 <span class="text-sm text-gray-400">/mês</span></p>
-          <ul class="mt-4 text-sm text-gray-300 space-y-2">
-            <li>✔️ Rastreamento em tempo real</li>
-            <li>✔️ Bloqueio por central</li>
-            <li>✔️ App próprio</li>
-            <li>✔️ Manutenção em pane</li>
-          </ul>
-          <p class="mt-4 text-sm text-gray-400">Adesão + Instalação: R$ 120,00</p>
-        </div>
-        <!-- Botão -->
-        <a href="https://wa.me/558581432880?text=Olá,+quero+contratar+o+plano+Moto/Quadriciclo+da+JMAX+Rastreamento"
-           class="mt-6 inline-flex items-center justify-center rounded-lg bg-green-500 px-4 py-2 font-semibold text-white hover:bg-green-600 transition">
-          Escolher Plano
-        </a>
-      </div>
-
-      <!-- Carro (plano destaque) -->
-      <div class="reveal relative flex flex-col justify-between rounded-2xl border-2 border-blue-500 bg-gradient-to-b from-blue-900/40 to-gray-800 p-6 shadow-2xl hover:scale-[1.02] transition">
-        <span class="absolute -top-3 right-4 rounded-full bg-blue-500 px-3 py-1 text-xs font-bold text-white">Mais escolhido</span>
-        <div>
-          <h3 class="text-xl font-semibold text-white mb-2">Carro / Jetski / Barco</h3>
-          <p class="text-blue-300 text-3xl font-bold">R$ 49,99 <span class="text-sm text-gray-400">/mês</span></p>
-          <ul class="mt-4 text-sm text-gray-300 space-y-2">
-            <li>✔️ Rastreamento em tempo real</li>
-            <li>✔️ Bloqueio por central</li>
-            <li>✔️ App próprio</li>
-            <li>✔️ Alertas e âncoras</li>
-          </ul>
-          <p class="mt-4 text-sm text-gray-300">Adesão + Instalação: R$ 150,00</p>
-        </div>
-        <!-- Botão -->
-        <a href="https://wa.me/558581432880?text=Olá,+quero+contratar+o+plano+Carro/Jetski/Barco+da+JMAX+Rastreamento"
-           class="mt-6 inline-flex items-center justify-center rounded-lg bg-green-500 px-4 py-2 font-semibold text-white hover:bg-green-600 transition">
-          Escolher Plano
-        </a>
-      </div>
-
-      <!-- Caminhão -->
-      <div class="reveal flex flex-col justify-between rounded-2xl border border-white/10 bg-gray-800 p-6 shadow-lg hover:scale-[1.02] transition">
-        <div>
-          <h3 class="text-xl font-semibold text-white mb-2">Caminhão / Van / Ônibus</h3>
-          <p class="text-blue-300 text-3xl font-bold">R$ 49,99 <span class="text-sm text-gray-400">/mês</span></p>
-          <ul class="mt-4 text-sm text-gray-300 space-y-2">
-            <li>✔️ Rastreamento em tempo real</li>
-            <li>✔️ Suporte 24h</li>
-            <li>✔️ App próprio</li>
-            <li>✔️ Manutenção e alertas</li>
-          </ul>
-          <p class="mt-4 text-sm text-gray-400">Adesão + Instalação: R$ 180,00</p>
-        </div>
-        <!-- Botão -->
-        <a href="https://wa.me/558581432880?text=Olá,+quero+contratar+o+plano+Caminhão/Van/Ônibus+da+JMAX+Rastreamento"
-           class="mt-6 inline-flex items-center justify-center rounded-lg bg-green-500 px-4 py-2 font-semibold text-white hover:bg-green-600 transition">
-          Escolher Plano
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
- <!-- Contato -->
-<section id="contato" class="py-20 bg-gray-900">
-  <div class="mx-auto max-w-7xl px-4">
-    <div class="grid md:grid-cols-2 gap-12 items-start">
-      
-      <!-- Informações de contato -->
-      <div class="text-left">
-        <h2 class="text-3xl font-bold mb-4 text-blue-300">Fale com a JMAX</h2>
-        <p class="text-gray-400 mb-6">Estamos prontos para te atender!</p>
-        <ul class="space-y-4 text-gray-300 text-base">
-          <li class="flex items-start gap-3">
-            <span>📍</span>
-            <span>Travessa Padre Pio 767<br>Bairro Gerardo Cristinomenes<br>Sobral - CE</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <span>📧</span>
-            <a href="mailto:jmaxrastreamento@gmail.com" class="text-blue-400 underline">jmaxrastreamento@gmail.com</a>
-          </li>
-          <li class="flex items-center gap-3">
-            <span>📱</span>
-            <a href="https://wa.me/558581432880" class="text-green-400 underline">(85) 8143-2880</a>
-          </li>
+      <!-- Card 2 -->
+      <div class="card destaque">
+        <div class="icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>Relatórios</h3>
+        <ul>
+          <li>Permanência em Pontos de Referência</li>
+          <li>Veículos Atualizados/Desatualizados</li>
+          <li>Tempo de Motor Ligado/Desligado</li>
+          <li>Km Percorridos</li>
+          <li>Limites de Velocidade</li>
+          <li>Deslocamentos, Paradas</li>
+          <li>Jornada motorista</li>
+          <li>+ de 40 tipo de relatórios</li>
         </ul>
-
-        <!-- CTA botão WhatsApp -->
-        <a href="https://wa.me/558581432880?text=Olá,+gostaria+de+falar+com+a+JMAX+Rastreamento"
-           class="mt-8 inline-flex items-center justify-center rounded-xl bg-green-500 px-6 py-3 font-semibold text-white hover:bg-green-600 transition">
-          Falar no WhatsApp
-        </a>
       </div>
 
-      <!-- Mapa Google -->
-      <div class="rounded-2xl overflow-hidden shadow-lg">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.468492937299!2d-40.34218602425972!3d-3.7074524430675257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7eac7af629afbed%3A0xcd0029793c75a02b!2sTv.%20Pe.%20Pio%20-%20Sobral%2C%20CE%2C%2062051-282!5e0!3m2!1spt-BR!2sbr!4v1756944345499!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+        <h3>Rastreamento</h3>
+        <ul>
+          <li>Rastreamento com Mapa em Tempo Real</li>
+          <li>Comandos Remotos de Bloqueio e Desbloqueio</li>
+          <li>Automação de Comandos Remotos</li>
+          <li>Telemetria RPM, Portas, Odômetro, etc</li>
+        </ul>
       </div>
+    </div>
 
+    <a href="#" class="btn-agendar">Agende Sua Instalação</a>
+  </div>
+</section>
+
+
+<section class="depoimentos">
+  <div class="container">
+    <h2>Depoimentos</h2>
+    <p class="subtitulo">Veja o que os nossos clientes estão dizendo sobre nós.</p>
+  </div>
+</section>
+
+
+<section class="contato">
+  <div class="container">
+    <div class="info">
+      <h2>Fale Conosco</h2>
+      <p class="subtitulo">Prontos para atender em nossos canais de atendimento</p>
+
+      <ul class="contato-lista">
+        <li><i class="fab fa-whatsapp"></i> (85) 9 8143 2880</li>
+        <li><i class="fas fa-envelope"></i> jmaxrastreamento@gmail.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Tv Padre Pio, 767 – Gerardo C. S. – CE</li>
+      </ul>
+
+      <a href="https://wa.me/5585981432880" target="_blank" class="btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> Fale conosco pelo whatsapp
+      </a>
+    </div>
+
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31720.18267914311!2d-40.3543168!3d-3.6864725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78eaf7e764cd325%3A0xf7464b82808677d9!2sTv.%20Pe.%20Pio%20-%20Sobral%2C%20CE!5e0!3m2!1spt-BR!2sbr!4v1699999999999"
+        width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy">
+      </iframe>
     </div>
   </div>
 </section>
 
-  <!-- Footer -->
-  <footer class="border-t border-white/10 py-6 text-center text-sm text-gray-500">
-    &copy; 2025 JMAX Rastreamento – Todos os direitos reservados.
-  </footer>
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/559899010453?text=Olá,+gostaria+de+saber+mais+sobre+os+planos+da+JMAX+Rastreamento"
-     class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 hover:bg-green-600 shadow-lg transition">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-7 w-7 fill-white">
-      <path d="M16 .6C7.5.6.6 7.5.6 16c0 2.8.7 5.4 2.1 7.8L0 32l8.5-2.2c2.3 1.3 4.9 2 7.6 2 8.5 0 15.4-6.9 15.4-15.4S24.5.6 16 .6zM16 28.8c-2.3 0-4.6-.6-6.6-1.8l-.5-.3-5 .1 1.4-4.8-.3-.5C3.8 20.3 3 18 3 15.6 3 8.6 8.7 3 15.6 3S28.2 8.7 28.2 15.6 23.3 28.8 16 28.8z"/>
-    </svg>
-  </a>
-<!-- SwiperJS Script -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    spaceBetween: 20,
-    slidesPerView: 1,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      640: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
-    },
-  });
-</script>
-  <!-- JS para menu e animação scroll -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <!-- Coluna 1 -->
+      <div class="footer-col">
+        <img src="logo.webp" alt="JMAX Logo" class="footer-logo">
+        <ul class="footer-contato">
+          <li><i class="fab fa-whatsapp"></i> (85) 9 8143 2880</li>
+          <li><i class="fas fa-envelope"></i> jmaxrastreamento@gmail.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Tv Padre Pio, 767 - Gerardo C. S. - CE</li>
+        </ul>
+      </div>
+
+      <!-- Coluna 2 -->
+      <div class="footer-col">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Notícias</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3 -->
+      <div class="footer-col">
+        <ul>
+          <li><a href="#">Rastreamento veicular</a></li>
+          <li><a href="#">Histórico de Rotas</a></li>
+          <li><a href="#">Bloqueio Remoto</a></li>
+          <li><a href="#">App Android e iOS</a></li>
+          <li><a href="#">Suporte 24h para sinistro</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4 -->
+      <div class="footer-col">
+        <h4>Baixe Nosso App</h4>
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png" alt="Google Play"></a>
+        <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>Jmax – Copyright ® 2023 – Todos os Direitos Reservados.</p>
+      <a href="#">Política de Privacidade</a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- JS do toggle -->
   <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const menuArea = document.querySelector('.menu-area');
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    toggleBtn.addEventListener('click', () => {
+      menuArea.classList.toggle('show');
+    });
   </script>
-
 </body>
 </html>
