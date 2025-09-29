@@ -274,16 +274,26 @@
   </script>
   <script>
   const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 3000, // tempo em ms entre os slides (3 segundos)
+      disableOnInteraction: false, // continua mesmo após o usuário interagir
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
+    speed: 1000, // velocidade da transição entre slides (1 segundo)
+    slidesPerView: 1, // ajuste para mais se quiser múltiplos depoimentos na tela
+    spaceBetween: 20,
     breakpoints: {
-      640: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
-    },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      }
+    }
   });
 </script>
 </body>
