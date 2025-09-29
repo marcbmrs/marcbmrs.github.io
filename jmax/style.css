@@ -464,11 +464,12 @@ a.top-item:hover {
   color: white;
   padding: 15px 20px;
   font-size: 14px;
+  text-align: center; /* ✅ Centraliza o texto */
 }
 
 .footer-bottom .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -710,7 +711,6 @@ a.top-item:hover {
   }
 
   .footer-bottom .container {
-    flex-direction: column;
     gap: 4px;
     text-align: center;
   }
