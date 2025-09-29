@@ -6,7 +6,8 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* texto normal */
       background-color: #fff;
       color: #fff;
     }
@@ -152,15 +153,18 @@ a.top-item:hover {
 
 .sobre-nos .content {
   flex: 1 1 500px;
+  font-weight: 600;
 }
 
 .sobre-nos .content h3 {
   font-size: 28px;
+  font-weight: 700;
   margin-bottom: 20px;
   color: #6b47dc;
 }
 
 .sobre-nos .content h3 span {
+  font-weight: 700;
   font-weight: normal;
   font-size: 20px;
   color: #333;
