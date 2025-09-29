@@ -11,6 +11,14 @@
       color: #fff;
     }
 
+    a.top-item {
+  color: white;
+  text-decoration: none;
+}
+
+a.top-item:hover {
+  color: #ccc; /* ou o que preferir */
+}
     /* TOPO ROXO */
     .top-bar {
       background-color: #6b47dc;
