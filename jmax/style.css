@@ -278,6 +278,7 @@
   font-size: 16px;
   color: #999;
   font-style: italic;
+  margin-bottom: 5px;
 }
 
 /* CONTATO */
@@ -350,6 +351,27 @@
 
 .mapa {
   flex: 1 1 450px;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 /* FOOTER */

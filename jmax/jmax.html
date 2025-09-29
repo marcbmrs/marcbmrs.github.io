@@ -20,6 +20,11 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
 
+  <!-- SwiperJS CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 </head>
 <body>
 
@@ -54,7 +59,7 @@
           <a href="/jmax/jmax.html">Home</a>
           <a href="jmax.html#sobre">Sobre Nós</a>
           <a href="/jmax/planos.html">Planos</a>
-          <a href="#contato">Contato</a>
+          <a href="jmax.html#contato">Contato</a>
           <a href="https://jmaxrastreio.rastrosystem.com.br/">Área do Cliente</a>
         </nav>
         <a href="https://www.asaas.com/segunda-via" class="btn-boleto">2º Via Boleto</a>
@@ -147,6 +152,25 @@
   <div class="container">
     <h2>Depoimentos</h2>
     <p class="subtitulo">Veja o que os nossos clientes estão dizendo sobre nós.</p>
+
+    <!-- Carrossel Swiper -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Slides com as avaliações -->
+        <div class="swiper-slide"><img src="avaliacao1.png" alt="Depoimento 1" /></div>
+        <div class="swiper-slide"><img src="avaliacao2.png" alt="Depoimento 2" /></div>
+        <div class="swiper-slide"><img src="avaliacao3.png" alt="Depoimento 3" /></div>
+        <div class="swiper-slide"><img src="avaliacao4.png" alt="Depoimento 4" /></div>
+        <div class="swiper-slide"><img src="avaliacao5.png" alt="Depoimento 5" /></div>
+        <div class="swiper-slide"><img src="avaliacao6.png" alt="Depoimento 6" /></div>
+        <div class="swiper-slide"><img src="avaliacao7.png" alt="Depoimento 7" /></div>
+        <div class="swiper-slide"><img src="avaliacao8.png" alt="Depoimento 8" /></div>
+        <div class="swiper-slide"><img src="avaliacao9.png" alt="Depoimento 9" /></div>
+      </div>
+
+      <!-- Paginação -->
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </section>
 
@@ -230,7 +254,8 @@
   </div>
 </footer>
 
-
+<!-- SwiperJS JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- JS do toggle -->
   <script>
     const toggleBtn = document.querySelector('.menu-toggle');
@@ -240,5 +265,19 @@
       menuArea.classList.toggle('show');
     });
   </script>
+  <script>
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+</script>
 </body>
 </html>
