@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 html, body {
   width: 100%;
   max-width: 100%;
@@ -12,6 +13,55 @@ html, body {
   background: #000;
   font-family: Arial, sans-serif;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #000;
+
+  background-image: url("banner.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.lt-wrapper {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  padding: 24px 16px 40px;
+  text-align: center;
+  position: relative; /* ESSENCIAL */
+  z-index: 2; /* garante que tudo fica na frente */
+}
+
+/* OVERLAY */
+.lt-wrapper::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.90); /* controle da suavidade */
+  z-index: -1; /* fica atrás de tudo */
+  pointer-events: none;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.88); /* opacidade do fundo */
+  z-index: -1; /* garante que fique atrás de tudo */
+  pointer-events: none;
+}
+
 
 /* WRAPPER CENTRAL */
 .lt-wrapper {
@@ -59,16 +109,24 @@ html, body {
 
 /* BOTÕES — COM CORREÇÃO DE LARGURA */
 .lt-btn {
+  position: relative;         /* garante que fique acima do overlay */
+  z-index: 5;                 /* botão SEMPRE na frente */
+  
   width: 100%;
   max-width: 100%;
   display: block;
+
   padding: 16px;
+  margin: 0 auto;
+
   text-decoration: none;
+  text-align: center;
+
   color: #e5e5e5;
   font-size: 1rem;
   font-weight: 700;
-  border-radius: 14px;
 
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 50, 50, 0.4);
 
@@ -77,6 +135,8 @@ html, body {
     0 4px 12px rgba(0,0,0,0.7);
 
   transition: 0.22s ease;
+  box-sizing: border-box;     /* impede de estourar a largura */
+  overflow: hidden;           /* impede sombra de empurrar o layout */
 }
 
 /* HOVER */
