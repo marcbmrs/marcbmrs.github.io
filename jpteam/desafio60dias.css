@@ -23,7 +23,6 @@ body {
 }
 
 .page-wrapper {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,7 +283,7 @@ body {
 
 .problem-section {
   width: 100%;
-  padding: 5px 16px;
+  padding: 10px 16px;
   display: flex;
   justify-content: center;
 }
@@ -356,7 +355,7 @@ body {
 
 .receives-section {
   width: 100%;
-  padding: 5px 16px;
+  padding: 10px 16px;
   display: flex;
   justify-content: center;
   background: radial-gradient(circle at top, #1c1b19 0%, #070707 70%, #000 100%);
@@ -452,7 +451,7 @@ body {
 
 .socialproof-section {
   width: 100%;
-  padding: 5px 16px;
+  padding: 10px 16px;
   display: flex;
   justify-content: center;
   background: radial-gradient(circle at top, #1a1815, #060606 70%, #000);
@@ -528,7 +527,7 @@ body {
 
 .audience-section {
   width: 100%;
-  padding: 5px 16px;
+  padding: 10px 16px;
   display: flex;
   justify-content: center;
   background: radial-gradient(circle at top, #2a1616, #0a0a0a 65%, #000 100%);
@@ -619,7 +618,7 @@ body {
 
 .faq-section {
   width: 100%;
-  padding: 5px 16px;
+  padding: 10px 16px;
   display: flex;
   justify-content: center;
   background: linear-gradient(160deg, #0d0d0d, #1d1a13 55%, #0a0a0a 100%);
@@ -714,7 +713,7 @@ body {
 
 .offer-section {
   width: 100%;
-  padding: 5px 16px;
+  padding: 10px 16px;
   display: flex;
   justify-content: center;
   background: radial-gradient(circle at center, #1a1a1a 0%, #070707 65%, #000 100%);
@@ -841,7 +840,7 @@ body {
 
 .urgency-section {
   width: 100%;
-  padding: 5px 16px;
+  padding: 10px 16px;
   display: flex;
   justify-content: center;
   background: radial-gradient(circle at top, #4a1111, #1a0b0b 60%, #050505 100%);
