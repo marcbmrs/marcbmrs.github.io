@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Desafio 60 Dias - Método JP Team</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Link do CSS separado -->
+  <link rel="stylesheet" href="desafio60dias.css" />
+
+  <!-- Fonte sugerida (pode trocar) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <section class="hero" id="hero">
+
+      <!-- Tag superior -->
+      <div class="hero-top-tag">
+        <span class="dot"></span>
+        <span>DESAFIO 60 DIAS · MÉTODO JP TEAM</span>
+      </div>
+
+      <!-- Logo + títulos -->
+      <div class="hero-header">
+        <!-- Substitua pelo arquivo PNG do escudo -->
+        <img
+          src="logo-desafio-60dias-escudo.png"
+          alt="Desafio 60 Dias - Método JP Team"
+          class="hero-logo"
+        />
+
+        <h1 class="hero-title">
+          Transforme seu corpo em<br />
+          <span class="highlight">60 dias</span> com método e acompanhamento.
+        </h1>
+
+        <p class="hero-subtitle">
+          Treino, dieta e protocolo anti-açúcar adaptados para a sua rotina — com acompanhamento direto do JP.
+        </p>
+      </div>
+
+      <!-- Selos / informações rápidas -->
+      <div class="hero-badges">
+        <div class="hero-pill">
+          <span class="status-dot"></span>
+          <span>Acesso imediato após o pagamento</span>
+        </div>
+        <p class="hero-mini-info">
+          Comece <strong>antes do dia 1º</strong> e chegue na frente.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div class="hero-cta-wrapper">
+        <button class="hero-button" id="btn-hero">
+          <span>Quero começar agora</span>
+          <span class="chevron">➜</span>
+        </button>
+
+        <div class="hero-secure-line">
+          <!-- Ícone cadeado -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2ZM10 7a2 2 0 1 1 4 0v2h-4V7Zm7 11H7v-7h10v7Z" />
+          </svg>
+          <span>Pagamento 100% seguro · vagas limitadas</span>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ========================= -->
+<!-- SEÇÃO 2 — VSL (YOUTUBE) -->
+<!-- ========================= -->
+<section class="vsl-section" id="vsl">
+  <div class="vsl-container">
+
+    <h2 class="vsl-title">Assista antes de entrar</h2>
+
+    <p class="vsl-subtitle">
+      Em menos de 3 minutos você entende como funciona o método e por que você pode começar antes do dia 1º.
+    </p>
+
+    <!-- VIDEO DO YOUTUBE -->
+    <div class="vsl-video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI"
+        title="Vídeo de vendas - Desafio 60 Dias"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- CTA -->
+    <button class="vsl-button" onclick="document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' })">
+      Quero começar agora
+    </button>
+
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- SEÇÃO 3 — O PROBLEMA -->
+<!-- ========================= -->
+<section class="problem-section" id="problema">
+  <div class="problem-container">
+
+    <h2 class="problem-title">O que realmente te trava?</h2>
+
+    <p class="problem-subtitle">
+      Não é falta de força de vontade.  
+      É falta de método e estrutura.
+    </p>
+
+    <div class="problem-list">
+
+      <!-- Item 1 -->
+      <div class="problem-item">
+        <div class="problem-icon">
+          <!-- Ícone açúcar -->
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L1 7l11 5l9-4.09V17h2V7L12 2m0 7.82L5.74 7L12 4.18L18.26 7L12 9.82M3 9v8c0 1.1.9 2 2 2h7v-2H5V9H3m16 4a2 2 0 0 0-2 2v4h2v-4h2v-2h-2Z" /></svg>
+        </div>
+        <p>Compulsão por açúcar</p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="problem-item">
+        <div class="problem-icon">
+          <!-- Ícone treino desorganizado -->
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 3v18h2V3H7m8 0v18h2V3h-2M3 8v8h2V8H3m16 0v8h2V8h-2Z" /></svg>
+        </div>
+        <p>Treino sem estrutura</p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="problem-item">
+        <div class="problem-icon">
+          <!-- Ícone dieta genérica -->
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17 3a2 2 0 0 0-2 2c0 .34.08.67.21.96L7 11V7H5v10h2v-4l8.21 5.04c-.13.29-.21.62-.21.96a2 2 0 0 0 4 0a2 2 0 0 0-2-2c-.34 0-.67.08-.96.21L9 13l7.04-4.21c.29.13.62.21.96.21a2 2 0 0 0 0-4Z" /></svg>
+        </div>
+        <p>Dieta que não encaixa no seu dia</p>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="problem-item">
+        <div class="problem-icon">
+          <!-- Ícone loop -->
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 6V3L8 7l4 4V8c2.21 0 4 1.79 4 4a3.99 3.99 0 0 1-3 3.87v2.02A6.002 6.002 0 0 0 12 6Zm-1 5a3.99 3.99 0 0 1 3-3.87V5.11A6.002 6.002 0 0 0 6 12c0 3.31 2.69 6 6 6v3l4-4l-4-4v3c-2.21 0-4-1.79-4-4Z" /></svg>
+        </div>
+        <p>Começa e para sempre no mesmo ponto</p>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="problem-item">
+        <div class="problem-icon">
+          <!-- Ícone ansiedade -->
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12,2A10,10 0 1,0 22,12A10,10 0 0,0 12,2M11 6H13V13H11V6M11 16H13V18H11V16Z" /></svg>
+        </div>
+        <p>Ansiedade que atrapalha seus resultados</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ========================= -->
+<!-- SEÇÃO 5 — O QUE VOCÊ RECEBE -->
+<!-- ========================= -->
+<section class="receives-section" id="beneficios">
+  <div class="receives-container">
+
+    <h2 class="receives-title">O Que Você Recebe</h2>
+
+    <p class="receives-subtitle">
+      Tudo que você precisa para transformar seu corpo em 60 dias — sem adivinhações.
+    </p>
+
+    <div class="receives-grid">
+
+      <!-- Card 1 -->
+      <div class="receives-card">
+        <img src="icon-treino.png" alt="Treino" class="receives-icon" />
+        <h3>Treino Estruturado</h3>
+        <p>Plano direto para perder gordura de forma consistente.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="receives-card">
+        <img src="icon-dieta.png" alt="Dieta" class="receives-icon" />
+        <h3>Dieta Personalizada</h3>
+        <p>Montada para sua rotina e objetivo desde o primeiro dia.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="receives-card">
+        <img src="icon-grupo.png" alt="Grupo VIP" class="receives-icon" />
+        <h3>Grupo VIP</h3>
+        <p>Você entra imediatamente após o pagamento.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="receives-card">
+        <img src="icon-acompanhamento.png" alt="Acompanhamento" class="receives-icon" />
+        <h3>Acompanhamento Direto</h3>
+        <p>Feedback semanal obrigatório para manter constância.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="receives-card">
+        <img src="icon-acucar.png" alt="Anti-Açúcar" class="receives-icon" />
+        <h3>Protocolo Anti-Açúcar</h3>
+        <p>Reduza compulsão e ansiedade já na primeira semana.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="receives-card">
+        <img src="icon-acesso.png" alt="Acesso Imediato" class="receives-icon" />
+        <h3>Acesso Imediato</h3>
+        <p>Comece ainda hoje — não espere o dia 1º.</p>
+      </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SEÇÃO 6 — PROVAS SOCIAIS (CARROSSEL) -->
+<!-- ========================= -->
+<section class="socialproof-section" id="provas">
+  <div class="socialproof-container">
+
+    <h2 class="socialproof-title">Resultados Reais</h2>
+
+    <p class="socialproof-subtitle">
+      Alunos que seguiram o método e transformaram o corpo em poucas semanas.
+    </p>
+
+    <!-- CARROSSEL -->
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+
+        <!-- IMAGEM 1 -->
+        <div class="carousel-item">
+          <img src="evo1.jpeg" alt="Antes e Depois 1" />
+        </div>
+
+        <!-- IMAGEM 2 -->
+        <div class="carousel-item">
+          <img src="evo2.jpeg" alt="Antes e Depois 2" />
+        </div>
+
+        <!-- IMAGEM 3 -->
+        <div class="carousel-item">
+          <img src="evo3.jpeg" alt="Antes e Depois 3" />
+        </div>
+
+        <!-- IMAGEM 4 -->
+        <div class="carousel-item">
+          <img src="evo4.jpeg" alt="Antes e Depois 4" />
+        </div>
+
+        <!-- IMAGEM 5 -->
+        <div class="carousel-item">
+          <img src="evo5.jpeg" alt="Antes e Depois 3" />
+        </div>
+
+        <!-- IMAGEM 6 -->
+        <div class="carousel-item">
+          <img src="evo6.jpeg" alt="Antes e Depois 4" />
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- SEÇÃO 7 — PARA QUEM É -->
+<!-- ========================= -->
+<section class="audience-section" id="paraquem">
+  <div class="audience-container">
+
+    <h2 class="audience-title">Para Quem é o Desafio</h2>
+
+    <p class="audience-subtitle">
+      Se você se encaixa em pelo menos 1 desses pontos, o método foi feito para você:
+    </p>
+
+    <div class="audience-list">
+
+      <!-- ITEM 1 -->
+      <div class="audience-item">
+        <img src="icon-acucar.png" class="audience-icon" alt="Reduzir Açúcar" />
+        <p>Quem quer reduzir açúcar e controlar compulsão.</p>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="audience-item">
+        <img src="icon-gordura.png" class="audience-icon" alt="Perder Gordura" />
+        <p>Quem quer perder gordura de forma consistente.</p>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="audience-item">
+        <img src="icon-semtempo.png" class="audience-icon" alt="Sem Tempo" />
+        <p>Quem não tem tempo para treinos longos.</p>
+      </div>
+
+      <!-- ITEM 4 -->
+      <div class="audience-item">
+        <img src="icon-recomeco.png" class="audience-icon" alt="Recomeço" />
+        <p>Quem já tentou várias vezes e nunca manteve constância.</p>
+      </div>
+
+      <!-- ITEM 5 -->
+      <div class="audience-item">
+        <img src="icon-ansiedade.png" class="audience-icon" alt="Ansiedade" />
+        <p>Quem sente ansiedade ao tentar emagrecer.</p>
+      </div>
+
+      <!-- ITEM 6 -->
+      <div class="audience-item">
+        <img src="icon-acesso.png" class="audience-icon" alt="Começar Hoje" />
+        <p>Quem quer começar antes do dia 1º.</p>
+      </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SEÇÃO 8 — FAQ / PERGUNTAS FREQUENTES -->
+<!-- ========================= -->
+<section class="faq-section" id="faq">
+  <div class="faq-container">
+
+    <h2 class="faq-title">Perguntas Frequentes</h2>
+
+    <p class="faq-subtitle">
+      As respostas diretas para as dúvidas que mais impedem as pessoas de começar.
+    </p>
+
+    <div class="faq-list">
+
+      <!-- FAQ ITEM 1 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>E se eu não tiver tempo?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>O treino dura entre 25 e 45 minutos. Você não precisa de 1h por dia — precisa de método.</p>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 2 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>E se eu já tentei antes e falhei?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>O acompanhamento semanal impede que você abandone. O método corrige erros logo no início.</p>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 3 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>A dieta é muito difícil?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>A dieta é personalizada. Nada extremo. Você recebe algo compatível com sua rotina.</p>
+        </div>
+      </div>
+
+      <!-- FAQ ITEM 4 -->
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Preciso esperar o dia 1º?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Não. Você pode começar hoje mesmo. O acesso libera imediatamente após o pagamento.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========================= -->
+<!-- SEÇÃO 9 — A OFERTA -->
+<!-- ========================= -->
+<section class="offer-section" id="checkout">
+  <div class="offer-container">
+
+    <h2 class="offer-title">Entre no Desafio 60 Dias</h2>
+
+    <p class="offer-subtitle">
+      Acesso imediato + treino + dieta personalizada + acompanhamento direto.
+    </p>
+
+    <!-- CAIXA DA OFERTA -->
+    <div class="offer-box">
+
+      <h3 class="offer-box-title">Tudo isso por apenas:</h3>
+
+      <div class="offer-price">
+        <span class="currency">R$</span>
+        <span class="value">300</span>
+      </div>
+
+      <p class="offer-price-sub">Pagamento único · Acesso liberado na hora</p>
+
+      <ul class="offer-list">
+        <li>✔ Treino estruturado</li>
+        <li>✔ Dieta personalizada</li>
+        <li>✔ Protocolo anti-açúcar</li>
+        <li>✔ Acompanhamento direto</li>
+        <li>✔ Grupo VIP</li>
+        <li>✔ Acesso imediato</li>
+      </ul>
+
+      <!-- CTA -->
+      <button class="offer-button">
+        Começar Agora
+      </button>
+
+      <div class="offer-secure">
+        <img src="jp-logo-small.png" alt="JP Team" class="offer-mini-logo" />
+        <span>Pagamento 100% seguro</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- SEÇÃO 10 — URGÊNCIA FINAL -->
+<!-- ========================= -->
+<section class="urgency-section" id="urgencia">
+  <div class="urgency-container">
+
+    <h2 class="urgency-title">
+      O ano está acabando.
+    </h2>
+
+    <p class="urgency-subtitle">
+      Você vai virar igual… ou já transformando seu corpo?
+    </p>
+
+    <!-- CONTADOR (OPCIONAL) -->
+    <div class="urgency-timer">
+      <span class="timer-label">Faltam</span>
+      <span class="timer-number" id="days-left">10</span>
+      <span class="timer-label">dias para 2025</span>
+    </div>
+
+    <!-- CTA FINAL -->
+    <button class="urgency-button" onclick="document.getElementById('checkout').scrollIntoView({ behavior: 'smooth' })">
+      Começar Agora
+    </button>
+
+    <!-- Selo -->
+    <div class="urgency-security">
+      <img src="logo-desafio-60dias-escudo.png" alt="JP Team" class="urgency-logo" />
+      <span>Acesso imediato · Pagamento seguro</span>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function updateDaysLeft() {
+    const today = new Date();
+    const newYear = new Date(today.getFullYear() + 1, 0, 1);
+    const diff = newYear - today;
+    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("days-left").textContent = days;
+  }
+  updateDaysLeft();
+</script>
+
+
+<script>
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const btn = item.querySelector(".faq-question");
+
+    btn.addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
+  });
+</script>
+
+
+  <script>
+    // Scroll suave para próxima seção quando existir
+    const heroBtn = document.getElementById('btn-hero');
+    heroBtn.addEventListener('click', function () {
+      const target =
+        document.getElementById('checkout') ||
+        document.getElementById('vsl') ||
+        document.getElementById('hero'); // fallback
+
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+
+</body>
+</html>
