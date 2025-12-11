@@ -204,78 +204,73 @@ body {
 }
 
 /* ========================= */
-/* SEÇÃO 2 — VSL (YOUTUBE) */
+/* SEÇÃO 2 — WHATSAPP CTA */
 /* ========================= */
 
-.vsl-section {
+.whats-section {
   width: 100%;
-  padding: 0px 16px;
+  padding: 40px 16px;
+  background: radial-gradient(circle at top, #111, #000);
   display: flex;
   justify-content: center;
 }
 
-.vsl-container {
-  width: 100%;
+.whats-container {
   max-width: 480px;
+  width: 100%;
   text-align: center;
 }
 
-.vsl-title {
-  font-size: 1.4rem;
+.whats-title {
+  font-size: 1.5rem;
   font-weight: 800;
-  margin-bottom: 8px;
   color: var(--gold);
+  margin-bottom: 10px;
 }
 
-.vsl-subtitle {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 20px;
-  line-height: 1.4;
-}
-
-/* Wrapper para video 100% responsivo */
-.vsl-video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.5%; /* 16:9 */
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(242, 193, 79, 0.25);
-  box-shadow: var(--shadow-soft);
-  margin-bottom: 20px;
-}
-
-.vsl-video-wrapper iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-/* CTA abaixo do vídeo */
-.vsl-button {
-  width: 100%;
-  border: none;
-  padding: 14px 20px;
-  margin-top: 8px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--gold), #ffdd7a);
-  color: #1a1a1a;
-  font-weight: 800;
+.whats-text {
   font-size: 0.95rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  letter-spacing: 0.05em;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.65);
-  transition: 0.12s ease-out;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin-bottom: 24px;
 }
 
-.vsl-button:active {
-  transform: translateY(1px) scale(0.98);
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.5);
+.whats-box {
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(242, 193, 79, 0.25);
+  box-shadow: 0 0 20px rgba(242, 193, 79, 0.2);
+  backdrop-filter: blur(4px);
 }
+
+.whats-highlight {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* BOTÃOZÃO DO WHATSAPP */
+.whats-button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #25d366, #1da851);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.6), 0 0 14px rgba(37,211,102,0.5);
+  transition: 0.15s ease;
+}
+
+.whats-button:active {
+  transform: scale(0.96);
+  box-shadow: 0 5px 16px rgba(0,0,0,0.5);
+}
+
 
 /* ========================= */
 /* SEÇÃO 3 — O PROBLEMA */
