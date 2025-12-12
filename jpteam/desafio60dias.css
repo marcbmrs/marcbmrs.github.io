@@ -484,14 +484,24 @@ body {
 .carousel-track {
   display: flex;
   gap: 12px;
-  animation: scrollCarousel 22s linear infinite;
+  width: max-content;
+  animation: scrollCarousel 18s linear infinite;
+}
+
+
+/* Pausa quando o usuário toca (mobile) ou passa o mouse (desktop) */
+.carousel-wrapper:hover .carousel-track,
+.carousel-wrapper:active .carousel-track {
+  animation-play-state: paused;
 }
 
 /* Cada imagem */
 .carousel-item {
-  min-width: 70%;
+  width: 70vw; /* melhor que % */
+  max-width: 320px;
   flex-shrink: 0;
 }
+
 
 .carousel-item img {
   width: 100%;
