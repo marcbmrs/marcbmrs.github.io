@@ -119,29 +119,25 @@ img{ max-width: 100%; display: block; }
 
 /* Nav (mobile: scroll) */
 .topbar__nav{
-  display:flex;
-  gap:14px;
+  display: flex;
+  width: 100%;
   padding: 0 0 12px;
-  overflow:auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .topbar__nav a{
-  white-space: nowrap;
-  text-decoration:none;
-  color: var(--coral2);
+  flex: 1; /* divide igualmente */
+  text-align: center;
+  text-decoration: none;
   font-weight: 800;
   font-size: 13px;
-  padding: 8px 12px;
-  border-radius: 12px;
-  transition: all .25s ease;
+  padding: 10px 4px;
+  color: var(--coral2);
+  transition: .2s ease;
 }
 
 .topbar__nav a:hover{
   background: rgba(254,95,69,.12);
-  transform: translateY(-2px);
 }
-
 .menu-cta{
   color: #fff !important;
   background: linear-gradient(
