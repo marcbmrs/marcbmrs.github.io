@@ -12,23 +12,25 @@
   <!-- Top bar -->
 <header class="topbar">
   <div class="wrap topbar__row">
-    <a class="brand" href="#inicio" aria-label="Voltar ao início">
-      <img src="./assets/logo.avif" alt="Logo Confeitaria Adão & Eva" class="brand__logo">
+
+    <a class="brand" href="#inicio">
+      <img src="./assets/logo.avif" class="brand__logo">
       <div class="brand__txt">
         <span class="brand__name">Adão & Eva</span>
         <span class="brand__tag">Confeitaria artesanal</span>
       </div>
     </a>
 
-    <a class="btn btn--wa" href="#orcamento">Orçamento</a>
-  </div>
+    <nav class="topbar__nav">
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Doces & Salgados</a>
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#cardapio">Cardápio</a>
+    </nav>
 
-  <nav class="wrap topbar__nav" aria-label="Navegação principal">
-    <a href="#inicio">Início</a>
-    <a href="#produtos">Doces &amp; Salgados</a>
-    <a href="#sobre">Sobre Nós</a>
-    <a href="#cardapio">Cardápio</a>
-  </nav>
+    <a class="btn btn--wa" href="#orcamento">Orçamento</a>
+
+  </div>
 </header>
 
 <section id="inicio" class="hero" aria-label="Seção principal">
@@ -53,6 +55,88 @@
     </ul>
   </div>
 </section>
+
+<section id="produtos" class="galeria">
+  <div class="wrap">
+    <h2 class="galeria__titulo">Doces & Salgados</h2>
+    <p class="galeria__sub">Clique para abrir as galerias.</p>
+
+    <details class="acc" open>
+      <summary class="acc__sum">
+        <span>Doces</span>
+        <span class="acc__icon" aria-hidden="true"></span>
+      </summary>
+
+      <div class="galeria__grid">
+        <figure class="galeria__item">
+          <img src="./assets/doces1.avif" alt="Brigadeiros gourmet">
+        </figure>
+
+        <figure class="galeria__item">
+          <img src="./assets/doces2.avif" alt="Bolo decorado">
+        </figure>
+
+        <figure class="galeria__item">
+          <img src="./assets/doces3.avif" alt="Doces para presente">
+        </figure>
+
+        <figure class="galeria__item">
+          <img src="./assets/doces4.avif" alt="Tortas artesanais">
+        </figure>
+
+        <figure class="galeria__item">
+          <img src="./assets/doces5.avif" alt="Tortas artesanais">
+        </figure>
+
+        <figure class="galeria__item">
+          <img src="./assets/doces6.avif" alt="Tortas artesanais">
+        </figure>
+
+        <figure class="galeria__item">
+          <img src="./assets/doces7.avif" alt="Tortas artesanais">
+        </figure>
+
+        <figure class="galeria__item">
+          <img src="./assets/doces8.avif" alt="Tortas artesanais">
+        </figure>
+
+        <figure class="galeria__item">
+          <img src="./assets/doces9.avif" alt="Tortas artesanais">
+        </figure>
+      </div>
+    </details>
+
+    <details class="acc">
+      <summary class="acc__sum">
+        <span>Salgados</span>
+        <span class="acc__icon" aria-hidden="true"></span>
+      </summary>
+
+      <div class="galeria__grid">
+        <figure class="galeria__item">
+          <img src="./assets/salgado1.jpg" alt="Coxinhas artesanais">
+          <figcaption>Coxinhas</figcaption>
+        </figure>
+
+        <figure class="galeria__item">
+          <img src="./assets/salgado2.jpg" alt="Mini salgados para festa">
+          <figcaption>Mini Salgados</figcaption>
+        </figure>
+
+        <figure class="galeria__item">
+          <img src="./assets/salgado3.jpg" alt="Empadinhas artesanais">
+          <figcaption>Empadinhas</figcaption>
+        </figure>
+
+        <figure class="galeria__item">
+          <img src="./assets/salgado4.jpg" alt="Enroladinhos para eventos">
+          <figcaption>Enroladinhos</figcaption>
+        </figure>
+      </div>
+    </details>
+  </div>
+</section>
+
 
 </body>
 </html>

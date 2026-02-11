@@ -51,8 +51,24 @@ img{ max-width: 100%; display: block; }
   align-items:center;
   justify-content:space-between;
   gap: 12px;
-  padding: 12px 0;
+  padding: 6px 0;
 }
+
+/* Mobile: logo + botão em cima, menu embaixo ocupando 100% */
+.topbar__row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "brand cta"
+    "nav   nav";
+  align-items: center;
+  gap: 10px;
+}
+
+.brand{ grid-area: brand; }
+.btn--wa{ grid-area: cta; }
+.topbar__nav{ grid-area: nav; }
+
 
 .brand{
   display:flex;
@@ -121,18 +137,19 @@ img{ max-width: 100%; display: block; }
 .topbar__nav{
   display: flex;
   width: 100%;
-  padding: 0 0 12px;
+  padding: 0 0;
+  border-top: 1px solid rgba(0,0,0,.06);
 }
 
 .topbar__nav a{
-  flex: 1; /* divide igualmente */
+  flex: 1;
   text-align: center;
   text-decoration: none;
   font-weight: 800;
   font-size: 13px;
   padding: 10px 4px;
   color: var(--coral2);
-  transition: .2s ease;
+  border-radius: 10px;
 }
 
 .topbar__nav a:hover{
@@ -157,30 +174,35 @@ img{ max-width: 100%; display: block; }
 
 /* Desktop: nav na mesma linha */
 @media (min-width: 900px){
-  .topbar{
-    padding: 6px 0;
-  }
-
-  .topbar__row{
+    .topbar{
     padding: 10px 0;
   }
 
+  /* linha única */
+  .topbar__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* o nav agora fica na mesma linha */
   .topbar__nav{
+    width: auto;
+    border-top: 0;
     padding: 0;
-    overflow: visible;
-    justify-content: flex-end;
-    gap: 6px;
-    margin-top: -54px; /* puxa o menu pra mesma “faixa” */
   }
 
-  /* No desktop, esconde o botão duplicado */
-  .btn--wa{
-    display: none;
-  }
-
+  /* no desktop os links não precisam dividir largura */
   .topbar__nav a{
-    font-size: 14px;
-    padding: 10px 12px;
+    flex: 0 0 auto;
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  /* botão orçamento: decide se quer mostrar no desktop */
+  .btn--wa{
+    grid-column: 2;
+    justify-self: end;
   }
 
   .menu-cta{
@@ -362,4 +384,149 @@ img{ max-width: 100%; display: block; }
     transform: none !important;
     opacity: 1 !important;
   }
+}
+
+
+
+/* ---------------- GALERIA ---------------- */
+/* -------- GALERIA SANFONADA -------- */
+.galeria{
+  padding: 56px 0;
+  background: #fff;
+}
+
+.galeria__titulo{
+  margin: 0 0 6px;
+  font-size: 26px;
+  letter-spacing: -0.2px;
+  text-align: center;
+}
+
+.galeria__sub{
+  margin: 0 0 18px;
+  color: rgba(0,0,0,.62);
+  text-align: center;
+}
+
+/* details */
+.acc{
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  background: rgba(250,235,209,.35);
+  box-shadow: 0 10px 25px rgba(0,0,0,.06);
+  overflow: hidden;
+  margin: 12px 0;
+}
+
+/* animação suave no conteúdo da sanfona */
+
+.acc > .galeria__grid{
+  overflow: hidden;
+  transition: max-height .5s ease, opacity .3s ease;
+  max-height: 0;
+  opacity: 0;
+}
+
+/* quando aberto */
+.acc[open] > .galeria__grid{
+  max-height: 1200px; /* valor grande suficiente */
+  opacity: 1;
+}
+
+.acc__sum{
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 14px;
+  font-weight: 900;
+  color: var(--coral2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  transition: background .3s ease;
+}
+
+.acc__sum::-webkit-details-marker{ display:none; }
+
+.acc__icon{
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  background: rgba(254,95,69,.12);
+  border: 1px solid rgba(254,95,69,.25);
+  position: relative;
+  transition: transform .3s ease;
+}
+
+.acc[open] .acc__icon{
+  transform: rotate(180deg);
+}
+
+.acc__icon::before,
+.acc__icon::after{
+  content:"";
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 2px;
+  background: var(--coral2);
+  transform: translate(-50%, -50%);
+}
+.acc__icon::after{
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.acc[open] .acc__icon::after{
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 0;
+}
+
+.acc[open] .acc__sum{
+  background: rgba(254,95,69,.10);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+/* grid */
+.galeria__grid{
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+
+@media (min-width: 520px){
+  .galeria__grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px){
+  .galeria__grid{ grid-template-columns: repeat(4, 1fr); }
+}
+
+.galeria__item{
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: transform .3s ease;
+}
+
+.galeria__item:hover{
+  transform: translateY(-4px);
+}
+
+.galeria__item img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+}
+
+.galeria__item:hover img{
+  transform: scale(1.06);
+}
+
+.galeria__item figcaption{
+  padding: 10px 10px;
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(0,0,0,.75);
 }
