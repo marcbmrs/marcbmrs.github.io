@@ -429,7 +429,7 @@ img{ max-width: 100%; display: block; }
 
 /* quando aberto */
 .acc[open] > .galeria__grid{
-  max-height: 1200px; /* valor grande suficiente */
+  max-height: 5000px; /* mobile pode precisar bem mais */
   opacity: 1;
 }
 
