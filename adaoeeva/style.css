@@ -703,3 +703,269 @@ img{ max-width: 100%; display: block; }
     justify-content: start;
   }
 }
+
+/* ---------------- CARDÁPIO ---------------- */
+.cardapio{
+  padding: 56px 0;
+  background: #fff;
+}
+
+.cardapio__title{
+  margin: 0 0 8px;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: -0.2px;
+}
+
+.cardapio__sub{
+  margin: 0 0 18px;
+  text-align: center;
+  color: rgba(0,0,0,.62);
+  font-weight: 600;
+}
+
+/* sub-accordion */
+.subacc{
+  margin: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.06);
+  background: rgba(255,255,255,.85);
+  overflow: hidden;
+}
+
+.subacc__sum{
+  cursor: pointer;
+  list-style: none;
+  padding: 12px 12px;
+  font-weight: 900;
+  color: rgba(0,0,0,.78);
+  background: rgba(0,0,0,.03);
+}
+
+.subacc__sum::-webkit-details-marker{ display: none; }
+
+.menu{
+  padding: 10px 12px 12px;
+}
+
+.menu__item{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(0,0,0,.12);
+}
+
+.menu__item:last-child{
+  border-bottom: 0;
+}
+
+.menu__item span{
+  color: rgba(0,0,0,.78);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.menu__item strong{
+  color: var(--coral2);
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.menu__cta{
+  margin: 0 12px 14px;
+  width: calc(100% - 24px);
+}
+
+@media (min-width: 900px){
+  .subacc{
+    margin: 12px 18px;
+  }
+
+  .menu__cta{
+    width: auto;
+  }
+}
+
+/* ---------------- CTA FINAL ---------------- */
+
+.cta-final{
+  padding: 70px 0;
+  background: linear-gradient(
+    135deg,
+    var(--coral),
+    var(--coral2)
+  );
+  color: #fff;
+  text-align: center;
+}
+
+.cta-final__content h2{
+  margin: 0 0 12px;
+  font-size: 30px;
+  letter-spacing: -0.4px;
+}
+
+.cta-final__content p{
+  margin: 0 auto 22px;
+  max-width: 520px;
+  font-weight: 600;
+  line-height: 1.6;
+  opacity: .95;
+}
+
+.cta-final__buttons{
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* botão claro */
+.btn--light{
+  background: #fff;
+  color: var(--coral2);
+  font-weight: 900;
+  padding: 12px 20px;
+  border-radius: 16px;
+  transition: .25s ease;
+}
+
+.btn--light:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.2);
+}
+
+/* botão whatsapp escuro */
+.btn--whatsapp{
+  background: rgba(0,0,0,.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.35);
+  padding: 12px 20px;
+  border-radius: 16px;
+  font-weight: 900;
+  transition: .25s ease;
+}
+
+.btn--whatsapp:hover{
+  transform: translateY(-3px);
+  background: rgba(0,0,0,.25);
+}
+
+/* ---------------- FOOTER ---------------- */
+
+.footer{
+  background: #111;
+  color: #eee;
+  padding: 60px 0 20px;
+  font-size: 14px;
+}
+
+.footer__grid{
+  display: grid;
+  gap: 30px;
+}
+
+.footer__col h3{
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.footer__col h4{
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: var(--coral);
+}
+
+.footer__col p{
+  margin: 0;
+  line-height: 1.6;
+  color: rgba(255,255,255,.75);
+}
+
+.footer__col a{
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  transition: .2s ease;
+}
+
+.footer__col a:hover{
+  color: var(--coral);
+}
+
+.footer__social{
+  display: flex;
+  gap: 14px;
+}
+
+.footer__bottom{
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.1);
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,.6);
+}
+
+/* Desktop */
+@media (min-width: 900px){
+  .footer__grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------------- WHATSAPP FLUTUANTE ---------------- */
+
+.wpp-float{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 999;
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
+  transition: all .25s ease;
+}
+
+.wpp-float img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* efeito hover desktop */
+.wpp-float:hover{
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+}
+
+/* efeito pulsar leve */
+@keyframes wppPulse{
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.wpp-float{
+  animation: wppPulse 3s infinite;
+}
+
+/* mobile ajuste */
+@media (max-width: 480px){
+  .wpp-float{
+    width: 64px;
+    height: 64px;
+    right: 14px;
+    bottom: 14px;
+  }
+}
