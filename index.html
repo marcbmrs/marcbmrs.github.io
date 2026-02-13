@@ -1,447 +1,772 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1898376720984808');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1898376720984808&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Landing Page Express — pronta em 48h por R$47</title>
-  <meta name="description" content="Receba uma landing page profissional em até 48h por R$47. Layout moderno, WhatsApp, formulário e prova social. Bônus: 1 mês de hospedagem + ajustes em 7 dias." />
-  <meta property="og:title" content="Landing Page Express em 48h por R$47" />
-  <meta property="og:description" content="Página profissional, rápida e que converte. Entrega em até 48h." />
-  <meta property="og:type" content="website" />
+
+  <title>Landing Page Profissional em até 48h | Orçamento Rápido</title>
+  <meta name="description" content="Landing Page profissional pronta em até 48h. Ideal para validar oferta e gerar leads. Solicite orçamento rápido pelo WhatsApp." />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] },
-          colors: {
-            bg: '#0b0f1a',
-            primary: '#6D28D9',
-            neon: '#00E5FF',
-            ink: '#D6E4FF',
-            success: '#22c55e',
-            warn: '#f59e0b',
-          },
-          boxShadow: {
-            neon: '0 0 16px rgba(0,229,255,.35), 0 0 40px rgba(109,40,217,.25)'
-          },
-          backgroundImage: {
-            glow: 'radial-gradient(1200px 600px at 80% -10%, rgba(0,229,255,.12), transparent 40%), radial-gradient(900px 500px at -10% 10%, rgba(109,40,217,.18), transparent 35%)',
-            grid: 'linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px)'
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    .bg-grid{background-size:24px 24px,24px 24px;mask-image:radial-gradient(circle at 50% 30%, black 60%, transparent 100%)}
-    .btn-glow{box-shadow:0 0 0 0 rgba(0,229,255,.6);animation:pulseGlow 2.4s ease-in-out infinite}
-    @keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(0,229,255,.55)}50%{box-shadow:0 0 28px 6px rgba(0,229,255,.35)}}
-    .glass{backdrop-filter:blur(10px);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
-  </style>
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-bg text-ink font-sans antialiased selection:bg-primary/40">
-  <!-- BG decor -->
-  <div aria-hidden="true" class="fixed inset-0 -z-10 bg-glow"></div>
-  <div aria-hidden="true" class="fixed inset-0 -z-10 bg-grid pointer-events-none"></div>
 
-  <!-- NAV -->
-  <header class="sticky top-0 z-50 bg-bg/70 backdrop-blur border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2 group">
-        <span class="inline-block w-2.5 h-2.5 rounded-full bg-neon shadow-neon"></span>
-        <span class="font-extrabold tracking-tight">Marcos<span class="text-neon">Dev</span></span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#beneficios" class="hover:text-neon transition">Benefícios</a>
-        <a href="#exemplos" class="hover:text-neon transition">Exemplos</a>
-        <a href="#como" class="hover:text-neon transition">Como funciona</a>
-        <a href="#depoimentos" class="hover:text-neon transition">Depoimentos</a>
-        <a href="#faq" class="hover:text-neon transition">FAQ</a>
-      </nav>
-      <div class="flex items-center gap-3">
-        <a href="#checkout" class="hidden sm:inline-flex items-center px-4 py-2 rounded-md border border-neon/60 text-neon hover:bg-neon/10 transition">Começar agora</a>
-        <button id="menu" class="md:hidden p-2 rounded border border-white/10" aria-label="Abrir menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-width="1.7" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobile" class="md:hidden hidden border-t border-white/10">
-      <nav class="px-4 py-3 flex flex-col gap-3 bg-bg/90">
-        <a href="#beneficios" class="hover:text-neon">Benefícios</a>
-        <a href="#exemplos" class="hover:text-neon">Exemplos</a>
-        <a href="#como" class="hover:text-neon">Como funciona</a>
-        <a href="#depoimentos" class="hover:text-neon">Depoimentos</a>
-        <a href="#faq" class="hover:text-neon">FAQ</a>
-        <a href="#checkout" class="text-neon">Começar agora</a>
-      </nav>
-    </div>
-  </header>
+<body>
 
-  <!-- HERO -->
-  <section class="relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <p class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-neon/90">
-          <span class="w-1.5 h-1.5 rounded-full bg-neon"></span> entrega em até 48h
-        </p>
-        <h1 class="mt-3 text-3xl sm:text-5xl font-extrabold leading-tight">
-          Landing Page <span class="text-neon">Express</span> por <span class="text-primary">R$47</span> — pronta em 48h
-        </h1>
-        <p class="mt-5 text-white/80 max-w-xl">Página única, moderna e focada em conversão. Ideal para validar oferta, captar leads e iniciar tráfego pago sem dor de cabeça.</p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#checkout" class="px-6 py-3 rounded-md bg-neon text-bg font-semibold btn-glow">Começar agora</a>
-          <a href="#exemplos" class="px-5 py-3 rounded-md bg-white/5 hover:bg-white/10 border border-white/15">Ver exemplos</a>
-        </div>
-        <div class="mt-6 flex flex-wrap items-center gap-4 text-xs text-white/60">
-          <span class="flex items-center gap-1">⚡ Setup rápido</span>
-          <span class="flex items-center gap-1">💬 WhatsApp + Formulário</span>
-          <span class="flex items-center gap-1">📈 Pronta p/ tráfego</span>
-        </div>
-      </div>
-      <a href="barbearia1.html" 
-      class="block w-11/12 sm:w-2/3 lg:w-1/2 mx-auto transition transform hover:-translate-y-2 hover:scale-[1.02]">
-      <div class="glass rounded-2xl p-4 sm:p-5 shadow-neon hover:shadow-[0_0_25px_rgba(236,72,153,0.8)] transition-shadow duration-300">
-        <img 
-          src="principal/preview-barbearia1.webp" 
-          alt="Preview da Landing Page Express" 
-          class="rounded-xl w-full object-cover"
-        >
-      </div>
+<!-- =========================
+  HEADER (Mobile-first)
+  - No mobile: Logo + CTA WhatsApp + Hamburger
+  - No desktop: aparece navegação completa
+========================= -->
+<header class="header">
+  <div class="container header__inner">
+
+    <!-- Marca -->
+    <a href="#" class="brand" aria-label="Voltar ao início">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__text">Marcos<span class="brand__accent">Dev</span></span>
     </a>
+
+    <!-- Ações (mobile) -->
+    <div class="header__actions">
+      <!-- CTA principal (mobile): WhatsApp sempre visível -->
+      <a
+        class="btn btn--primary"
+        href="https://wa.me/5195412536?text=Quero%20um%20or%C3%A7amento%20para%20site%20ou%20landing%20page"
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp
+      </a>
+
+      <!-- Botão menu (mobile) -->
+      <button
+        class="menu-btn"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span class="menu-btn__bar" aria-hidden="true"></span>
+        <span class="menu-btn__bar" aria-hidden="true"></span>
+        <span class="menu-btn__bar" aria-hidden="true"></span>
+      </button>
     </div>
-  </section>
 
-  <!-- BENEFÍCIOS / O QUE INCLUI -->
-  <section id="beneficios" class="py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-        <h2 class="text-2xl sm:text-3xl font-extrabold">O que você recebe</h2>
-        <p class="text-white/70">Pacote pensado para <span class="text-neon">converter</span> e acelerar a validação do seu negócio.</p>
-      </div>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <article class="glass rounded-xl p-6 transition transform hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-brand-500/30">
-        <div class="flex items-center gap-2 mb-3">
-          <!-- Ícone PNG -->
-          <img src="icone-conversao.png" alt="" class="w-10 h-10">
-          <h3 class="font-bold text-xl">Estrutura de Alta Conversão</h3>
-        </div>
-
-        <ul class="text-sm text-white/85 space-y-2">
-          <li>✓ Headline + Subheadline + CTA</li>
-          <li>✓ Seção de benefícios e provas</li>
-          <li>✓ FAQ e gatilhos de urgência</li>
-        </ul>
-      </article>
-        <article class="glass rounded-xl p-6 transition transform hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-brand-500/30">
-          <div class="flex items-center gap-2 mb-3">
-          <img src="icone-integracoes.png" alt="" class="w-10 h-10">
-          <h3 class="font-bold text-xl mb-2">Integrações Essenciais</h3>
-          </div>
-          <ul class="text-sm text-white/85 space-y-2">
-            <li>✓ Botão WhatsApp e formulário</li>
-            <li>✓ Pixel/Tags (Meta/GA) <span class="text-white/60">(opcional)</span></li>
-            <li>✓ Links para redes sociais</li>
-          </ul>
-        </article>
-        <article class="glass rounded-xl p-6 transition transform hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-brand-500/30">
-          <div class="flex items-center gap-2 mb-3">
-          <img src="icone-performance.png" alt="" class="w-10 h-10">
-          <h3 class="font-bold text-xl mb-2">Performance e SEO básico</h3>
-          </div>
-          <ul class="text-sm text-white/85 space-y-2">
-            <li>✓ Layout responsivo e leve</li>
-            <li>✓ Metas de título e descrição</li>
-            <li>✓ Otimização para velocidade</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="mt-6 grid md:grid-cols-3 gap-6">
-        <article class="glass rounded-xl p-6 transition transform hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-brand-500/30">
-          <div class="flex items-center gap-2 mb-3">
-          <img src="icone-bonus.png" alt="" class="w-10 h-10">
-          <h3 class="font-bold text-xl mb-2">Bônus</h3>
-          </div>
-          <ul class="text-sm text-white/85 space-y-2">
-            <li>🎁 Hospedagem grátis por 1 mês</li>
-            <li>🎁 Ajustes de conteúdo por 7 dias</li>
-          </ul>
-        </article>
-        <article class="glass rounded-xl p-6 transition transform hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-brand-500/30">
-           <div class="flex items-center gap-2 mb-3">
-          <img src="icone-garantia.png" alt="" class="w-10 h-10">
-          <h3 class="font-bold text-xl mb-2">Garantia</h3>
-           </div>
-          <p class="text-sm text-white/85">Se eu não entregar em até 48h após receber seu conteúdo, devolvo 100% do seu dinheiro.</p>
-        </article>
-        <article class="glass rounded-xl p-6 transition transform hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-brand-500/30">
-           <div class="flex items-center gap-2 mb-3">
-          <img src="icone-upgrade.png" alt="" class="w-10 h-10">
-          <h3 class="font-bold text-xl mb-2">Upgrade (Upsell)</h3>
-           </div>
-          <p class="text-sm text-white/85">Transforme em <b>site completo até 5 páginas</b> com <b>R$100 de desconto</b> se fechar no ato da entrega.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXEMPLOS / PORTFÓLIO -->
-  <section id="exemplos" class="py-16 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between gap-4">
-        <h2 class="text-2xl sm:text-3xl font-extrabold">Exemplos</h2>
-        <p class="text-white/70">Captura de leads, cardápio digital e Site Completo.</p>
-      </div>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <article class="glass rounded-xl overflow-hidden group">
-          <div class="aspect-video relative cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img 
-            src="principal/preview-pag-captura-1.webp" 
-            alt="Exemplo 1" 
-            class="w-full h-full object-cover object-top hover:opacity-90 transition"
-          >
-        </div>
-          <div class="p-5">
-            <a href="pag-captura-1.html" class="text-lg font-semibold text-plum-700 hover:text-plum-900 transition-colors">
-            Landing Captura
-          </a>
-          </div>
-        </article>
-        <article class="glass rounded-xl overflow-hidden group">
-          <div class="aspect-video relative cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="principal/preview-cardapio-digital-1.webp" alt="Exemplo 2" class="w-full h-full object-cover object-top hover:opacity-90 transition">
-          </div>
-          <div class="p-5">
-            <a href="cardapio-digital-1.html" class="text-lg font-semibold text-plum-700 hover:text-plum-900 transition-colors">
-            Cardapio Digital
-          </a>
-          </div>
-        </article>
-        <article class="glass rounded-xl overflow-hidden group">
-          <div class="aspect-video relative cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="principal/preview-petshop1.webp" alt="Exemplo 3" class="w-full h-full object-cover object-top hover:opacity-90 transition">
-          </div>
-          <div class="p-5">
-            <a href="petshop1.html" class="text-lg font-semibold text-plum-700 hover:text-plum-900 transition-colors">
-            Negócio Local
-          </a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMO FUNCIONA -->
- <section id="como" class="py-16 lg:py-20">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="glass rounded-2xl p-6 sm:p-10 shadow-neon">
-      <div class="grid lg:grid-cols-3 gap-8">
-        <div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold">Como funciona</h2>
-          <p class="mt-2 text-white/80">Processo simples em 3 passos para colocar sua oferta no ar.</p>
-        </div>
-        <ol class="lg:col-span-2 grid sm:grid-cols-3 gap-6">
-          
-          <li class="glass rounded-xl p-5 text-center">
-            <img src="principal/icone-pagamento.png" alt="" class="w-16 h-16 mx-auto mb-3">
-            <span class="text-neon font-bold block">1. Pagamento</span>
-            <p class="text-sm text-white/85 mt-1">Você escolhe o método e confirma seu pedido.</p>
-          </li>
-          
-          <li class="glass rounded-xl p-5 text-center">
-            <img src="principal/icone-briefing.png" alt="" class="w-16 h-16 mx-auto mb-3">
-            <span class="text-neon font-bold block">2. Briefing rápido</span>
-            <p class="text-sm text-white/85 mt-1">Me envia logo, cores, texto/contatos (formulário de 3 min).</p>
-          </li>
-          
-          <li class="glass rounded-xl p-5 text-center">
-            <img src="principal/icone-entrega.png" alt="" class="w-16 h-16 mx-auto mb-3">
-            <span class="text-neon font-bold block">3. Entrega em até 48h</span>
-            <p class="text-sm text-white/85 mt-1">Receba o link para aprovar + 1 rodada de ajustes.</p>
-          </li>
-
-        </ol>
-      </div>
-    </div>
+    <!-- Navegação (desktop) -->
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#planos" class="nav__link">Planos</a>
+      <a href="#exemplos" class="nav__link">Exemplos</a>
+      <a href="#como" class="nav__link">Como funciona</a>
+      <a href="#faq" class="nav__link">FAQ</a>
+    </nav>
   </div>
-</section>
 
-  <!-- DEPOIMENTOS -->
-  <section id="depoimentos" class="py-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl font-extrabold">Depoimentos</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <figure class="glass p-6 rounded-xl">
-          <blockquote class="text-white/90">“Subimos tráfego no mesmo dia e a página já trouxe os primeiros leads. Rápido e direto ao ponto.”</blockquote>
-          <figcaption class="mt-4 flex items-center gap-3">
-            <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-primary to-neon"></span>
-            <div>
-              <div class="font-semibold">Marina S.</div>
-              <div class="text-xs text-white/60">E-commerce de acessórios</div>
-            </div>
-          </figcaption>
-        </figure>
-        <figure class="glass p-6 rounded-xl">
-          <blockquote class="text-white/90">“O site ficou muito leve e com uma cara profissional. Conversão subiu e o suporte foi impecável.”</blockquote>
-          <figcaption class="mt-4 flex items-center gap-3">
-            <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-primary to-neon"></span>
-            <div>
-              <div class="font-semibold">Rafael T.</div>
-              <div class="text-xs text-white/60">Infoprodutor</div>
-            </div>
-          </figcaption>
-        </figure>
-        <figure class="glass p-6 rounded-xl">
-          <blockquote class="text-white/90">“Em 48h eu já tinha uma landing linda rodando campanha. Excelente custo‑benefício.”</blockquote>
-          <figcaption class="mt-4 flex items-center gap-3">
-            <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-primary to-neon"></span>
-            <div>
-              <div class="font-semibold">Carlos M.</div>
-              <div class="text-xs text-white/60">Prestador de serviços</div>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
+  <!-- Menu dropdown (mobile) -->
+  <div id="mobileMenu" class="mobile-menu" hidden>
+    <a href="#planos" class="mobile-menu__link">Planos</a>
+    <a href="#exemplos" class="mobile-menu__link">Exemplos</a>
+    <a href="#como" class="mobile-menu__link">Como funciona</a>
+    <a href="#faq" class="mobile-menu__link">FAQ</a>
 
- <!-- GARANTIA + UPSELL com mais destaque -->
-<section class="py-12 relative">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6">
-    <div class="glass rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8 shadow-neon">
-      
-      <!-- Ícone de Garantia -->
-      <div class="flex items-start gap-4 flex-1">
-        <div class="text-4xl">🛡️</div>
-        <div>
-          <h3 class="text-xl font-extrabold text-neon">Garantia de Prazo</h3>
-          <p class="text-white/80 mt-1">
-            Entregamos em até <b>48h</b> após o briefing ou devolvemos seu dinheiro.
-          </p>
-        </div>
-      </div>
+    <!-- CTA duplicado no menu (pra quem abrir) -->
+    <a
+      class="btn btn--primary mobile-menu__cta"
+      href="https://wa.me/5195412536?text=Quero%20um%20or%C3%A7amento%20para%20site%20ou%20landing%20page"
+      target="_blank"
+      rel="noopener"
+    >
+      Pedir orçamento no WhatsApp
+    </a>
+  </div>
+</header>
 
-      <!-- Ícone de Upgrade -->
-      <div class="flex items-start gap-4 flex-1">
-        <div class="text-4xl">🚀</div>
-        <div>
-          <h3 class="text-xl font-extrabold text-primary">Oferta de Upgrade</h3>
-          <p class="text-white/80 mt-1">
-            Gostou do teste? Faça upgrade para <b>Site Completo (até 5 páginas)</b> e ganhe <b>R$100 de desconto</b>.
-          </p>
-        </div>
-      </div>
+<!-- =========================
+  HERO (Mobile-first)
+  - Objetivo: fazer o cara clicar no WhatsApp
+  - 1 CTA principal + 1 secundário
+  - Prova rápida (3 bullets) + preview (imagem)
+========================= -->
+<section class="hero" id="inicio">
+  <div class="container hero__inner">
 
-      <!-- Botão com Glow -->
-      <div class="flex flex-col items-center">
-        <a href="https://wa.me/5195412536?text=Quero%20meu%20%20Site%20Completo%20!" class="px-6 py-3 rounded-md bg-neon text-bg font-bold btn-glow">
-          Garantir minha vaga
+    <!-- Texto do Hero -->
+    <div class="hero__content">
+      <!-- Selo curto (reforça velocidade / promessa) -->
+      <span class="pill">Entrega rápida • foco em conversão</span>
+
+      <!-- Headline: direta, sem preço fixo -->
+      <h1 class="hero__title">
+        Site e Landing Page <span class="u-primary">profissionais</span>
+        pra gerar clientes no WhatsApp
+      </h1>
+
+      <!-- Subheadline: explica em 1 frase o que tu faz -->
+      <p class="hero__subtitle">
+        Feito sob medida pro teu negócio. Estrutura pronta pra tráfego (Google Ads)
+        e otimizada pra converter visita em mensagem.
+      </p>
+
+      <!-- CTAs -->
+      <div class="hero__cta">
+        <!-- CTA principal: WhatsApp -->
+        <a
+          class="btn btn--primary btn--wide"
+          href="https://wa.me/5195412536?text=Quero%20um%20or%C3%A7amento%20para%20site%20ou%20landing%20page.%20Meu%20neg%C3%B3cio%20%C3%A9%3A%20_____%20%7C%20Preciso%20de%3A%20Landing%20ou%20Site%20Completo%20%7C%20Prazo%3A%20____"
+          target="_blank"
+          rel="noopener"
+        >
+          Pedir orçamento no WhatsApp
         </a>
-        <span class="mt-2 text-xs text-white/60">Vagas limitadas</span>
+
+        <!-- CTA secundário: exemplos (não tira do Whats, só dá confiança) -->
+        <a class="btn btn--ghost btn--wide" href="#exemplos">
+          Ver exemplos
+        </a>
       </div>
 
+      <!-- Prova rápida (sem enrolar) -->
+      <div class="hero__proof">
+        <div class="proof">
+          <span class="proof__icon" aria-hidden="true">⚡</span>
+          <div class="proof__text">
+            <strong>Rápido</strong>
+            <span>processo simples, sem burocracia</span>
+          </div>
+        </div>
+
+        <div class="proof">
+          <span class="proof__icon" aria-hidden="true">📲</span>
+          <div class="proof__text">
+            <strong>WhatsApp</strong>
+            <span>CTA claro + formulário se precisar</span>
+          </div>
+        </div>
+
+        <div class="proof">
+          <span class="proof__icon" aria-hidden="true">📈</span>
+          <div class="proof__text">
+            <strong>Pronto pra Ads</strong>
+            <span>estrutura pensada pra tráfego</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mini aviso (reduz objeção / ansiedade) -->
+      <p class="hero__note">
+        Orçamento por faixa (sem pegadinha). Você escolhe o pacote e eu te digo o valor na hora.
+      </p>
     </div>
+
+    <!-- Visual do Hero (imagem/preview) -->
+    <div class="hero__visual">
+      <!-- Card com imagem: passa confiança e “cara premium” -->
+      <a class="preview" target="_blank" rel="noopener" href="https://marcbmrs.github.io/barbearia1.html" aria-label="Ver exemplos de sites">
+        <img
+          src="principal/preview-barbearia1.webp"
+          alt="Preview de landing page"
+          loading="lazy"
+        >
+      </a>
+
+      <!-- Badges embaixo do preview (reforça pontos-chave) -->
+      <div class="hero__badges">
+        <span class="badge">Mobile-first</span>
+        <span class="badge">SEO básico</span>
+        <span class="badge">Leve e rápido</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <h2 class="text-2xl sm:text-3xl font-extrabold">Perguntas Frequentes</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-5">
-        <details class="glass rounded-xl p-5">
-          <summary class="font-semibold cursor-pointer">O que está incluso por R$47?</summary>
-          <p class="text-sm text-white/80 mt-2">1 página responsiva com estrutura de conversão, WhatsApp, formulário, prova social, SEO básico e publicação em link temporário.</p>
-        </details>
-        <details class="glass rounded-xl p-5">
-          <summary class="font-semibold cursor-pointer">Isso inclui domínio e hospedagem?</summary>
-          <p class="text-sm text-white/80 mt-2">Inclui <b>hospedagem grátis por 1 mês</b> em ambiente temporário. Domínio próprio e hospedagem definitiva são parte do projeto completo.</p>
-        </details>
-        <details class="glass rounded-xl p-5">
-          <summary class="font-semibold cursor-pointer">Quais prazos?</summary>
-          <p class="text-sm text-white/80 mt-2">Até 48h úteis após receber o briefing. Você recebe 1 rodada de ajustes.</p>
-        </details>
-        <details class="glass rounded-xl p-5">
-          <summary class="font-semibold cursor-pointer">Posso pedir reembolso?</summary>
-          <p class="text-sm text-white/80 mt-2">Sim, se eu não entregar no prazo combinado. Satisfação garantida.</p>
-        </details>
-      </div>
+<!-- =========================
+  PLANOS (Mobile-first)
+  - Contraste de seção: fundo mais escuro (premium) pra separar do Hero claro
+  - 3 pacotes com faixa de preço (variável) + CTA WhatsApp por pacote
+========================= -->
+<section class="plans" id="planos">
+  <div class="container plans__inner">
+
+    <!-- Cabeçalho da seção -->
+    <header class="section-head">
+      <span class="section-kicker">Planos</span>
+      <h2 class="section-title">Escolha o pacote ideal pro teu momento</h2>
+      <p class="section-subtitle">
+        Preço por faixa (depende de conteúdo, integrações e prazo). Você escolhe o pacote e eu fecho o valor no WhatsApp.
+      </p>
+    </header>
+
+    <!-- Cards -->
+    <div class="plans__grid">
+
+      <!-- Plano 1 -->
+      <article class="plan-card">
+        <div class="plan-card__top">
+          <h3 class="plan-card__name">Start</h3>
+          <p class="plan-card__desc">Landing simples pra validar oferta e começar a captar leads.</p>
+
+          <!-- Faixa de preço (variável, sem fixar) -->
+          <p class="plan-card__price">
+            <span class="price-label">Faixa:</span>
+            <strong>R$ 197 – 397</strong>
+          </p>
+
+          <p class="plan-card__meta">Prazo: 48h (após briefing)</p>
+        </div>
+
+        <ul class="plan-card__list">
+          <li>1 página (landing)</li>
+          <li>Botão WhatsApp + CTA</li>
+          <li>Seções: benefícios, prova, FAQ</li>
+          <li>Responsivo (mobile-first)</li>
+          <li>Publicação + link</li>
+        </ul>
+
+        <a
+          class="btn btn--primary btn--wide"
+          href="https://wa.me/5195412536?text=Quero%20o%20PLANO%20START%20(Landing).%20Meu%20neg%C3%B3cio%20%C3%A9%3A%20_____%20%7C%20Tenho%20logo%3A%20sim/n%C3%A3o%20%7C%20Prazo%3A%20____"
+          target="_blank"
+          rel="noopener"
+        >
+          Quero o Start no WhatsApp
+        </a>
+      </article>
+
+      <!-- Plano 2 (destaque / mais vendido) -->
+      <article class="plan-card plan-card--featured" aria-label="Plano recomendado">
+        <div class="plan-card__badge">Mais vendido</div>
+
+        <div class="plan-card__top">
+          <h3 class="plan-card__name">Pro</h3>
+          <p class="plan-card__desc">Landing mais forte pra tráfego (Google Ads) e conversão.</p>
+
+          <p class="plan-card__price">
+            <span class="price-label">Faixa:</span>
+            <strong>R$ 397 – 797</strong>
+          </p>
+
+          <p class="plan-card__meta">Prazo: 3–5 dias</p>
+        </div>
+
+        <ul class="plan-card__list">
+          <li>1 landing premium + copy refinada</li>
+          <li>Formulário + WhatsApp</li>
+          <li>Integração GA4 / Tag (se quiser)</li>
+          <li>Estrutura pronta pra Ads</li>
+          <li>1 rodada de ajustes</li>
+        </ul>
+
+        <a
+          class="btn btn--primary btn--wide"
+          href="https://wa.me/5195412536?text=Quero%20o%20PLANO%20PRO%20(Landing%20Premium).%20Meu%20neg%C3%B3cio%20%C3%A9%3A%20_____%20%7C%20Quero%20GA4/Ads%3A%20sim/n%C3%A3o%20%7C%20Prazo%3A%20____"
+          target="_blank"
+          rel="noopener"
+        >
+          Quero o Pro no WhatsApp
+        </a>
+      </article>
+
+      <!-- Plano 3 -->
+      <article class="plan-card">
+        <div class="plan-card__top">
+          <h3 class="plan-card__name">Site Completo</h3>
+          <p class="plan-card__desc">Pra quem quer presença profissional com várias páginas.</p>
+
+          <p class="plan-card__price">
+            <span class="price-label">Faixa:</span>
+            <strong>R$ 897 – 1.997</strong>
+          </p>
+
+          <p class="plan-card__meta">Prazo: 7–12 dias</p>
+        </div>
+
+        <ul class="plan-card__list">
+          <li>Até 5 páginas (home, serviços, sobre, contato…)</li>
+          <li>SEO básico (títulos, descrição, estrutura)</li>
+          <li>Formulário + WhatsApp</li>
+          <li>Performance (site leve)</li>
+          <li>2 rodadas de ajustes</li>
+        </ul>
+
+        <a
+          class="btn btn--primary btn--wide"
+          href="https://wa.me/5195412536?text=Quero%20o%20SITE%20COMPLETO%20(at%C3%A9%205%20p%C3%A1ginas).%20Meu%20neg%C3%B3cio%20%C3%A9%3A%20_____%20%7C%20P%C3%A1ginas%20que%20preciso%3A%20_____%20%7C%20Prazo%3A%20____"
+          target="_blank"
+          rel="noopener"
+        >
+          Quero o Site Completo no WhatsApp
+        </a>
+      </article>
+
     </div>
-  </section>
 
-  <!-- CHECKOUT / CTA FINAL -->
-  <section id="checkout" class="py-20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Pronto para lançar sua landing?</h2>
-      <p class="mt-3 text-white/80">Clique abaixo para Criar sua Landing Page.</p>
+    <!-- Observação final da seção -->
+    <p class="plans__note">
+      * As faixas são referência. O valor final depende do conteúdo pronto (texto/fotos), integrações e urgência.
+    </p>
 
-      <div class="mt-7 grid sm:grid-cols-1 gap-3 max-w-xl mx-auto">
-        <!-- Substitua os href pelos seus links reais de checkout -->
-        <a href="https://wa.me/5195412536?text=Quero%20minha%20%20Landing%20Page%20!" class="px-6 py-3 rounded-md bg-neon text-bg font-bold btn-glow">Crie Minha Landing Page</a>
-    
-      </div>
-
-      <div class="mt-4 text-sm text-white/60">Dúvidas rápidas? Fale comigo no WhatsApp: <a class="text-neon underline" href="https://wa.me/5195412536" target="_blank" rel="noopener">(51) 9 9541 2536</a></div>
-    </div>
-  </section>
-
-  <footer class="border-t border-white/10 py-8 text-center text-sm text-white/60">
-    © <span id="y"></span> MarcosDev — todos os direitos reservados.
-  </footer>
-
-  <!-- Lightbox -->
-  <div id="lightbox" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50" role="dialog" aria-modal="true" aria-label="Visualização de imagem">
-    <button id="lb-close" class="absolute top-4 right-4 text-white text-3xl" aria-label="Fechar">&times;</button>
-    <img id="lightbox-img" src="" alt="Preview ampliado" class="max-w-full max-h-full rounded-lg shadow-lg">
   </div>
+</section>
 
-  <script>
-    // Mobile menu
-    const btn = document.getElementById('menu');
-    const mob = document.getElementById('mobile');
-    btn?.addEventListener('click', ()=> mob.classList.toggle('hidden'));
+<!-- =========================
+  EXEMPLOS (Mobile-first)
+  - Contraste: volta pro fundo claro (separa bem da seção Planos escura)
+  - Cards clicáveis com preview + título + tag
+  - 1 CTA pro WhatsApp no final (pra não depender só do Hero)
+========================= -->
+<section class="examples" id="exemplos">
+  <div class="container examples__inner">
 
-    // Ano automático
-    document.getElementById('y').textContent = new Date().getFullYear();
+    <!-- Cabeçalho da seção -->
+    <header class="section-head section-head--light">
+      <span class="section-kicker section-kicker--light">Exemplos</span>
+      <h2 class="section-title section-title--light">Alguns layouts que eu já faço rodar</h2>
+      <p class="section-subtitle section-subtitle--light">
+        Clique pra abrir o exemplo real. Cada projeto é ajustado pro teu nicho e objetivo.
+      </p>
+    </header>
 
-    // Scroll suave
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        const el = document.querySelector(id);
-        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); if(mob && !mob.classList.contains('hidden')) mob.classList.add('hidden'); }
-      });
+   <!-- Grid (mobile-first: 1 coluna) -->
+<div class="examples__grid">
+
+  <!-- Exemplo 1 -->
+  <button 
+    class="example-card"
+    type="button"
+    data-image="principal/preview-barbearia1.webp"
+    aria-label="Visualizar exemplo Barbearia"
+  >
+    <div class="example-card__media">
+      <img src="principal/preview-barbearia1.webp" alt="Exemplo de site para barbearia" loading="lazy">
+    </div>
+
+    <div class="example-card__body">
+      <h3 class="example-card__title">Barbearia</h3>
+      <p class="example-card__desc">Landing com CTA direto pro WhatsApp.</p>
+    </div>
+  </button>
+
+
+  <!-- Exemplo 2 -->
+  <button 
+    class="example-card"
+    type="button"
+    data-image="principal/preview-cardapio-digital-1.webp"
+    aria-label="Visualizar exemplo Cardápio Digital"
+  >
+    <div class="example-card__media">
+      <img src="principal/preview-cardapio-digital-1.webp" alt="Exemplo de cardápio digital" loading="lazy">
+    </div>
+
+    <div class="example-card__body">
+      <h3 class="example-card__title">Cardápio Digital</h3>
+      <p class="example-card__desc">Ideal pra lancheria, pizzaria e delivery.</p>
+
+      <div class="example-card__tags">
+        <span class="tag">Vendas</span>
+        <span class="tag">Catálogo</span>
+        <span class="tag">Rápido</span>
+      </div>
+    </div>
+  </button>
+
+
+  <!-- Exemplo 3 -->
+  <button 
+    class="example-card"
+    type="button"
+    data-image="principal/preview-petshop1.webp"
+    aria-label="Visualizar exemplo Negócio Local"
+  >
+    <div class="example-card__media">
+      <img src="principal/preview-petshop1.webp" alt="Exemplo de site para negócio local" loading="lazy">
+    </div>
+
+    <div class="example-card__body">
+      <h3 class="example-card__title">Negócio Local</h3>
+      <p class="example-card__desc">Presença profissional + contato rápido.</p>
+
+      <div class="example-card__tags">
+        <span class="tag">Institucional</span>
+        <span class="tag">Serviços</span>
+        <span class="tag">Contato</span>
+      </div>
+    </div>
+  </button>
+
+</div>
+
+
+    <!-- CTA final da seção -->
+    <div class="examples__cta">
+      <a
+        class="btn btn--primary btn--wide"
+        href="https://wa.me/5195412536?text=Vi%20os%20exemplos%20e%20quero%20um%20or%C3%A7amento.%20Meu%20neg%C3%B3cio%20%C3%A9%3A%20_____%20%7C%20Preciso%20de%3A%20Landing%20ou%20Site%20Completo"
+        target="_blank"
+        rel="noopener"
+      >
+        Quero um orçamento no WhatsApp
+      </a>
+
+      <p class="examples__note">
+        Dica: me diz teu nicho + objetivo (vendas, leads, agenda) e eu já te indico o melhor pacote.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+  COMO FUNCIONA
+========================= -->
+<section class="how" id="como">
+  <div class="container">
+
+    <!-- Cabeçalho -->
+    <header class="section-head section-head--light">
+      <span class="section-kicker section-kicker--light">
+        Processo simples
+      </span>
+
+      <h2 class="section-title section-title--light">
+        Como funciona na prática
+      </h2>
+
+      <p class="section-subtitle section-subtitle--light">
+        Sem burocracia. Você fala comigo direto e em até 48h sua página está no ar.
+      </p>
+    </header>
+
+    <!-- Grid mobile-first -->
+    <div class="how__grid">
+
+      <!-- Passo 1 -->
+      <div class="how-card">
+        <div class="how-card__number">1</div>
+        <h3 class="how-card__title">Você chama no WhatsApp</h3>
+        <p class="how-card__desc">
+          Clica no botão e me conta qual é seu negócio e objetivo.
+        </p>
+      </div>
+
+      <!-- Passo 2 -->
+      <div class="how-card">
+        <div class="how-card__number">2</div>
+        <h3 class="how-card__title">Envio um briefing rápido</h3>
+        <p class="how-card__desc">
+          5 perguntas simples: logo, cores, serviços e contato.
+        </p>
+      </div>
+
+      <!-- Passo 3 -->
+      <div class="how-card">
+        <div class="how-card__number">3</div>
+        <h3 class="how-card__title">Entrega + ajustes</h3>
+        <p class="how-card__desc">
+          Em até 48h você recebe o link. Fazemos 1 rodada de ajustes.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- CTA final da seção -->
+    <div class="how__cta">
+      <a 
+        href="https://wa.me/5195412536?text=Quero%20criar%20meu%20site"
+        class="btn btn--primary btn--wide"
+        target="_blank"
+        rel="noopener"
+      >
+        Começar agora no WhatsApp
+      </a>
+
+      <p class="how__note">
+        Atendimento direto comigo. Sem intermediários.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+  FAQ
+========================= -->
+<section id="faq" class="faq">
+  <div class="container">
+
+    <!-- Cabeçalho -->
+    <header class="section-head section-head--light">
+      <span class="section-kicker section-kicker--light">
+        Perguntas Frequentes
+      </span>
+
+      <h2 class="section-title section-title--light">
+        Dúvidas antes de começar?
+      </h2>
+
+      <p class="section-subtitle section-subtitle--light">
+        Respostas diretas para você decidir com segurança.
+      </p>
+    </header>
+
+    <!-- Lista -->
+    <div class="faq__list">
+
+      <details class="faq-item">
+        <summary>O que está incluso exatamente?</summary>
+        <p>
+          Página responsiva, estrutura de conversão, botão WhatsApp,
+          formulário, SEO básico e publicação em link temporário.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Inclui domínio e hospedagem?</summary>
+        <p>
+          O domínio e a hospedagem são contratados à parte pelo cliente.
+          Utilizo a Hostinger como padrão.
+          <br><br>
+          • Domínio: a partir de R$39,99/ano  
+          • Hospedagem: a partir de R$29,99/mês  
+          <br><br>
+          Ambos pagos diretamente na plataforma, no seu nome.
+        </p>
+      </details>
+
+
+      <details class="faq-item">
+        <summary>Quanto tempo demora?</summary>
+        <p>
+          Até 48h úteis após receber seu briefing.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Posso pedir alterações?</summary>
+        <p>
+          Sim. Está incluso 1 rodada de ajustes após a entrega.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Como funciona o pagamento?</summary>
+        <p>
+          O pagamento é feito antes do início do projeto.
+          Após confirmação, envio o briefing e começamos.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>E se eu não gostar?</summary>
+        <p>
+          Se eu não entregar dentro do prazo combinado,
+          devolvo 100% do valor pago.
+        </p>
+      </details>
+
+    </div>
+
+    <!-- CTA final da seção -->
+    <div class="faq__cta">
+      <a 
+        href="https://wa.me/5195412536?text=Quero%20criar%20meu%20site"
+        class="btn btn--primary btn--wide"
+        target="_blank"
+        rel="noopener"
+      >
+        Tirar minha dúvida no WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+  FECHAMENTO / CTA FINAL
+========================= -->
+<section class="final-cta" id="contato">
+  <div class="container">
+
+    <div class="final-cta__box">
+
+      <!-- Texto -->
+      <div class="final-cta__content">
+        <span class="final-cta__kicker">Fechamento</span>
+
+        <h2 class="final-cta__title">
+          Quer colocar seu site no ar e começar a gerar clientes no WhatsApp?
+        </h2>
+
+        <p class="final-cta__subtitle">
+          Me chama agora. Eu te digo o melhor pacote pro teu caso e fecho o valor na hora.
+        </p>
+
+        <!-- Mini prova / segurança -->
+        <div class="final-cta__bullets">
+          <div class="final-bullet">
+            <span class="final-bullet__icon" aria-hidden="true">✅</span>
+            <span>Atendimento direto comigo</span>
+          </div>
+          <div class="final-bullet">
+            <span class="final-bullet__icon" aria-hidden="true">⚡</span>
+            <span>Processo rápido e sem enrolação</span>
+          </div>
+          <div class="final-bullet">
+            <span class="final-bullet__icon" aria-hidden="true">📈</span>
+            <span>Estrutura pronta pra Ads</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ação -->
+      <div class="final-cta__action">
+        <a
+          class="btn btn--primary btn--wide"
+          href="https://wa.me/5195412536?text=Quero%20um%20or%C3%A7amento%20para%20site%20ou%20landing.%20Meu%20neg%C3%B3cio%20%C3%A9%3A%20_____%20%7C%20Objetivo%3A%20(leads/vendas/agendamento)%20%7C%20Prazo%3A%20____"
+          target="_blank"
+          rel="noopener"
+        >
+          Chamar no WhatsApp agora
+        </a>
+
+        <p class="final-cta__note">
+          Vagas limitadas pra manter prazo de entrega.
+        </p>
+
+        <p class="final-cta__micro">
+          WhatsApp: <a href="https://wa.me/5195412536" target="_blank" rel="noopener">(51) 9 9541-2536</a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+  FOOTER
+========================= -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer__grid">
+
+      <!-- Marca -->
+      <div class="footer__brand">
+        <a href="#" class="brand">
+          <span class="brand__mark"></span>
+          Marcos<span class="brand__accent">Dev</span>
+        </a>
+
+        <p class="footer__desc">
+          Criação de sites e landing pages focadas em geração de clientes
+          via WhatsApp e tráfego pago.
+        </p>
+      </div>
+
+      <!-- Navegação -->
+      <div class="footer__links">
+        <h4 class="footer__title">Navegação</h4>
+        <a href="#planos">Planos</a>
+        <a href="#exemplos">Exemplos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <!-- Contato -->
+      <div class="footer__contact">
+        <h4 class="footer__title">Contato</h4>
+        <a href="https://wa.me/5195412536" target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+
+        <!-- Se tiver Instagram depois pode colocar aqui -->
+        <!-- <a href="#">Instagram</a> -->
+
+        <p class="footer__small">
+          Domínio e hospedagem contratados diretamente na Hostinger.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Linha inferior -->
+    <div class="footer__bottom">
+      <p>
+        © <span id="year"></span> MarcosDev — Todos os direitos reservados.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- =========================
+  LIGHTBOX (Modal de imagem)
+========================= -->
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox__overlay"></div>
+
+  <div class="lightbox__content">
+    <button class="lightbox__close" aria-label="Fechar imagem">
+      &times;
+    </button>
+
+    <img src="" alt="Preview ampliado" class="lightbox__image">
+  </div>
+</div>
+
+
+<script>
+  // Toggle do menu mobile (bem simples e confiável)
+  const menuBtn = document.querySelector('.menu-btn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn?.addEventListener('click', () => {
+    const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    mobileMenu.hidden = isOpen;
+  });
+</script>
+
+<script>
+  const cards = document.querySelectorAll('.example-card');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('.lightbox__image');
+  const closeBtn = lightbox.querySelector('.lightbox__close');
+  const overlay = lightbox.querySelector('.lightbox__overlay');
+
+  // Abrir
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const imgSrc = card.getAttribute('data-image');
+      lightboxImg.src = imgSrc;
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
     });
+  });
 
-    // Lightbox simples
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lightbox-img');
-    const lbBtn = document.getElementById('lb-close');
-    window.openLightbox = function(imgSrc){ lbImg.src = imgSrc||''; lb.classList.remove('hidden'); lb.classList.add('flex'); document.body.style.overflow='hidden'; };
-    function closeLightbox(){ lb.classList.remove('flex'); lb.classList.add('hidden'); lbImg.src=''; document.body.style.overflow=''; }
-    lbBtn.addEventListener('click', closeLightbox);
-    document.addEventListener('keydown', e=>{ if(!lb.classList.contains('hidden') && e.key==='Escape') closeLightbox(); });
-    lb.addEventListener('click', e=>{ if(e.target===lb) closeLightbox(); });
-  </script>
+  // Fechar
+  function closeLightbox(){
+    lightbox.hidden = true;
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+  overlay.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
