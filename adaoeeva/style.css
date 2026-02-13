@@ -530,3 +530,176 @@ img{ max-width: 100%; display: block; }
   font-size: 13px;
   color: rgba(0,0,0,.75);
 }
+
+/* ---------- LIGHTBOX ---------- */
+
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s ease;
+  z-index: 999;
+}
+
+.lightbox.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__img{
+  max-width: 92%;
+  max-height: 92%;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.5);
+  animation: zoomIn .3s ease;
+}
+
+@keyframes zoomIn{
+  from{ transform: scale(.85); opacity: 0; }
+  to{ transform: scale(1); opacity: 1; }
+}
+
+.lightbox__close{
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* ---------------- SOBRE NÓS (rework) ---------------- */
+.sobre{
+  padding: 58px 0;
+  background: linear-gradient(180deg, rgba(250,235,209,.55), rgba(255,255,255,.65));
+}
+
+.sobre__grid{
+  display: grid;
+  gap: 18px;
+}
+
+.sobre__content{
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+.sobre__eyebrow{
+  margin: 0 0 8px;
+  font-weight: 900;
+  color: var(--coral2);
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.sobre__title{
+  margin: 0 0 12px;
+  font-size: 26px;
+  line-height: 1.08;
+  letter-spacing: -0.3px;
+  color: #111;
+}
+
+.sobre__quote{
+  border-left: 4px solid rgba(254,95,69,.55);
+  background: rgba(254,95,69,.08);
+  border-radius: 14px;
+  padding: 12px 12px 12px 14px;
+  margin: 0 0 14px;
+}
+
+.sobre__quote p{
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.5;
+  color: rgba(0,0,0,.78);
+}
+
+.sobre__text p{
+  margin: 0 0 10px;
+  line-height: 1.65;
+  color: rgba(0,0,0,.74);
+  font-weight: 600;
+}
+
+.sobre__chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.chip{
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.04);
+  border: 1px solid rgba(0,0,0,.06);
+  color: rgba(0,0,0,.70);
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.sobre__cta{
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap; /* evita quebrar layout se a tela for muito pequena */
+}
+
+.sobre__cta .btn{
+  flex: 1; /* deixa os dois do mesmo tamanho */
+  text-align: center;
+}
+
+.sobre__media{
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 26px rgba(0,0,0,.10);
+  border: 1px solid rgba(0,0,0,.06);
+  background: #fff;
+}
+
+.sobre__media img{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* Desktop */
+@media (min-width: 900px){
+  .sobre__grid{
+    grid-template-columns: 1.1fr .9fr; /* texto maior, imagem menor */
+    align-items: center;
+    gap: 22px;
+  }
+
+  .sobre__content{
+    padding: 22px;
+  }
+
+  .sobre__title{
+    font-size: 34px;
+  }
+
+  .sobre__media img{
+    height: 420px;
+  }
+
+  .sobre__cta{
+    grid-template-columns: auto auto;
+    justify-content: start;
+  }
+}
