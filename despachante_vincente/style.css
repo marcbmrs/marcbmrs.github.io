@@ -333,6 +333,7 @@ button {
 .specialties,
 .testimonials,
 .partners,
+.credentials,
 .blog,
 .faq {
   padding: 72px 0;
@@ -348,15 +349,10 @@ button {
   gap: 18px;
 }
 
-.service-groups,
 .specialty-grid {
   display: grid;
   gap: 18px;
   margin-top: 22px;
-}
-
-.service-groups {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .specialty-grid {
@@ -364,7 +360,6 @@ button {
 }
 
 .service-card,
-.group-card,
 .specialty-card,
 .testimonial-card,
 .blog-card,
@@ -379,7 +374,6 @@ button {
 }
 
 .service-card:hover,
-.group-card:hover,
 .specialty-card:hover,
 .testimonial-card:hover,
 .blog-card:hover,
@@ -396,7 +390,138 @@ button {
   text-align: center;
 }
 
-.group-card,
+.service-card-expandable {
+  text-align: left;
+}
+
+.service-card-summary {
+  list-style: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.service-card-summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.service-toggle-label::after {
+  content: "+";
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
+.service-card-details {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  display: none;
+}
+
+.service-card-details h4 {
+  margin: 0 0 10px;
+  color: var(--primary-dark);
+  font-size: 0.98rem;
+}
+
+.service-card-details ul {
+  margin: 0 0 16px;
+  padding-left: 18px;
+}
+
+.service-card-details li {
+  margin-bottom: 8px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.service-modal[hidden] {
+  display: none !important;
+}
+
+.service-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.service-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 31, 60, 0.58);
+  backdrop-filter: blur(6px);
+  animation: modalFade 180ms ease;
+}
+
+.service-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(720px, 100%);
+  max-height: min(84vh, 900px);
+  overflow: auto;
+  padding: 28px 24px 24px;
+  border: 1px solid rgba(214, 223, 235, 0.9);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 24px 60px rgba(21, 41, 78, 0.24);
+  animation: modalSlide 220ms ease;
+}
+
+.service-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.service-modal-body h3 {
+  margin: 0 0 18px;
+  padding-right: 44px;
+  color: var(--primary-dark);
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+}
+
+.service-modal-body h4 {
+  margin: 20px 0 10px;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.service-modal-body ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.service-modal-body li {
+  margin-bottom: 10px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .specialty-card {
   padding: 26px 24px;
 }
@@ -430,7 +555,6 @@ button {
 }
 
 .service-card p,
-.group-card li,
 .specialty-card li,
 .about-copy p,
 .about-points p,
@@ -444,20 +568,17 @@ button {
   line-height: 1.7;
 }
 
-.group-card h3,
 .specialty-card h3 {
   margin-top: 0;
   margin-bottom: 14px;
   color: var(--primary-dark);
 }
 
-.group-card ul,
 .specialty-card ul {
   margin: 0;
   padding-left: 18px;
 }
 
-.group-card li,
 .specialty-card li {
   margin-bottom: 8px;
 }
@@ -580,10 +701,46 @@ button {
   overflow: hidden;
 }
 
+.credentials {
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.credential-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 128px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.credential-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(38, 68, 124, 0.14);
+  border-color: rgba(13, 182, 216, 0.24);
+}
+
+.credential-logo {
+  width: 100%;
+  max-width: 170px;
+  height: 76px;
+  object-fit: contain;
+}
+
 .partners-marquee {
   position: relative;
   overflow: hidden;
-  padding: 16px 0;
+  padding: 26px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -591,7 +748,7 @@ button {
 .partners-track {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 24px;
   width: max-content;
   animation: partner-scroll 38s linear infinite;
 }
@@ -604,13 +761,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 210px;
-  min-width: 210px;
-  height: 108px;
-  padding: 8px 10px;
+  width: 280px;
+  min-width: 280px;
+  height: 150px;
+  padding: 10px 12px;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 22px;
   box-shadow: var(--shadow);
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
@@ -619,7 +776,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: saturate(0.92) grayscale(0.08);
+  filter: saturate(0.96) grayscale(0.04);
   transition: transform 220ms ease, filter 220ms ease;
 }
 
@@ -747,7 +904,7 @@ button {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr 0.9fr 1fr;
+  grid-template-columns: 1.1fr 0.8fr 0.9fr 1fr 1.2fr;
   gap: 28px;
 }
 
@@ -766,6 +923,31 @@ button {
 .footer p {
   display: block;
   margin: 0 0 10px;
+}
+
+.footer-map iframe {
+  width: 100%;
+  min-height: 220px;
+  border: 0;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.footer-credit {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.footer-credit p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.footer-credit a {
+  color: var(--primary-dark);
+  font-weight: 700;
 }
 
 .floating-whatsapp {
@@ -787,6 +969,13 @@ button {
   animation: whatsappPulse 2.8s ease-in-out infinite;
 }
 
+.floating-whatsapp img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -805,6 +994,28 @@ button {
 
   to {
     transform: translateX(calc(-50% - 9px));
+  }
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlide {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -894,13 +1105,16 @@ button {
   }
 
   .service-grid,
-  .service-groups,
   .testimonial-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .specialty-grid {
     grid-template-columns: 1fr;
+  }
+
+  .credentials-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .dual-banner-grid {
@@ -994,8 +1208,11 @@ button {
   }
 
   .service-grid,
-  .service-groups,
   .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credentials-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1014,10 +1231,10 @@ button {
   }
 
   .partner-logo-card {
-    width: 160px;
-    min-width: 160px;
-    height: 88px;
-    padding: 6px 8px;
+    width: 210px;
+    min-width: 210px;
+    height: 116px;
+    padding: 8px 10px;
   }
 
   .partners-track {
@@ -1025,8 +1242,31 @@ button {
   }
 
   .floating-whatsapp {
-    right: 12px;
-    left: 12px;
+    right: 14px;
+    left: auto;
     bottom: 12px;
+    width: 64px;
+    min-width: 64px;
+    height: 64px;
+    min-height: 64px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 0;
+    box-shadow: 0 16px 30px rgba(32, 190, 99, 0.34);
+  }
+
+  .floating-whatsapp img {
+    width: 34px;
+    height: 34px;
+    margin-right: 0;
+  }
+
+  .service-modal {
+    padding: 12px;
+  }
+
+  .service-modal-dialog {
+    padding: 24px 18px 20px;
+    border-radius: 20px;
   }
 }

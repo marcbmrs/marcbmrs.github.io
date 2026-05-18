@@ -3,21 +3,27 @@ const mobileMenu = document.querySelector("#mobile-menu");
 const mobileLinks = document.querySelectorAll("#mobile-menu a");
 const revealElements = document.querySelectorAll(".reveal");
 const partnersTrack = document.querySelector("[data-partners-track]");
+const serviceCardSummaries = document.querySelectorAll(".service-card-expandable .service-card-summary");
+const serviceModal = document.querySelector("#service-modal");
+const serviceModalTitle = document.querySelector("#service-modal-title");
+const serviceModalContent = document.querySelector("#service-modal-content");
+const serviceModalCloseTargets = document.querySelectorAll("[data-service-modal-close]");
 
 const partnerLogos = [
   "ccr.png",
   "CPFL.png",
+  "ceee-equatorial.png",
   "edisa.png",
   "fedex.png",
   "Forza.png",
   "kinto.png",
   "leaseplan.png",
   "lm.png",
-  "locamerica.png",
+  "maximmotors.jpg",
   "ouro_e_prata.png",
-  "ouroverde.png",
   "RGE.png",
   "savauto.png",
+  "supermix.png",
   "triumph.jpg",
   "unesul.png",
   "unidas.png",
@@ -57,6 +63,50 @@ if (menuToggle && mobileMenu) {
         mobileMenu.hidden = true;
       }, 220);
     });
+  });
+}
+
+const closeServiceModal = () => {
+  if (!serviceModal) {
+    return;
+  }
+
+  serviceModal.hidden = true;
+  document.body.style.overflow = "";
+};
+
+if (serviceCardSummaries.length > 0 && serviceModal && serviceModalTitle && serviceModalContent) {
+  document.querySelectorAll(".service-card-expandable").forEach((card) => {
+    card.open = false;
+  });
+
+  serviceCardSummaries.forEach((summary) => {
+    summary.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const card = summary.closest(".service-card-expandable");
+      const title = card?.querySelector("h3");
+      const details = card?.querySelector(".service-card-details");
+
+      if (!title || !details) {
+        return;
+      }
+
+      serviceModalTitle.textContent = title.textContent ?? "";
+      serviceModalContent.innerHTML = details.innerHTML;
+      serviceModal.hidden = false;
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  serviceModalCloseTargets.forEach((target) => {
+    target.addEventListener("click", closeServiceModal);
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !serviceModal.hidden) {
+      closeServiceModal();
+    }
   });
 }
 
