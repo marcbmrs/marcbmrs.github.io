@@ -8,25 +8,26 @@ const serviceModal = document.querySelector("#service-modal");
 const serviceModalTitle = document.querySelector("#service-modal-title");
 const serviceModalContent = document.querySelector("#service-modal-content");
 const serviceModalCloseTargets = document.querySelectorAll("[data-service-modal-close]");
+const reviewsTrack = document.querySelector("[data-reviews-track]");
+const reviewsPrev = document.querySelector("[data-reviews-prev]");
+const reviewsNext = document.querySelector("[data-reviews-next]");
 
 const partnerLogos = [
-  "ccr.png",
   "CPFL.png",
+  "RGE.png",
   "ceee-equatorial.png",
+  "ouro_e_prata.png",
+  "unesul.png",
+  "catarinense.png",
+  "jbs.png",
   "edisa.png",
-  "fedex.png",
-  "Forza.png",
+  "triumph.jpg",
+  "savauto.png",
+  "maximmotors.jpg",
   "kinto.png",
   "leaseplan.png",
   "lm.png",
-  "maximmotors.jpg",
-  "ouro_e_prata.png",
-  "RGE.png",
-  "savauto.png",
-  "supermix.png",
-  "triumph.jpg",
-  "unesul.png",
-  "unidas.png",
+  "pontual.png",
 ];
 
 if ("scrollRestoration" in history) {
@@ -145,4 +146,62 @@ if (partnersTrack && partnerLogos.length > 0) {
   marqueeItems.forEach((fileName) => {
     partnersTrack.appendChild(buildPartnerItem(fileName));
   });
+}
+
+if (reviewsTrack && reviewsPrev && reviewsNext) {
+  let currentIndex = 0;
+  let reviewsAutoPlay;
+
+  const getCardsPerView = () => {
+    if (window.innerWidth <= 760) return 1;
+    if (window.innerWidth <= 1080) return 2;
+    return 3;
+  };
+
+  const updateReviewsCarousel = () => {
+    const cards = Array.from(reviewsTrack.children);
+    const cardsPerView = getCardsPerView();
+    const maxIndex = Math.max(0, cards.length - cardsPerView);
+    currentIndex = Math.min(currentIndex, maxIndex);
+
+    const firstCard = cards[0];
+    if (!firstCard) return;
+
+    const cardWidth = firstCard.getBoundingClientRect().width;
+    const gap = 18;
+    const offset = currentIndex * (cardWidth + gap);
+    reviewsTrack.style.transform = `translateX(-${offset}px)`;
+  };
+
+  const goToNextReview = () => {
+    const cardsPerView = getCardsPerView();
+    const maxIndex = Math.max(0, reviewsTrack.children.length - cardsPerView);
+    currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+    updateReviewsCarousel();
+  };
+
+  const startReviewsAutoPlay = () => {
+    window.clearInterval(reviewsAutoPlay);
+    reviewsAutoPlay = window.setInterval(goToNextReview, 5000);
+  };
+
+  reviewsPrev.addEventListener("click", () => {
+    currentIndex = Math.max(0, currentIndex - 1);
+    updateReviewsCarousel();
+    startReviewsAutoPlay();
+  });
+
+  reviewsNext.addEventListener("click", () => {
+    goToNextReview();
+    startReviewsAutoPlay();
+  });
+
+  reviewsTrack.addEventListener("mouseenter", () => window.clearInterval(reviewsAutoPlay));
+  reviewsTrack.addEventListener("mouseleave", startReviewsAutoPlay);
+  reviewsTrack.addEventListener("touchstart", () => window.clearInterval(reviewsAutoPlay), { passive: true });
+  reviewsTrack.addEventListener("touchend", startReviewsAutoPlay, { passive: true });
+
+  window.addEventListener("resize", updateReviewsCarousel);
+  window.addEventListener("load", updateReviewsCarousel);
+  window.addEventListener("load", startReviewsAutoPlay);
 }
