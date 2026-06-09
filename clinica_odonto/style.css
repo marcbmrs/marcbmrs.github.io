@@ -1,0 +1,514 @@
+:root{
+  --bg:#ffffff;
+  --surface:#ffffff;
+  --surface-soft:#eef3f8;
+  --surface-contrast:#f7fafc;
+  --text:#14263d;
+  --muted:#60748a;
+  --line:rgba(20,38,61,.10);
+  --primary:#0f2f57;
+  --primary-strong:#0a2342;
+  --accent:#2c82d8;
+  --accent-soft:#d9ebfb;
+  --white:#ffffff;
+  --radius:22px;
+  --shadow:0 22px 48px rgba(20,38,61,.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:
+    radial-gradient(920px 460px at 0% 0%, rgba(44,130,216,.05), transparent 54%),
+    radial-gradient(840px 440px at 100% 0%, rgba(15,47,87,.04), transparent 50%),
+    var(--bg);
+  color:var(--text);
+}
+
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+
+.container{
+  width:min(1160px,100%);
+  margin:0 auto;
+  padding:0 18px;
+}
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+
+.header__inner{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.brand{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  font-weight:800;
+  letter-spacing:-.4px;
+  color:var(--primary);
+}
+
+.brand__mark{
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  background:var(--accent);
+  box-shadow:0 0 0 6px rgba(44,130,216,.12);
+}
+
+.brand__accent{color:var(--accent)}
+
+.nav{
+  display:none;
+  align-items:center;
+  gap:18px;
+}
+
+.nav__link{
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:600;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:50px;
+  padding:0 20px;
+  border-radius:16px;
+  text-decoration:none;
+  font-weight:800;
+  transition:transform .18s ease, background .18s ease, box-shadow .18s ease;
+}
+
+.btn:hover{transform:translateY(-1px)}
+
+.btn--primary{
+  background:var(--primary);
+  color:var(--white);
+  box-shadow:0 16px 30px rgba(15,47,87,.20);
+}
+
+.btn--primary:hover{
+  background:var(--primary-strong);
+}
+
+.btn--ghost{
+  background:rgba(255,255,255,.75);
+  border:1px solid var(--line);
+  color:var(--primary);
+}
+
+.btn--light{
+  background:var(--white);
+  color:var(--primary);
+  box-shadow:0 18px 36px rgba(0,0,0,.12);
+}
+
+.hero{
+  padding:56px 0 34px;
+}
+
+.hero__inner,
+.clinic__grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:26px;
+  align-items:center;
+}
+
+.eyebrow,
+.section__kicker{
+  display:inline-flex;
+  align-items:center;
+  width:fit-content;
+  padding:8px 12px;
+  border-radius:999px;
+  background:var(--accent-soft);
+  color:var(--accent);
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.section__kicker--dark{
+  background:rgba(255,255,255,.12);
+  color:rgba(255,255,255,.82);
+}
+
+.hero__title,
+.section__title,
+.final-cta__title{
+  margin-top:14px;
+  font-size:36px;
+  line-height:1.08;
+  letter-spacing:-.95px;
+  color:var(--primary);
+}
+
+.hero__subtitle,
+.section__subtitle,
+.final-cta__subtitle{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.7;
+  max-width:62ch;
+}
+
+.hero__actions{
+  margin-top:18px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.hero__anchor{
+  display:inline-flex;
+  margin-top:16px;
+  color:var(--accent);
+  font-weight:700;
+  text-decoration:none;
+}
+
+.hero__media{
+  display:grid;
+  gap:14px;
+}
+
+.hero__image-frame,
+.clinic__media img,
+.result-card,
+.specialty-card,
+.stat-card,
+.differential-item,
+.testimonial-card,
+.insurance-card,
+.final-cta__box{
+  border-radius:var(--radius);
+}
+
+.hero__image-frame{
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid var(--line);
+}
+
+.hero__image-frame img{
+  width:100%;
+  min-height:360px;
+  object-fit:cover;
+}
+
+.hero__card{
+  background:rgba(255,255,255,.96);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  border-radius:18px;
+  padding:18px;
+}
+
+.impact-strip{
+  padding:8px 0 38px;
+}
+
+.impact-strip__grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+
+.impact-card{
+  padding:22px 20px;
+  border-radius:var(--radius);
+  background:
+    radial-gradient(160px 90px at 0% 0%, rgba(44,130,216,.18), transparent 60%),
+    linear-gradient(180deg, #10355f, #0a2342);
+  color:var(--white);
+  box-shadow:0 24px 46px rgba(10,35,66,.2);
+}
+
+.impact-card strong{
+  display:block;
+  font-size:30px;
+  line-height:1;
+  letter-spacing:-.04em;
+}
+
+.impact-card span{
+  display:block;
+  margin-top:8px;
+  color:rgba(255,255,255,.78);
+  line-height:1.5;
+}
+
+.hero__card strong{
+  display:block;
+  color:var(--primary);
+}
+
+.hero__card span{
+  display:block;
+  margin-top:8px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.section{
+  padding:26px 0 56px;
+  background:var(--surface);
+}
+
+.section--soft{
+  background:var(--surface-soft);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.section__head{
+  display:grid;
+  gap:8px;
+  max-width:780px;
+}
+
+.specialties-grid,
+.results-grid,
+.differentials-grid,
+.testimonials-grid,
+.insurance-grid,
+.clinic__stats{
+  margin-top:20px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.specialty-card,
+.result-card,
+.stat-card,
+.testimonial-card{
+  background:rgba(255,255,255,.98);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  padding:22px;
+}
+
+.specialty-card__icon{
+  font-size:24px;
+}
+
+.specialty-card h3,
+.result-card h3{
+  margin-top:14px;
+  font-size:20px;
+  letter-spacing:-.3px;
+  color:var(--primary);
+}
+
+.specialty-card p,
+.result-card p,
+.stat-card span,
+.testimonial-card p{
+  margin-top:8px;
+  color:var(--muted);
+  line-height:1.65;
+}
+
+.clinic__media img{
+  width:100%;
+  min-height:360px;
+  object-fit:cover;
+  box-shadow:var(--shadow);
+  border:1px solid var(--line);
+}
+
+.stat-card strong{
+  display:block;
+  color:var(--primary);
+  font-size:18px;
+}
+
+.result-card{
+  overflow:hidden;
+  padding:0;
+}
+
+.result-card__image img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.result-card h3,
+.result-card p{
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.result-card h3{
+  margin-top:18px;
+}
+
+.result-card p{
+  padding-bottom:22px;
+}
+
+.differential-item{
+  min-height:84px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:18px;
+  background:rgba(255,255,255,.98);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+
+.differential-item span{
+  color:var(--accent);
+  font-size:20px;
+  font-weight:800;
+}
+
+.differential-item strong{
+  color:var(--primary);
+}
+
+.testimonial-card__stars{
+  color:var(--accent);
+  font-weight:800;
+  letter-spacing:.15em;
+}
+
+.testimonial-card strong{
+  display:block;
+  margin-top:12px;
+  color:var(--primary);
+}
+
+.insurance-card{
+  min-height:120px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px 8px;
+  background:var(--white);
+  border:1px solid rgba(15,47,87,.12);
+  box-shadow:0 20px 42px rgba(15,47,87,.1);
+}
+
+.insurance-logo{
+  max-width:96%;
+  max-height:108px;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  display:block;
+}
+
+.insurance-logo--unimed{
+  max-width:94%;
+}
+
+.insurance-logo--bradesco{
+  max-width:96%;
+}
+
+.insurance-logo--sulamerica{
+  max-width:96%;
+}
+
+.insurance-logo--amil{
+  max-width:98%;
+}
+
+.final-cta{
+  padding:28px 0 60px;
+}
+
+.final-cta__box{
+  padding:28px;
+  background:
+    radial-gradient(520px 240px at 0% 0%, rgba(44,130,216,.18), transparent 55%),
+    linear-gradient(180deg, #0f2f57, #0a2342);
+  color:var(--white);
+  box-shadow:0 26px 56px rgba(10,35,66,.26);
+}
+
+.final-cta__title{
+  color:var(--white);
+}
+
+.final-cta__subtitle{
+  color:rgba(255,255,255,.78);
+}
+
+.final-cta .btn{
+  min-height:58px;
+  padding:0 28px;
+  font-size:15px;
+  box-shadow:0 20px 40px rgba(0,0,0,.16);
+}
+
+@media (min-width:920px){
+  .nav{
+    display:flex;
+  }
+
+  .hero{
+    padding:62px 0 34px;
+  }
+
+  .impact-strip__grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .hero__inner,
+  .clinic__grid{
+    grid-template-columns:1.04fr .96fr;
+    gap:32px;
+  }
+
+  .hero__title,
+  .section__title,
+  .final-cta__title{
+    font-size:52px;
+  }
+
+  .specialties-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .clinic__stats{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .results-grid,
+  .testimonials-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .differentials-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .insurance-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+}
