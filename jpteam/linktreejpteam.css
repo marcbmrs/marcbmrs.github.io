@@ -1,0 +1,161 @@
+/* RESET PARA NÃO ESTOURAR NADA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  background: #000;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #000;
+
+  background-image: url("banner.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.lt-wrapper {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  padding: 24px 16px 40px;
+  text-align: center;
+  position: relative; /* ESSENCIAL */
+  z-index: 2; /* garante que tudo fica na frente */
+}
+
+/* OVERLAY */
+.lt-wrapper::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.90); /* controle da suavidade */
+  z-index: -1; /* fica atrás de tudo */
+  pointer-events: none;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.88); /* opacidade do fundo */
+  z-index: -1; /* garante que fique atrás de tudo */
+  pointer-events: none;
+}
+
+
+/* WRAPPER CENTRAL */
+.lt-wrapper {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  padding: 24px 16px 40px;
+  text-align: center;
+}
+
+/* HERO */
+.lt-hero {
+  margin-bottom: 28px;
+}
+
+.lt-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.35));
+}
+
+.lt-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #e5e5e5;
+  margin-bottom: 4px;
+}
+
+.lt-sub {
+  font-size: 0.9rem;
+  color: #b8b8b8;
+}
+
+/* LINKS */
+.lt-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+/* BOTÕES — COM CORREÇÃO DE LARGURA */
+.lt-btn {
+  position: relative;         /* garante que fique acima do overlay */
+  z-index: 5;                 /* botão SEMPRE na frente */
+  
+  width: 100%;
+  max-width: 100%;
+  display: block;
+
+  padding: 16px;
+  margin: 0 auto;
+
+  text-decoration: none;
+  text-align: center;
+
+  color: #e5e5e5;
+  font-size: 1rem;
+  font-weight: 700;
+
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 50, 50, 0.4);
+
+  box-shadow:
+    0 0 14px rgba(255, 0, 0, 0.25),
+    0 4px 12px rgba(0,0,0,0.7);
+
+  transition: 0.22s ease;
+  box-sizing: border-box;     /* impede de estourar a largura */
+  overflow: hidden;           /* impede sombra de empurrar o layout */
+}
+
+/* HOVER */
+.lt-btn:active,
+.lt-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 26px rgba(255, 0, 0, 0.45),
+    0 8px 20px rgba(0,0,0,0.75);
+}
+
+/* FOOTER */
+.lt-footer {
+  margin-top: 40px;
+  opacity: 0.6;
+}
+
+.lt-footer-logo {
+  width: 40px;
+  margin-bottom: 8px;
+  opacity: 0.7;
+}

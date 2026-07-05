@@ -1,0 +1,72 @@
+:root{
+  --black:#0A0A0A;
+  --yellow:#F5C32E;
+  --gray:#121316;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);
+  color:#F7F7F7;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+.gold{color:var(--yellow)}
+.btn-gold{
+  background:linear-gradient(180deg,#FFD666 0%, var(--yellow) 60%, #C09213 100%);
+  color:#111;
+  box-shadow:0 8px 28px rgba(245,195,46,.25)
+}
+.btn-gold:hover{filter:brightness(1.05)}
+.card{
+  background:#0E0E0E;
+  border:1px solid #1C1C1C;
+  border-radius:14px
+}
+.section{scroll-margin-top:84px}
+.container-max{max-width:1200px}
+.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+.no-scrollbar::-webkit-scrollbar{display:none}
+
+/* animação marcas */
+.animate-brands {
+  animation: brands-marquee 28s linear infinite;
+  will-change: transform;
+}
+@keyframes brands-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-brands { animation: none; }
+}
+
+/* Neon Glow nos planos */
+.card-neon {
+  position: relative;
+  border: 2px solid rgba(245, 195, 46, 0.3);
+  border-radius: 14px;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-neon:hover {
+  border-color: rgba(245, 195, 46, 0.6);
+  box-shadow: 0 0 12px rgba(245, 195, 46, 0.6), 0 0 24px rgba(245, 195, 46, 0.35);
+}
+
+.hero-glow {
+  background:
+    radial-gradient(600px 380px at 85% -10%, rgba(245,195,46,.35), transparent),
+    radial-gradient(560px 320px at 10% 110%, rgba(245,195,46,.2), transparent);
+}
+
+.about-glow {
+  background:
+    radial-gradient(700px 380px at 90% -10%, rgba(245,195,46,.45), transparent),
+    radial-gradient(560px 320px at 10% 110%, rgba(245,195,46,.25), transparent);
+}
+
+.tour-glow {
+  background:
+    radial-gradient(480px 220px at 10% 0%, rgba(245,195,46,.32), transparent),
+    radial-gradient(380px 180px at 100% 100%, rgba(245,195,46,.18), transparent);
+}
