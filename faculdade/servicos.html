@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados de SEO e recursos visuais compartilhados -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça os serviços do Portal Astral Aurora, incluindo tarot, astrologia, rituais e orientação energética em um site responsivo.">
+  <meta name="keywords" content="tarot, astrologia, rituais, serviços esotéricos, orientação energética">
+  <meta name="author" content="Portal Astral Aurora">
+  <title>Portal Astral Aurora | Serviços</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Link de acessibilidade para navegação por teclado -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <!-- Cabeçalho fixo com navegação entre as páginas -->
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="Portal Astral Aurora - página inicial">
+        <span class="brand-mark">✦</span>
+        <span class="brand-text">Portal Astral Aurora</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a class="active" href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="page-main">
+    <!-- Banner interno com apresentação da seção de serviços -->
+    <section class="page-banner">
+      <div class="container reveal">
+        <p class="eyebrow">Atendimentos simbólicos</p>
+        <h1>Escolha o atendimento que conversa com o seu momento</h1>
+        <p>
+          Leituras, rituais e orientações pensadas para diferentes fases da vida. Explore por categoria
+          e descubra o que faz mais sentido para você agora.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filtro e listagem dinâmica dos atendimentos -->
+    <section class="container section">
+      <div class="filter-bar reveal" aria-label="Filtrar serviços">
+        <button class="filter-btn is-active" type="button" data-filter="todos">Todos</button>
+        <button class="filter-btn" type="button" data-filter="astrologia">Astrologia</button>
+        <button class="filter-btn" type="button" data-filter="oraculo">Oráculo</button>
+        <button class="filter-btn" type="button" data-filter="ritual">Rituais</button>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal" data-category="astrologia">
+          <p class="service-tag">Astrologia</p>
+          <h2>Mapa Astral Essencial</h2>
+          <p>Leitura introdutória com análise de signos, casas e potenciais pessoais.</p>
+        </article>
+        <article class="service-card reveal" data-category="oraculo">
+          <p class="service-tag">Oráculo</p>
+          <h2>Tarot de Clareza</h2>
+          <p>Tiragem voltada para entender caminhos, bloqueios e decisões do presente.</p>
+        </article>
+        <article class="service-card reveal" data-category="ritual">
+          <p class="service-tag">Ritual</p>
+          <h2>Ritual de Lua Nova</h2>
+          <p>Prática guiada para definir intenções, metas e novos começos com presença.</p>
+        </article>
+        <article class="service-card reveal" data-category="astrologia">
+          <p class="service-tag">Astrologia</p>
+          <h2>Sinastria Afetiva</h2>
+          <p>Comparação simbólica entre mapas para leitura de afinidades e aprendizados.</p>
+        </article>
+        <article class="service-card reveal" data-category="oraculo">
+          <p class="service-tag">Oráculo</p>
+          <h2>Conselho da Semana</h2>
+          <p>Mensagem temática para orientar prioridades, emoções e relações nos próximos dias.</p>
+        </article>
+        <article class="service-card reveal" data-category="ritual">
+          <p class="service-tag">Ritual</p>
+          <h2>Limpeza Energética Simbólica</h2>
+          <p>Sequência leve de elementos, aromas e escrita para renovação de ambiente e foco.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé com atalhos para as próximas ações do usuário -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Portal Astral Aurora</h2>
+        <p>Atendimentos pensados para acolher dúvidas, revelar tendências e fortalecer intenções com mais consciência.</p>
+      </div>
+      <div>
+        <p><strong>Próximo passo</strong></p>
+        <ul class="footer-links">
+          <li><a href="contato.html">Solicitar atendimento</a></li>
+          <li><a href="sobre.html">Conhecer nossa essência</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>

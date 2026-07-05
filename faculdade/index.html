@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados de SEO e carregamento de estilos/fontes -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal Astral Aurora: website esotérico responsivo com leituras energéticas, astrologia, rituais e atendimento personalizado.">
+  <meta name="keywords" content="esotérico, astrologia, tarot, mapa astral, portal astral, espiritualidade">
+  <meta name="author" content="Portal Astral Aurora">
+  <title>Portal Astral Aurora | Início</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Link de acessibilidade para navegação por teclado -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <!-- Cabeçalho fixo com navegação principal -->
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="Portal Astral Aurora - página inicial">
+        <span class="brand-mark">✦</span>
+        <span class="brand-text">Portal Astral Aurora</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <a class="active" href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- Seção de abertura com chamada principal e mensagem dinâmica -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Bem-vindo ao seu novo ciclo</p>
+          <h1>Descubra sinais, rituais e caminhos no Portal Astral Aurora</h1>
+          <p class="lead">
+            Um espaço dedicado a astrologia intuitiva, leituras simbólicas e práticas de conexão interior.
+            Aqui, cada atendimento nasce do cuidado com os ciclos, da escuta sensível e da busca por clareza.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="servicos.html">Explorar serviços</a>
+            <a class="btn btn-secondary" href="contato.html">Agendar consulta</a>
+          </div>
+        </div>
+        <aside class="hero-card reveal">
+          <p class="card-label">Mensagem do dia</p>
+          <h2 id="daily-message-title">A energia de hoje pede escuta</h2>
+          <p id="daily-message-text">
+            Respire antes de decidir. O silêncio revela detalhes que a pressa costuma esconder.
+          </p>
+          <button class="btn btn-ghost" id="message-button" type="button">Gerar nova mensagem</button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Bloco de apresentação dos destaques do portal -->
+    <section class="container section">
+      <div class="section-heading reveal">
+          <p class="eyebrow">Propósito do portal</p>
+          <h2>Uma jornada mística guiada por presença e significado</h2>
+          <p>
+          O Portal Astral Aurora une estética simbólica e acolhimento para apresentar atendimentos,
+          orientações e experiências voltadas ao autoconhecimento de forma clara e envolvente.
+          </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <h3>Leitura simbólica</h3>
+          <p>Interpretações voltadas para autoconhecimento, ciclos emocionais e decisões conscientes.</p>
+        </article>
+        <article class="feature-card reveal">
+          <h3>Mapa astral</h3>
+          <p>Análise de posicionamentos planetários para compreender potenciais, desafios e tendências.</p>
+        </article>
+        <article class="feature-card reveal">
+          <h3>Rituais de intenção</h3>
+          <p>Sugestões de práticas leves, criativas e reflexivas para renovar metas e fortalecer foco.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Oráculo interativo alimentado por JavaScript -->
+    <section class="spotlight">
+      <div class="container spotlight-grid">
+        <div class="reveal">
+          <p class="eyebrow">Oráculo intuitivo</p>
+          <h2>Escolha um símbolo e receba sua orientação</h2>
+          <p>
+            Permita que o símbolo encontre você. Toque em uma carta para revelar uma mensagem
+            conectada ao seu momento atual.
+          </p>
+        </div>
+        <div class="oracle-grid">
+          <button class="oracle-card reveal" type="button" data-oracle="lua">
+            <span class="oracle-icon">☾</span>
+            <span class="oracle-name">Lua</span>
+          </button>
+          <button class="oracle-card reveal" type="button" data-oracle="sol">
+            <span class="oracle-icon">☼</span>
+            <span class="oracle-name">Sol</span>
+          </button>
+          <button class="oracle-card reveal" type="button" data-oracle="estrela">
+            <span class="oracle-icon">✧</span>
+            <span class="oracle-name">Estrela</span>
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="oracle-result reveal" id="oracle-result" aria-live="polite">
+          Selecione um símbolo para revelar uma mensagem intuitiva.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé com navegação complementar -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Portal Astral Aurora</h2>
+        <p>Astrologia intuitiva, rituais de intenção e leituras simbólicas para quem deseja escutar os próprios ciclos.</p>
+      </div>
+      <div>
+        <p><strong>Páginas</strong></p>
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>
