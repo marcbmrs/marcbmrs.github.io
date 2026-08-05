@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados de SEO e recursos visuais compartilhados -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com o Portal Astral Aurora para agendamentos, dúvidas e orientações sobre leituras, astrologia e rituais.">
+  <meta name="keywords" content="contato, formulário, portal astral, atendimento esotérico, agendamento espiritual">
+  <meta name="author" content="Portal Astral Aurora">
+  <title>Portal Astral Aurora | Contato</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Link de acessibilidade para navegação por teclado -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <!-- Cabeçalho fixo com navegação entre as páginas -->
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="Portal Astral Aurora - página inicial">
+        <span class="brand-mark">✦</span>
+        <span class="brand-text">Portal Astral Aurora</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a class="active" href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="page-main">
+    <!-- Banner interno com introdução ao agendamento -->
+    <section class="page-banner">
+      <div class="container reveal">
+        <p class="eyebrow">Contato e agendamento</p>
+        <h1>Vamos conversar sobre o que o seu momento pede</h1>
+        <p>
+          Se você deseja agendar uma leitura, tirar dúvidas ou entender qual atendimento combina mais com a sua fase atual,
+          envie sua mensagem. Será um prazer receber você.
+        </p>
+      </div>
+    </section>
+
+    <!-- Área de contato com informações do portal e formulário -->
+    <section class="container section contact-layout">
+      <article class="panel reveal">
+        <h2>Informações de atendimento</h2>
+        <p><strong>Portal Astral Aurora</strong></p>
+        <p>Atendimentos online com escuta acolhedora e foco em orientação simbólica.</p>
+        <p>Horários de atendimento: segunda a sábado, das 18h às 22h.</p>
+        <p>E-mail: contato@portalastralaurora.com</p>
+        <p>Instagram: @portalastralaurora</p>
+      </article>
+
+      <!-- O atributo novalidate permite que a validação seja controlada pelo JavaScript -->
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Digite seu nome completo">
+          <small class="error-message"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="Digite seu melhor e-mail">
+          <small class="error-message"></small>
+        </div>
+
+        <div class="field">
+          <label for="assunto">Assunto</label>
+          <select id="assunto" name="assunto">
+            <option value="">Selecione uma opção</option>
+            <option value="mapa-astral">Mapa astral</option>
+            <option value="tarot">Leitura de tarot</option>
+            <option value="ritual">Ritual simbólico</option>
+            <option value="duvida">Dúvida geral</option>
+          </select>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="field">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem"></textarea>
+          <small class="error-message"></small>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+        <p class="form-status" id="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé com links de retorno -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>Portal Astral Aurora</h2>
+        <p>Agendamentos, dúvidas e orientações para quem deseja atravessar fases com mais presença e clareza.</p>
+      </div>
+      <div>
+        <p><strong>Retornar</strong></p>
+        <ul class="footer-links">
+          <li><a href="index.html">Voltar ao início</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+  <script src="js/script.js"></script>
+</body>
+</html>
