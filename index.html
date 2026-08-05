@@ -1,1002 +1,212 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <title>Landing Page Profissional em até 48h | Orçamento Rápido</title>
-  <meta name="description" content="Landing Page profissional pronta em até 48h. Ideal para validar oferta e gerar leads. Solicite orçamento rápido pelo WhatsApp." />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Primeira Impressão Digital: uma revisão inicial gratuita para identificar três pontos que podem facilitar o primeiro contato.">
+  <title>Marcos Dev | Presença digital que gera conversas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<!-- =========================
-  HEADER (Mobile-first)
-  - No mobile: Logo + CTA WhatsApp + Hamburger
-  - No desktop: aparece navegação completa
-========================= -->
-<header class="header">
-  <div class="container header__inner">
-
-    <!-- Marca -->
-    <a href="#inicio" class="brand" aria-label="Voltar ao início">
-      <span class="brand__mark" aria-hidden="true"></span>
-
-      <span class="brand__text">
-        Marcos<span class="brand__accent">Dev</span>
-        <span class="brand__tag">• Sites & Google Ads</span>
-      </span>
-    </a>
-
-    <!-- Ações (mobile) -->
-    <div class="header__actions">
-      <!-- CTA principal (mobile): WhatsApp sempre visível -->
-      <a
-        class="btn btn--primary"
-        href="https://wa.me/51980109047?text=Quero%20gerar%20clientes%20pelo%20Google%20e%20WhatsApp.%0AMeu%20neg%C3%B3cio%20%C3%A9%3A%20_____%0ACidade%3A%20_____%0AObjetivo%3A%20(or%C3%A7amentos%2Fvendas%2Fagendamentos)"
-        target="_blank"
-        rel="noopener"
-        aria-label="Chamar no WhatsApp para gerar clientes"
-      >
-        WhatsApp
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>Marcos Dev</span>
       </a>
-
-      <!-- Botão menu (mobile) -->
-      <button
-        class="menu-btn"
-        type="button"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="mobileMenu"
-      >
-        <span class="menu-btn__bar" aria-hidden="true"></span>
-        <span class="menu-btn__bar" aria-hidden="true"></span>
-        <span class="menu-btn__bar" aria-hidden="true"></span>
-      </button>
-    </div>
-
-    <!-- Navegação (desktop) -->
-    <nav class="nav" aria-label="Navegação principal">
-      <a href="#planos" class="nav__link">Pacotes</a>
-      <a href="#exemplos" class="nav__link">Exemplos</a>
-      <a href="portfolios.html" class="nav__link">Portfolios</a>
-      <a href="#como" class="nav__link">Processo</a>
-      <a href="#faq" class="nav__link">FAQ</a>
-    </nav>
-  </div>
-
-  <!-- Menu dropdown (mobile) -->
-  <div id="mobileMenu" class="mobile-menu" hidden>
-    <a href="#planos" class="mobile-menu__link">Pacotes</a>
-    <a href="#exemplos" class="mobile-menu__link">Exemplos</a>
-    <a href="portfolios.html" class="mobile-menu__link">Portfolios</a>
-    <a href="#como" class="mobile-menu__link">Processo</a>
-    <a href="#faq" class="mobile-menu__link">FAQ</a>
-
-    <!-- CTA duplicado no menu (pra quem abrir) -->
-    <a
-      class="btn btn--primary mobile-menu__cta"
-      href="https://wa.me/51980109047?text=Quero%20gerar%20clientes%20pelo%20Google%20e%20WhatsApp.%0AMeu%20neg%C3%B3cio%20%C3%A9%3A%20_____%0ACidade%3A%20_____%0AObjetivo%3A%20(or%C3%A7amentos%2Fvendas%2Fagendamentos)"
-      target="_blank"
-      rel="noopener"
-    >
-      Pedir orçamento no WhatsApp
-    </a>
-  </div>
-</header>
-
-<!-- =========================
-  HERO (Mobile-first)
-  - Objetivo: clique no WhatsApp
-  - Posicionamento: "gerar conversas/orçamentos" (não "fazer site")
-========================= -->
-<section class="hero" id="inicio">
-  <div class="container hero__inner">
-
-    <!-- Texto do Hero -->
-    <div class="hero__content">
-      <!-- Selo curto -->
-      <span class="pill">Google Ads + Página • conversas no WhatsApp</span>
-
-      <!-- Headline (posicionamento certo) -->
-      <h1 class="hero__title">
-        Transformo buscas no <span class="u-primary">Google</span>
-        em conversas no <span class="u-primary">WhatsApp</span>
-      </h1>
-
-      <!-- Subheadline (mensurável / sem prometer milagre) -->
-      <p class="hero__subtitle">
-        Eu monto a página + configuro o anúncio e o rastreamento do clique no WhatsApp.
-        Você acompanha o custo por conversa e a evolução das campanhas.
-      </p>
-
-      <!-- CTAs -->
-      <div class="hero__cta">
-        <a
-          class="btn btn--primary btn--wide"
-          href="https://wa.me/51980109047?text=Quero%20gerar%20clientes%20pelo%20Google%20e%20WhatsApp.%0AMeu%20neg%C3%B3cio%3A%20_____%0ACidade%3A%20_____%0AObjetivo%3A%20(or%C3%A7amentos%2Fvendas%2Fagendamentos)%0AOr%C3%A7amento%20de%20an%C3%BAncios%3A%20R%24%20____%2Fdia"
-          target="_blank"
-          rel="noopener"
-        >
-          Quero começar (WhatsApp)
-        </a>
-
-        <a class="btn btn--ghost btn--wide" href="#exemplos">
-          Ver exemplos
-        </a>
-      </div>
-
-      <!-- Prova rápida (agora com métrica/segurança) -->
-      <div class="hero__proof">
-        <div class="proof">
-          <span class="proof__icon" aria-hidden="true">📊</span>
-          <div class="proof__text">
-            <strong>Métricas claras</strong>
-            <span>cliques, conversas e custo por conversa</span>
-          </div>
-        </div>
-
-        <div class="proof">
-          <span class="proof__icon" aria-hidden="true">🎯</span>
-          <div class="proof__text">
-            <strong>Busca local</strong>
-            <span>aparece pra quem já está procurando</span>
-          </div>
-        </div>
-
-        <div class="proof">
-          <span class="proof__icon" aria-hidden="true">⚡</span>
-          <div class="proof__text">
-            <strong>Execução rápida</strong>
-            <span>processo direto, sem burocracia</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mini aviso (protege você e deixa sério) -->
-      <p class="hero__note">
-        Anúncios são pagos direto no Google pelo cliente. Eu cuido da estrutura e otimização.
-      </p>
-    </div>
-
-    <!-- Visual do Hero -->
-    <div class="hero__visual">
-      <a
-        class="preview"
-        target="_blank"
-        rel="noopener"
-        href="https://marcbmrs.github.io/barbearia1.html"
-        aria-label="Abrir exemplo real"
-      >
-        <img
-          src="index_img/preview-barbearia1.webp"
-          alt="Preview de landing page"
-          loading="lazy"
-        >
-      </a>
-
-      <div class="hero__badges">
-        <span class="badge">Mobile-first</span>
-        <span class="badge">Rastreamento WhatsApp</span>
-        <span class="badge">Otimizado pra Ads</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- =========================
-  PLANOS (Mobile-first)
-  - Separar "Página" de "Tráfego" (posicionamento certo)
-  - 3 pacotes de página + Add-on Google Ads
-========================= -->
-<section class="plans" id="planos">
-  <div class="container plans__inner">
-
-    <!-- Cabeçalho -->
-    <header class="section-head">
-      <span class="section-kicker">Pacotes</span>
-
-      <h2 class="section-title">
-        Escolha a estrutura ideal (e adicione Google Ads se quiser clientes mais rápido)
-      </h2>
-
-      <p class="section-subtitle">
-        Você pode contratar só a página ou página + tráfego. O investimento em anúncios é pago direto no Google.
-      </p>
-    </header>
-
-    <!-- Bloco 1: Página (Entrega única) -->
-    <div class="plans__block">
-      <h3 class="plans__block-title">1) Página / Site (entrega única)</h3>
-
-      <div class="plans__grid">
-
-        <!-- Plano 1 -->
-        <article class="plan-card">
-          <div class="plan-card__top">
-            <h4 class="plan-card__name">Start</h4>
-            <p class="plan-card__desc">Landing simples pra validar oferta e começar a captar conversas.</p>
-
-            <p class="plan-card__price">
-              <span class="price-label">Faixa:</span>
-              <strong>R$ 197 – 397</strong>
-            </p>
-
-            <p class="plan-card__meta">Prazo: até 48h (após briefing)</p>
-          </div>
-
-          <ul class="plan-card__list">
-            <li>1 página (landing)</li>
-            <li>Botão WhatsApp + CTA</li>
-            <li>Seções: benefícios, prova, FAQ</li>
-            <li>Responsivo (mobile-first)</li>
-            <li>Publicação + link</li>
-          </ul>
-
-          <a
-            class="btn btn--primary btn--wide"
-            href="https://wa.me/51980109047?text=Quero%20o%20PACOTE%20START%20(P%C3%A1gina).%0AMeu%20neg%C3%B3cio%3A%20_____%0ACidade%3A%20_____%0AObjetivo%3A%20(or%C3%A7amentos%2Fvendas%2Fagendamentos)%0APrazo%3A%20____"
-            target="_blank"
-            rel="noopener"
-          >
-            Quero o Start (WhatsApp)
-          </a>
-        </article>
-
-        <!-- Plano 2 (destaque) -->
-        <article class="plan-card plan-card--featured" aria-label="Pacote recomendado">
-          <div class="plan-card__badge">Mais pedido</div>
-
-          <div class="plan-card__top">
-            <h4 class="plan-card__name">Pro</h4>
-            <p class="plan-card__desc">Landing premium pronta pra campanha e conversão.</p>
-
-            <p class="plan-card__price">
-              <span class="price-label">Faixa:</span>
-              <strong>R$ 397 – 797</strong>
-            </p>
-
-            <p class="plan-card__meta">Prazo: 3–5 dias</p>
-          </div>
-
-          <ul class="plan-card__list">
-            <li>Landing premium + copy refinada</li>
-            <li>WhatsApp + formulário</li>
-            <li>Estrutura pronta pra anúncios</li>
-            <li>1 rodada de ajustes</li>
-          </ul>
-
-          <a
-            class="btn btn--primary btn--wide"
-            href="https://wa.me/51980109047?text=Quero%20o%20PACOTE%20PRO%20(P%C3%A1gina%20Premium).%0AMeu%20neg%C3%B3cio%3A%20_____%0ACidade%3A%20_____%0AObjetivo%3A%20(or%C3%A7amentos%2Fvendas%2Fagendamentos)%0APrazo%3A%20____"
-            target="_blank"
-            rel="noopener"
-          >
-            Quero o Pro (WhatsApp)
-          </a>
-        </article>
-
-        <!-- Plano 3 -->
-        <article class="plan-card">
-          <div class="plan-card__top">
-            <h4 class="plan-card__name">Site Completo</h4>
-            <p class="plan-card__desc">Presença profissional com páginas e conteúdo organizado.</p>
-
-            <p class="plan-card__price">
-              <span class="price-label">Faixa:</span>
-              <strong>R$ 897 – 1.997</strong>
-            </p>
-
-            <p class="plan-card__meta">Prazo: 7–12 dias</p>
-          </div>
-
-          <ul class="plan-card__list">
-            <li>Até 5 páginas (home, serviços, sobre, contato…)</li>
-            <li>SEO básico (títulos e estrutura)</li>
-            <li>WhatsApp + formulário</li>
-            <li>Performance (site leve)</li>
-            <li>2 rodadas de ajustes</li>
-          </ul>
-
-          <a
-            class="btn btn--primary btn--wide"
-            href="https://wa.me/51980109047?text=Quero%20o%20SITE%20COMPLETO%20(at%C3%A9%205%20p%C3%A1ginas).%0AMeu%20neg%C3%B3cio%3A%20_____%0ACidade%3A%20_____%0AP%C3%A1ginas%20que%20preciso%3A%20_____%0APrazo%3A%20____"
-            target="_blank"
-            rel="noopener"
-          >
-            Quero o Site Completo (WhatsApp)
-          </a>
-        </article>
-
-      </div>
-    </div>
-
-    <!-- Bloco 2: Tráfego (Add-on) -->
-    <div class="plans__addon" id="trafego">
-      <div class="plans__addon-head">
-        <h3 class="plans__addon-title">2) Google Ads (opcional)</h3>
-        <p class="plans__addon-subtitle">
-          Ideal pra quem quer acelerar os resultados. Você paga os anúncios direto no Google e eu cuido do setup/otimização.
-        </p>
-      </div>
-
-      <div class="plans__addon-grid">
-        <!-- Setup -->
-        <article class="addon-card">
-          <h4 class="addon-card__title">Setup inicial</h4>
-          <p class="addon-card__desc">
-            Configuro campanha de Pesquisa + palavras-chave + anúncios + rastreamento do clique no WhatsApp.
-          </p>
-
-          <p class="addon-card__price">
-            <span class="price-label">Faixa:</span>
-            <strong>R$ 150 – 350</strong>
-          </p>
-
-          <ul class="addon-card__list">
-            <li>Campanha Google Pesquisa</li>
-            <li>Extensões (chamada/links)</li>
-            <li>Conversão: clique no WhatsApp</li>
-            <li>Checklist de palavras negativas</li>
-          </ul>
-
-          <a
-            class="btn btn--primary btn--wide"
-            href="https://wa.me/51980109047?text=Quero%20o%20SETUP%20do%20Google%20Ads%20(Pesquisa%20+%20Convers%C3%A3o%20WhatsApp).%0ANicho%3A%20_____%0ACidade%3A%20_____%0AOr%C3%A7amento%20di%C3%A1rio%3A%20R%24%20____%2Fdia"
-            target="_blank"
-            rel="noopener"
-          >
-            Quero Setup (WhatsApp)
-          </a>
-        </article>
-
-        <!-- Gestão mensal -->
-        <article class="addon-card addon-card--featured" aria-label="Gestão recomendada">
-          <div class="addon-card__badge">Recomendado</div>
-
-          <h4 class="addon-card__title">Gestão mensal</h4>
-          <p class="addon-card__desc">
-            Otimizações semanais pra baixar o custo por conversa e melhorar a qualidade dos leads.
-          </p>
-
-          <p class="addon-card__price">
-            <span class="price-label">Mensal:</span>
-            <strong>R$ 250 – 600</strong>
-          </p>
-
-          <ul class="addon-card__list">
-            <li>Ajustes de palavras e anúncios</li>
-            <li>Negativas e refinamento</li>
-            <li>Relatório simples (conversas e custo)</li>
-            <li>Melhorias na página (se precisar)</li>
-          </ul>
-
-          <a
-            class="btn btn--primary btn--wide"
-            href="https://wa.me/51980109047?text=Quero%20GEST%C3%83O%20MENSAL%20do%20Google%20Ads.%0ANicho%3A%20_____%0ACidade%3A%20_____%0AOr%C3%A7amento%20di%C3%A1rio%3A%20R%24%20____%2Fdia"
-            target="_blank"
-            rel="noopener"
-          >
-            Quero Gestão Mensal (WhatsApp)
-          </a>
-        </article>
-      </div>
-
-      <p class="plans__note">
-        * As faixas são referência. O valor final depende do nicho, urgência, conteúdo pronto e complexidade.
-        O investimento em anúncios (ex: R$10/dia) é pago direto no Google.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- =========================
-  EXEMPLOS (Mobile-first)
-  - Contraste novo: faixa "tint" (degrade bem leve) + bordas
-  - Cards com altura padronizada (media 16:9)
-  - Mantém lightbox via data-image
-========================= -->
-<section class="examples examples--tint" id="exemplos">
-  <div class="container examples__inner">
-
-    <!-- Cabeçalho -->
-    <header class="section-head section-head--light">
-      <span class="section-kicker section-kicker--light">Exemplos</span>
-      <h2 class="section-title section-title--light">Alguns layouts que eu já faço rodar</h2>
-      <p class="section-subtitle section-subtitle--light">
-        Clique pra ampliar a imagem. Se quiser, eu mando o link do exemplo real no WhatsApp.
-      </p>
-    </header>
-
-    <!-- Grid -->
-    <div class="examples__grid">
-
-      <!-- Exemplo 1 -->
-      <button
-        class="example-card"
-        type="button"
-        data-image="index_img/preview-barbearia1.webp"
-        aria-label="Visualizar exemplo Barbearia"
-      >
-        <div class="example-card__media">
-            <img src="index_img/preview-barbearia1.webp" alt="Exemplo de site para barbearia" loading="lazy">
-        </div>
-
-        <div class="example-card__body">
-          <h3 class="example-card__title">Barbearia</h3>
-          <p class="example-card__desc">Landing com CTA direto pro WhatsApp.</p>
-
-          <div class="example-card__tags">
-            <span class="tag">Conversão</span>
-            <span class="tag">WhatsApp</span>
-          </div>
-        </div>
-      </button>
-
-      <!-- Exemplo 2 -->
-      <button
-        class="example-card"
-        type="button"
-        data-image="index_img/preview-cardapio-digital-1.webp"
-        aria-label="Visualizar exemplo Cardápio Digital"
-      >
-        <div class="example-card__media">
-            <img src="index_img/preview-cardapio-digital-1.webp" alt="Exemplo de cardápio digital" loading="lazy">
-        </div>
-
-        <div class="example-card__body">
-          <h3 class="example-card__title">Cardápio Digital</h3>
-          <p class="example-card__desc">Ideal pra lancheria, pizzaria e delivery.</p>
-
-          <div class="example-card__tags">
-            <span class="tag">Vendas</span>
-            <span class="tag">Catálogo</span>
-            <span class="tag">Rápido</span>
-          </div>
-        </div>
-      </button>
-
-      <!-- Exemplo 3 -->
-      <button
-        class="example-card"
-        type="button"
-        data-image="index_img/preview-petshop1.webp"
-        aria-label="Visualizar exemplo Negócio Local"
-      >
-        <div class="example-card__media">
-            <img src="index_img/preview-petshop1.webp" alt="Exemplo de site para negócio local" loading="lazy">
-        </div>
-
-        <div class="example-card__body">
-          <h3 class="example-card__title">Negócio Local</h3>
-          <p class="example-card__desc">Presença profissional + contato rápido.</p>
-
-          <div class="example-card__tags">
-            <span class="tag">Institucional</span>
-            <span class="tag">Serviços</span>
-            <span class="tag">Contato</span>
-          </div>
-        </div>
-      </button>
-
-    </div>
-
-    <!-- CTA final -->
-    <div class="examples__cta">
-      <a
-        class="btn btn--primary btn--wide"
-        href="https://wa.me/51980109047?text=Vi%20os%20exemplos%20e%20quero%20um%20or%C3%A7amento.%0AMeu%20neg%C3%B3cio%3A%20_____%0AObjetivo%3A%20(leads%2Fvendas%2Fagendamento)%0AQuero%3A%20(P%C3%A1gina%20%2F%20P%C3%A1gina%20%2B%20Google%20Ads)"
-        target="_blank"
-        rel="noopener"
-      >
-        Quero um orçamento no WhatsApp
-      </a>
-
-      <p class="examples__note">
-        Me diz teu nicho + cidade + objetivo e eu já te digo o melhor pacote.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- =========================
-  COMO FUNCIONA
-  - Contraste: faixa “tint” (degrade leve) + bordas, pra diferenciar do Examples
-========================= -->
-<section class="how how--tint" id="como">
-  <div class="container">
-
-    <!-- Cabeçalho -->
-    <header class="section-head section-head--light">
-      <span class="section-kicker section-kicker--light">Processo simples</span>
-
-      <h2 class="section-title section-title--light">Como funciona na prática</h2>
-
-      <p class="section-subtitle section-subtitle--light">
-        Sem burocracia. Você fala comigo direto e eu entrego do jeito certo pra rodar tráfego.
-      </p>
-    </header>
-
-    <!-- Grid mobile-first -->
-    <div class="how__grid">
-
-      <!-- Passo 1 -->
-      <div class="how-card">
-        <div class="how-card__top">
-          <div class="how-card__number">1</div>
-          <h3 class="how-card__title">Você chama no WhatsApp</h3>
-        </div>
-        <p class="how-card__desc">
-          Você me diz seu negócio, cidade e objetivo (leads/vendas/agendamento).
-        </p>
-      </div>
-
-      <!-- Passo 2 -->
-      <div class="how-card">
-        <div class="how-card__top">
-          <div class="how-card__number">2</div>
-          <h3 class="how-card__title">Briefing rápido</h3>
-        </div>
-        <p class="how-card__desc">
-          5 perguntas: logo, cores, serviços, diferenciais e contato.
-        </p>
-      </div>
-
-      <!-- Passo 3 -->
-      <div class="how-card">
-        <div class="how-card__top">
-          <div class="how-card__number">3</div>
-          <h3 class="how-card__title">Entrega + 1 ajuste</h3>
-        </div>
-        <p class="how-card__desc">
-          Eu te mando o link pra aprovar. Ajusto e publico.
-        </p>
-      </div>
-
-    </div>
-
-    <!-- CTA final -->
-    <div class="how__cta">
-      <a
-        href="https://wa.me/51980109047?text=Quero%20criar%20meu%20site.%0AMeu%20neg%C3%B3cio%3A%20_____%0ACidade%3A%20_____%0AObjetivo%3A%20(leads%2Fvendas%2Fagendamento)"
-        class="btn btn--primary btn--wide"
-        target="_blank"
-        rel="noopener"
-      >
-        Começar agora no WhatsApp
-      </a>
-
-      <p class="how__note">Atendimento direto comigo. Sem intermediários.</p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- =========================
-  FAQ
-  - Contraste: “tint” próprio (diferente do HOW) + cards com ícone
-========================= -->
-<section id="faq" class="faq faq--tint">
-  <div class="container">
-
-    <!-- Cabeçalho -->
-    <header class="section-head section-head--light">
-      <span class="section-kicker section-kicker--light">Perguntas Frequentes</span>
-
-      <h2 class="section-title section-title--light">Dúvidas antes de começar?</h2>
-
-      <p class="section-subtitle section-subtitle--light">
-        Respostas diretas pra você decidir rápido e sem insegurança.
-      </p>
-    </header>
-
-    <!-- Lista -->
-    <div class="faq__list">
-
-      <details class="faq-item">
-        <summary>
-          <span>O que está incluso exatamente?</span>
-        </summary>
-        <div class="faq-item__content">
-          <p>
-            Página responsiva, estrutura de conversão, botão WhatsApp,
-            formulário (se precisar), SEO básico e publicação em link temporário.
-          </p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>
-          <span>Inclui domínio e hospedagem?</span>
-        </summary>
-        <div class="faq-item__content">
-          <p>
-            Domínio e hospedagem são contratados à parte pelo cliente.
-            Eu uso Hostinger como padrão.
-            <br><br>
-            • Domínio: R$39,99/ano (pago direto na plataforma) <br>
-            • Hospedagem: R$29,99/mês (pago direto na plataforma) <br><br>
-            Fica no seu nome — você mantém controle total.
-          </p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>
-          <span>Quanto tempo demora?</span>
-        </summary>
-        <div class="faq-item__content">
-          <p>Até 48h úteis após receber seu briefing (no pacote Start).</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>
-          <span>Posso pedir alterações?</span>
-        </summary>
-        <div class="faq-item__content">
-          <p>Sim. Vai 1 rodada de ajustes inclusa após a entrega.</p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>
-          <span>Como funciona o pagamento?</span>
-        </summary>
-        <div class="faq-item__content">
-          <p>
-            Pagamento antes de iniciar. Confirmou, eu te mando o briefing e começo.
-          </p>
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>
-          <span>E se eu não gostar?</span>
-        </summary>
-        <div class="faq-item__content">
-          <p>
-            Se eu não entregar no prazo combinado, devolvo 100% do valor pago.
-          </p>
-        </div>
-      </details>
-
-    </div>
-
-    <!-- CTA final da seção -->
-    <div class="faq__cta">
-      <a
-        href="https://wa.me/51980109047?text=Tenho%20uma%20d%C3%BAvida%20antes%20de%20fechar.%20Meu%20neg%C3%B3cio%20%C3%A9%3A%20_____"
-        class="btn btn--primary btn--wide"
-        target="_blank"
-        rel="noopener"
-      >
-        Tirar minha dúvida no WhatsApp
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- =========================
-  FECHAMENTO / CTA FINAL (novo)
-  - Contraste forte + “cara premium”
-  - 2 CTAs (principal + secundário “ver exemplos”) sem dispersar
-========================= -->
-<section class="final-cta final-cta--aurora" id="contato">
-  <div class="container">
-
-    <div class="final-cta__box">
-
-      <!-- Texto -->
-      <div class="final-cta__content">
-        <span class="final-cta__kicker">Fechamento</span>
-
-        <h2 class="final-cta__title">
-          Quer um site que <span class="final-cta__accent">traz mensagem</span> no WhatsApp?
-        </h2>
-
-        <p class="final-cta__subtitle">
-          Eu monto a página + deixo pronta pra Google Ads. Você recebe o link e já pode rodar campanha.
-        </p>
-
-        <!-- Mini prova / segurança -->
-        <div class="final-cta__bullets">
-          <div class="final-bullet">
-            <span class="final-bullet__icon" aria-hidden="true">✅</span>
-            <span>Atendimento direto comigo</span>
-          </div>
-
-          <div class="final-bullet">
-            <span class="final-bullet__icon" aria-hidden="true">⚡</span>
-            <span>Entrega rápida (Start em até 48h)</span>
-          </div>
-
-          <div class="final-bullet">
-            <span class="final-bullet__icon" aria-hidden="true">📈</span>
-            <span>Estrutura pronta pra Ads + conversão</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Ação -->
-      <div class="final-cta__action">
-
-        <a
-          class="btn btn--primary btn--wide"
-          href="https://wa.me/51980109047?text=Quero%20um%20or%C3%A7amento%20pra%20Site%20ou%20Landing%20%2B%20Google%20Ads.%0AMeu%20neg%C3%B3cio%3A%20_____%0AObjetivo%3A%20(leads/vendas/agendamento)%0ACidade%3A%20_____%0APrazo%3A%20_____"
-          target="_blank"
-          rel="noopener"
-        >
-          Chamar no WhatsApp agora
-        </a>
-
-        <a class="btn btn--ghost btn--wide final-cta__secondary" href="#exemplos">
-          Ver exemplos antes
-        </a>
-
-        <p class="final-cta__note">
-          Vagas limitadas pra manter prazo de entrega.
-        </p>
-
-        <p class="final-cta__micro">
-          WhatsApp: <a href="https://wa.me/51980109047" target="_blank" rel="noopener">(51) 9 8010-9047</a>
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- =========================
-  FOOTER (novo)
-  - Contraste + “cara premium”
-  - Colunas claras + CTA final
-========================= -->
-<footer class="footer footer--aurora">
-  <div class="container">
-
-    <div class="footer__grid">
-
-      <!-- Marca -->
-      <div class="footer__brand">
-        <a href="#inicio" class="brand" aria-label="Voltar ao início">
-          <span class="brand__mark" aria-hidden="true"></span>
-          <span>Marcos<span class="brand__accent">Dev</span></span>
-          <span class="footer__tag">Sites & Google Ads</span>
-        </a>
-
-        <p class="footer__desc">
-          Sites e landing pages focadas em gerar mensagens no WhatsApp.
-          Estrutura pronta pra Google Ads, rápida e leve.
-        </p>
-
-        <div class="footer__cta">
-          <a
-            class="btn btn--primary btn--wide"
-            href="https://wa.me/51980109047?text=Quero%20um%20or%C3%A7amento%20pra%20Site%20ou%20Landing%20%2B%20Google%20Ads.%0AMeu%20neg%C3%B3cio%3A%20_____%0ACidade%3A%20_____%0AObjetivo%3A%20(leads/vendas/agendamento)"
-            target="_blank"
-            rel="noopener"
-          >
-            Pedir orçamento no WhatsApp
-          </a>
-        </div>
-      </div>
-
-      <!-- Navegação -->
-      <nav class="footer__links" aria-label="Links do rodapé">
-        <h4 class="footer__title">Navegação</h4>
-        <a href="#planos">Planos</a>
-        <a href="#exemplos">Exemplos</a>
-        <a href="#como">Como funciona</a>
-        <a href="#faq">FAQ</a>
-        <a href="#" id="openPrivacy">Política de Privacidade</a>
+      <nav class="header-nav" aria-label="Navegação principal">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#trabalhos">Trabalhos</a>
       </nav>
+      <a class="header-link" href="#analise">Primeira Impressão Digital <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
 
-      <!-- Contato / Info -->
-      <div class="footer__contact">
-        <h4 class="footer__title">Contato</h4>
-
-        <a href="https://wa.me/51980109047" target="_blank" rel="noopener">
-          WhatsApp: (51) 9 8010-9047
-        </a>
-
-        <p class="footer__small">
-          Domínio e hospedagem são pagos direto na Hostinger (no teu nome).
-        </p>
-
-        <p class="footer__micro">
-          Domínio: R$ 39,99/ano • Hospedagem: R$ 29,99/mês
-        </p>
+  <main id="inicio">
+    <section class="hero section">
+      <div class="container hero-content">
+        <p class="eyebrow">Para negócios locais</p>
+        <h1>Você pode estar perdendo clientes <span>antes da primeira mensagem.</span></h1>
+        <p class="hero-lead">Descubra como sua presença digital influencia a decisão de quem pensa em contratar você.</p>
+        <ul class="hero-context" aria-label="Públicos atendidos">
+          <li>Psicólogos</li>
+          <li>Advogados</li>
+          <li>Negócios locais</li>
+        </ul>
+        <a class="button button-primary" href="https://wa.me/51980109047?text=Quero%20minha%20Primeira%20Impress%C3%A3o%20Digital.%0A%0AMeu%20site%20ou%20Instagram%3A%20_____%0AMeu%20neg%C3%B3cio%20%C3%A9%3A%20_____%0A" target="_blank" rel="noopener">Quero minha Primeira Impressão Digital <span aria-hidden="true">→</span></a>
+        <p class="button-note">Sem custo. Sem compromisso.</p>
+        <div class="hero-proof" aria-label="O que a revisão inicial mostra">
+          <span class="proof-dot" aria-hidden="true"></span>
+          Uma visão clara dos pontos que podem afastar clientes.
+        </div>
       </div>
+    </section>
 
+    <section class="section decisions" aria-labelledby="decisions-title">
+      <div class="container narrow">
+        <p class="eyebrow">Como seus clientes decidem</p>
+        <h2 id="decisions-title">Em poucos segundos, seu cliente responde três perguntas.</h2>
+        <div class="question-grid">
+          <article class="question-card">
+            <span class="icon-bubble" aria-hidden="true">✓</span>
+            <p class="decision-state">Entendi o que essa pessoa faz.</p>
+            <h3>A proposta ficou clara.</h3>
+            <p>Quem chega entende com rapidez como você pode ajudar.</p>
+          </article>
+          <article class="question-card">
+            <span class="icon-bubble" aria-hidden="true">✓</span>
+            <p class="decision-state">Ela parece profissional.</p>
+            <h3>Transmite organização.</h3>
+            <p>A apresentação demonstra cuidado e ajuda a criar autoridade.</p>
+          </article>
+          <article class="question-card">
+            <span class="icon-bubble" aria-hidden="true">✓</span>
+            <p class="decision-state">Posso confiar nessa pessoa?</p>
+            <h3>Tenho segurança para entrar em contato.</h3>
+            <p>Confiança é o que transforma interesse em uma conversa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section subtle-section" aria-labelledby="problem-title">
+      <div class="container split-layout">
+        <div>
+          <p class="eyebrow">O problema invisível</p>
+          <h2 id="problem-title">A pessoa entra, olha e vai embora.</h2>
+          <p class="section-copy">Quando sua presença digital não esclarece o essencial, a oportunidade termina antes de uma mensagem ser enviada.</p>
+        </div>
+        <div class="flow-card" aria-label="Fluxo de uma oportunidade perdida">
+          <div class="flow-diagram">
+            <div class="flow-step"><span class="flow-icon" aria-hidden="true">↗</span><strong>Entrada</strong><small>A pessoa chega</small></div>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <div class="flow-step"><span class="flow-icon" aria-hidden="true">?</span><strong>Dúvida</strong><small>Não encontra respostas</small></div>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <div class="flow-step flow-step--exit"><span class="flow-icon" aria-hidden="true">×</span><strong>Saída</strong><small>Vai embora sem falar</small></div>
+          </div>
+          <p>Você nunca fica sabendo que perdeu essa oportunidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" aria-labelledby="services-title">
+      <div class="container split-layout">
+        <div>
+          <p class="eyebrow">Como eu resolvo</p>
+          <h2 id="services-title">Eu respondo as perguntas que seus clientes fazem antes da primeira mensagem.</h2>
+        </div>
+        <div class="solution-content">
+          <ul class="check-list check-list--outcomes">
+            <li>Clareza sobre o que você faz.</li>
+            <li>Mais confiança.</li>
+            <li>Contato mais fácil.</li>
+            <li>Mais oportunidades.</li>
+          </ul>
+          <div class="service-tools">
+            <p>Isso pode envolver</p>
+            <ul>
+              <li>Site profissional e focado em conversão</li>
+              <li>Landing pages objetivas</li>
+              <li>Google Meu Negócio e presença local</li>
+              <li>Integração estratégica com WhatsApp</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section work-section" id="trabalhos" aria-labelledby="work-title">
+      <div class="container">
+        <p class="eyebrow">Alguns trabalhos</p>
+        <h2 id="work-title">Cada projeto começa com uma conversa que ainda não está acontecendo.</h2>
+        <p class="section-copy intro-copy">O objetivo não é apenas apresentar um negócio. É remover as dúvidas que impedem o próximo contato.</p>
+        <div class="work-grid">
+          <article class="case-card">
+            <p class="work-type">Psicóloga</p>
+            <div class="case-flow">
+              <div class="case-stage"><span>Problema</span><p>Transmitia pouca confiança.</p></div>
+              <span class="case-arrow" aria-hidden="true">↓</span>
+              <div class="case-stage"><span>Solução</span><p>Landing focada em acolhimento e autoridade.</p></div>
+              <span class="case-arrow" aria-hidden="true">↓</span>
+              <div class="case-stage case-stage--result"><span>Resultado esperado</span><p>Mais pessoas iniciando uma conversa.</p></div>
+            </div>
+          </article>
+          <article class="case-card">
+            <p class="work-type">Clínica de estética</p>
+            <div class="case-flow">
+              <div class="case-stage"><span>Problema</span><p>Os serviços pareciam confusos para quem chegava.</p></div>
+              <span class="case-arrow" aria-hidden="true">↓</span>
+              <div class="case-stage"><span>Solução</span><p>Landing clara, com serviços e próximos passos organizados.</p></div>
+              <span class="case-arrow" aria-hidden="true">↓</span>
+              <div class="case-stage case-stage--result"><span>Resultado esperado</span><p>Mais clareza antes do primeiro contato.</p></div>
+            </div>
+          </article>
+          <article class="case-card">
+            <p class="work-type">Escritório de advocacia</p>
+            <div class="case-flow">
+              <div class="case-stage"><span>Problema</span><p>Era difícil comunicar autoridade logo no início.</p></div>
+              <span class="case-arrow" aria-hidden="true">↓</span>
+              <div class="case-stage"><span>Solução</span><p>Presença profissional com áreas de atuação bem explicadas.</p></div>
+              <span class="case-arrow" aria-hidden="true">↓</span>
+              <div class="case-stage case-stage--result"><span>Resultado esperado</span><p>Mais segurança para iniciar uma conversa.</p></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="como-funciona" aria-labelledby="process-title">
+      <div class="container narrow">
+        <p class="eyebrow">Como funciona</p>
+        <h2 id="process-title">Um processo simples e transparente.</h2>
+        <ol class="process-list">
+          <li><span>1</span><div><h3>Primeira conversa</h3><p>Você compartilha o contexto do seu negócio e o que precisa melhorar.</p></div></li>
+          <li><span>2</span><div><h3>Planejamento</h3><p>Definimos a mensagem, a estrutura e o caminho mais adequado para o seu negócio.</p></div></li>
+          <li><span>3</span><div><h3>Desenvolvimento</h3><p>Transformo o planejamento em uma presença clara, rápida e feita para orientar o contato.</p></div></li>
+          <li><span>4</span><div><h3>Entrega e acompanhamento</h3><p>Entrego tudo organizado e acompanho os próximos passos necessários para a evolução.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section evaluation-section" aria-labelledby="evaluation-title">
+      <div class="container">
+        <p class="eyebrow">Primeira Impressão Digital</p>
+        <h2 id="evaluation-title">Como funciona a avaliação?</h2>
+        <div class="evaluation-steps">
+          <article><span>1</span><h3>Você envia</h3><p>Seu site ou Instagram.</p></article>
+          <i aria-hidden="true">→</i>
+          <article><span>2</span><h3>Eu avalio</h3><p>Clareza, confiança e facilidade de contato.</p></article>
+          <i aria-hidden="true">→</i>
+          <article><span>3</span><h3>Você recebe</h3><p>As três melhorias prioritárias.</p></article>
+          <i aria-hidden="true">→</i>
+          <article><span>4</span><h3>Você decide</h3><p>Sem compromisso e sem pressão comercial.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="analise" aria-labelledby="cta-title">
+      <div class="container final-content">
+        <p class="cta-urgency">Você pode estar perdendo clientes hoje.</p>
+        <h2 id="cta-title">Quer descobrir onde você pode estar perdendo oportunidades?</h2>
+        <p>Envie seu site ou Instagram. Eu avalio como um potencial cliente enxerga seu negócio nos primeiros segundos e mostro três melhorias que podem facilitar o primeiro contato.</p>
+        <a class="button button-primary" href="https://wa.me/51980109047?text=Quero%20minha%20Primeira%20Impress%C3%A3o%20Digital.%0A%0AMeu%20site%20ou%20Instagram%3A%20_____%0AMeu%20neg%C3%B3cio%20%C3%A9%3A%20_____%0A" target="_blank" rel="noopener">Quero minha Primeira Impressão Digital <span aria-hidden="true">→</span></a>
+        <ul class="cta-reassurance" aria-label="Condições da Primeira Impressão Digital"><li>Sem compromisso</li><li>Feedback simples e objetivo</li><li>Apenas os três pontos mais importantes</li></ul>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-profile">
+        <img src="marcos_dev.jpg" alt="Marcos, desenvolvedor web" loading="lazy">
+        <div><strong>Marcos Dev</strong><span>Desenvolvedor Web</span></div>
+      </div>
+      <p class="footer-manifesto">“Meu trabalho não é criar sites.<br>É ajudar empresas a fazerem a primeira conversa acontecer.”</p>
+      <a href="https://wa.me/51980109047" target="_blank" rel="noopener">WhatsApp: (51) 9 8010-9047</a>
+      <small>© 2026 Marcos Dev. Todos os direitos reservados.</small>
     </div>
-
-    <!-- Linha inferior -->
-    <div class="footer__bottom">
-      <p>© <span id="year"></span> MarcosDev — Todos os direitos reservados.</p>
-    </div>
-
-  </div>
-</footer>
-
-
-
-<!-- =========================
-  LIGHTBOX (Modal de imagem)
-========================= -->
-<div class="lightbox" id="lightbox" hidden>
-  <div class="lightbox__overlay"></div>
-
-  <div class="lightbox__content">
-    <button class="lightbox__close" aria-label="Fechar imagem">
-      &times;
-    </button>
-
-    <img src="" alt="Preview ampliado" class="lightbox__image">
-  </div>
-</div>
-
-<!-- =========================
-  MODAL - POLÍTICA DE PRIVACIDADE
-========================= -->
-<div class="modal" id="privacyModal" aria-hidden="true">
-  <div class="modal__overlay" id="closePrivacy"></div>
-
-  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
-    <button class="modal__close" id="closePrivacyBtn" aria-label="Fechar">
-      ×
-    </button>
-
-    <span class="modal__kicker">Informações Legais</span>
-
-    <h2 class="modal__title" id="privacyTitle">
-      Política de Privacidade
-    </h2>
-
-    <div class="modal__content">
-      <p>
-        Este site coleta informações fornecidas voluntariamente pelo usuário,
-        como nome, telefone ou e-mail, quando enviadas por formulário ou WhatsApp.
-      </p>
-
-      <p>
-        Também utilizamos ferramentas como Google Analytics e tags de rastreamento
-        para fins estatísticos e melhoria de campanhas.
-      </p>
-
-      <p>
-        Nenhuma informação é vendida ou compartilhada com terceiros.
-      </p>
-
-      <p>
-        Ao utilizar este site, você concorda com esta política.
-      </p>
-
-      <p>
-        Para dúvidas, entre em contato pelo WhatsApp:
-        <a href="https://wa.me/51980109047" target="_blank" rel="noopener">
-          (51) 9 8010-9047
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
-
-
-<script>
-  /* =========================
-    MENU MOBILE
-  ========================= */
-  const menuBtn = document.querySelector('.menu-btn');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  menuBtn?.addEventListener('click', () => {
-    const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
-    menuBtn.setAttribute('aria-expanded', String(!isOpen));
-    mobileMenu.hidden = isOpen;
-  });
-
-  /* =========================
-    LIGHTBOX (EXEMPLOS)
-  ========================= */
-  const exampleCards = document.querySelectorAll('.example-card');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox?.querySelector('.lightbox__image');
-  const lightboxCloseBtn = lightbox?.querySelector('.lightbox__close');
-  const lightboxOverlay = lightbox?.querySelector('.lightbox__overlay');
-
-  function openLightbox(imgSrc){
-    if(!lightbox || !lightboxImg) return;
-    lightboxImg.src = imgSrc;
-    lightbox.hidden = false;
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox(){
-    if(!lightbox || !lightboxImg) return;
-    lightbox.hidden = true;
-    lightboxImg.src = '';
-    document.body.style.overflow = '';
-  }
-
-  exampleCards.forEach(card => {
-    card.addEventListener('click', () => {
-      const imgSrc = card.getAttribute('data-image');
-      if(imgSrc) openLightbox(imgSrc);
-    });
-  });
-
-  lightboxCloseBtn?.addEventListener('click', closeLightbox);
-  lightboxOverlay?.addEventListener('click', closeLightbox);
-
-  /* =========================
-    MODAL (POLÍTICA)
-  ========================= */
-  const openPrivacy = document.getElementById("openPrivacy");
-  const privacyModal = document.getElementById("privacyModal");
-  const privacyCloseOverlay = document.getElementById("closePrivacy");
-  const privacyCloseBtn = document.getElementById("closePrivacyBtn");
-
-  function openPrivacyModal(){
-    if(!privacyModal) return;
-    privacyModal.classList.add("active");
-    privacyModal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closePrivacyModal(){
-    if(!privacyModal) return;
-    privacyModal.classList.remove("active");
-    privacyModal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
-
-  openPrivacy?.addEventListener("click", (e) => {
-    e.preventDefault();
-    openPrivacyModal();
-  });
-
-  privacyCloseOverlay?.addEventListener("click", closePrivacyModal);
-  privacyCloseBtn?.addEventListener("click", closePrivacyModal);
-
-  /* =========================
-    ESC fecha o que estiver aberto
-  ========================= */
-  document.addEventListener('keydown', (e) => {
-    if(e.key !== 'Escape') return;
-
-    // se o modal estiver aberto, fecha ele
-    if(privacyModal?.classList.contains('active')){
-      closePrivacyModal();
-      return;
-    }
-
-    // se o lightbox estiver aberto, fecha ele
-    if(lightbox && !lightbox.hidden){
-      closeLightbox();
-    }
-  });
-
-  /* =========================
-    ANO
-  ========================= */
-  const yearEl = document.getElementById("year");
-  if(yearEl) yearEl.textContent = new Date().getFullYear();
-</script>
-
+  </footer>
 </body>
 </html>
