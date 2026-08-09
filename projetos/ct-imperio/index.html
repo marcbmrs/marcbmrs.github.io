@@ -1,0 +1,703 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="assets/icons/favicon-ctimperio.png" type="image/png">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>CT IMPÉRIO FITNESS — Academia com equipamentos de elite</title>
+  <meta name="description" content="Transforme seu corpo na CT Império Fitness. Estrutura importada, treinos personalizados e ambiente espartano. Agende uma aula experimental agora." />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="antialiased">
+
+
+  <!-- TOPBAR -->
+  <header class="sticky top-0 z-50 bg-black/85 backdrop-blur border-b border-[#1F1F1F]">
+    <div class="mx-auto container-max px-3 py-2.5 md:px-4 md:py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 md:gap-3">
+        <!-- seu logo sem texto -->
+        <img src="assets/images/logo-ct.jpg" alt="CT Império Fitness" class="w-14 h-14 md:w-10 md:h-10 object-contain">
+        <span class="hidden md:inline font-semibold tracking-tight">CT IMPÉRIO FITNESS</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#sobre" class="hover:text-[var(--yellow)]">Sobre</a>
+        <a href="#planos" class="hover:text-[var(--yellow)]">Planos</a>
+        <a href="#agendamento" class="hover:text-[var(--yellow)]">Agendar</a>
+      </nav>
+      <a href="#agendamento" class="btn-gold px-3 py-2 md:px-4 rounded-md font-semibold text-[11px] leading-none md:text-sm">Aula experimental</a>
+    </div>
+  </header>
+
+  <!-- HERO (vibe espartana + romano) -->
+  <!-- HERO (vibe espartana + romano) -->
+<section id="hero" class="section relative overflow-hidden">
+  <div class="hero-glow absolute inset-0 pointer-events-none opacity-[.08]"></div>
+
+  <div class="mx-auto container-max px-4 py-10 md:py-24 grid md:grid-cols-2 gap-8 md:gap-10 items-center">
+    <div class="space-y-5">
+      <div class="inline-flex items-center gap-2 rounded-full border border-[var(--yellow)]/25 bg-[var(--yellow)]/8 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--yellow)]">
+        CT Império Fitness
+      </div>
+
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+        Atendimento <span class="gold">humanizado</span>. Equipamentos de <span class="gold">última geração</span>.
+      </h1>
+
+      <p class="text-base text-neutral-300 md:hidden">
+        Professores qualificados, estrutura premium e acompanhamento real para você evoluir com segurança.
+      </p>
+
+      <p class="hidden md:block text-lg text-neutral-300">
+        Aqui sua evolução é levada a sério. Com professores qualificados, tecnologia de ponta e acompanhamento real, 
+        você conquista resultados com segurança e motivação. Junte-se à <span class="gold font-semibold">FAMÍLIA CT IMPÉRIO FITNESS</span>.
+      </p>
+
+      <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--yellow)]">Aberta todos os dias</div>
+        <div class="mt-2 grid gap-2 text-sm text-neutral-300 sm:grid-cols-3">
+          <div><strong class="text-white">Seg a Sex:</strong> 06h às 23h</div>
+          <div><strong class="text-white">Sáb:</strong> 09h às 16h</div>
+          <div><strong class="text-white">Dom/Feriados:</strong> 06h às 14h</div>
+        </div>
+      </div>
+
+      <!-- Botões + WellHub -->
+      <div class="flex flex-col sm:flex-row gap-3 pt-1">
+        <a href="#agendamento" class="btn-gold px-6 py-3 rounded-lg font-semibold text-base text-center">
+          Agendar experimental
+        </a>
+        <a href="#planos" class="px-6 py-3 rounded-lg font-semibold text-base text-center border border-[var(--yellow)] hover:bg-white/5">
+          Ver planos
+        </a>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-3 text-sm text-neutral-300">
+        <div class="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-2">
+          <img src="assets/images/wellhub-logo.svg" alt="WellHub aceito" class="h-6 w-auto">
+          <span>Aceitamos Wellhub</span>
+        </div>
+        <div class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-2">+200 alunos</div>
+        <div class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-2">Avaliação física</div>
+        <div class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-2">App de treino</div>
+      </div>
+
+      <div class="hidden md:block text-sm text-neutral-400">
+        ★★★★★ • +200 alunos • Avaliação física • App de treino
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="card aspect-[4/3] w-full overflow-hidden">
+        <img src="assets/images/hero_img.webp" alt="Academia CT Império Fitness com vibe romana" class="w-full h-full object-cover">
+      </div>
+      <div class="absolute inset-x-4 bottom-4 rounded-2xl border border-white/10 bg-black/70 p-3 backdrop-blur md:hidden">
+        <div class="text-xs uppercase tracking-[0.18em] text-[var(--yellow)]">Estrutura de elite</div>
+        <div class="mt-1 text-sm text-neutral-200">Ambiente premium, atendimento próximo e energia de treino de verdade.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA "FININHA" DE MARCAS (loop contínuo com mais espaço) -->
+<section aria-label="Equipamentos importados" class="border-y border-[#1F1F1F] bg-[#FFFFFF]">
+  <div class="mx-auto container-max px-0">
+    <div class="h-14 md:h-16 overflow-hidden flex items-center">
+      <div class="marquee flex items-center animate-brands whitespace-nowrap">
+        <!-- trilha A -->
+        <ul class="flex items-center gap-20 shrink-0">
+          <li><img src="assets/images/life.webp"   alt="Life Fitness"    class="h-9 md:h-10 opacity-90"></li>
+          <li><img src="assets/images/hammer.webp" alt="Hammer Strength" class="h-12 md:h-12 opacity-90"></li>
+          <li><img src="assets/images/techno.webp" alt="Technogym"       class="h-9 md:h-10 opacity-90"></li>
+          <li><img src="assets/images/cybex.webp"  alt="Cybex"           class="h-9 md:h-10 opacity-90"></li>
+          <!-- espaçador extra -->
+          <li class="w-18"></li>
+        </ul>
+        <!-- trilha B -->
+        <ul class="flex items-center gap-20 shrink-0" aria-hidden="true">
+          <li><img src="assets/images/life.webp"   alt="" class="h-9 md:h-10 opacity-90"></li>
+          <li><img src="assets/images/hammer.webp" alt="" class="h-12 md:h-12 opacity-90"></li>
+          <li><img src="assets/images/techno.webp" alt="" class="h-9 md:h-10 opacity-90"></li>
+          <li><img src="assets/images/cybex.webp"  alt="" class="h-9 md:h-10 opacity-90"></li>
+          <!-- espaçador extra -->
+          <li class="w-32"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SOBRE (missão + método, sem repetir o hero) -->
+<section id="sobre" class="section relative mx-auto container-max px-4 py-16">
+  <div aria-hidden="true" class="about-glow pointer-events-none absolute inset-0 opacity-[.06]"></div>
+
+  <div class="relative grid md:grid-cols-2 gap-10 items-start">
+    <!-- Lado A -->
+    <div>
+      <div class="flex items-center gap-3 mb-3">
+        <span class="h-[2px] w-10 bg-[var(--yellow)] inline-block"></span>
+        <span class="uppercase tracking-widest text-xs text-neutral-400">Nossa missão & método</span>
+      </div>
+
+      <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
+        Disciplina e resultado — com acompanhamento de verdade.
+      </h2>
+
+      <p class="mt-4 text-neutral-300 text-base md:text-lg">
+        A CT Império existe para tornar sua jornada fitness <span class="gold font-semibold">acessível e conveniente</span>.
+        Treinos planejados por professores qualificados, acompanhamento próximo e progressões simples de seguir —
+        sem modismos, só o que funciona.
+      </p>
+
+      <ul class="mt-6 grid grid-cols-2 gap-3 text-sm">
+        <li class="card p-4 flex items-center gap-3">
+          <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 7 7h3v8h4V7h3l-5-5ZM4 20h16v2H4z"/></svg>
+          Avaliação física
+        </li>
+        <li class="card p-4 flex items-center gap-3">
+          <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18v12H7l-4 4V5z"/></svg>
+          Plano no app
+        </li>
+        <li class="card p-4 flex items-center gap-3">
+          <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h4l3 8 3-12 2 6h2"/></svg>
+          WellHub (Gympass)
+        </li>
+        <li class="card p-4 flex items-center gap-3">
+          <svg class="w-5 h-5 gold" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18v14H3z"/></svg>
+          Ambiente motivador
+        </li>
+      </ul>
+
+      <div class="mt-6">
+        <a href="#agendamento" class="btn-gold px-5 py-2.5 rounded-md font-semibold inline-flex items-center gap-2">
+          Agendar aula experimental
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13 5l7 7-7 7v-4H4v-6h9V5z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Lado B -->
+    <div class="card p-6 relative overflow-hidden">
+      <div aria-hidden="true" class="absolute -right-10 -top-10 w-48 h-48 rounded-full border border-[var(--yellow)]/20"></div>
+
+      <div class="flex items-center justify-between gap-3">
+        <h3 class="text-xl font-semibold">Equipamentos importados</h3>
+        <span class="text-xs px-2 py-1 rounded-full border border-[var(--yellow)]/60 text-neutral-200 bg-black/30">
+          Performance & Ergonomia
+        </span>
+      </div>
+      <p class="mt-2 text-sm text-neutral-300">
+        Máquinas e acessórios de marcas globais para segurança, ergonomia e resultados consistentes.
+      </p>
+
+      <ul class="mt-4 grid grid-cols-2 gap-2 text-sm text-neutral-300">
+        <li class="flex items-center gap-2"><span class="gold">•</span> Racks olímpicos</li>
+        <li class="flex items-center gap-2"><span class="gold">•</span> Remo indoor</li>
+        <li class="flex items-center gap-2"><span class="gold">•</span> Bikes air</li>
+        <li class="flex items-center gap-2"><span class="gold">•</span> Placas calibradas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA / ESPAÇO CT -->
+<section id="galeria" class="section mx-auto container-max px-4 py-12 md:py-14">
+  <div class="flex items-end justify-between gap-4 mb-5">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold">Nosso espaço</h2>
+      <p class="mt-2 text-sm text-neutral-400 md:hidden">Deslize para ver mais fotos</p>
+    </div>
+    <div class="hidden md:block text-sm text-neutral-500">Clique para ampliar</div>
+  </div>
+
+  <div class="relative">
+    <div class="flex md:grid gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory md:grid-cols-3 scroll-smooth pb-3 -mx-4 px-4 md:mx-0 md:px-0">
+      <button type="button" class="group card snap-center shrink-0 w-[calc(100vw-3.5rem)] sm:w-[70%] md:w-auto overflow-hidden text-left" onclick="abrirLightbox(0)">
+        <img src="assets/images/galeria01.webp" alt="Área de musculação" class="h-52 md:h-56 w-full object-cover transition duration-300 group-hover:scale-[1.02]">
+        <div class="p-3">
+          <div class="text-sm font-semibold text-white">Área de musculação</div>
+          <div class="mt-1 text-xs text-neutral-400">Equipamentos modernos e espaço amplo</div>
+        </div>
+      </button>
+
+      <button type="button" class="group card snap-center shrink-0 w-[calc(100vw-3.5rem)] sm:w-[70%] md:w-auto overflow-hidden text-left" onclick="abrirLightbox(1)">
+        <img src="assets/images/galeria02.webp" alt="Fachada da CT Império" class="h-52 md:h-56 w-full object-cover transition duration-300 group-hover:scale-[1.02]">
+        <div class="p-3">
+          <div class="text-sm font-semibold text-white">Fachada da CT Império</div>
+          <div class="mt-1 text-xs text-neutral-400">Entrada moderna e identidade marcante da academia</div>
+        </div>
+      </button>
+
+      <button type="button" class="group card snap-center shrink-0 w-[calc(100vw-3.5rem)] sm:w-[70%] md:w-auto overflow-hidden text-left" onclick="abrirLightbox(2)">
+        <img src="assets/images/galeria03.webp" alt="Recepção da academia" class="h-52 md:h-56 w-full object-cover transition duration-300 group-hover:scale-[1.02]">
+        <div class="p-3">
+          <div class="text-sm font-semibold text-white">Recepção da academia</div>
+          <div class="mt-1 text-xs text-neutral-400">Um atendimento acolhedor logo na chegada</div>
+        </div>
+      </button>
+
+      <button type="button" class="group card snap-center shrink-0 w-[calc(100vw-3.5rem)] sm:w-[70%] md:w-auto overflow-hidden text-left" onclick="abrirLightbox(3)">
+        <img src="assets/images/galeria04.webp" alt="Equipamentos premium" class="h-52 md:h-56 w-full object-cover transition duration-300 group-hover:scale-[1.02]">
+        <div class="p-3">
+          <div class="text-sm font-semibold text-white">Equipamentos premium</div>
+          <div class="mt-1 text-xs text-neutral-400">Máquinas de alto padrão para treinos intensos</div>
+        </div>
+      </button>
+
+      <button type="button" class="group card snap-center shrink-0 w-[calc(100vw-3.5rem)] sm:w-[70%] md:w-auto overflow-hidden text-left" onclick="abrirLightbox(4)">
+        <img src="assets/images/galeria05.webp" alt="Área de pesos livres" class="h-52 md:h-56 w-full object-cover transition duration-300 group-hover:scale-[1.02]">
+        <div class="p-3">
+          <div class="text-sm font-semibold text-white">Área de pesos livres</div>
+          <div class="mt-1 text-xs text-neutral-400">Halteres e estrutura organizada para seu treino</div>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- VÍDEO LOCAL -->
+<section id="video-tour" class="section mx-auto container-max px-4 py-12 md:py-14">
+  <div class="relative overflow-hidden rounded-[28px] border border-[#1F1F1F] bg-[#0D0D0D] px-4 py-6 md:px-8 md:py-8">
+    <div aria-hidden="true" class="tour-glow pointer-events-none absolute inset-0 opacity-[.10]"></div>
+
+    <div class="relative">
+      <div class="flex justify-center md:justify-start">
+        <span class="rounded-full border border-[var(--yellow)]/35 bg-[var(--yellow)]/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--yellow)]">
+          Experiência real
+        </span>
+      </div>
+
+      <h2 class="mt-4 text-3xl font-extrabold leading-tight text-center md:text-left">Tour pela CT Império</h2>
+      <p class="mx-auto mt-3 max-w-[32rem] text-sm leading-relaxed text-neutral-300 text-center md:mx-0 md:text-left">
+        Veja de perto a estrutura, o clima da academia e os espaços que fazem parte da rotina dos nossos alunos.
+      </p>
+
+      <div class="mt-5 flex flex-wrap justify-center gap-2 md:justify-start">
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-neutral-200">Estrutura moderna</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-neutral-200">Ambiente motivador</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-neutral-200">Equipamentos premium</span>
+      </div>
+
+      <div class="mt-6 grid gap-4 md:grid-cols-[minmax(0,1fr)_220px] md:items-end">
+        <div class="rounded-[22px] border border-white/10 bg-black/60 p-2 shadow-[0_18px_45px_rgba(0,0,0,.35)]">
+          <div class="mb-2 flex items-center justify-between px-2 pt-1 text-xs text-neutral-400">
+            <span class="font-medium text-neutral-200">Tour completo</span>
+            <span>1 min 20 s</span>
+          </div>
+
+          <video
+            class="w-full rounded-2xl bg-black"
+            controls
+            playsinline
+            preload="metadata"
+            poster="assets/images/galeria02.webp"
+            src="assets/media/video.mp4">
+            <source src="assets/media/video.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeo.
+          </video>
+        </div>
+
+        <div class="card p-4 md:p-5">
+          <div class="text-sm font-semibold text-white">O que você vai ver</div>
+          <ul class="mt-3 space-y-2 text-sm text-neutral-300 list-none">
+            <li class="flex items-start gap-2">
+              <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--yellow)]"></span>
+              <span>Entrada e identidade da CT Império</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--yellow)]"></span>
+              <span>Área de treino e equipamentos</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--yellow)]"></span>
+              <span>Ambiente que motiva a voltar</span>
+            </li>
+          </ul>
+          <a href="#agendamento" class="btn-gold mt-5 inline-flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-semibold">
+            Quero conhecer pessoalmente
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section id="planos" class="section mx-auto container-max px-4 py-12 pb-24 md:py-14 md:pb-14">
+  <div class="mb-6 flex items-end justify-between gap-4">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold">Escolha seu plano</h2>
+      <p class="mt-2 text-sm text-neutral-400 md:hidden">Deslize para comparar os planos</p>
+    </div>
+    <div class="hidden md:block text-sm text-neutral-500">Compare benefícios e escolha o ideal</div>
+  </div>
+
+  <div class="flex md:grid gap-3 md:gap-5 overflow-x-auto no-scrollbar snap-x snap-mandatory md:grid-cols-3 scroll-smooth pb-3 -mx-4 px-4 pr-10 md:mx-0 md:px-0 md:pr-0">
+
+    <!-- PLANO BASE -->
+     <div class="card card-neon p-6 snap-start shrink-0 w-[calc(100vw-4.5rem)] sm:w-[70%] md:w-auto min-h-[24rem] flex flex-col">
+      <div class="text-sm gold mb-1 font-semibold uppercase">Plano Base</div>
+      <div class="text-3xl font-extrabold mb-1">R$ <span class="gold">119,90</span></div>
+      <div class="text-xs text-neutral-400 mb-4">Cobrança mensal</div>
+      <ul class="text-sm text-neutral-300 space-y-2 mb-6">
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>Musculação livre</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>App do aluno</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>Troca de treino</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>1ª Avaliação física gratuita</span></li>
+      </ul>
+      <div class="mt-auto pt-4">
+        <a href="#agendamento" class="btn-gold px-4 py-3 rounded-lg font-semibold inline-flex w-full justify-center text-center">Assinar agora</a>
+      </div>
+    </div>
+
+    <!-- PLANO FLEX -->
+    <div class="card card-neon p-6 snap-start shrink-0 w-[calc(100vw-4.5rem)] sm:w-[70%] md:w-auto min-h-[24rem] flex flex-col border border-[var(--yellow)] ring-2 ring-[var(--yellow)] relative">
+      <div class="absolute right-4 top-4 rounded-full bg-[var(--yellow)] px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-black">Mais escolhido</div>
+      <div class="text-sm gold mb-1 font-semibold uppercase">Plano Flex</div>
+      <div class="text-3xl font-extrabold mb-1">6x R$ <span class="gold">104,90</span></div>
+      <div class="text-xs text-neutral-400 mb-1">Semestral</div>
+      <div class="text-3xl font-extrabold mt-4 mb-1">12x R$ <span class="gold">89,90</span></div>
+      <div class="text-xs text-neutral-400 mb-4">Anual</div>
+      <ul class="text-sm text-neutral-300 space-y-2 mb-6">
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>Musculação livre</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>App do aluno</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>Troca de treino</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>1ª Avaliação física gratuita</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>Trancamento de matrícula</span></li>
+      </ul>
+      <div class="mt-auto pt-4">
+        <a href="#agendamento" class="btn-gold px-4 py-3 rounded-lg font-semibold inline-flex w-full justify-center text-center">Assinar agora</a>
+      </div>
+    </div>
+
+    <!-- PLANO PREMIUM -->
+    <div class="card card-neon p-6 snap-start shrink-0 w-[calc(100vw-4.5rem)] sm:w-[70%] md:w-auto min-h-[24rem] flex flex-col">
+      <div class="text-sm gold mb-1 font-semibold uppercase">Plano Premium</div>
+      <div class="text-3xl font-extrabold mb-1">R$ <span class="gold">139,90</span></div>
+      <div class="text-xs text-neutral-400 mb-1">Mensal</div>
+      <div class="text-3xl font-extrabold mt-4 mb-1">6x R$ <span class="gold">124,90</span></div>
+      <div class="text-xs text-neutral-400 mb-1">Semestral</div>
+      <div class="text-3xl font-extrabold mt-4 mb-1">12x R$ <span class="gold">109,90</span></div>
+      <div class="text-xs text-neutral-400 mb-4">Anual</div>
+      <ul class="text-sm text-neutral-300 space-y-2 mb-6">
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>Musculação livre</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>App do aluno</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>Troca de treino</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>2 avaliações físicas gratuitas</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>Trancamento de matrícula</span></li>
+        <li class="flex items-start gap-2"><span class="gold">✔</span><span>Aulas coletivas inclusas</span></li>
+      </ul>
+      <div class="mt-auto pt-4">
+        <a href="#agendamento" class="btn-gold px-4 py-3 rounded-lg font-semibold inline-flex w-full justify-center text-center">Assinar agora</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- RESULTADOS (depoimentos sem foto) -->
+<section id="resultados" class="section mx-auto container-max px-4 py-12 md:py-14">
+  <h2 class="text-2xl md:text-3xl font-bold mb-2 text-center">O que os alunos falam?</h2>
+  <p class="mb-5 text-center text-sm text-neutral-400 md:hidden">Avaliações reais de quem já treina com a gente</p>
+
+  <!-- Avaliação Google -->
+  <div class="mb-6 flex justify-center">
+    <img src="assets/images/avaliacao.webp" alt="Nota 5 estrelas Google da CT Império Fitness" class="h-14 md:h-16" loading="lazy">
+  </div>
+
+  <!-- Depoimentos maiores -->
+  <div class="flex md:grid gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory md:grid-cols-2 md:gap-6 -mx-4 px-4 md:mx-0 md:px-0 pb-2">
+    <figure class="card snap-center shrink-0 w-[calc(100vw-3.5rem)] md:w-auto p-2 overflow-hidden">
+      <img src="assets/images/depo01.webp" alt="Depoimento Google Rafael" class="w-full h-auto rounded-md" loading="eager">
+    </figure>
+    <figure class="card snap-center shrink-0 w-[calc(100vw-3.5rem)] md:w-auto p-2 overflow-hidden">
+      <img src="assets/images/depo02.webp" alt="Depoimento Google Jeferson" class="w-full h-auto rounded-md" loading="eager">
+    </figure>
+    <figure class="card snap-center shrink-0 w-[calc(100vw-3.5rem)] md:w-auto p-2 overflow-hidden">
+      <img src="assets/images/depo03.webp" alt="Depoimento Google Marcos" class="w-full h-auto rounded-md" loading="eager">
+    </figure>
+  </div>
+</section>
+
+  <!-- AGENDAMENTO (1 passo → WhatsApp) -->
+  <section id="agendamento" class="section mx-auto container-max px-4 py-14 md:py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-2">Agende sua aula experimental</h2>
+    <p class="text-sm text-neutral-300 mb-6">Sem compromisso • Resposta rápida</p>
+
+    <form id="formAgendar" class="card p-5 md:p-6 space-y-5">
+      <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--yellow)]">Passo 1</div>
+        <div class="mt-1 text-sm text-neutral-300">Preencha seus dados e envie para falar no WhatsApp.</div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <label class="block">
+          <span class="text-sm">Seu nome</span>
+          <input name="nome" required type="text" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+        </label>
+        <label class="block">
+          <span class="text-sm">WhatsApp</span>
+          <input id="whats" name="whats" required type="tel" placeholder="(11) 99999-9999" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+        </label>
+        <label class="block">
+          <span class="text-sm">Objetivo</span>
+          <select name="objetivo" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+            <option>Emagrecimento</option><option>Ganho de massa</option>
+            <option>Condicionamento</option><option>Saúde/Qualidade de vida</option>
+          </select>
+        </label>
+      </div>
+
+      <details class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+        <summary class="cursor-pointer list-none text-sm font-semibold text-white">
+          Preferências do treino
+          <span class="ml-2 text-xs font-normal text-neutral-400">Opcional</span>
+        </summary>
+
+        <div class="mt-4 grid md:grid-cols-3 gap-4">
+          <label class="block">
+            <span class="text-sm">Modalidade preferida</span>
+            <select name="modalidade" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+              <option>Musculação</option><option>Funcional</option><option>HIIT</option><option>Bike</option>
+            </select>
+          </label>
+          <label class="block">
+            <span class="text-sm">Melhor horário</span>
+            <select name="horario" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+              <option>Manhã</option><option>Tarde</option><option>Noite</option>
+            </select>
+          </label>
+          <label class="block">
+            <span class="text-sm">Dia desejado</span>
+            <input name="dia" type="date" class="mt-1 w-full bg-black border border-[#2A2A2A] rounded-md p-2">
+          </label>
+        </div>
+      </details>
+
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <small class="text-xs text-neutral-400">Ao enviar, abriremos o WhatsApp com seu pedido.</small>
+        <button class="btn-gold w-full sm:w-auto px-5 py-3 rounded-md font-semibold" type="submit">Agendar pelo Whats</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta-final" class="section mx-auto container-max px-4 py-14 md:py-16 text-center">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Bora treinar hoje?</h2>
+    <p class="text-neutral-300 mb-6">Estrutura de império. Foco de espartano.</p>
+    <a href="#agendamento" class="btn-gold px-6 py-3 rounded-lg font-semibold">Agendar agora</a>
+  </section>
+
+  <!-- FOOTER -->
+<footer class="border-t border-[#1F1F1F] text-center text-sm text-neutral-400 py-6 px-4">
+  
+  <!-- Benefício -->
+  <div class="mb-2">
+    ✅ Aceitamos <strong class="text-white">WellHub (Gympass)</strong>
+  </div>
+  
+  <!-- Horários -->
+  <div class="mb-2 leading-relaxed">
+    ⏰ <strong class="text-neutral-200">Aberta todos os dias</strong><br>
+    <span class="block sm:inline"><strong>Seg a Sex:</strong> 06h às 23h</span>
+    <span class="hidden sm:inline">&nbsp;•&nbsp;</span>
+    <span class="block sm:inline"><strong>Sáb:</strong> 09h às 16h</span>
+    <span class="hidden sm:inline">&nbsp;•&nbsp;</span>
+    <span class="block sm:inline"><strong>Dom/Feriados:</strong> 06h às 14h</span>
+  </div>
+
+  <!-- Redes sociais -->
+<div class="mt-3 flex justify-center items-center gap-4">
+  <a href="https://www.instagram.com/ctimperiofitness/" target="_blank" rel="noopener" aria-label="Instagram CT Império">
+    <svg class="w-6 h-6 text-neutral-400 hover:text-[var(--yellow)] transition" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.055 1.96.24 2.415.404a4.84 4.84 0 0 1 1.73 1.13 4.84 4.84 0 0 1 1.13 1.73c.164.455.35 1.245.404 2.415.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.24 1.96-.404 2.415a4.84 4.84 0 0 1-1.13 1.73 4.84 4.84 0 0 1-1.73 1.13c-.455.164-1.245.35-2.415.404-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.96-.24-2.415-.404a4.84 4.84 0 0 1-1.73-1.13 4.84 4.84 0 0 1-1.13-1.73c-.164-.455-.35-1.245-.404-2.415C2.212 15.584 2.2 15.2 2.2 12s.012-3.584.07-4.85c.055-1.17.24-1.96.404-2.415a4.84 4.84 0 0 1 1.13-1.73 4.84 4.84 0 0 1 1.73-1.13c.455-.164 1.245-.35 2.415-.404C8.416 2.212 8.8 2.2 12 2.2Zm0 1.8c-3.136 0-3.504.012-4.736.068-.965.043-1.49.206-1.838.342a3.043 3.043 0 0 0-1.1.717 3.043 3.043 0 0 0-.717 1.1c-.136.348-.299.873-.342 1.838C3.012 8.496 3 8.864 3 12c0 3.136.012 3.504.068 4.736.043.965.206 1.49.342 1.838.187.474.436.863.717 1.1.337.287.726.536 1.1.717.348.136.873.299 1.838.342 1.232.056 1.6.068 4.736.068s3.504-.012 4.736-.068c.965-.043 1.49-.206 1.838-.342a3.043 3.043 0 0 0 1.1-.717 3.043 3.043 0 0 0 .717-1.1c.136-.348.299-.873.342-1.838.056-1.232.068-1.6.068-4.736s-.012-3.504-.068-4.736c-.043-.965-.206-1.49-.342-1.838a3.043 3.043 0 0 0-.717-1.1 3.043 3.043 0 0 0-1.1-.717c-.348-.136-.873-.299-1.838-.342-1.232-.056-1.6-.068-4.736-.068Zm0 3.6a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8Zm0 1.8a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2Zm5.4-.9a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/>
+    </svg>
+  </a>
+</div>
+
+  <!-- Direitos -->
+  <div class="text-xs text-neutral-500 pt-4">
+    © <span id="year"></span> CT Império Fitness. Todos os direitos reservados.
+  </div>
+
+  <div class="mt-5 border-t border-white/10 pt-4 text-xs leading-relaxed text-neutral-500">
+    Desenvolvido por
+    <div class="mt-1 font-semibold">
+      <a href="https://marcbmrs.github.io/" target="_blank" rel="noopener" class="text-neutral-200 hover:text-[var(--yellow)] transition">
+        Marcos Dev
+      </a>
+    </div>
+  </div>
+
+</footer>
+
+  <!-- WHATS FLOAT (opcional mobile) -->
+  <a id="whats-float" href="http://wa.me/555196474166" target="_blank" aria-label="Falar no WhatsApp"
+     class="fixed md:hidden bottom-4 right-4 btn-gold rounded-full w-14 h-14 grid place-items-center transition-all duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.2 11.2 0 0 0-9.72 16.8L1 24l6.89-1.8A11.2 11.2 0 1 0 12 .5Zm6.55 16.05c-.28.8-1.64 1.53-2.26 1.58-.58.05-1.33.07-2.15-.13-.5-.12-1.15-.37-1.99-.77-3.49-1.65-5.75-5.47-5.93-5.73-.18-.26-1.42-1.9-1.42-3.63s.9-2.58 1.22-2.93c.32-.35.7-.44.94-.44h.68c.22 0 .52-.09.81.62.28.68.95 2.35 1.03 2.52.08.17.12.37.02.6-.1.23-.15.37-.3.57-.15.2-.32.45-.46.61-.15.17-.3.36-.13.68.18.32.8 1.32 1.72 2.14 1.18 1.05 2.18 1.38 2.5 1.53.32.14.52.12.72-.07.2-.18.84-.98 1.07-1.32.23-.34.46-.28.77-.17.32.12 2.01.95 2.36 1.12.35.17.58.26.66.41.08.14.08.83-.2 1.63Z"/></svg>
+  </a>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="fecharLightbox(event)" class="fixed inset-0 z-[999] hidden bg-black/95 backdrop-blur-sm px-4 py-6 md:px-6">
+  <div class="mx-auto flex min-h-full w-full max-w-5xl items-center justify-center">
+    <div class="relative w-full" onclick="event.stopPropagation()">
+      <button type="button" onclick="fecharLightbox()" aria-label="Fechar imagem" class="absolute right-0 top-0 z-20 grid h-11 w-11 place-items-center rounded-full border border-white/15 bg-black/70 text-white transition hover:bg-white hover:text-black">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.29 19.7 2.88 18.3 9.17 12 2.88 5.71 4.29 4.29l6.3 6.3 6.29-6.3z"/></svg>
+      </button>
+
+      <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0B0B0B] shadow-2xl">
+        <img id="lightbox-img" src="" class="h-[58vh] w-full object-contain bg-black md:h-[78vh]">
+
+        <button type="button" onclick="mudarLightbox(-1)" aria-label="Imagem anterior" class="absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/15 bg-black/65 p-3 text-white transition hover:bg-white hover:text-black">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="m15.41 7.41-1.41-1.41L8.59 12 14 17.41l1.41-1.41L11.41 12z"/></svg>
+        </button>
+
+        <button type="button" onclick="mudarLightbox(1)" aria-label="Próxima imagem" class="absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full border border-white/15 bg-black/65 p-3 text-white transition hover:bg-white hover:text-black">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="m8.59 16.59 1.41 1.41L15.41 12 10 6.59 8.59 8l4 4z"/></svg>
+        </button>
+      </div>
+
+      <div class="mt-4 flex items-start justify-between gap-4">
+        <div>
+          <div id="lightbox-title" class="text-base font-semibold text-white"></div>
+          <div id="lightbox-desc" class="mt-1 text-sm text-neutral-400"></div>
+          <div class="mt-2 text-xs text-neutral-500 md:hidden">Toque fora da imagem para fechar</div>
+        </div>
+        <div id="lightbox-count" class="shrink-0 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-neutral-300"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    // Número do Whats
+    const WHATS_NUMBER = '555196474166';
+    const whatsLink = (msg='') => `https://wa.me/${WHATS_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+    // Ano
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Float Whats
+    const whatsFloat = document.getElementById('whats-float');
+    whatsFloat.href = whatsLink('Olá! Quero agendar uma aula experimental.');
+
+    const sectionsToAvoid = ['planos', 'agendamento', 'cta-final']
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    if ('IntersectionObserver' in window && sectionsToAvoid.length) {
+      const observer = new IntersectionObserver((entries) => {
+        const shouldHide = entries.some((entry) => entry.isIntersecting);
+        whatsFloat.classList.toggle('opacity-0', shouldHide);
+        whatsFloat.classList.toggle('pointer-events-none', shouldHide);
+        whatsFloat.classList.toggle('translate-y-4', shouldHide);
+      }, { threshold: 0.2 });
+
+      sectionsToAvoid.forEach((section) => observer.observe(section));
+    }
+
+    // Máscara simples para Whats
+    const w = document.getElementById('whats');
+    if(w){
+      w.addEventListener('input', (e)=>{
+        let v = e.target.value.replace(/\D/g,'').slice(0,11);
+        const ddd=v.slice(0,2), a=v.slice(2,7), b=v.slice(7);
+        e.target.value = v.length>6 ? `(${ddd}) ${a}-${b}` : v.length>2 ? `(${ddd}) ${v.slice(2)}` : v;
+      });
+    }
+
+    // Envio do agendamento → Whats
+    const form = document.getElementById('formAgendar');
+    form?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const d = new FormData(form);
+      const resumo = `Aula experimental:
+• Nome: ${d.get('nome')}
+• Whats: ${d.get('whats')}
+• Objetivo: ${d.get('objetivo')}
+• Modalidade: ${d.get('modalidade') || 'Não informado'}
+• Melhor horário: ${d.get('horario') || 'Não informado'}
+• Dia desejado: ${d.get('dia')||'—'}`;
+      window.open(whatsLink(resumo), '_blank');
+    });
+
+    // LIGHTBOX (galeria)
+    const galleryItems = [
+      {
+        src: 'assets/images/galeria01.webp',
+        title: 'Área de musculação',
+        description: 'Equipamentos modernos e espaço amplo'
+      },
+      {
+        src: 'assets/images/galeria02.webp',
+        title: 'Fachada da CT Império',
+        description: 'Entrada moderna e identidade marcante da academia'
+      },
+      {
+        src: 'assets/images/galeria03.webp',
+        title: 'Recepção da academia',
+        description: 'Um atendimento acolhedor logo na chegada'
+      },
+      {
+        src: 'assets/images/galeria04.webp',
+        title: 'Equipamentos premium',
+        description: 'Máquinas de alto padrão para treinos intensos'
+      },
+      {
+        src: 'assets/images/galeria05.webp',
+        title: 'Área de pesos livres',
+        description: 'Halteres e estrutura organizada para seu treino'
+      }
+    ];
+
+    let lightboxIndex = 0;
+
+    function renderLightbox() {
+      const item = galleryItems[lightboxIndex];
+      const img = document.getElementById('lightbox-img');
+      const title = document.getElementById('lightbox-title');
+      const desc = document.getElementById('lightbox-desc');
+      const count = document.getElementById('lightbox-count');
+
+      img.src = item.src;
+      img.alt = item.title;
+      title.textContent = item.title;
+      desc.textContent = item.description;
+      count.textContent = `${lightboxIndex + 1} / ${galleryItems.length}`;
+    }
+
+    function abrirLightbox(index) {
+      const lb = document.getElementById('lightbox');
+      lightboxIndex = index;
+      renderLightbox();
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function mudarLightbox(direction) {
+      lightboxIndex = (lightboxIndex + direction + galleryItems.length) % galleryItems.length;
+      renderLightbox();
+    }
+
+    function fecharLightbox(event) {
+      if (event && event.target !== event.currentTarget) return;
+      const lb = document.getElementById('lightbox');
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (event) => {
+      const lightboxOpen = !document.getElementById('lightbox').classList.contains('hidden');
+      if (!lightboxOpen) return;
+
+      if (event.key === 'Escape') fecharLightbox();
+      if (event.key === 'ArrowLeft') mudarLightbox(-1);
+      if (event.key === 'ArrowRight') mudarLightbox(1);
+    });
+  </script>
+</body>
+</html>
