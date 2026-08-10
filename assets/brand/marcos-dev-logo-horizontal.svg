@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" role="img" aria-labelledby="title desc">
+  <title id="title">Logo candidata da Marcos Dev</title>
+  <desc id="desc">Símbolo abstrato azul-marinho com ponto verde-água ao lado do nome Marcos Dev.</desc>
+  <g transform="translate(18 19)">
+    <path d="M25 93V37c0-5.5 6.7-8.2 10.5-4.3L64 61l28.5-28.3C96.3 28.8 103 31.5 103 37v38c0 2.7-1.1 5.2-3 7.1L74.5 107" fill="none" stroke="#0B1F3A" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="25" cy="98" r="6" fill="#14B8A6"/>
+  </g>
+  <text x="166" y="115" fill="#0B1F3A" font-family="Manrope, Arial, sans-serif" font-size="78" font-weight="600" letter-spacing="-3">Marcos Dev</text>
+</svg>

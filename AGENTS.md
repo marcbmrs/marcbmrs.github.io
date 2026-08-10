@@ -49,6 +49,7 @@ Arquivos e páginas legados ou de demonstração podem coexistir aqui. Não os a
 - Usar nomes descritivos em minúsculas e com hífens também para ativos: `hero-academia.webp`, `logo-cliente.svg`, `depoimento-01.webp`. Não usar espaços, acentos, versões vagas como `final`, `novo` ou `teste`, nem nomes genéricos como `imagem1` quando houver contexto melhor.
 - Para páginas públicas adicionais do site oficial, usar `<rota>/index.html`, como `servicos/index.html` ou `contato/index.html`, para preservar URLs legíveis. Não criar novos arquivos HTML soltos na raiz, exceto `index.html` e arquivos de infraestrutura estritamente necessários.
 - Todo projeto deve conter um `README.md` com finalidade, estado, arquivos principais e URL pública esperada no GitHub Pages.
+- Ao criar um novo projeto em `projetos/<nome-do-projeto>/`, criar também a pasta local correspondente `C:\MarcosDev-Originais\<nome-do-projeto>\images\`. Ela é o local padrão para PNG, JPG, render e demais imagens-fonte, fica fora do repositório público e não deve ser publicada no GitHub. O site recebe apenas as versões derivadas e otimizadas em `projetos/<nome-do-projeto>/assets/images/`.
 - Antes de mover uma página já publicada, confirmar o impacto na URL. Quando a troca for autorizada, atualizar referências internas, README e qualquer link conhecido que aponte para o endereço anterior.
 - A URL pública padrão de um projeto é `https://marcbmrs.github.io/projetos/<nome-do-projeto>/`, enquanto não houver domínio personalizado ou outra configuração de publicação registrada.
 
@@ -82,6 +83,8 @@ Não duplicar o cérebro inteiro neste repositório. Quando uma decisão nova fo
 
 - Começar pelo problema e objetivo da página; não adicionar tecnologia, animação ou seção apenas por aparência.
 - Preservar clareza, rapidez, acessibilidade, responsividade e caminho de contato como prioridades de produto.
+- Antes de incluir foto, fundo, render, print ou outra imagem rasterizada em `assets/images`, avaliar dimensões e peso. Para novos assets de site, usar o otimizador local em `C:\MarcosOS\tools\image-optimizer`, tomando `C:\MarcosDev-Originais\<nome-do-projeto>\images\` como origem e gerando versões AVIF e WebP responsivas para o site. PNG permanece reservado a screenshots que precisem preservar texto fino ou transparência sem alternativa adequada; SVG é preferível para logos e ícones vetoriais. Nunca substituir ou apagar o original automaticamente.
+- Usar `<picture>` com AVIF, WebP e fallback quando a compatibilidade justificar; declarar `width` e `height`; aplicar `loading="lazy"` apenas a imagens fora da primeira tela. A imagem principal visível ao abrir a página não deve ser carregada tardiamente. Conferir a qualidade visual em celular e desktop antes de publicar.
 - Usar a identidade vigente: azul-marinho `#0B1F3A`, azul `#2563EB`, verde-água `#14B8A6`, fundo claro `#F8FAFC`; Manrope para títulos e Inter para apoio, quando disponíveis.
 - A linguagem deve ser natural, direta e didática. Não inventar cases, métricas, clientes, depoimentos, promessas de ranking, vendas ou resultados.
 - Informações de plataformas, políticas, APIs, preços, anúncios ou métricas são atualizáveis: conferir fonte oficial antes de afirmar detalhes ou implementar integração dependente delas.
