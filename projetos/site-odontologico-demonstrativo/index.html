@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projeto demonstrativo da Marcos Dev para um site odontológico claro, acessível e orientado ao primeiro contato.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/main.js" defer></script>
+  <title>Odonto Horizonte — projeto demonstrativo</title>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Odonto Horizonte, início"><span class="brand-mark" aria-hidden="true">O</span><span>Odonto Horizonte</span></a>
+    <nav aria-label="Navegação principal"><a href="#atendimento">Atendimento</a><a href="#como-funciona">Como funciona</a><a href="#contato">Contato</a></nav>
+    <a class="button button-small" href="#contato">Ver contato</a>
+  </header>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+      <div class="hero-copy" data-reveal="left">
+        <p class="eyebrow">Projeto demonstrativo · Marcos Dev</p>
+        <h1 id="titulo-principal">Informação clara para deixar o primeiro contato mais simples.</h1>
+        <p class="lead">Uma estrutura de site para apresentar atendimento odontológico, responder dúvidas iniciais e mostrar com clareza como a pessoa pode entrar em contato.</p>
+        <div class="hero-actions"><a class="button" href="#como-funciona">Entender o atendimento</a><a class="text-link" href="#atendimento">Ver estrutura do site <span aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="hero-panel" data-reveal="right" aria-label="Exemplo visual de uma página odontológica organizada">
+        <div class="panel-top"><span class="status-dot" aria-hidden="true"></span><span>Informações antes da primeira consulta</span></div>
+        <div class="panel-content"><div class="tooth-shape" aria-hidden="true"></div><p class="panel-label">Comece por aqui</p><h2>O que você precisa saber antes de marcar.</h2><ul><li>Como funciona o primeiro contato</li><li>Modalidades e informações do atendimento</li><li>Onde encontrar o consultório</li></ul></div>
+      </div>
+    </section>
+    <section class="notice" aria-label="Aviso sobre o projeto"><p><strong>Esta é uma demonstração de estrutura.</strong> Não representa uma clínica, profissional ou serviço odontológico real e não coleta dados de pacientes.</p></section>
+    <section class="section" id="atendimento" aria-labelledby="atendimento-titulo">
+      <div class="section-heading" data-reveal><p class="eyebrow">Antes do design</p><h2 id="atendimento-titulo">O site precisa responder ao que costuma gerar dúvida.</h2><p>Em vez de começar por efeitos visuais, esta estrutura organiza informações que ajudam a pessoa a entender se faz sentido seguir para uma conversa.</p></div>
+      <div class="cards">
+        <article class="card" data-reveal><span class="card-number">01</span><h3>Entender o atendimento</h3><p>Uma apresentação simples das áreas, do tipo de cuidado oferecido e de para quem aquele atendimento pode fazer sentido.</p></article>
+        <article class="card" data-reveal><span class="card-number">02</span><h3>Conhecer o profissional</h3><p>Espaço para nome, CRO, formação e abordagem profissional reais — sempre confirmados antes da publicação.</p></article>
+        <article class="card" data-reveal><span class="card-number">03</span><h3>Saber o próximo passo</h3><p>Contato, localização, horários e orientação de agendamento visíveis sem obrigar a pessoa a procurar a informação.</p></article>
+      </div>
+    </section>
+    <section class="section split-section" id="como-funciona" aria-labelledby="processo-titulo">
+      <div data-reveal><p class="eyebrow">Caminho de contato</p><h2 id="processo-titulo">O que a pessoa encontra, em ordem.</h2><p>O objetivo não é substituir conversa profissional. É diminuir a incerteza antes dela.</p></div>
+      <ol class="steps" data-draw>
+        <li><span>1</span><div><h3>Conhece o serviço</h3><p>Entende o que é apresentado e identifica se precisa buscar mais informações.</p></div></li>
+        <li><span>2</span><div><h3>Confere informações essenciais</h3><p>Visualiza dados profissionais, localização e como o atendimento é organizado.</p></div></li>
+        <li><span>3</span><div><h3>Escolhe entrar em contato</h3><p>Encontra um canal direto para tirar dúvidas iniciais ou solicitar agendamento.</p></div></li>
+      </ol>
+    </section>
+    <section class="section professional" aria-labelledby="profissional-titulo">
+      <div class="profile-placeholder" data-reveal="left" aria-hidden="true"><span>Foto<br>profissional</span></div>
+      <div data-reveal="right"><p class="eyebrow">Apresentação com confiança</p><h2 id="profissional-titulo">O espaço que, em um projeto real, apresentaria quem atende.</h2><p>Em uma clínica ou consultório real, esta área reuniria informações confirmadas pelo profissional: nome, registro, formação, áreas de atuação, localização e formas de contato.</p><p class="muted">Sem depoimentos inventados, promessas de tratamento ou resultados que não possam ser comprovados.</p></div>
+    </section>
+    <section class="contact" id="contato" aria-labelledby="contato-titulo">
+      <div data-reveal="left"><p class="eyebrow">Contato organizado</p><h2 id="contato-titulo">O próximo passo precisa estar à vista.</h2><p>Em uma versão real, este bloco receberia os canais e horários confirmados pelo consultório.</p></div>
+      <div class="contact-card" data-reveal="right"><p class="contact-label">Exemplo de canais</p><ul><li><strong>WhatsApp:</strong> informado pelo profissional</li><li><strong>Localização:</strong> confirmada antes da publicação</li><li><strong>Horários:</strong> confirmados antes da publicação</li></ul><a class="button button-disabled" href="#contato" aria-disabled="true">Agendamento ilustrativo</a></div>
+    </section>
+  </main>
+  <footer><p>Projeto demonstrativo criado pela <a href="https://marcbmrs.github.io/">Marcos Dev</a>.</p><p>Sem atendimento, agendamento ou coleta de dados nesta página.</p></footer>
+</body>
+</html>
