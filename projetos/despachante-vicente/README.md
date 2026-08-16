@@ -20,6 +20,7 @@ Após publicar o GitHub Pages, o endereço previsto é:
 - `styles/main.css` e `scripts/main.js`: estilos e comportamento específicos.
 - `assets/images/`: ativos visuais usados pelo projeto.
 - `transferencia-veicular/index.html`: landing de campanha para assessoria privada de transferência veicular; deve ser usada somente após a rota de política do Google Ads ser confirmada.
+- `gestao-de-frotas/index.html`: landing B2B para gestão operacional de frotas. A página não promove obtenção, renovação ou pagamento de documentos e serviços oficiais; qualquer campanha deve passar por revisão de política antes da ativação.
 - `robots.txt` e `sitemap.xml`: arquivos de descoberta a subir na raiz pública do domínio próprio da Hostinger.
 
 A pasta anterior `despachante_vincente` foi renomeada e movida para esta rota por decisão do titular em 2026-08-09.
