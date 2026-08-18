@@ -64,6 +64,8 @@ Referências prioritárias:
 - `C:\MarcosOS\30 - Negócios\Marcos Dev\Onboarding de Domínio e Hospedagem Hostinger.md`
 - `C:\MarcosOS\40 - GPTs\Marcos Dev — Diretor de Conteúdo para Instagram\` quando a tarefa envolver conteúdo de Instagram.
 
+Quando o titular acionar `Post Mega Power` ou `Story Mega Power`, consultar primeiro `Configuração.md` e `Conhecimento\09 - Produção via ChatGPT Images e Referências.md` nesse pacote do MarcosOS. Esses comandos significam produção completa e revisável de conteúdo: estratégia e direção aprovadas → artes geradas e revisadas → pacote local com legenda e briefing → uma única aprovação final do titular. As artes devem ficar em `C:\MarcosDev-Originais\conteudos\`, fora deste repositório público. Não publicar no Instagram, acessar contas ou tratar a revisão interna como aprovação final.
+
 Para decisões técnicas, consultar o módulo pertinente em vez de trabalhar apenas por preferência pessoal:
 
 | Necessidade | Fonte no MarcosOS |
