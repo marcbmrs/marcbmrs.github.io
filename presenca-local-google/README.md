@@ -13,6 +13,7 @@ Página pública para reunir as informações iniciais de uma empresa que deseja
 - `index.html`: estrutura, conteúdo e metadados.
 - `styles/main.css`: layout responsivo e componentes do formulário.
 - `scripts/main.js`: validação e mensagem estruturada para WhatsApp.
+- `../assets/images/presenca-local-google-compartilhamento.png`: imagem exibida no compartilhamento do link.
 
 ## Estado
 
