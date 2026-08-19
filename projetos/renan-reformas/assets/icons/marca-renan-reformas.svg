@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Renan Reformas</title>
+  <desc id="desc">Monograma estrutural com dois erres e uma coluna central</desc>
+  <rect width="128" height="128" rx="22" fill="#151515"/>
+  <path fill="#f4b51b" d="M18 18h92v14H18zm16 78h60v14H34zM59 38h10v12H59zm0 17h10v12H59zm0 17h10v18H59z"/>
+  <path fill="#fff" d="M20 40h31l9 9v13l-9 9H40l20 22H42L27 76v17H14V40h6zm7 12v10h20V52H27zm50-12h31l9 9v13l-9 9H97l20 22H99L84 76v17H71V40h6zm7 12v10h20V52H84z"/>
+</svg>
