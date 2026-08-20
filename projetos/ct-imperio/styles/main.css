@@ -23,6 +23,13 @@ body{
 }
 .section{scroll-margin-top:84px}
 .container-max{max-width:1200px}
+.hero-layout{grid-template-columns:minmax(0,1fr)}
+@media (min-width:768px){
+  .hero-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto 1fr;align-items:center}
+  .hero-intro{grid-column:1;grid-row:1}
+  .hero-actions{grid-column:1;grid-row:2;align-self:start}
+  .hero-media{grid-column:2;grid-row:1 / span 2}
+}
 .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
 .no-scrollbar::-webkit-scrollbar{display:none}
 
