@@ -113,7 +113,47 @@
           </fieldset>
 
           <fieldset>
-            <legend><span>04</span> O que já existe</legend>
+            <legend><span>04</span> Como acontece o atendimento</legend>
+            <label>Como você atende seus clientes? <b>*</b></label>
+            <div class="check-options check-options-single" data-attendance-options>
+              <label><input type="radio" name="Modelo de atendimento" value="Presencial em endereço físico" required> Presencial em endereço físico</label>
+              <label><input type="radio" name="Modelo de atendimento" value="Online"> Online</label>
+              <label><input type="radio" name="Modelo de atendimento" value="Presencial e online"> Presencial e online</label>
+              <label><input type="radio" name="Modelo de atendimento" value="Vou até o cliente"> Vou até o cliente</label>
+            </div>
+            <div class="field-grid">
+              <label>Telefone profissional que pode aparecer no site <input name="Telefone público" type="tel" autocomplete="tel" placeholder="Com DDD"><span class="field-help">Use o número que realmente receberá os contatos.</span></label>
+              <label>E-mail que pode aparecer no site <input name="E-mail público" type="email" autocomplete="email"><span class="field-help">Pode ser diferente do e-mail usado para alinhar o projeto.</span></label>
+              <label>Horários de atendimento <input name="Horários de atendimento" placeholder="Ex.: segunda a sexta, 10h às 19h"></label>
+              <label>Atendimento somente com hora marcada? <select name="Atendimento com hora marcada"><option value="">Selecione</option><option>Sim</option><option>Não</option><option>Em alguns horários</option></select></label>
+            </div>
+            <label>Endereço que pode aparecer no site <textarea name="Endereço público" rows="2" placeholder="Rua, número, sala/complemento, bairro, cidade e CEP."></textarea><span class="field-help">Preencha apenas se o endereço puder ficar visível para clientes.</span></label>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>05</span> Informações profissionais, se aplicável</legend>
+            <label>O negócio atua em uma profissão regulamentada? <span class="field-help">Ex.: psicologia, saúde, advocacia ou contabilidade.</span></label>
+            <div class="check-options check-options-single" data-regulated-choice>
+              <label><input type="radio" name="Profissão regulamentada" value="Sim"> Sim</label>
+              <label><input type="radio" name="Profissão regulamentada" value="Não"> Não</label>
+            </div>
+            <div data-regulated-details hidden>
+              <p class="conditional-note">Esses dados nos ajudam a representar o serviço corretamente. Não envie documentos, dados de pacientes ou outras informações sensíveis.</p>
+              <div class="field-grid">
+                <label>Profissão ou área <input name="Profissão ou área" placeholder="Ex.: Psicologia"></label>
+                <label>Nome profissional que deve aparecer <input name="Nome profissional público" placeholder="Ex.: Daniela Rodrigues Dorneles"></label>
+                <label>Registro profissional <input name="Registro profissional" placeholder="Ex.: CRP 07/34812"></label>
+                <label>Atuação <select name="Atuação profissional"><option value="">Selecione</option><option>Profissional individual</option><option>Clínica ou empresa com CNPJ</option><option>Outra composição</option></select></label>
+                <label>Atendimento online <select name="Atendimento online"><option value="">Selecione</option><option>Não atende online</option><option>Atende online e está apta/o a isso</option><option>Atende online, mas preciso confirmar</option></select></label>
+              </div>
+              <label>Há algum serviço que ainda não é oferecido ou que não deve aparecer publicamente? <textarea name="Serviços não divulgados" rows="2" placeholder="Ex.: atendimento psiquiátrico ainda não é oferecido."></textarea></label>
+              <label>Há alguma orientação de comunicação ou regra profissional que devemos respeitar? <textarea name="Observações profissionais" rows="2" placeholder="Ex.: não usar promessas de resultado; confirmar descrição antes de publicar."></textarea></label>
+              <p class="conditional-note">Para fotos, envie apenas imagens do ambiente, da profissional ou da equipe que tenham autorização de uso. Não envie imagens ou informações que identifiquem pacientes.</p>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>06</span> O que já existe</legend>
             <label>Informe links que já representam seu negócio (Instagram, Google, site atual, catálogo, WhatsApp Business ou outros). <textarea name="Links atuais" rows="4" placeholder="Cole aqui os links, um por linha."></textarea><span class="field-help">Um link por linha facilita a análise.</span></label>
             <label>Você já tem logo, fotos, textos, portfólio ou identidade visual? Conte o que está disponível e o que ainda precisa ser criado. <textarea name="Materiais disponíveis" rows="4"></textarea><span class="field-help">Ex.: tenho logo e fotos de 5 projetos; ainda preciso organizar os textos.</span></label>
             <p class="attachment-note"><span aria-hidden="true">📎</span> Depois de enviar este briefing, você poderá anexar fotos, logo, catálogo ou outros arquivos diretamente na mesma conversa do WhatsApp.</p>
@@ -121,11 +161,12 @@
           </fieldset>
 
           <fieldset>
-            <legend><span>05</span> Momento do projeto</legend>
+            <legend><span>07</span> Momento do projeto</legend>
             <div class="field-grid">
               <label>Já possui domínio? <select name="Domínio"><option value="">Selecione</option><option>Sim, já tenho</option><option>Não, preciso registrar</option><option>Não sei</option></select><span class="field-help">Ex.: suaempresa.com.br. Se não souber, tudo bem.</span></label>
               <label>Existe alguma data importante ou prazo desejado? <input name="Prazo desejado" placeholder="Ex.: antes de uma campanha em outubro"><span class="field-help">Ajuda a organizar o projeto; não representa uma confirmação de prazo.</span></label>
             </div>
+            <label>Quem deve aprovar textos, serviços, telefone, horário e a publicação do site? <input name="Responsável pelas aprovações" placeholder="Nome e função da pessoa responsável"><span class="field-help">Assim evitamos publicar uma informação importante sem a confirmação certa.</span></label>
             <label>Há alguma informação importante que não perguntamos? <textarea name="Observações finais" rows="4"></textarea><span class="field-help">Ex.: parceiros envolvidos, limitações do projeto ou uma preocupação específica.</span></label>
           </fieldset>
 

@@ -1,0 +1,1 @@
+.field-intro,.field-hint,.regulated-note{display:block;margin:8px 0 0;color:var(--muted);font-size:12px;font-weight:500}.field-intro{margin-top:15px}.field-hint{margin-top:9px}.regulated-note{padding:12px 14px;border-radius:11px;background:#f3fffd;color:#355c61}.options-inline{grid-template-columns:repeat(2,minmax(0,1fr))}
