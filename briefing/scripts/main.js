@@ -5,6 +5,18 @@
   const checkboxError = document.querySelector("[data-checkbox-error]");
   const status = document.querySelector("[data-form-status]");
   const whatsapp = "51980109047";
+  const regulatedDetails = document.querySelector("[data-regulated-details]");
+  const regulatedChoices = form.querySelectorAll('input[name="Profissão regulamentada"]');
+
+  function updateRegulatedFields() {
+    const selected = form.querySelector('input[name="Profissão regulamentada"]:checked');
+    const enabled = selected && selected.value === "Sim";
+    regulatedDetails.hidden = !enabled;
+    regulatedDetails.querySelectorAll("input, select, textarea").forEach((field) => { field.disabled = !enabled; });
+  }
+
+  regulatedChoices.forEach((choice) => choice.addEventListener("change", updateRegulatedFields));
+  updateRegulatedFields();
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -24,33 +36,23 @@
     }
 
     const answers = new FormData(form);
-    const lines = ["Olá, Marcos! Preenchi o briefing para criação de site.", "", "*DADOS DE CONTATO*"];
-    const sections = {
-      "Nome": "Nome",
-      "Empresa": "Empresa",
-      "WhatsApp": "WhatsApp",
-      "E-mail": "E-mail",
-      "O que a empresa faz": "SOBRE O NEGÓCIO",
-      "Região de atendimento": null,
-      "Tempo de negócio": null,
-      "Público que deseja atrair": null,
-      "Diferenciais": null,
-      "Objetivo principal do site": "OBJETIVO DO SITE",
-      "Páginas e informações desejadas": null,
-      "Links atuais": "PRESENÇA ATUAL E MATERIAIS",
-      "Materiais disponíveis": null,
-      "Referências": null,
-      "Domínio": "MOMENTO DO PROJETO",
-      "Prazo desejado": null,
-      "Observações finais": null
-    };
+    const lines = ["Olá, Marcos! Preenchi o briefing para criação de site."];
+    const sections = [
+      ["DADOS DE CONTATO", ["Nome", "Empresa", "WhatsApp", "E-mail"]],
+      ["SOBRE O NEGÓCIO", ["O que a empresa faz", "Região de atendimento", "Tempo de negócio", "Público que deseja atrair", "Diferenciais"]],
+      ["OBJETIVO DO SITE", ["Objetivo principal do site", "Páginas e informações desejadas"]],
+      ["ATENDIMENTO", ["Modelo de atendimento", "Telefone público", "E-mail público", "Horários de atendimento", "Atendimento com hora marcada", "Endereço público"]],
+      ["INFORMAÇÕES PROFISSIONAIS", ["Profissão regulamentada", "Profissão ou área", "Nome profissional público", "Registro profissional", "Atuação profissional", "Atendimento online", "Serviços não divulgados", "Observações profissionais"]],
+      ["PRESENÇA ATUAL E MATERIAIS", ["Links atuais", "Materiais disponíveis", "Referências"]],
+      ["MOMENTO DO PROJETO", ["Domínio", "Prazo desejado", "Responsável pelas aprovações", "Observações finais"]]
+    ];
 
-    for (const [name, heading] of Object.entries(sections)) {
-      const value = String(answers.get(name) || "").trim();
-      if (!value) continue;
-      if (heading && name !== "Nome" && name !== "Empresa" && name !== "WhatsApp" && name !== "E-mail") lines.push("", `*${heading}*`);
-      lines.push(`${name}: ${value}`);
-    }
+    sections.forEach(([heading, fields]) => {
+      const filled = fields.map((name) => [name, String(answers.get(name) || "").trim()]).filter(([, value]) => value);
+      if (!filled.length) return;
+      lines.push("", `*${heading}*`);
+      filled.forEach(([name, value]) => lines.push(`${name}: ${value}`));
+    });
     lines.push("", "Necessidades: " + checkedNeeds.map((item) => item.value).join(", "));
     lines.push("", "Fico à disposição para complementar alguma informação.");
 
