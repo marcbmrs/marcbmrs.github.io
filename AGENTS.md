@@ -91,6 +91,7 @@ Não duplicar o cérebro inteiro neste repositório. Quando uma decisão nova fo
 - A linguagem deve ser natural, direta e didática. Não inventar cases, métricas, clientes, depoimentos, promessas de ranking, vendas ou resultados.
 - Informações de plataformas, políticas, APIs, preços, anúncios ou métricas são atualizáveis: conferir fonte oficial antes de afirmar detalhes ou implementar integração dependente delas.
 - Não armazenar credenciais, tokens, chaves privadas, dados pessoais desnecessários ou segredos no repositório.
+- Em links `https://wa.me/`, usar sempre o número no formato internacional E.164, somente com dígitos: código do país + DDD + número (por exemplo, `5551980109047`). Nunca omitir o código do país, nem incluir `+`, espaços, parênteses ou hífens na URL.
 - Não publicar, enviar para GitHub, alterar DNS, hospedagem ou serviços externos sem pedido explícito do titular.
 
 ## Qualidade antes de entrega

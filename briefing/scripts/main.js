@@ -4,7 +4,8 @@
 
   const checkboxError = document.querySelector("[data-checkbox-error]");
   const status = document.querySelector("[data-form-status]");
-  const whatsapp = "51980109047";
+  // Número para links wa.me: país + DDD + número, apenas dígitos (E.164).
+  const whatsapp = "5551980109047";
   const regulatedDetails = document.querySelector("[data-regulated-details]");
   const regulatedChoices = form.querySelectorAll('input[name="Profissão regulamentada"]');
 
