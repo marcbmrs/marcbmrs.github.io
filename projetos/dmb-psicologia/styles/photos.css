@@ -1,6 +1,6 @@
 .hero-card{padding:0;overflow:hidden;border-radius:170px 170px 20px 20px;background:var(--sage)}
 .hero-card picture,.hero-card img{display:block;width:100%}
-.hero-card img{height:auto;aspect-ratio:auto;object-fit:contain;object-position:center}
+.hero-card img{height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 18%}
 .hero-card figcaption{position:absolute;right:15px;bottom:15px;left:15px;display:grid;gap:1px;padding:14px 16px;background:rgba(25,49,46,.88);color:#fffdf8}
 .hero-card figcaption span{font:600 20px/1.1 "Playfair Display",serif}
 .hero-card figcaption small{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}

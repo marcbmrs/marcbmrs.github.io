@@ -12,9 +12,9 @@
   --white:#fffdf7;
 }
 
-.site-header{border-bottom-color:rgba(6,61,43,.12)}
+.site-header{position:relative;border-bottom-color:rgba(6,61,43,.12)}
 .brand{gap:12px}
-.brand-logo{display:block;flex:0 0 52px;width:52px}
+.brand-logo{display:block;flex:0 0 72px;width:72px}
 .brand-logo img{display:block;width:100%;height:auto;transform-origin:center;transition:transform .45s cubic-bezier(.2,.75,.25,1)}
 .brand:hover .brand-logo img{transform:translateY(-2px) rotate(-2deg) scale(1.035)}
 .brand-copy strong{color:var(--ink-deep);letter-spacing:.08em}
@@ -81,19 +81,26 @@
 
 @media (max-width:719px){
   .brand{gap:9px}
-  .brand-logo{flex-basis:45px;width:45px}
+  .brand-logo{flex-basis:64px;width:64px}
   .brand-copy strong{font-size:13px}
   .brand-copy small{font-size:7px}
   .brand-story{padding:70px 0}
   .brand-story-image{min-height:440px}
-  .hero-card picture{background:var(--white)}
-  .hero-card img{width:100%;height:auto;transform:none!important}
+  .hero{padding:54px 0 66px}
+  .hero-card{width:min(100%,370px);margin:14px auto 0}
+  .hero-card picture{background:var(--sage)}
+  .hero-card img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 16%;transform:none!important}
+  .pathway-grid h3{margin:30px 0 10px}
+  .service-card{min-height:0;padding:24px}
+  .service-card h3{margin:30px 0 14px}
   .site-nav{display:grid;opacity:0;visibility:hidden;transform:translateY(-8px) scale(.985);transform-origin:top right;pointer-events:none;transition:opacity .2s ease,transform .25s cubic-bezier(.2,.72,.2,1),visibility 0s linear .25s}
   .site-nav.is-open{opacity:1;visibility:visible;transform:none;pointer-events:auto;transition-delay:0s}
 }
 
 @media (min-width:720px){
   .brand-story-grid{grid-template-columns:minmax(300px,.85fr) minmax(0,1fr);gap:8vw}
+  .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(360px,.72fr);gap:clamp(44px,6vw,86px)}
+  .hero-card{max-width:460px}
 }
 
 @media (prefers-reduced-motion:reduce){

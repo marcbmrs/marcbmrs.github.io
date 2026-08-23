@@ -22,7 +22,8 @@
 ## Arquivos de marca disponíveis
 
 - `C:\MarcosDev-Originais\dmb-psicologia\images\dmb-logo-alta-definicao.png`: proposta de logo completa, com fundo transparente. A versão contém a indicação "Sofisticada"; confirmar com a cliente se essa palavra faz parte da marca antes de usá-la no site.
-- `C:\MarcosDev-Originais\dmb-psicologia\images\dmb.png`: monograma DMB com elemento floral e fundo transparente.
+- `C:\MarcosDev-Originais\dmb-psicologia\images\dmb.png`: referência do monograma DMB com elemento floral; o quadriculado está incorporado ao arquivo e não representa transparência real.
+- `C:\MarcosDev-Originais\dmb-psicologia\images\dmb-monograma-transparente.png`: versão web do monograma com fundo realmente transparente e recorte otimizado.
 
 ## Observações de uso
 
