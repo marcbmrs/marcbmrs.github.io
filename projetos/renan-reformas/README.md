@@ -11,6 +11,7 @@ Versão publicada para revisão do proprietário. Horários, condições comerci
 - `index.html`: página principal.
 - `styles/main.css`: identidade visual e responsividade.
 - `scripts/main.js`: navegação e pedido de orçamento pelo WhatsApp.
+- `painel/`: módulo PHP em desenvolvimento para propostas e PDFs personalizados.
 - `politica-de-privacidade/index.html`: aviso de privacidade do formulário.
 - `sitemap.xml`: URLs do projeto para descoberta pelos mecanismos de busca.
 - `robots.txt`: regra pronta para reaproveitar caso o projeto use domínio próprio.

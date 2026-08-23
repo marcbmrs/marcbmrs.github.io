@@ -1,0 +1,2 @@
+# Configuração local de banco: pode conter senha e nunca deve ir ao Git.
+app/config.local.php
