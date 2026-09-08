@@ -55,7 +55,19 @@ Arquivos e páginas legados ou de demonstração podem coexistir aqui. Não os a
 
 ## Conexão com o MarcosOS
 
-Antes de tomar decisões de negócio, conteúdo, posicionamento, identidade visual, oferta ou processo, consultar o MarcosOS em `C:\MarcosOS`. O MarcosOS é a fonte de contexto e decisões registradas; este repositório é a fonte de implementação técnica e dos ativos publicados.
+Antes de tomar decisões relevantes de produto, marketing, UX, copy, identidade visual, conteúdo, estratégia, presença digital, oferta, comunicação com clientes ou melhoria do projeto, consultar primeiro a KORA local em `.kora/`. Enquanto existir e estiver acessível, o MarcosOS em `C:\MarcosOS` pode ser usado como fonte legada/transitória para migração ou conferência, mas não deve ser tratado como dependência operacional permanente da Marcos Dev.
+
+Se a sessão não conseguir ler `C:\MarcosOS`, prosseguir com a KORA local e informar apenas quando a limitação afetar a tarefa. Não copiar conhecimento global do MarcosOS para este repositório sem necessidade; migrar somente contexto, procedimentos e decisões específicos da Marcos Dev, com adaptação ao caso.
+
+Fontes centrais do MarcosOS:
+
+- `C:\MarcosOS\README.md`
+- `C:\MarcosOS\AGENTS.md`
+- `C:\MarcosOS\CORE.md`
+- `C:\MarcosOS\GOVERNANCE.md`
+- `C:\MarcosOS\KNOWLEDGE_MODEL.md`
+- `C:\MarcosOS\PROCESS_CATALOG.md`
+- `C:\MarcosOS\Uso do MarcosOS em Outros Repositorios.md`
 
 Referências prioritárias:
 
@@ -79,7 +91,18 @@ Para decisões técnicas, consultar o módulo pertinente em vez de trabalhar ape
 
 Ler apenas os documentos diretamente relevantes para a tarefa. Para uma landing page, por exemplo, combinar estratégia de site, conversão, performance e a oferta da Marcos Dev; para uma alteração visual, consultar identidade e UX antes de mudar componentes.
 
-Não duplicar o cérebro inteiro neste repositório. Quando uma decisão nova for durável e relevante para a Marcos Dev, registrar primeiro ou também no local adequado do MarcosOS.
+Ao aplicar o MarcosOS neste repositório, distinguir claramente:
+
+- regra local deste projeto;
+- conhecimento global reutilizável;
+- contexto de negócio da Marcos Dev ou de cliente;
+- hipótese de trabalho;
+- recomendação técnica ou estratégica;
+- decisão aprovada pelo titular.
+
+Não duplicar o cérebro inteiro neste repositório. Registrar aqui apenas decisões, adaptações, evidências e documentação específicas deste projeto. Como MarcosOS será descontinuado, novas decisões duráveis da Marcos Dev devem ser registradas prioritariamente na KORA local.
+
+Não alterar o MarcosOS a partir deste repositório sem pedido explícito do titular.
 
 ## Regras de implementação
 
@@ -101,3 +124,62 @@ Em alterações de páginas da Marcos Dev, verificar conforme aplicável: links 
 ## Escopo e versionamento
 
 Antes de editar, identificar exatamente quais arquivos pertencem à tarefa. Em uma árvore com alterações de terceiros ou de outros sites, nunca incluir arquivos fora do escopo em commit ou publicação.
+## KORA
+
+Este repositório está conectado à KORA em `C:\KORA` e usa uma camada local em `.kora/`.
+
+Nível ativo: KORA nível 7.
+
+### KORA instalada neste repositório
+
+Quando este repositório estiver aberto, trate a Marcos Dev como um projeto operacional conectado à KORA. O usuário não precisa mencionar KORA em todo pedido.
+
+Use este fluxo padrão:
+
+```text
+1. Leia `.kora/binding.md`.
+2. Leia este `AGENTS.md` para regras locais.
+3. Selecione apenas o contexto local necessário em `.kora/context/`.
+4. Use capacidades locais quando a tarefa depender da Marcos Dev, clientes, site, conteúdo, publicação, anúncios ou deploy.
+5. Use a KORA Core em `C:\KORA` quando precisar de métodos reutilizáveis.
+6. Mantenha detalhes do projeto dentro deste repositório.
+7. Promova padrões reutilizáveis para a KORA Core somente depois de revisão.
+```
+
+Capacidades Core úteis para uso instalado:
+
+- `C:\KORA\skills\use-installed-kora.md`
+- `C:\KORA\skills\check-installed-kora.md`
+- `C:\KORA\skills\route-user-request.md`
+- `C:\KORA\skills\check-approval-needed.md`
+- `C:\KORA\skills\detect-capability-gap.md`
+- `C:\KORA\projects\PROJECT-FLOW.md`
+
+Ao tomar decisões relevantes sobre estrutura do repositório, site oficial, páginas de cliente, ofertas, conteúdo, UX, publicação, qualidade web ou recorrência de trabalho, consultar a KORA local antes de concluir a resposta:
+
+- `.kora/binding.md`
+- `.kora/context/overview.md`
+- `.kora/context/stack.md`
+- `.kora/context/social-content-strategy.md`
+- `.kora/context/brand-and-content-identity.md`
+- `.kora/agents/`
+- `.kora/skills/`
+- `.kora/evals/`
+- `.kora/memory/`
+- `.kora/experiments/`
+- `.kora/decisions/`
+
+Regra prática da KORA: agent = papel com julgamento, skill = procedimento repetível, tool = execução, eval = critério de qualidade, automation = recorrência sem supervisão.
+
+Capacidades locais ativas:
+
+- agentes: `brand-site-guardian`, `offer-content-strategist`, `web-quality-reviewer`, `instagram-content-analyst`, `google-ads-performance-analyst`;
+- skills: `review-landing-page-change`, `review-offer-and-positioning`, `review-content-publication`, `review-client-project-page`, `review-publish-readiness`, `collect-instagram-post-intelligence`, `migrate-marcos-dev-capability-to-kora`, `plan-instagram-content-from-strategy`, `collect-google-ads-campaign-intelligence`;
+- evals: `brand-positioning-fit`, `landing-page-quality`, `contact-conversion`, `site-accessibility-performance`, `repository-boundary-safety`, `instagram-content-quality`;
+- tools: `instagram-connector` como referência local para o conector somente leitura; a implementação atual usa o runtime privado em `C:\KORA\runtime\tools\instagram-connector\` e segredos em `C:\KORA\.env`.
+
+Usar essas capacidades de forma proporcional à tarefa. Para uma edição simples e local, basta aplicar a skill/eval relevante mentalmente e citar o que foi verificado. Para mudanças maiores, explicitar a capacidade usada, arquivos consultados, riscos e validações.
+
+Persistência operacional de nível 7 está ativa: quando uma decisão, resultado de eval, experimento, lacuna de capacidade ou aprendizado for durável e útil para trabalhos futuros da Marcos Dev, registrar de forma objetiva na `.kora/` local. Não persistir rascunhos, transcrições cruas, dados pessoais desnecessários, segredos, hipóteses fracas ou conhecimento genérico que pertença ao MarcosOS/KORA Core.
+
+Automações continuam inativas por padrão. Não implementar, agendar, publicar, acionar integrações externas ou criar recorrência sem pedido explícito do titular para a automação específica.

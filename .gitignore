@@ -1,0 +1,15 @@
+# Arquivos locais com credenciais ou configurações privadas.
+**/.env
+**/.env.*
+!**/.env.example
+.env_renanreformas
+**/config.local.php
+
+# Pacotes locais de instalação.
+projetos/dmb-psicologia/blog-wordpress/*.zip
+
+# Artefatos locais de trabalho.
+.codex-remote-attachments/
+output/
+tmp/
+

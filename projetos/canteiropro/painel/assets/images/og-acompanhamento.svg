@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="CanteiroPro — Acompanhamento da obra">
+  <rect width="1200" height="630" fill="#F7F5F0"/>
+  <path d="M705 0h495v630H535c28-104 79-190 170-260 80-61 169-104 283-132 83-21 154-60 212-117Z" fill="#ECE8DE"/>
+  <path d="M667 551c86-142 210-234 405-290M731 630c84-119 203-191 390-238M840 0c-21 139 38 225 195 278" fill="none" stroke="#D9D2C2" stroke-width="2"/>
+  <g transform="translate(72 66) scale(1.55)">
+    <path fill="#C18400" d="M8 18 58 8v38l-12 3V24L20 30v30L8 64Z"/>
+    <text x="72" y="35" fill="#151515" font-family="Arial,sans-serif" font-size="24" font-weight="800" letter-spacing="1">CANTEIRO</text>
+    <text x="73" y="56" fill="#C18400" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3">PRO</text>
+  </g>
+  <g transform="translate(72 274)">
+    <text x="0" y="0" fill="#9B6900" font-family="Arial,sans-serif" font-size="19" font-weight="800" letter-spacing="2.2">ÁREA PRIVADA</text>
+    <text x="0" y="70" fill="#151515" font-family="Arial,sans-serif" font-size="62" font-weight="800" letter-spacing="-2">Acompanhamento</text>
+    <text x="0" y="140" fill="#151515" font-family="Arial,sans-serif" font-size="62" font-weight="800" letter-spacing="-2">da obra</text>
+    <text x="0" y="197" fill="#5F5B54" font-family="Arial,sans-serif" font-size="25">Atualizações, fotos e próximos passos</text>
+  </g>
+  <g transform="translate(780 197)">
+    <rect x="0" y="0" width="280" height="282" rx="28" fill="#151515"/>
+    <rect x="27" y="31" width="226" height="45" rx="16" fill="#F4D78E"/>
+    <rect x="27" y="99" width="181" height="16" rx="8" fill="#FFFFFF" opacity=".95"/>
+    <rect x="27" y="129" width="135" height="12" rx="6" fill="#CBC5BA"/>
+    <rect x="27" y="171" width="226" height="75" rx="17" fill="#282828"/>
+    <circle cx="55" cy="208" r="14" fill="#C18400"/>
+    <path d="m48 208 5 5 10-12" fill="none" stroke="#151515" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="84" y="194" width="130" height="12" rx="6" fill="#FFFFFF"/>
+    <rect x="84" y="217" width="93" height="10" rx="5" fill="#CBC5BA"/>
+  </g>
+  <rect x="72" y="560" width="398" height="3" fill="#C18400"/>
+</svg>

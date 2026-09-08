@@ -1,0 +1,6 @@
+@media (max-width:719px){
+  .steps span{
+    flex:0 0 35px;
+    aspect-ratio:1;
+  }
+}

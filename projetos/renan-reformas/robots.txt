@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://marcbmrs.github.io/projetos/renan-reformas/sitemap.xml
+Sitemap: https://renanreformas.com.br/sitemap.xml

@@ -20,4 +20,6 @@ Em desenvolvimento e em revisão da cliente. As fotos profissionais e o monogram
 
 ## URL pública esperada
 
-`https://marcbmrs.github.io/projetos/dmb-psicologia/`
+Prévia atual: `https://marcbmrs.github.io/projetos/dmb-psicologia/`
+
+URL de produção planejada: `https://dmbpsicologia.com.br/`

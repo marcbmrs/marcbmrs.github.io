@@ -1,0 +1,4 @@
+<?php get_header(); ?>
+<section class="dmb-hero"><div class="dmb-container"><p class="dmb-eyebrow">CONTEÚDOS PARA REFLETIR</p><h1>Um espaço para compreender, elaborar e transformar.</h1><p class="dmb-hero__lead">Textos sobre psicologia, relações, desenvolvimento e os movimentos que fazem parte da experiência humana.</p></div></section>
+<section class="dmb-posts"><div class="dmb-container"><div class="dmb-section-heading"><div><p class="dmb-eyebrow">PUBLICAÇÕES RECENTES</p><h2>Leituras para o seu tempo.</h2></div></div><div class="dmb-post-grid"><?php if ( have_posts() ) : while ( have_posts() ) : the_post(); get_template_part( 'template-parts/post', 'card' ); endwhile; else : ?><p class="dmb-empty">Os primeiros conteúdos da DMB serão publicados em breve.</p><?php endif; ?></div><?php the_posts_pagination( array( 'mid_size' => 1, 'prev_text' => '← Anterior', 'next_text' => 'Próximo →' ) ); ?></div></section>
+<?php get_footer(); ?>

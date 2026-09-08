@@ -1,0 +1,3 @@
+<?php get_header(); ?>
+<article class="dmb-single"><div class="dmb-container"><?php while ( have_posts() ) : the_post(); ?><header class="dmb-single__header"><p class="dmb-eyebrow"><?php echo wp_kses_post( get_the_category_list( ' · ' ) ?: 'DMB PSICOLOGIA' ); ?></p><h1><?php the_title(); ?></h1><p class="dmb-single__meta">Publicado em <?php echo esc_html( get_the_date( 'd \d\e F \d\e Y' ) ); ?></p></header><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'large', array( 'class' => 'dmb-single__cover' ) ); } ?><div class="dmb-entry"><?php the_content(); ?></div><aside class="dmb-disclaimer">Este conteúdo é informativo e não substitui acompanhamento psicológico ou atendimento de urgência e emergência.</aside><?php endwhile; ?></div></article>
+<?php get_footer(); ?>

@@ -1,0 +1,33 @@
+.footer-links a[href*="instagram.com"]{
+  display:inline-flex;
+  width:max-content;
+  min-width:32px;
+  min-height:32px;
+  align-items:center;
+  justify-content:center;
+  justify-self:end;
+  border:0;
+  font-size:0;
+  transition:color .2s ease;
+}
+
+.footer-links a[href*="instagram.com"]::before{
+  display:block;
+  width:16px;
+  height:16px;
+  background:currentColor;
+  content:"";
+  mask:url("../assets/icons/instagram.svg") center/contain no-repeat;
+  -webkit-mask:url("../assets/icons/instagram.svg") center/contain no-repeat;
+}
+
+.footer-links a[href*="instagram.com"]:hover{
+  color:var(--terracotta);
+  text-decoration:none;
+}
+
+@media (max-width:719px){
+  .footer-links a[href*="instagram.com"]{justify-self:start}
+}
+
+.site-credit a{color:var(--ink);font-weight:700;text-decoration:none}.site-credit a:hover{color:var(--terracotta);text-decoration:underline;text-underline-offset:4px}
