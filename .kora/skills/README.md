@@ -14,6 +14,7 @@ Level 6 skills active under KORA level 7:
 - `migrate-marcos-dev-capability-to-kora.md`
 - `plan-instagram-content-from-strategy.md`
 - `collect-google-ads-campaign-intelligence.md`
+- `create-despachante-vicente-google-ads-weekly-report.md`
 - `deploy-project-to-hostinger.md`
 - `inspect-renan-panel-in-browser.md`
 - `prepare-renan-local-change.md`

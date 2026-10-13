@@ -74,6 +74,8 @@ return [
         ['nome' => 'Fechamento de rasgos de elétrica', 'unidade' => 'metro', 'valor_centavos' => 3000],
         ['nome' => 'Fechamento de rasgos hidráulicos', 'unidade' => 'metro', 'valor_centavos' => 4000],
         ['nome' => 'Pequenos reparos de alvenaria', 'unidade' => 'a confirmar', 'valor_centavos' => 4000],
+        ['nome' => 'Forro', 'unidade' => 'm²', 'valor_centavos' => 5000],
+        ['nome' => 'Pintura', 'unidade' => 'm²', 'valor_centavos' => 5000],
         ['nome' => 'Telhado', 'unidade' => 'a confirmar', 'valor_centavos' => 3500],
         ['nome' => 'Solda simples', 'unidade' => 'serviço', 'valor_minimo_centavos' => 8000, 'valor_maximo_centavos' => 15000],
         ['nome' => 'Solda média', 'unidade' => 'serviço', 'valor_minimo_centavos' => 15000, 'valor_maximo_centavos' => 30000],

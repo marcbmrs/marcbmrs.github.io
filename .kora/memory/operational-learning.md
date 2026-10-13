@@ -15,6 +15,24 @@ Follow-up:
 
 ## Records
 
+### 2026-09-11 - Renan Reformas: serviços de forro e pintura no catálogo
+
+Date: 2026-09-11
+Scope: renan-reformas-service-catalog
+Source/Evidence: Solicitação direta do titular para adicionar os serviços ao catálogo do painel.
+Learning: Forro e pintura devem estar disponíveis nos fluxos de criação e edição de orçamento como itens por metro quadrado.
+Decision or Recommendation: Manter `Forro` e `Pintura` em `painel/app/catalogo-inicial.php`, ambos com valor de tabela de R$ 50,00/m² (5.000 centavos). `Forro` deve ter filtro próprio no painel; `Pintura` permanece em `Acabamento`.
+Follow-up: Qualquer mudança futura de preço deve alterar somente o catálogo central e preservar os valores já gravados em orçamentos existentes.
+
+### 2026-09-11 - Renan Reformas: catálogo de forro e pintura publicado
+
+Date: 2026-09-11
+Scope: renan-reformas-production-deploy
+Source/Evidence: Com aprovação explícita de Marcos, o upload por arquivo para `renanreformas.com.br` retornou `204` para `index.html`, `painel/app/catalogo-inicial.php`, `painel/index.php` e `painel/editar.php`; a limpeza de cache foi aceita pelo provedor. A página pública retornou `200` com as novas referências a Forro e Pintura; o painel protegido retornou sua tela de login sem erro.
+Learning: O catálogo e os filtros do painel podem receber atualizações pequenas por upload direcionado, sem publicar outros arquivos ou substituir o site inteiro.
+Decision or Recommendation: Para alterações futuras de categoria ou preço, publicar o catálogo e as duas telas do painel que renderizam os filtros, além do site público somente quando a oferta visível também mudar.
+Follow-up: Em uma sessão autenticada, confirmar visualmente o filtro `Forro` ao montar e editar um orçamento.
+
 ### 2026-09-05 - Instagram read connector available for Marcos Dev
 
 Date: 2026-09-05
@@ -70,3 +88,57 @@ Source/Evidence: Marcos approved publishing all local Renan panel UX changes. PH
 Learning: The Renan panel can receive broader UX updates safely through explicit file-level upload of the touched PHP/CSS/JS files, while avoiding database, DNS, credential, and full-site overwrite risk.
 Decision or Recommendation: For future broad panel publishes, prepare a named file manifest, lint PHP/JS first, upload only the approved manifest, clear cache, then verify public CSS/script assets plus protected page status.
 Follow-up: When production login is available in-browser, add a post-deploy visual smoke test for logged-in dashboard, orçamento, contratos, obras, atualizar obra, and cliente private page.
+
+### 2026-09-19 - Despachante Vicente weekly Google Ads reporting standard
+
+Date: 2026-09-19
+Scope: despachante-vicente-google-ads-reporting
+Source/Evidence: Marcos requested a durable KORA workflow after the Gamma workspace confirmed reports for 24/08–30/08 and 31/08–06/09. The latter is the preferred current visual and structural reference.
+Learning: A generic Gamma generation cannot reliably preserve the established client-report layout. The report workflow needs a private reference registry, read-only metric collection, and a specific visual/factual evaluation.
+Decision or Recommendation: Use `create-despachante-vicente-google-ads-weekly-report`, the Google Ads read-only capability, and `despachante-vicente-google-ads-report-quality` for future report requests. Keep Gamma URLs and report history private in `C:\KORA\private\marcos-dev\despachante-vicente-google-ads-reporting.md`.
+Follow-up: The preferred reference was converted into the private Gamma template `Modelo — Relatório Semanal de Tráfego Pago | Despachante Vicente` on 2026-09-19. Use its private registry ID for future reports and keep the template unchanged.
+
+### 2026-09-19 - Despachante Vicente: publicação do relatório depende de recuperar o mapeamento Hostinger
+
+Date: 2026-09-19
+Scope: despachante-vicente-report-panel-production
+Source/Evidence: Não há mapeamento deste cliente em `.kora/context/hostinger-production-map.md` ou no registro privado de relatórios. As consultas somente-leitura `hosting_listWebsitesV1` para o domínio e para a conta não responderam; a checagem do runtime local também não encontrou o pacote/binário nem uma configuração de token operacional.
+Learning: O relatório do Gamma está pronto, mas a URL pública do site não identifica por si só a rota autenticada do painel nem o mecanismo correto para criar uma entrada de relatório.
+Decision or Recommendation: Não fazer upload ou alteração em produção até a conexão Hostinger recuperar a leitura e confirmar domínio, usuário, rota do painel e o arquivo/mecanismo exato. Depois de uma publicação verificada, registrar este mapeamento sem credenciais em `hostinger-production-map.md` e manter detalhes sensíveis apenas na KORA privada.
+Follow-up: Concluído no mesmo dia: a autenticação OAuth foi restaurada, o painel foi mapeado e a publicação focada do PDF foi verificada.
+
+### 2026-09-19 - Despachante Vicente: primeiro relatório semanal publicado no painel
+
+Date: 2026-09-19
+Scope: despachante-vicente-report-panel-production
+Source/Evidence: Após autorização explícita de Marcos, o MCP Hostinger confirmou `despachantevicente.com.br` como site ativo e o painel em `/painel/`. O upload direcionado do PDF de 07/09/2026–13/09/2026 concluiu com sucesso. A pasta protegida passou a conter três relatórios e a tela de login do painel retornou `200` normalmente.
+Learning: O painel lê automaticamente PDFs na pasta protegida de relatórios; a rotina não requer alterações em PHP, banco de dados ou páginas públicas.
+Decision or Recommendation: Para cada relatório semanal aprovado no Gamma, exportar e validar o PDF, enviar somente o arquivo com o padrão de nome registrado no mapa de produção e confirmar a presença do arquivo mais a disponibilidade do login do painel.
+Follow-up: Na próxima publicação, reutilizar este mapeamento e registrar apenas a nova data/período no registro privado de relatórios.
+
+### 2026-09-30 - Despachante Vicente: campanha de Google Ads retomada dentro do saldo autorizado
+
+Date: 2026-09-30
+Scope: despachante-vicente-google-ads-campaign-operations
+Source/Evidence: Marcos autorizou explicitamente a retomada usando os fundos já disponíveis. A leitura inicial mostrou a campanha habilitada, mas encerrada por data, com o teto cumulativo anterior praticamente consumido. A estrutura B2B existente (palavras-chave, negativas, anúncios, URL de destino e limite de CPC) foi revisada sem necessidade de alteração. A mutação atômica foi validada e aplicada; a leitura posterior retornou campanha e orçamento habilitados, com status primário `ELIGIBLE`.
+Learning: Em campanhas com orçamento total, `ENABLED` não basta para retomar a entrega quando o status primário é `ENDED`: é necessário estender a data de término e elevar o teto cumulativo dentro da autorização. Validar a mutação antes da aplicação evita reativação parcial.
+Decision or Recommendation: Manter a segmentação B2B atual e o orçamento diário já configurado. Para esta retomada, registrar somente a operação e o estado verificável; valores, identificadores e credenciais permanecem fora do repositório público.
+Follow-up: Acompanhar a primeira janela de sete dias de entrega, termos de pesquisa e contatos atribuíveis ao WhatsApp antes de propor uma nova mudança estrutural ou de orçamento.
+
+### 2026-10-13 - Despachante Vicente: relatório da primeira semana após a retomada publicado
+
+Date: 2026-10-13
+Scope: despachante-vicente-report-panel-production
+Source/Evidence: Com autorização explícita de Marcos, o relatório de 30/09/2026 a 06/10/2026 foi criado a partir do template oficial do Gamma, reconciliado com a leitura somente leitura do Google Ads, revisado visualmente em todas as páginas e enviado como PDF isolado ao armazenamento protegido do painel. A listagem remota confirmou o arquivo e o login do painel respondeu normalmente.
+Learning: Quando a semana de comparação não tem atividade por campanha encerrada, o relatório deve apresentar a semana atual como retomada, sem calcular variações percentuais contra zero. A publicação rotineira continua exigindo somente o PDF validado, sem mudanças no código ou banco do painel.
+Decision or Recommendation: Manter o template Gamma registrado, o padrão de nome do PDF e a verificação conjunta de arquivo remoto e disponibilidade do login após cada publicação.
+Follow-up: Executar separadamente a melhoria aprovada da campanha, começando pela revisão de termos e negativas, e medir mais sete dias antes de nova decisão de orçamento ou lances.
+
+### 2026-10-13 - Despachante Vicente: intenção de busca limpa e mensuração corrigida
+
+Date: 2026-10-13
+Scope: despachante-vicente-google-ads-optimization
+Source/Evidence: Após autorização explícita de Marcos, uma mutação previamente validada adicionou negativas em nível de campanha para buscas navegacionais, plataformas concorrentes, login, rastreamento e intenção informacional observadas no relatório de termos. A conferência da mensuração também encontrou divergência entre o rótulo da conversão habilitada no Google Ads e o código publicado; somente esse rótulo foi corrigido por upload direcionado da landing page e verificado em produção.
+Learning: A campanha pode estar tecnicamente ativa e ainda desperdiçar verba por expansão de correspondência de frase. Além disso, uma ação de conversão habilitada não prova que o rótulo publicado corresponde à ação; comparar o snippet retornado pela API com o HTML de produção é uma verificação necessária.
+Decision or Recommendation: Preservar orçamento, estratégia, limite de CPC, anúncios e palavras positivas durante a próxima janela. Avaliar termos, conversões técnicas e qualidade dos contatos após sete dias completos antes de outra mudança.
+Follow-up: Reexecutar a leitura somente após sete dias completos; não usar um clique real de teste no WhatsApp durante a janela para evitar contaminar os dados.

@@ -174,8 +174,8 @@ Regra prática da KORA: agent = papel com julgamento, skill = procedimento repet
 Capacidades locais ativas:
 
 - agentes: `brand-site-guardian`, `offer-content-strategist`, `web-quality-reviewer`, `instagram-content-analyst`, `google-ads-performance-analyst`;
-- skills: `review-landing-page-change`, `review-offer-and-positioning`, `review-content-publication`, `review-client-project-page`, `review-publish-readiness`, `collect-instagram-post-intelligence`, `migrate-marcos-dev-capability-to-kora`, `plan-instagram-content-from-strategy`, `collect-google-ads-campaign-intelligence`;
-- evals: `brand-positioning-fit`, `landing-page-quality`, `contact-conversion`, `site-accessibility-performance`, `repository-boundary-safety`, `instagram-content-quality`;
+- skills: `review-landing-page-change`, `review-offer-and-positioning`, `review-content-publication`, `review-client-project-page`, `review-publish-readiness`, `collect-instagram-post-intelligence`, `migrate-marcos-dev-capability-to-kora`, `plan-instagram-content-from-strategy`, `collect-google-ads-campaign-intelligence`, `create-despachante-vicente-google-ads-weekly-report`;
+- evals: `brand-positioning-fit`, `landing-page-quality`, `contact-conversion`, `site-accessibility-performance`, `repository-boundary-safety`, `instagram-content-quality`, `despachante-vicente-google-ads-report-quality`;
 - tools: `instagram-connector` como referência local para o conector somente leitura; a implementação atual usa o runtime privado em `C:\KORA\runtime\tools\instagram-connector\` e segredos em `C:\KORA\.env`.
 
 Usar essas capacidades de forma proporcional à tarefa. Para uma edição simples e local, basta aplicar a skill/eval relevante mentalmente e citar o que foi verificado. Para mudanças maiores, explicitar a capacidade usada, arquivos consultados, riscos e validações.

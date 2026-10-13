@@ -23,10 +23,11 @@ function grupoServico(string $nome): string
 {
     $texto = mb_strtolower($nome, 'UTF-8');
     if (str_contains($texto, 'solda')) return 'solda';
+    if (str_contains($texto, 'forro')) return 'forro';
     if (str_contains($texto, 'piso') || str_contains($texto, 'porcelanato') || str_contains($texto, 'azulejo') || str_contains($texto, 'revestimento') || str_contains($texto, 'rejuntamento') || str_contains($texto, 'rodapé') || str_contains($texto, 'soleira') || str_contains($texto, 'peitoril')) return 'pisos';
     if (str_contains($texto, 'chapisco') || str_contains($texto, 'emboço') || str_contains($texto, 'reboco')) return 'reboco';
     if (str_contains($texto, 'demolição') || str_contains($texto, 'retirada') || str_contains($texto, 'abertura')) return 'demolicao';
-    if (str_contains($texto, 'porta') || str_contains($texto, 'marco') || str_contains($texto, 'churrasqueira') || str_contains($texto, 'forno') || str_contains($texto, 'bancada') || str_contains($texto, 'nicho') || str_contains($texto, 'rasgos') || str_contains($texto, 'reparos') || str_contains($texto, 'telhado') || str_contains($texto, 'oitão') || str_contains($texto, 'impermeabilização')) return 'acabamento';
+    if (str_contains($texto, 'porta') || str_contains($texto, 'marco') || str_contains($texto, 'churrasqueira') || str_contains($texto, 'forno') || str_contains($texto, 'bancada') || str_contains($texto, 'nicho') || str_contains($texto, 'rasgos') || str_contains($texto, 'reparos') || str_contains($texto, 'forro') || str_contains($texto, 'pintura') || str_contains($texto, 'telhado') || str_contains($texto, 'oitão') || str_contains($texto, 'impermeabilização')) return 'acabamento';
     return 'base';
 }
 function valorExibicao(array $item): string
@@ -92,6 +93,7 @@ function valorExibicao(array $item): string
         <button class="service-filter is-active" type="button" data-service-filter="todos">Todos</button>
         <button class="service-filter" type="button" data-service-filter="base">Base</button>
         <button class="service-filter" type="button" data-service-filter="reboco">Reboco</button>
+        <button class="service-filter" type="button" data-service-filter="forro">Forro</button>
         <button class="service-filter" type="button" data-service-filter="pisos">Pisos</button>
         <button class="service-filter" type="button" data-service-filter="demolicao">Demolição</button>
         <button class="service-filter" type="button" data-service-filter="acabamento">Acabamento</button>

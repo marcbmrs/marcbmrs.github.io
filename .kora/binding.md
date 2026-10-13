@@ -78,6 +78,7 @@ Level 7 operational persistence is active as of 2026-09-05 by explicit request f
 - `.kora/skills/migrate-marcos-dev-capability-to-kora.md`
 - `.kora/skills/plan-instagram-content-from-strategy.md`
 - `.kora/skills/collect-google-ads-campaign-intelligence.md`
+- `.kora/skills/create-despachante-vicente-google-ads-weekly-report.md`
 - `.kora/skills/deploy-project-to-hostinger.md`
 - `.kora/skills/review-internal-panel-app-experience.md`
 - `.kora/skills/inspect-renan-panel-in-browser.md`
@@ -103,6 +104,7 @@ Level 7 operational persistence is active as of 2026-09-05 by explicit request f
 - `.kora/evals/repository-boundary-safety.md`
 - `.kora/evals/instagram-content-quality.md`
 - `.kora/evals/google-ads-proposal-quality.md`
+- `.kora/evals/despachante-vicente-google-ads-report-quality.md`
 - `.kora/evals/hostinger-deploy-safety.md`
 - `.kora/evals/internal-panel-native-app-quality.md`
 - `.kora/evals/renan-browser-ux-inspection-quality.md`
