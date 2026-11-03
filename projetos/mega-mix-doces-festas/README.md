@@ -38,6 +38,7 @@ Falta confirmar com a loja antes de publicar:
 - `styles/main.css`: identidade baseada na fachada e layout mobile-first.
 - `scripts/main.js`: selo de aberto/fechado no fuso de São Paulo, destaque do dia e montagem da mensagem do WhatsApp por motivo de compra.
 - `assets/icons/favicon.svg`: ícone provisório com as cores da placa.
+- `assets/images/megamix-compartilhamento.jpg`: imagem de 1200 × 630 que aparece ao compartilhar o link no WhatsApp e em outras redes. A fonte editável (`compartilhamento-megamix.html`) e o PNG renderizado ficam em `C:\MarcosDev-Originais\mega-mix-doces-festas\images\`.
 - `tests/main.test.js`: testes da lógica de horário e da mensagem (`node --test tests/main.test.js`).
 
 ## URL pública esperada
