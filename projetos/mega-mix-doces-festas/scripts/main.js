@@ -3,6 +3,7 @@
 
   var WHATSAPP = '5551995481422';
   var TIME_ZONE = 'America/Sao_Paulo';
+  var STORAGE_KEY = 'megamix-lista';
 
   // Horários em minutos desde 00:00. Índice = dia da semana (0 = domingo).
   var HOURS = [
@@ -17,27 +18,39 @@
 
   var DAY_NAMES = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
 
-  // Abertura da mensagem e exemplo do campo de detalhes para cada motivo de compra.
-  var INTENTS = {
-    festa: {
-      opening: 'Olá, Megamix! Vim pelo site. Gostaria de consultar estes itens para uma festa:',
-      placeholder: 'Ex.: tema, data e para quantas pessoas'
-    },
-    producao: {
-      opening: 'Olá, Megamix! Vim pelo site. Gostaria de consultar estes itens para a minha produção de doces:',
-      placeholder: 'Ex.: caixas para 12 brigadeiros, forminhas nº 4'
-    },
-    revenda: {
-      opening: 'Olá, Megamix! Vim pelo site. Gostaria de consultar estes itens para revenda:',
-      placeholder: 'Ex.: produto, marca e quantidade'
-    },
-    produto: {
-      opening: 'Olá, Megamix! Vim pelo site e queria saber se vocês têm:',
-      placeholder: 'Ex.: o nome do produto que você procura'
-    }
-  };
-  var DEFAULT_OPENING = 'Olá, Megamix! Vim pelo site e queria saber se vocês têm:';
-  var DEFAULT_PLACEHOLDER = 'Ex.: balas sortidas, copos para aniversário, caixas para brigadeiro';
+  // Vitrines. Categorias vêm da placa da fachada; os itens são tipos de produto, sem marca nem preço.
+  var SHELVES = [
+    { id: 'doces', title: 'Doces e guloseimas' },
+    { id: 'festa', title: 'Para sua festa' },
+    { id: 'embalagens', title: 'Embalagens e descartáveis' },
+    { id: 'escola', title: 'Material escolar' },
+    { id: 'mercado', title: 'Alimentos em geral' }
+  ];
+
+  var PRODUCTS = [
+    { id: 'balas', shelf: 'doces', name: 'Balas sortidas', tag: 'Pacote e a granel', icon: 'bala', tint: 't-pink', words: 'bala balinha goma jujuba' },
+    { id: 'pirulitos', shelf: 'doces', name: 'Pirulitos', tag: 'Sabores variados', icon: 'pirulito', tint: 't-yellow', words: 'pirulito' },
+    { id: 'chicletes', shelf: 'doces', name: 'Chicletes', tag: 'Caixinha e pacote', icon: 'chiclete', tint: 't-mint', words: 'chiclete goma de mascar' },
+    { id: 'chocolates', shelf: 'doces', name: 'Chocolates', tag: 'Barras e tabletes', icon: 'chocolate', tint: 't-orange', words: 'chocolate barra' },
+    { id: 'bombons', shelf: 'doces', name: 'Bombons', tag: 'Unidade e caixa', icon: 'bombom', tint: 't-lilac', words: 'bombom' },
+    { id: 'salgadinhos', shelf: 'doces', name: 'Salgadinhos', tag: 'Para lanche e festa', icon: 'salgadinho', tint: 't-yellow', words: 'salgadinho chips snack' },
+    { id: 'baloes', shelf: 'festa', name: 'Balões', tag: 'Para decorar', icon: 'balao', tint: 't-pink', words: 'balao bexiga' },
+    { id: 'velas', shelf: 'festa', name: 'Velas de aniversário', tag: 'Para o bolo', icon: 'vela', tint: 't-mint', words: 'vela numero aniversario bolo' },
+    { id: 'decoracao', shelf: 'festa', name: 'Decoração de festa', tag: 'Mesa e ambiente', icon: 'bandeirinha', tint: 't-lilac', words: 'decoracao enfeite bandeirinha festa' },
+    { id: 'saquinhos', shelf: 'festa', name: 'Saquinhos surpresa', tag: 'Para lembrancinhas', icon: 'saquinho', tint: 't-pink', words: 'saquinho sacola lembrancinha surpresa' },
+    { id: 'caixas', shelf: 'embalagens', name: 'Caixas para doces', tag: 'Embalagens', icon: 'caixa', tint: 't-orange', words: 'caixa embalagem brigadeiro forminha' },
+    { id: 'copos', shelf: 'embalagens', name: 'Copos descartáveis', tag: 'Descartáveis', icon: 'copo', tint: 't-sky', words: 'copo descartavel' },
+    { id: 'pratos', shelf: 'embalagens', name: 'Pratos e talheres', tag: 'Descartáveis', icon: 'prato', tint: 't-yellow', words: 'prato talher garfo colher faca descartavel' },
+    { id: 'cadernos', shelf: 'escola', name: 'Cadernos', tag: 'Material escolar', icon: 'caderno', tint: 't-sky', words: 'caderno escola' },
+    { id: 'lapis', shelf: 'escola', name: 'Lápis e canetas', tag: 'Material escolar', icon: 'lapis', tint: 't-yellow', words: 'lapis caneta borracha escola' },
+    { id: 'mercearia', shelf: 'mercado', name: 'Itens de mercearia', tag: 'Pergunte pelo que precisa', icon: 'mercado', tint: 't-green', words: 'alimento mercado mercearia comida' }
+  ];
+
+  var TICKER = [
+    'Atacarejo de doces e festas no Guajuviras',
+    'Monte sua lista e consulte pelo WhatsApp',
+    'Seg. a sex. 9h–19h · Sáb. 9h–12h e 14h–19h'
+  ];
 
   function formatTime(minutes) {
     var h = Math.floor(minutes / 60);
@@ -77,43 +90,270 @@
     return { open: false, text: 'Fechado agora' };
   }
 
-  function buildMessage(intent, items, details) {
-    var extra = (details || '').trim();
-    var config = INTENTS[intent];
-    if (!items.length && !extra) {
-      return 'Olá, Megamix! Vim pelo site e gostaria de fazer uma consulta.';
+  function normalize(text) {
+    return (text || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim();
+  }
+
+  // Ids dos produtos que combinam com a busca; todas as palavras precisam aparecer.
+  function searchProducts(products, term) {
+    var words = normalize(term).split(/\s+/).filter(Boolean);
+    if (!words.length) return products.map(function (p) { return p.id; });
+    return products.filter(function (p) {
+      var haystack = normalize(p.name + ' ' + p.tag + ' ' + p.words);
+      return words.every(function (w) { return haystack.indexOf(w) !== -1 || haystack.indexOf(w.replace(/s$/, '')) !== -1; });
+    }).map(function (p) { return p.id; });
+  }
+
+  function buildListMessage(names, note) {
+    var extra = (note || '').trim();
+    if (!names.length && !extra) return 'Olá, Megamix! Vim pelo site e gostaria de fazer uma consulta.';
+    var lines = ['Olá, Megamix! Vim pelo site e gostaria de consultar esta lista:'];
+    names.forEach(function (name) { lines.push('• ' + name); });
+    if (extra) {
+      if (names.length) lines.push('');
+      lines.push(extra);
     }
-    var lines = [config ? config.opening : DEFAULT_OPENING];
-    items.forEach(function (item) { lines.push('• ' + item); });
-    if (extra) lines.push(items.length ? '' : null, extra);
-    return lines.filter(function (line) { return line !== null; }).join('\n');
+    return lines.join('\n');
   }
 
-  function submitLabel(count) {
-    if (!count) return 'Consultar no WhatsApp';
-    return 'Consultar ' + count + (count === 1 ? ' tipo de item' : ' tipos de item') + ' no WhatsApp';
-  }
-
-  function placeholderFor(intent) {
-    return INTENTS[intent] ? INTENTS[intent].placeholder : DEFAULT_PLACEHOLDER;
+  function buildSearchMessage(term) {
+    return 'Olá, Megamix! Vim pelo site. Vocês têm ' + term.trim() + '?';
   }
 
   function whatsappUrl(message) {
     return 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(message);
   }
 
+  // Lê a lista salva, ignorando ids que não existem mais.
+  function parseSaved(raw, products) {
+    try {
+      var ids = JSON.parse(raw);
+      if (!Array.isArray(ids)) return [];
+      return ids.filter(function (id) { return products.some(function (p) { return p.id === id; }); });
+    } catch (e) {
+      return [];
+    }
+  }
+
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
-      getStatus: getStatus, buildMessage: buildMessage, submitLabel: submitLabel,
-      placeholderFor: placeholderFor, whatsappUrl: whatsappUrl, localNow: localNow
+      PRODUCTS: PRODUCTS, SHELVES: SHELVES, getStatus: getStatus, localNow: localNow,
+      searchProducts: searchProducts, buildListMessage: buildListMessage,
+      buildSearchMessage: buildSearchMessage, whatsappUrl: whatsappUrl, parseSaved: parseSaved
     };
     return;
   }
 
-  // Selos de aberto/fechado e destaque do dia na tabela de horários.
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var byId = {};
+  PRODUCTS.forEach(function (p) { byId[p.id] = p; });
+
+  /* ---------- Vitrines ---------- */
+  var shelvesRoot = document.querySelector('[data-shelves]');
+  SHELVES.forEach(function (shelf) {
+    var section = document.createElement('section');
+    section.className = 'section';
+    section.id = shelf.id;
+    section.setAttribute('aria-labelledby', shelf.id + '-titulo');
+    section.innerHTML =
+      '<div class="container section-head"><h2 class="section-title" id="' + shelf.id + '-titulo">' + shelf.title + '</h2></div>' +
+      '<div class="scroller shelf"></div>';
+    var row = section.querySelector('.shelf');
+    PRODUCTS.filter(function (p) { return p.shelf === shelf.id; }).forEach(function (p) {
+      var card = document.createElement('article');
+      card.className = 'card';
+      card.dataset.product = p.id;
+      card.innerHTML =
+        '<div class="card-img ' + p.tint + '"><svg aria-hidden="true"><use href="#i-' + p.icon + '"/></svg></div>' +
+        '<div class="card-body"><h3 class="card-name">' + p.name + '</h3>' +
+        '<p class="card-tag">' + p.tag + '</p>' +
+        '<button class="add" type="button" aria-pressed="false" data-add="' + p.id + '">+ Lista</button></div>';
+      row.appendChild(card);
+    });
+    shelvesRoot.appendChild(section);
+  });
+
+  /* ---------- Lista ---------- */
+  var list = [];
+  try { list = parseSaved(localStorage.getItem(STORAGE_KEY), PRODUCTS); } catch (e) { list = []; }
+
+  var count = document.querySelector('[data-count]');
+  var basket = document.querySelector('[data-basket]');
+  var listItems = document.querySelector('[data-list-items]');
+  var listEmpty = document.querySelector('[data-list-empty]');
+  var note = document.querySelector('[data-note]');
+  var sendLink = document.querySelector('[data-send]');
+  var toast = document.querySelector('[data-toast]');
+  var toastText = document.querySelector('[data-toast-text]');
+  var toastTimer;
+
+  function currentMessage() {
+    return buildListMessage(list.map(function (id) { return byId[id].name; }), note.value);
+  }
+
+  function save() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) { /* sem armazenamento: a lista vale só nesta visita */ }
+  }
+
+  function render() {
+    count.textContent = list.length;
+    count.hidden = !list.length;
+    basket.setAttribute('aria-label', 'Minha lista, ' + list.length + (list.length === 1 ? ' item' : ' itens'));
+    document.querySelectorAll('[data-add]').forEach(function (button) {
+      var inList = list.indexOf(button.dataset.add) !== -1;
+      button.setAttribute('aria-pressed', inList);
+      button.textContent = inList ? '✓ Na lista' : '+ Lista';
+    });
+    listItems.innerHTML = '';
+    list.forEach(function (id) {
+      var p = byId[id];
+      var li = document.createElement('li');
+      li.innerHTML = '<svg aria-hidden="true"><use href="#i-' + p.icon + '"/></svg><span></span>' +
+        '<button type="button" data-remove="' + id + '" aria-label="Tirar ' + p.name + ' da lista">×</button>';
+      li.querySelector('span').textContent = p.name;
+      listItems.appendChild(li);
+    });
+    listEmpty.hidden = list.length > 0;
+    var url = whatsappUrl(currentMessage());
+    sendLink.href = url;
+    document.querySelectorAll('[data-whats]').forEach(function (link) { link.href = url; });
+  }
+
+  function showToast(text) {
+    toastText.textContent = text;
+    toast.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.hidden = true; }, 3500);
+  }
+
+  document.addEventListener('click', function (event) {
+    var add = event.target.closest('[data-add]');
+    if (add) {
+      var id = add.dataset.add;
+      var at = list.indexOf(id);
+      if (at === -1) {
+        list.push(id);
+        showToast(byId[id].name + ' na lista');
+        if (!reduceMotion) {
+          basket.classList.remove('is-bumped');
+          void basket.offsetWidth;
+          basket.classList.add('is-bumped');
+        }
+      } else {
+        list.splice(at, 1);
+      }
+      save();
+      render();
+      return;
+    }
+    var remove = event.target.closest('[data-remove]');
+    if (remove) {
+      list.splice(list.indexOf(remove.dataset.remove), 1);
+      save();
+      render();
+    }
+  });
+
+  note.addEventListener('input', render);
+  document.querySelector('[data-clear]').addEventListener('click', function () {
+    list = [];
+    note.value = '';
+    save();
+    render();
+  });
+
+  /* ---------- Gavetas ---------- */
+  document.addEventListener('click', function (event) {
+    var opener = event.target.closest('[data-open]');
+    if (opener) {
+      var dialog = document.querySelector('[data-dialog="' + opener.dataset.open + '"]');
+      toast.hidden = true;
+      if (!dialog.open) dialog.showModal();
+      return;
+    }
+    var closer = event.target.closest('[data-close]');
+    if (closer) closer.closest('dialog').close();
+  });
+  document.querySelectorAll('dialog').forEach(function (dialog) {
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) dialog.close();
+    });
+  });
+
+  /* ---------- Busca ---------- */
+  var searchForm = document.querySelector('[data-search]');
+  var searchInput = searchForm.elements.q;
+  var searchEmpty = document.querySelector('[data-search-empty]');
+
+  function applySearch() {
+    var term = searchInput.value;
+    var found = searchProducts(PRODUCTS, term);
+    document.querySelectorAll('[data-product]').forEach(function (card) {
+      card.hidden = found.indexOf(card.dataset.product) === -1;
+    });
+    SHELVES.forEach(function (shelf) {
+      document.getElementById(shelf.id).hidden = !document.querySelector('#' + shelf.id + ' [data-product]:not([hidden])');
+    });
+    if (term.trim() && !found.length) {
+      searchEmpty.innerHTML = 'Não encontramos “<strong></strong>” na vitrine. <a target="_blank" rel="noopener">Perguntar no WhatsApp se tem</a>';
+      searchEmpty.querySelector('strong').textContent = term.trim();
+      searchEmpty.querySelector('a').href = whatsappUrl(buildSearchMessage(term));
+      searchEmpty.hidden = false;
+    } else {
+      searchEmpty.hidden = true;
+    }
+    return found;
+  }
+
+  searchInput.addEventListener('input', applySearch);
+  searchForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var found = applySearch();
+    var target = found.length ? document.querySelector('[data-product="' + found[0] + '"]').closest('section') : searchEmpty;
+    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    searchInput.blur();
+  });
+
+  /* ---------- Banner ---------- */
+  var track = document.querySelector('[data-banner]');
+  var dots = Array.prototype.slice.call(document.querySelectorAll('[data-dots] button'));
+  var autoplay;
+
+  function currentSlide() { return Math.round(track.scrollLeft / track.clientWidth); }
+  function goTo(index) { track.scrollTo({ left: index * track.clientWidth, behavior: reduceMotion ? 'auto' : 'smooth' }); }
+  function stopAutoplay() { clearInterval(autoplay); }
+
+  track.addEventListener('scroll', function () {
+    var index = currentSlide();
+    dots.forEach(function (dot, i) { dot.setAttribute('aria-current', i === index); });
+  }, { passive: true });
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { stopAutoplay(); goTo(i); });
+  });
+  ['pointerdown', 'focusin', 'wheel'].forEach(function (type) { track.addEventListener(type, stopAutoplay, { passive: true }); });
+  if (!reduceMotion) {
+    autoplay = setInterval(function () { goTo((currentSlide() + 1) % dots.length); }, 6000);
+  }
+
+  /* ---------- Avisos do topo ---------- */
+  var ticker = document.querySelector('[data-ticker]');
+  if (!reduceMotion) {
+    var tick = 0;
+    setInterval(function () {
+      ticker.classList.add('is-fading');
+      setTimeout(function () {
+        tick = (tick + 1) % TICKER.length;
+        ticker.textContent = TICKER[tick];
+        ticker.classList.remove('is-fading');
+      }, 300);
+    }, 4000);
+  }
+
+  /* ---------- Horário ---------- */
   function renderStatus() {
     var now = localNow(new Date());
     var status = getStatus(now.day, now.minutes);
+    document.querySelectorAll('[data-status-text]').forEach(function (el) { el.textContent = status.text.split(' · ')[0]; });
     document.querySelectorAll('[data-status]').forEach(function (badge) {
       badge.classList.toggle('is-open', status.open);
       badge.classList.toggle('is-closed', !status.open);
@@ -127,54 +367,5 @@
 
   renderStatus();
   setInterval(renderStatus, 60000);
-
-  // Lista de consulta: o botão do formulário e o da barra fixa enviam a mesma mensagem.
-  var form = document.querySelector('[data-picker]');
-  if (!form) return;
-
-  var picked = form.querySelector('[data-picked]');
-  var submit = form.querySelector('[data-submit-label]');
-  var dockLink = document.querySelector('[data-whats-link]');
-  var dockLabel = document.querySelector('[data-dock-label]');
-
-  function state() {
-    var intent = form.querySelector('input[name="intencao"]:checked');
-    var items = Array.prototype.map.call(
-      form.querySelectorAll('input[name="item"]:checked'),
-      function (input) { return input.value; }
-    );
-    return { intent: intent ? intent.value : null, items: items, details: form.elements.detalhes.value };
-  }
-
-  function currentUrl() {
-    var s = state();
-    return whatsappUrl(buildMessage(s.intent, s.items, s.details));
-  }
-
-  function refresh() {
-    var s = state();
-    submit.textContent = submitLabel(s.items.length);
-    dockLabel.textContent = s.items.length ? 'Enviar minha lista' : 'Consultar no WhatsApp';
-    form.elements.detalhes.placeholder = placeholderFor(s.intent);
-    if (s.items.length) {
-      picked.innerHTML = '';
-      picked.append('Na lista: ');
-      var strong = document.createElement('strong');
-      strong.textContent = s.items.join(', ');
-      picked.append(strong);
-    } else {
-      picked.textContent = 'Nada marcado ainda. Você também pode só escrever.';
-    }
-    dockLink.href = currentUrl();
-  }
-
-  form.addEventListener('change', refresh);
-  form.addEventListener('input', refresh);
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    window.open(currentUrl(), '_blank', 'noopener');
-  });
-  dockLink.addEventListener('click', function () { dockLink.href = currentUrl(); });
-
-  refresh();
+  render();
 })();
