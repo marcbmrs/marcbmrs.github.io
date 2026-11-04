@@ -96,6 +96,6 @@
   }
   input.addEventListener('input',applySearch);
   form.addEventListener('submit',function(event){event.preventDefault();var found=applySearch(),target=found.length?document.querySelector('[data-category="'+found[0]+'"]'):feedback;target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});});
-  function renderStatus(){var now=localNow(new Date()),status=getStatus(now.day,now.minutes),statusEl=document.querySelector('[data-status]');statusEl.textContent=status.text;statusEl.classList.toggle('is-open',status.open);document.querySelector('[data-status-short]').textContent=status.open?'Aberto agora':'Confira os horários';document.querySelectorAll('[data-days]').forEach(function(row){row.classList.toggle('is-today',row.dataset.days.split(' ').includes(String(now.day)));});}
+  function renderStatus(){var now=localNow(new Date()),status=getStatus(now.day,now.minutes),statusEl=document.querySelector('[data-status]');statusEl.textContent=status.text;statusEl.classList.toggle('is-open',status.open);document.querySelectorAll('[data-status-short],[data-status-top]').forEach(function(el){el.textContent=status.text;});var wrap=document.querySelector('[data-status-wrap]');if(wrap)wrap.classList.toggle('is-open',status.open);document.querySelectorAll('[data-days]').forEach(function(row){row.classList.toggle('is-today',row.dataset.days.split(' ').includes(String(now.day)));});}
   renderStatus();setInterval(renderStatus,60000);render();
 })();

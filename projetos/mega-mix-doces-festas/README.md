@@ -10,10 +10,12 @@ A página ajuda o visitante a reconhecer as categorias anunciadas pela loja, con
 
 A referência [Sul Doces](https://www.suldoces.com/) orientou apenas a organização por categorias de uma loja de doces. A versão anterior imitava uma loja virtual com carrossel, vitrines genéricas e ícones repetidos. Esta versão usa uma hierarquia mais curta: apresentação, categorias, explicação da consulta e informações da loja.
 
-- A marca no cabeçalho é uma reconstrução tipográfica provisória inspirada nas cores da fachada, não o arquivo oficial.
+- A marca no cabeçalho e o favicon usam a proposta vetorial conceitual criada com Claude Code a partir das cores da fachada. Os SVGs de origem e as prévias estão em `C:\MarcosDev-Originais\mega-mix-doces-festas\logos\`. Esta ainda não é a identidade oficial aprovada pela loja.
 - A composição de doces e artigos de festa é **ilustrativa e gerada por IA**. Ela não representa produtos, estoque ou interior da Megamix. Por escolha do titular, a página não exibe um selo sobre a imagem; a origem fica documentada aqui para orientar sua substituição futura. O original está fora do repositório em `C:\MarcosDev-Originais\mega-mix-doces-festas\images\editorial-doces-festas\`; o site usa derivados responsivos em AVIF e WebP.
 - As categorias se baseiam na placa da fachada e em fotos públicas descritas na pesquisa inicial. A lista de categorias fica em `CATEGORIES` em `scripts/main.js`; itens específicos, marcas, preços, formatos, ofertas e condições de atacado não são afirmados.
 - O site mantém busca de categorias, lista local e geração da mensagem de consulta. A lista é salva somente no navegador do visitante.
+- Logo e favicon têm as letras convertidas em contornos (fonte Kanit, licença OFL), sem depender de fontes instaladas no aparelho. No cabeçalho, o subtítulo “Doces & Festas” ocupa a largura do nome para continuar legível no celular.
+- Cabeçalho e topo (revisão de 04/11/2026): faixa superior com status em tempo real (“Aberto agora · fecha às 19h”), atalho de WhatsApp e botão “Lista” no cabeçalho, imagem acima do título no celular, CTA principal “Chamar no WhatsApp” e barra rápida com ícones (como chegar, horário, WhatsApp). A seta ↗ só aparece em links externos.
 
 ## Dados usados no protótipo
 
@@ -41,7 +43,8 @@ Não há preços, marcas, promoções, promessas de entrega ou formas de pagamen
 - `scripts/main.js`: categorias, busca, lista, consulta e horário local.
 - `assets/images/composicao-editorial-doces-festas-*.avif|webp`: imagem editorial derivada e otimizada.
 - `assets/images/megamix-compartilhamento.jpg`: imagem de compartilhamento provisória da versão anterior.
-- `assets/icons/favicon.svg`: favicon provisório.
+- `assets/icons/logo-megamix.svg`: proposta de logo horizontal usada no cabeçalho.
+- `assets/icons/favicon.svg`: versão compacta da proposta de logo.
 - `tests/main.test.js`: testes da busca, horário, lista e link de consulta. Executar com `node --test tests/main.test.js`.
 
 ## URL do protótipo publicado
