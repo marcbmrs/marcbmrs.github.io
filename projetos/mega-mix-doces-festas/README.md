@@ -4,15 +4,25 @@
 
 Proposta de site para o Megamix Doces & Festas, atacarejo de doces, artigos de festa e material escolar no Guajuviras, em Canoas (RS). A página é pensada primeiro para celular. Ela mostra se a loja está aberta, o que se encontra lá e como chegar, e leva o visitante ao WhatsApp com uma lista de compras já montada.
 
-## Direção (versão 3, 03/11/2026)
+## Direção (versão 4, 04/11/2026)
 
-Conceito "Da lista à prateleira": o Megamix é apresentado como a loja de bairro de gôndolas cheias onde a pessoa organiza o que procura. A direção veio de uma avaliação crítica do Codex sobre a versão 1, que parecia um template de festa infantil, e foi aplicada com a skill `design-mobile-web-experience` da KORA. A versão 3 alinhou a identidade com a fachada real da loja (imagem do Street View, guardada só como referência local).
+Formato de loja virtual, pedido pelo titular a partir da referência de um concorrente local de doces e festas em Canoas. Da referência veio só o padrão de navegação, que é comum em lojas virtuais; identidade, textos e imagens são do Megamix. Os elementos são estes:
 
-- Marca da fachada: o nome escrito "MEGAMIX" em letras limão `#E4E62B` com contorno escuro, "Doces" em ferrugem `#C4532F`, "&" laranja e "Festas" em verde `#1F9D4A`, sobre placas laranja `#EE7A3A`. A versão no site é reconstruída em texto e não é o arquivo oficial do logo.
-- Apoio visual: papel creme `#FFF9EB`, tinta `#251C2A`, laranja escuro `#B84A18` nos botões (contraste com texto branco), amarelo de etiqueta `#FFD43B`, verde WhatsApp `#087A43` reservado para contato. Títulos em Barlow Condensed e texto em Inter.
-- Topo: ilustração em SVG da fachada (placa, porta dos doces e vitrine de festas), para a pessoa reconhecer a loja na rua. Não usa a foto do Google.
-- Fluxo: motivo da compra (festa, produção, revenda, um produto) → prateleiras marcáveis → detalhes → mensagem pronta no WhatsApp. A barra fixa do celular envia a mesma lista.
-- Removidos: a seção "Como funciona" (processo não confirmado), o mapa incorporado e a nota do Google em destaque.
+- faixa de avisos no topo;
+- cabeçalho laranja com menu, WhatsApp, logo, rota e cestinha;
+- busca;
+- banner deslizante;
+- categorias em círculos;
+- vitrines de cards com botão;
+- WhatsApp flutuante.
+
+No lugar de "Comprar", cada card tem **+ Lista**. A cestinha vira "Minha lista", que é enviada pelo WhatsApp e fica salva no navegador da pessoa. A busca filtra as vitrines. Quando não encontra nada, ela oferece perguntar à loja no WhatsApp se o produto existe. Não há preços, marcas nem promoções, porque nada disso foi confirmado. Os itens das vitrines são tipos de produto ligados às categorias da placa e precisam ser revisados com a loja. Os produtos ficam na lista `PRODUCTS` de `scripts/main.js`.
+
+Histórico: as versões 1 a 3 (03/11/2026) passaram por avaliação do Codex e pela skill `design-mobile-web-experience` da KORA e alinharam a identidade com a fachada real. O titular achou o resultado estranho e pediu a linguagem de loja virtual.
+
+- Marca da fachada: o nome escrito "MEGAMIX" em letras limão `#E4E62B` com contorno escuro, "Doces" em ferrugem `#C4532F`, "&" laranja e "Festas" em verde `#1F9D4A`, sobre placas laranja `#EE7A3A`. No site, o logo é reconstruído em texto dentro de um selo branco e não é o arquivo oficial.
+- Apoio visual: cabeçalho laranja, faixa verde-escura `#157A36`, botões "+ Lista" verdes, rodapé ferrugem. Títulos em Kanit e texto em Inter. As ilustrações dos produtos são SVGs próprios, sem marcas.
+- A imagem de compartilhamento (fachada ilustrada) continua sendo a da versão 3.
 
 ## Estado
 
